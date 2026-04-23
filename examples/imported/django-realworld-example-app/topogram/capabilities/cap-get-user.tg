@@ -1,0 +1,18 @@
+# imported confidence: high
+# imported source_kind: route_code
+# imported provenance: conduit/apps/authentication/urls.py#GET /api/user
+# imported provenance: conduit/apps/authentication/serializers.py
+# imported provenance: conduit/apps/authentication/views.py
+capability cap_get_user {
+  name "GET /api/user"
+  description "Candidate capability imported from brownfield API evidence"
+
+  actors [user]
+
+  reads [entity_user]
+
+  input [shape_input_get_user]
+  output [shape_output_get_user]
+
+  status active
+}

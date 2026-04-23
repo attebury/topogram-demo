@@ -1,0 +1,7 @@
+[
+  {
+    "kind": "rails_routes",
+    "file": "config/routes.rb",
+    "route_count": 20
+  }
+]

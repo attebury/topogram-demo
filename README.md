@@ -1,0 +1,94 @@
+# Topogram Demo
+
+This repo contains the imported proof targets for [Topogram](https://github.com/attebury/topogram).
+
+Use the main `topogram` repo for:
+
+- product code
+- generated examples
+- maintained proof apps
+- fast engine and product verification
+
+Use this repo for:
+
+- imported brownfield proof targets
+- committed `topogram/` outputs for real external apps
+- proof status and rerun commands
+- proof-ops verification for the active imported claim set
+
+## Example Taxonomy
+
+Topogram uses three example relationships:
+
+- `examples/generated/<app>`: generated reference apps
+- `examples/maintained/<app>`: maintained proof apps
+- `examples/imported/<app>`: real existing systems imported into Topogram
+
+This repo owns the `examples/imported` side of that split.
+
+## Active Imported Claims
+
+The current active imported claim set is:
+
+- `supabase-express-api`
+- `eshoponweb`
+- `clean-architecture-swiftui`
+- `rails-realworld-example-app`
+- `django-realworld-example-app`
+
+Every active imported target publishes:
+
+- a source snapshot under `source/`
+- committed imported outputs under `topogram/`
+- a `proof-status.json`
+- exact rerun commands
+- the adoption-status evidence used to justify its published status
+
+## Verification
+
+Run the imported-proof verifier from the repo root:
+
+```bash
+node ./ops/verify-imported-targets.mjs
+```
+
+That command checks the active target inventory in [ops/active-targets.json](./ops/active-targets.json) and verifies that every published `closed` target still satisfies the stored imported-proof contract:
+
+- `next_bundle === null`
+- `blocked_item_count === 0`
+- `applied_item_count > 0`
+
+## Repo Layout
+
+```text
+examples/
+  imported/
+    README.md
+    supabase-express-api/
+    eshoponweb/
+    clean-architecture-swiftui/
+    rails-realworld-example-app/
+    django-realworld-example-app/
+ops/
+  README.md
+  active-targets.json
+  verify-imported-targets.mjs
+```
+
+## Status Model
+
+Each imported target carries a `proof-status.json` with:
+
+- `status`
+- `topogram_commit_tested`
+- `last_verified_date`
+- `known_blockers`
+- `notes`
+
+Allowed status values:
+
+- `closed`
+- `partial`
+- `drifting`
+- `broken`
+- `archived`

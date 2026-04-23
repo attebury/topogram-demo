@@ -1,0 +1,10 @@
+shape shape_input_update_profile {
+  name "Update Profile Input"
+  description "Candidate shape imported from brownfield API evidence"
+
+  fields {
+    name string optional
+  }
+
+  status active
+}

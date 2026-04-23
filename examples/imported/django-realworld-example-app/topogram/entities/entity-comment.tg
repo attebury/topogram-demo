@@ -1,0 +1,15 @@
+# imported confidence: high
+# imported source_kind: schema
+# imported provenance: conduit/apps/articles/models.py
+entity entity_comment {
+  name "Comment"
+  description "Candidate entity imported from brownfield schema evidence"
+
+  fields {
+    body string required
+    article article required
+    author profile required
+  }
+
+  status active
+}

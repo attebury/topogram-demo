@@ -1,0 +1,18 @@
+# imported confidence: high
+# imported source_kind: route_code
+# imported provenance: config/routes.rb#GET /api/users/:id
+# imported provenance: config/routes.rb#GET /api/user
+# imported provenance: app/controllers/users_controller.rb
+capability cap_get_user {
+  name "GET /api/users/:id"
+  description "Candidate capability imported from brownfield API evidence"
+
+  actors [user]
+
+  reads [entity_user]
+
+  input [shape_input_get_user]
+  output [shape_output_get_user]
+
+  status active
+}

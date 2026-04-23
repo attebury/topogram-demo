@@ -1,0 +1,196 @@
+{
+  "adoption_plan_path": "candidates/reconcile/adoption-plan.json",
+  "applied_item_count": 14,
+  "approved_item_count": 0,
+  "approved_review_groups": [
+    "workflow_review:country",
+    "workflow_review:country-details"
+  ],
+  "blocked_item_count": 0,
+  "bootstrapped_topogram_root": false,
+  "bundle_blockers": [
+    {
+      "applied_items": [
+        "cap_list_countries",
+        "dec_country",
+        "entity_country",
+        "shape_output_list_countries",
+        "ui_country_detail",
+        "ui_country_flag_modal",
+        "ui_country_list",
+        "workflow_country"
+      ],
+      "approved_items": [],
+      "blocked_items": [],
+      "blocking_dependencies": [],
+      "bundle": "country",
+      "pending_items": [],
+      "skipped_items": []
+    },
+    {
+      "applied_items": [
+        "entity_country_detail"
+      ],
+      "approved_items": [],
+      "blocked_items": [],
+      "blocking_dependencies": [],
+      "bundle": "country-detail",
+      "pending_items": [],
+      "skipped_items": []
+    },
+    {
+      "applied_items": [
+        "cap_get_country_details",
+        "dec_country_details",
+        "shape_output_get_country_details",
+        "workflow_country_details"
+      ],
+      "approved_items": [],
+      "blocked_items": [],
+      "blocking_dependencies": [],
+      "bundle": "country-details",
+      "pending_items": [],
+      "skipped_items": []
+    },
+    {
+      "applied_items": [
+        "entity_currency"
+      ],
+      "approved_items": [],
+      "blocked_items": [],
+      "blocking_dependencies": [],
+      "bundle": "currency",
+      "pending_items": [],
+      "skipped_items": []
+    }
+  ],
+  "bundle_priorities": [
+    {
+      "applied_items": 8,
+      "approved_items": 0,
+      "blocked_items": 0,
+      "bundle": "country",
+      "evidence": {
+        "capabilities": 1,
+        "docs": 0,
+        "entities": 1,
+        "enums": 0,
+        "screens": 3,
+        "shapes": 1,
+        "workflows": 1
+      },
+      "evidence_score": 25,
+      "is_complete": true,
+      "next_review_groups": [],
+      "pending_items": 0,
+      "recommend_bundle_review_selector": null,
+      "recommend_from_plan": false
+    },
+    {
+      "applied_items": 4,
+      "approved_items": 0,
+      "blocked_items": 0,
+      "bundle": "country-details",
+      "evidence": {
+        "capabilities": 1,
+        "docs": 0,
+        "entities": 0,
+        "enums": 0,
+        "screens": 0,
+        "shapes": 1,
+        "workflows": 1
+      },
+      "evidence_score": 14,
+      "is_complete": true,
+      "next_review_groups": [],
+      "pending_items": 0,
+      "recommend_bundle_review_selector": null,
+      "recommend_from_plan": false
+    },
+    {
+      "applied_items": 1,
+      "approved_items": 0,
+      "blocked_items": 0,
+      "bundle": "country-detail",
+      "evidence": {
+        "capabilities": 0,
+        "docs": 0,
+        "entities": 1,
+        "enums": 0,
+        "screens": 0,
+        "shapes": 0,
+        "workflows": 0
+      },
+      "evidence_score": 8,
+      "is_complete": true,
+      "next_review_groups": [],
+      "pending_items": 0,
+      "recommend_bundle_review_selector": null,
+      "recommend_from_plan": false
+    },
+    {
+      "applied_items": 1,
+      "approved_items": 0,
+      "blocked_items": 0,
+      "bundle": "currency",
+      "evidence": {
+        "capabilities": 0,
+        "docs": 0,
+        "entities": 1,
+        "enums": 0,
+        "screens": 0,
+        "shapes": 0,
+        "workflows": 0
+      },
+      "evidence_score": 8,
+      "is_complete": true,
+      "next_review_groups": [],
+      "pending_items": 0,
+      "recommend_bundle_review_selector": null,
+      "recommend_from_plan": false
+    }
+  ],
+  "next_bundle": null,
+  "projection_review_groups": [],
+  "type": "adoption_status",
+  "ui_review_groups": [],
+  "workflow_review_groups": [
+    {
+      "id": "workflow_review:country",
+      "items": [
+        {
+          "bundle": "country",
+          "item": "dec_country",
+          "kind": "decision",
+          "status": "applied"
+        },
+        {
+          "bundle": "country",
+          "item": "workflow_country",
+          "kind": "doc",
+          "status": "applied"
+        }
+      ],
+      "reason": "Workflow semantics for country need canonical review before promotion."
+    },
+    {
+      "id": "workflow_review:country-details",
+      "items": [
+        {
+          "bundle": "country-details",
+          "item": "dec_country_details",
+          "kind": "decision",
+          "status": "applied"
+        },
+        {
+          "bundle": "country-details",
+          "item": "workflow_country_details",
+          "kind": "doc",
+          "status": "applied"
+        }
+      ],
+      "reason": "Workflow semantics for country-details need canonical review before promotion."
+    }
+  ],
+  "workspace": "/Users/attebury/Documents/topogram/trials/clean-architecture-swiftui/topogram"
+}

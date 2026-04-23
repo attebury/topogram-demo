@@ -1,0 +1,922 @@
+{
+  "capabilities": [
+    {
+      "kind": "capability",
+      "id_hint": "cap_sign_in_account",
+      "label": "POST /api/auth/login",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "source_of_truth": "imported",
+      "provenance": [
+        "config/routes.rb#POST /api/auth/login",
+        "app/controllers/authentication_controller.rb"
+      ],
+      "track": "api",
+      "endpoint": {
+        "method": "POST",
+        "path": "/api/auth/login"
+      },
+      "path_params": [],
+      "query_params": [],
+      "header_params": [],
+      "input_fields": [
+        "email",
+        "password"
+      ],
+      "output_fields": [
+        "bio",
+        "email",
+        "error",
+        "image",
+        "token",
+        "username"
+      ],
+      "auth_hint": "public",
+      "entity_id": "entity_account",
+      "target_state": "authenticated",
+      "actor_hints": [
+        "anonymous"
+      ]
+    },
+    {
+      "kind": "capability",
+      "id_hint": "cap_get_user",
+      "label": "GET /api/users/:id",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "source_of_truth": "imported",
+      "provenance": [
+        "config/routes.rb#GET /api/users/:id",
+        "config/routes.rb#GET /api/user",
+        "app/controllers/users_controller.rb"
+      ],
+      "track": "api",
+      "endpoint": {
+        "method": "GET",
+        "path": "/api/users/{id}"
+      },
+      "path_params": [
+        {
+          "name": "id",
+          "required": true,
+          "type": null
+        }
+      ],
+      "query_params": [],
+      "header_params": [],
+      "input_fields": [
+        "bio",
+        "email",
+        "image",
+        "password",
+        "username"
+      ],
+      "output_fields": [
+        "user"
+      ],
+      "auth_hint": "secured",
+      "entity_id": "entity_user",
+      "target_state": null,
+      "actor_hints": [
+        "user"
+      ]
+    },
+    {
+      "kind": "capability",
+      "id_hint": "cap_create_user",
+      "label": "POST /api/users",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "source_of_truth": "imported",
+      "provenance": [
+        "config/routes.rb#POST /api/users",
+        "app/controllers/users_controller.rb"
+      ],
+      "track": "api",
+      "endpoint": {
+        "method": "POST",
+        "path": "/api/users"
+      },
+      "path_params": [],
+      "query_params": [],
+      "header_params": [],
+      "input_fields": [
+        "bio",
+        "email",
+        "image",
+        "password",
+        "username"
+      ],
+      "output_fields": [
+        "errors",
+        "user"
+      ],
+      "auth_hint": "public",
+      "entity_id": "entity_user",
+      "target_state": "registered",
+      "actor_hints": [
+        "anonymous"
+      ]
+    },
+    {
+      "kind": "capability",
+      "id_hint": "cap_update_user",
+      "label": "PUT /api/user",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "source_of_truth": "imported",
+      "provenance": [
+        "config/routes.rb#PUT /api/user",
+        "app/controllers/users_controller.rb"
+      ],
+      "track": "api",
+      "endpoint": {
+        "method": "PUT",
+        "path": "/api/user"
+      },
+      "path_params": [],
+      "query_params": [],
+      "header_params": [],
+      "input_fields": [
+        "bio",
+        "email",
+        "image",
+        "password",
+        "username"
+      ],
+      "output_fields": [
+        "user"
+      ],
+      "auth_hint": "secured",
+      "entity_id": "entity_user",
+      "target_state": null,
+      "actor_hints": [
+        "user"
+      ]
+    },
+    {
+      "kind": "capability",
+      "id_hint": "cap_favorite_article",
+      "label": "Favorite Article",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "source_of_truth": "imported",
+      "provenance": [
+        "config/routes.rb#POST /api/articles/:slug/favorite",
+        "app/controllers/articles_controller.rb"
+      ],
+      "track": "api",
+      "endpoint": {
+        "method": "POST",
+        "path": "/api/articles/{slug}/favorite"
+      },
+      "path_params": [
+        {
+          "name": "slug",
+          "required": true,
+          "type": null
+        }
+      ],
+      "query_params": [],
+      "header_params": [],
+      "input_fields": [
+        "body",
+        "description",
+        "tagList",
+        "title"
+      ],
+      "output_fields": [
+        "article"
+      ],
+      "auth_hint": "secured",
+      "entity_id": "entity_article",
+      "target_state": "favorited",
+      "actor_hints": [
+        "user"
+      ]
+    },
+    {
+      "kind": "capability",
+      "id_hint": "cap_unfavorite_article",
+      "label": "Unfavorite Article",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "source_of_truth": "imported",
+      "provenance": [
+        "config/routes.rb#DELETE /api/articles/:slug/favorite",
+        "app/controllers/articles_controller.rb"
+      ],
+      "track": "api",
+      "endpoint": {
+        "method": "DELETE",
+        "path": "/api/articles/{slug}/favorite"
+      },
+      "path_params": [
+        {
+          "name": "slug",
+          "required": true,
+          "type": null
+        }
+      ],
+      "query_params": [],
+      "header_params": [],
+      "input_fields": [
+        "body",
+        "description",
+        "tagList",
+        "title"
+      ],
+      "output_fields": [
+        "article"
+      ],
+      "auth_hint": "secured",
+      "entity_id": "entity_article",
+      "target_state": "not_favorited",
+      "actor_hints": [
+        "user"
+      ]
+    },
+    {
+      "kind": "capability",
+      "id_hint": "cap_list_articles",
+      "label": "GET /api/articles",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "source_of_truth": "imported",
+      "provenance": [
+        "config/routes.rb#GET /api/articles",
+        "app/controllers/articles_controller.rb"
+      ],
+      "track": "api",
+      "endpoint": {
+        "method": "GET",
+        "path": "/api/articles"
+      },
+      "path_params": [],
+      "query_params": [
+        {
+          "name": "author",
+          "required": false,
+          "type": null
+        },
+        {
+          "name": "favorited",
+          "required": false,
+          "type": null
+        },
+        {
+          "name": "limit",
+          "required": false,
+          "type": null
+        },
+        {
+          "name": "offset",
+          "required": false,
+          "type": null
+        },
+        {
+          "name": "tag",
+          "required": false,
+          "type": null
+        }
+      ],
+      "header_params": [],
+      "input_fields": [
+        "body",
+        "description",
+        "tagList",
+        "title"
+      ],
+      "output_fields": [
+        "articles",
+        "articlesCount"
+      ],
+      "auth_hint": "unknown",
+      "entity_id": "entity_article",
+      "target_state": null,
+      "actor_hints": []
+    },
+    {
+      "kind": "capability",
+      "id_hint": "cap_create_article",
+      "label": "POST /api/articles",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "source_of_truth": "imported",
+      "provenance": [
+        "config/routes.rb#POST /api/articles",
+        "app/controllers/articles_controller.rb"
+      ],
+      "track": "api",
+      "endpoint": {
+        "method": "POST",
+        "path": "/api/articles"
+      },
+      "path_params": [],
+      "query_params": [],
+      "header_params": [],
+      "input_fields": [
+        "body",
+        "description",
+        "tagList",
+        "title"
+      ],
+      "output_fields": [
+        "article"
+      ],
+      "auth_hint": "secured",
+      "entity_id": "entity_article",
+      "target_state": null,
+      "actor_hints": [
+        "user"
+      ]
+    },
+    {
+      "kind": "capability",
+      "id_hint": "cap_get_article",
+      "label": "GET /api/articles/:slug",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "source_of_truth": "imported",
+      "provenance": [
+        "config/routes.rb#GET /api/articles/:slug",
+        "app/controllers/articles_controller.rb"
+      ],
+      "track": "api",
+      "endpoint": {
+        "method": "GET",
+        "path": "/api/articles/{slug}"
+      },
+      "path_params": [
+        {
+          "name": "slug",
+          "required": true,
+          "type": null
+        }
+      ],
+      "query_params": [],
+      "header_params": [],
+      "input_fields": [
+        "body",
+        "description",
+        "tagList",
+        "title"
+      ],
+      "output_fields": [
+        "article"
+      ],
+      "auth_hint": "unknown",
+      "entity_id": "entity_article",
+      "target_state": null,
+      "actor_hints": []
+    },
+    {
+      "kind": "capability",
+      "id_hint": "cap_update_article",
+      "label": "PUT /api/articles/:slug",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "source_of_truth": "imported",
+      "provenance": [
+        "config/routes.rb#PUT /api/articles/:slug",
+        "app/controllers/articles_controller.rb"
+      ],
+      "track": "api",
+      "endpoint": {
+        "method": "PUT",
+        "path": "/api/articles/{slug}"
+      },
+      "path_params": [
+        {
+          "name": "slug",
+          "required": true,
+          "type": null
+        }
+      ],
+      "query_params": [],
+      "header_params": [],
+      "input_fields": [
+        "body",
+        "description",
+        "tagList",
+        "title"
+      ],
+      "output_fields": [
+        "article"
+      ],
+      "auth_hint": "unknown",
+      "entity_id": "entity_article",
+      "target_state": null,
+      "actor_hints": []
+    },
+    {
+      "kind": "capability",
+      "id_hint": "cap_delete_article",
+      "label": "DELETE /api/articles/:slug",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "source_of_truth": "imported",
+      "provenance": [
+        "config/routes.rb#DELETE /api/articles/:slug",
+        "app/controllers/articles_controller.rb"
+      ],
+      "track": "api",
+      "endpoint": {
+        "method": "DELETE",
+        "path": "/api/articles/{slug}"
+      },
+      "path_params": [
+        {
+          "name": "slug",
+          "required": true,
+          "type": null
+        }
+      ],
+      "query_params": [],
+      "header_params": [],
+      "input_fields": [
+        "body",
+        "description",
+        "tagList",
+        "title"
+      ],
+      "output_fields": [],
+      "auth_hint": "unknown",
+      "entity_id": "entity_article",
+      "target_state": null,
+      "actor_hints": []
+    },
+    {
+      "kind": "capability",
+      "id_hint": "cap_list_comments",
+      "label": "GET /api/articles/:slug/comments",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "source_of_truth": "imported",
+      "provenance": [
+        "config/routes.rb#GET /api/articles/:slug/comments",
+        "app/controllers/comments_controller.rb"
+      ],
+      "track": "api",
+      "endpoint": {
+        "method": "GET",
+        "path": "/api/articles/{slug}/comments"
+      },
+      "path_params": [
+        {
+          "name": "slug",
+          "required": true,
+          "type": null
+        }
+      ],
+      "query_params": [],
+      "header_params": [],
+      "input_fields": [],
+      "output_fields": [
+        "comments"
+      ],
+      "auth_hint": "unknown",
+      "entity_id": "entity_comment",
+      "target_state": null,
+      "actor_hints": []
+    },
+    {
+      "kind": "capability",
+      "id_hint": "cap_create_comment",
+      "label": "POST /api/articles/:slug/comments",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "source_of_truth": "imported",
+      "provenance": [
+        "config/routes.rb#POST /api/articles/:slug/comments",
+        "app/controllers/comments_controller.rb"
+      ],
+      "track": "api",
+      "endpoint": {
+        "method": "POST",
+        "path": "/api/articles/{slug}/comments"
+      },
+      "path_params": [
+        {
+          "name": "slug",
+          "required": true,
+          "type": null
+        }
+      ],
+      "query_params": [],
+      "header_params": [],
+      "input_fields": [
+        "body"
+      ],
+      "output_fields": [
+        "author",
+        "body",
+        "following"
+      ],
+      "auth_hint": "secured",
+      "entity_id": "entity_comment",
+      "target_state": null,
+      "actor_hints": [
+        "user"
+      ]
+    },
+    {
+      "kind": "capability",
+      "id_hint": "cap_delete_comment",
+      "label": "DELETE /api/articles/:slug/comments/:id",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "source_of_truth": "imported",
+      "provenance": [
+        "config/routes.rb#DELETE /api/articles/:slug/comments/:id",
+        "app/controllers/comments_controller.rb"
+      ],
+      "track": "api",
+      "endpoint": {
+        "method": "DELETE",
+        "path": "/api/articles/{slug}/comments/{id}"
+      },
+      "path_params": [
+        {
+          "name": "slug",
+          "required": true,
+          "type": null
+        },
+        {
+          "name": "id",
+          "required": true,
+          "type": null
+        }
+      ],
+      "query_params": [],
+      "header_params": [],
+      "input_fields": [],
+      "output_fields": [],
+      "auth_hint": "secured",
+      "entity_id": "entity_comment",
+      "target_state": null,
+      "actor_hints": [
+        "user"
+      ]
+    },
+    {
+      "kind": "capability",
+      "id_hint": "cap_feed_article",
+      "label": "Feed Article",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "source_of_truth": "imported",
+      "provenance": [
+        "config/routes.rb#GET /api/articles/feed",
+        "app/controllers/articles_controller.rb"
+      ],
+      "track": "api",
+      "endpoint": {
+        "method": "GET",
+        "path": "/api/articles/feed"
+      },
+      "path_params": [],
+      "query_params": [],
+      "header_params": [],
+      "input_fields": [
+        "body",
+        "description",
+        "tagList",
+        "title"
+      ],
+      "output_fields": [
+        "articles",
+        "articlesCount"
+      ],
+      "auth_hint": "secured",
+      "entity_id": "entity_article",
+      "target_state": null,
+      "actor_hints": [
+        "user"
+      ]
+    },
+    {
+      "kind": "capability",
+      "id_hint": "cap_get_profile",
+      "label": "GET /api/profiles/:username",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "source_of_truth": "imported",
+      "provenance": [
+        "config/routes.rb#GET /api/profiles/:username",
+        "app/controllers/profiles_controller.rb"
+      ],
+      "track": "api",
+      "endpoint": {
+        "method": "GET",
+        "path": "/api/profiles/{username}"
+      },
+      "path_params": [
+        {
+          "name": "username",
+          "required": true,
+          "type": null
+        }
+      ],
+      "query_params": [],
+      "header_params": [],
+      "input_fields": [],
+      "output_fields": [
+        "profile"
+      ],
+      "auth_hint": "public",
+      "entity_id": "entity_profile",
+      "target_state": null,
+      "actor_hints": [
+        "anonymous"
+      ]
+    },
+    {
+      "kind": "capability",
+      "id_hint": "cap_follow_profile",
+      "label": "Follow Profile",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "source_of_truth": "imported",
+      "provenance": [
+        "config/routes.rb#POST /api/profiles/:username/follow",
+        "app/controllers/profiles_controller.rb"
+      ],
+      "track": "api",
+      "endpoint": {
+        "method": "POST",
+        "path": "/api/profiles/{username}/follow"
+      },
+      "path_params": [
+        {
+          "name": "username",
+          "required": true,
+          "type": null
+        }
+      ],
+      "query_params": [],
+      "header_params": [],
+      "input_fields": [],
+      "output_fields": [
+        "profile"
+      ],
+      "auth_hint": "secured",
+      "entity_id": "entity_profile",
+      "target_state": "following",
+      "actor_hints": [
+        "user"
+      ]
+    },
+    {
+      "kind": "capability",
+      "id_hint": "cap_unfollow_profile",
+      "label": "Unfollow Profile",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "source_of_truth": "imported",
+      "provenance": [
+        "config/routes.rb#DELETE /api/profiles/:username/follow",
+        "app/controllers/profiles_controller.rb"
+      ],
+      "track": "api",
+      "endpoint": {
+        "method": "DELETE",
+        "path": "/api/profiles/{username}/follow"
+      },
+      "path_params": [
+        {
+          "name": "username",
+          "required": true,
+          "type": null
+        }
+      ],
+      "query_params": [],
+      "header_params": [],
+      "input_fields": [],
+      "output_fields": [
+        "profile"
+      ],
+      "auth_hint": "secured",
+      "entity_id": "entity_profile",
+      "target_state": "not_following",
+      "actor_hints": [
+        "user"
+      ]
+    },
+    {
+      "kind": "capability",
+      "id_hint": "cap_list_tags",
+      "label": "GET /api/tags",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "source_of_truth": "imported",
+      "provenance": [
+        "config/routes.rb#GET /api/tags",
+        "app/controllers/tags_controller.rb"
+      ],
+      "track": "api",
+      "endpoint": {
+        "method": "GET",
+        "path": "/api/tags"
+      },
+      "path_params": [],
+      "query_params": [],
+      "header_params": [],
+      "input_fields": [],
+      "output_fields": [
+        "tags"
+      ],
+      "auth_hint": "secured",
+      "entity_id": "entity_tag",
+      "target_state": null,
+      "actor_hints": [
+        "user"
+      ]
+    }
+  ],
+  "routes": [
+    {
+      "path": "/api/auth/login",
+      "method": "POST",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "provenance": [
+        "config/routes.rb#POST /api/auth/login"
+      ]
+    },
+    {
+      "path": "/api/users/{id}",
+      "method": "GET",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "provenance": [
+        "config/routes.rb#GET /api/users/:id"
+      ]
+    },
+    {
+      "path": "/api/users",
+      "method": "POST",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "provenance": [
+        "config/routes.rb#POST /api/users"
+      ]
+    },
+    {
+      "path": "/api/user",
+      "method": "PUT",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "provenance": [
+        "config/routes.rb#PUT /api/user"
+      ]
+    },
+    {
+      "path": "/api/user",
+      "method": "GET",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "provenance": [
+        "config/routes.rb#GET /api/user"
+      ]
+    },
+    {
+      "path": "/api/articles/{slug}/favorite",
+      "method": "POST",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "provenance": [
+        "config/routes.rb#POST /api/articles/:slug/favorite"
+      ]
+    },
+    {
+      "path": "/api/articles/{slug}/favorite",
+      "method": "DELETE",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "provenance": [
+        "config/routes.rb#DELETE /api/articles/:slug/favorite"
+      ]
+    },
+    {
+      "path": "/api/articles",
+      "method": "GET",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "provenance": [
+        "config/routes.rb#GET /api/articles"
+      ]
+    },
+    {
+      "path": "/api/articles",
+      "method": "POST",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "provenance": [
+        "config/routes.rb#POST /api/articles"
+      ]
+    },
+    {
+      "path": "/api/articles/{slug}",
+      "method": "GET",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "provenance": [
+        "config/routes.rb#GET /api/articles/:slug"
+      ]
+    },
+    {
+      "path": "/api/articles/{slug}",
+      "method": "PUT",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "provenance": [
+        "config/routes.rb#PUT /api/articles/:slug"
+      ]
+    },
+    {
+      "path": "/api/articles/{slug}",
+      "method": "DELETE",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "provenance": [
+        "config/routes.rb#DELETE /api/articles/:slug"
+      ]
+    },
+    {
+      "path": "/api/articles/{slug}/comments",
+      "method": "GET",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "provenance": [
+        "config/routes.rb#GET /api/articles/:slug/comments"
+      ]
+    },
+    {
+      "path": "/api/articles/{slug}/comments",
+      "method": "POST",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "provenance": [
+        "config/routes.rb#POST /api/articles/:slug/comments"
+      ]
+    },
+    {
+      "path": "/api/articles/{slug}/comments/{id}",
+      "method": "DELETE",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "provenance": [
+        "config/routes.rb#DELETE /api/articles/:slug/comments/:id"
+      ]
+    },
+    {
+      "path": "/api/articles/feed",
+      "method": "GET",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "provenance": [
+        "config/routes.rb#GET /api/articles/feed"
+      ]
+    },
+    {
+      "path": "/api/profiles/{username}",
+      "method": "GET",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "provenance": [
+        "config/routes.rb#GET /api/profiles/:username"
+      ]
+    },
+    {
+      "path": "/api/profiles/{username}/follow",
+      "method": "POST",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "provenance": [
+        "config/routes.rb#POST /api/profiles/:username/follow"
+      ]
+    },
+    {
+      "path": "/api/profiles/{username}/follow",
+      "method": "DELETE",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "provenance": [
+        "config/routes.rb#DELETE /api/profiles/:username/follow"
+      ]
+    },
+    {
+      "path": "/api/tags",
+      "method": "GET",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "provenance": [
+        "config/routes.rb#GET /api/tags"
+      ]
+    }
+  ],
+  "stacks": [
+    "rails"
+  ]
+}

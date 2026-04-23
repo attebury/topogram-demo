@@ -1,0 +1,13 @@
+shape shape_input_get_user {
+  name "Get User Input"
+  description "Candidate shape imported from brownfield API evidence"
+
+  fields {
+    email string optional
+    password string optional
+    profile string optional
+    username string optional
+  }
+
+  status active
+}

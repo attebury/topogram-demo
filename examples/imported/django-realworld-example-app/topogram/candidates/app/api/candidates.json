@@ -1,0 +1,1110 @@
+{
+  "capabilities": [
+    {
+      "kind": "capability",
+      "id_hint": "cap_list_articles",
+      "label": "GET /api/articles",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "source_of_truth": "imported",
+      "provenance": [
+        "conduit/apps/articles/urls.py#GET /api/articles",
+        "conduit/apps/articles/serializers.py",
+        "conduit/apps/articles/views.py"
+      ],
+      "track": "api",
+      "endpoint": {
+        "method": "GET",
+        "path": "/api/articles"
+      },
+      "path_params": [],
+      "query_params": [
+        {
+          "name": "author",
+          "required": false,
+          "type": null
+        },
+        {
+          "name": "favorited",
+          "required": false,
+          "type": null
+        },
+        {
+          "name": "tag",
+          "required": false,
+          "type": null
+        }
+      ],
+      "header_params": [],
+      "input_fields": [
+        "body",
+        "createdAt",
+        "description",
+        "favorited",
+        "favoritesCount",
+        "slug",
+        "tagList",
+        "title",
+        "updatedAt"
+      ],
+      "output_fields": [
+        "articles",
+        "articlesCount",
+        "author",
+        "body",
+        "createdAt",
+        "description",
+        "favorited",
+        "favoritesCount",
+        "slug",
+        "tagList",
+        "title",
+        "updatedAt"
+      ],
+      "auth_hint": "public",
+      "entity_id": "entity_article",
+      "view_class": "ArticleViewSet",
+      "serializer_class": "ArticleSerializer",
+      "target_state": null,
+      "actor_hints": [
+        "anonymous"
+      ]
+    },
+    {
+      "kind": "capability",
+      "id_hint": "cap_create_article",
+      "label": "POST /api/articles",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "source_of_truth": "imported",
+      "provenance": [
+        "conduit/apps/articles/urls.py#POST /api/articles",
+        "conduit/apps/articles/serializers.py",
+        "conduit/apps/articles/views.py"
+      ],
+      "track": "api",
+      "endpoint": {
+        "method": "POST",
+        "path": "/api/articles"
+      },
+      "path_params": [],
+      "query_params": [
+        {
+          "name": "author",
+          "required": false,
+          "type": null
+        },
+        {
+          "name": "favorited",
+          "required": false,
+          "type": null
+        },
+        {
+          "name": "tag",
+          "required": false,
+          "type": null
+        }
+      ],
+      "header_params": [],
+      "input_fields": [
+        "body",
+        "createdAt",
+        "description",
+        "favorited",
+        "favoritesCount",
+        "slug",
+        "tagList",
+        "title",
+        "updatedAt"
+      ],
+      "output_fields": [
+        "article",
+        "author",
+        "body",
+        "createdAt",
+        "description",
+        "favorited",
+        "favoritesCount",
+        "slug",
+        "tagList",
+        "title",
+        "updatedAt"
+      ],
+      "auth_hint": "secured",
+      "entity_id": "entity_article",
+      "view_class": "ArticleViewSet",
+      "serializer_class": "ArticleSerializer",
+      "target_state": null,
+      "actor_hints": [
+        "user"
+      ]
+    },
+    {
+      "kind": "capability",
+      "id_hint": "cap_get_article",
+      "label": "GET /api/articles/{slug}",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "source_of_truth": "imported",
+      "provenance": [
+        "conduit/apps/articles/urls.py#GET /api/articles/{slug}",
+        "conduit/apps/articles/serializers.py",
+        "conduit/apps/articles/views.py"
+      ],
+      "track": "api",
+      "endpoint": {
+        "method": "GET",
+        "path": "/api/articles/{slug}"
+      },
+      "path_params": [
+        {
+          "name": "slug",
+          "required": true,
+          "type": null
+        }
+      ],
+      "query_params": [
+        {
+          "name": "author",
+          "required": false,
+          "type": null
+        },
+        {
+          "name": "favorited",
+          "required": false,
+          "type": null
+        },
+        {
+          "name": "tag",
+          "required": false,
+          "type": null
+        }
+      ],
+      "header_params": [],
+      "input_fields": [
+        "body",
+        "createdAt",
+        "description",
+        "favorited",
+        "favoritesCount",
+        "slug",
+        "tagList",
+        "title",
+        "updatedAt"
+      ],
+      "output_fields": [
+        "article",
+        "author",
+        "body",
+        "createdAt",
+        "description",
+        "favorited",
+        "favoritesCount",
+        "slug",
+        "tagList",
+        "title",
+        "updatedAt"
+      ],
+      "auth_hint": "public",
+      "entity_id": "entity_article",
+      "view_class": "ArticleViewSet",
+      "serializer_class": "ArticleSerializer",
+      "target_state": null,
+      "actor_hints": [
+        "anonymous"
+      ]
+    },
+    {
+      "kind": "capability",
+      "id_hint": "cap_update_article",
+      "label": "PUT /api/articles/{slug}",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "source_of_truth": "imported",
+      "provenance": [
+        "conduit/apps/articles/urls.py#PUT /api/articles/{slug}",
+        "conduit/apps/articles/serializers.py",
+        "conduit/apps/articles/views.py"
+      ],
+      "track": "api",
+      "endpoint": {
+        "method": "PUT",
+        "path": "/api/articles/{slug}"
+      },
+      "path_params": [
+        {
+          "name": "slug",
+          "required": true,
+          "type": null
+        }
+      ],
+      "query_params": [
+        {
+          "name": "author",
+          "required": false,
+          "type": null
+        },
+        {
+          "name": "favorited",
+          "required": false,
+          "type": null
+        },
+        {
+          "name": "tag",
+          "required": false,
+          "type": null
+        }
+      ],
+      "header_params": [],
+      "input_fields": [
+        "body",
+        "createdAt",
+        "description",
+        "favorited",
+        "favoritesCount",
+        "slug",
+        "tagList",
+        "title",
+        "updatedAt"
+      ],
+      "output_fields": [
+        "article",
+        "author",
+        "body",
+        "createdAt",
+        "description",
+        "favorited",
+        "favoritesCount",
+        "slug",
+        "tagList",
+        "title",
+        "updatedAt"
+      ],
+      "auth_hint": "secured",
+      "entity_id": "entity_article",
+      "view_class": "ArticleViewSet",
+      "serializer_class": "ArticleSerializer",
+      "target_state": null,
+      "actor_hints": [
+        "user"
+      ]
+    },
+    {
+      "kind": "capability",
+      "id_hint": "cap_feed_article",
+      "label": "Feed Article",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "source_of_truth": "imported",
+      "provenance": [
+        "conduit/apps/articles/urls.py#GET /api/articles/feed",
+        "conduit/apps/articles/serializers.py",
+        "conduit/apps/articles/views.py"
+      ],
+      "track": "api",
+      "endpoint": {
+        "method": "GET",
+        "path": "/api/articles/feed"
+      },
+      "path_params": [],
+      "query_params": [],
+      "header_params": [],
+      "input_fields": [
+        "body",
+        "createdAt",
+        "description",
+        "favorited",
+        "favoritesCount",
+        "slug",
+        "tagList",
+        "title",
+        "updatedAt"
+      ],
+      "output_fields": [
+        "articles",
+        "articlesCount",
+        "author",
+        "body",
+        "createdAt",
+        "description",
+        "favorited",
+        "favoritesCount",
+        "slug",
+        "tagList",
+        "title",
+        "updatedAt"
+      ],
+      "auth_hint": "secured",
+      "entity_id": "entity_article",
+      "view_class": "ArticlesFeedAPIView",
+      "serializer_class": "ArticleSerializer",
+      "target_state": null,
+      "actor_hints": [
+        "user"
+      ]
+    },
+    {
+      "kind": "capability",
+      "id_hint": "cap_favorite_article",
+      "label": "Favorite Article",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "source_of_truth": "imported",
+      "provenance": [
+        "conduit/apps/articles/urls.py#POST /api/articles/{article_slug}/favorite",
+        "conduit/apps/articles/serializers.py",
+        "conduit/apps/articles/views.py"
+      ],
+      "track": "api",
+      "endpoint": {
+        "method": "POST",
+        "path": "/api/articles/{article_slug}/favorite"
+      },
+      "path_params": [
+        {
+          "name": "article_slug",
+          "required": true,
+          "type": null
+        }
+      ],
+      "query_params": [],
+      "header_params": [],
+      "input_fields": [
+        "body",
+        "createdAt",
+        "description",
+        "favorited",
+        "favoritesCount",
+        "slug",
+        "tagList",
+        "title",
+        "updatedAt"
+      ],
+      "output_fields": [
+        "article",
+        "author",
+        "body",
+        "createdAt",
+        "description",
+        "favorited",
+        "favoritesCount",
+        "slug",
+        "tagList",
+        "title",
+        "updatedAt"
+      ],
+      "auth_hint": "secured",
+      "entity_id": "entity_article",
+      "view_class": "ArticlesFavoriteAPIView",
+      "serializer_class": "ArticleSerializer",
+      "target_state": "favorited",
+      "actor_hints": [
+        "user"
+      ]
+    },
+    {
+      "kind": "capability",
+      "id_hint": "cap_unfavorite_article",
+      "label": "Unfavorite Article",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "source_of_truth": "imported",
+      "provenance": [
+        "conduit/apps/articles/urls.py#DELETE /api/articles/{article_slug}/favorite",
+        "conduit/apps/articles/serializers.py",
+        "conduit/apps/articles/views.py"
+      ],
+      "track": "api",
+      "endpoint": {
+        "method": "DELETE",
+        "path": "/api/articles/{article_slug}/favorite"
+      },
+      "path_params": [
+        {
+          "name": "article_slug",
+          "required": true,
+          "type": null
+        }
+      ],
+      "query_params": [],
+      "header_params": [],
+      "input_fields": [
+        "body",
+        "createdAt",
+        "description",
+        "favorited",
+        "favoritesCount",
+        "slug",
+        "tagList",
+        "title",
+        "updatedAt"
+      ],
+      "output_fields": [
+        "article",
+        "author",
+        "body",
+        "createdAt",
+        "description",
+        "favorited",
+        "favoritesCount",
+        "slug",
+        "tagList",
+        "title",
+        "updatedAt"
+      ],
+      "auth_hint": "secured",
+      "entity_id": "entity_article",
+      "view_class": "ArticlesFavoriteAPIView",
+      "serializer_class": "ArticleSerializer",
+      "target_state": "not_favorited",
+      "actor_hints": [
+        "user"
+      ]
+    },
+    {
+      "kind": "capability",
+      "id_hint": "cap_list_comments",
+      "label": "GET /api/articles/{article_slug}/comments",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "source_of_truth": "imported",
+      "provenance": [
+        "conduit/apps/articles/urls.py#GET /api/articles/{article_slug}/comments",
+        "conduit/apps/articles/serializers.py",
+        "conduit/apps/articles/views.py"
+      ],
+      "track": "api",
+      "endpoint": {
+        "method": "GET",
+        "path": "/api/articles/{article_slug}/comments"
+      },
+      "path_params": [
+        {
+          "name": "article_slug",
+          "required": true,
+          "type": null
+        }
+      ],
+      "query_params": [],
+      "header_params": [],
+      "input_fields": [
+        "author",
+        "body",
+        "createdAt",
+        "id",
+        "updatedAt"
+      ],
+      "output_fields": [
+        "author",
+        "body",
+        "comments",
+        "createdAt",
+        "id",
+        "updatedAt"
+      ],
+      "auth_hint": "public",
+      "entity_id": "entity_comment",
+      "view_class": "CommentsListCreateAPIView",
+      "serializer_class": "CommentSerializer",
+      "target_state": null,
+      "actor_hints": [
+        "anonymous"
+      ]
+    },
+    {
+      "kind": "capability",
+      "id_hint": "cap_create_comment",
+      "label": "POST /api/articles/{article_slug}/comments",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "source_of_truth": "imported",
+      "provenance": [
+        "conduit/apps/articles/urls.py#POST /api/articles/{article_slug}/comments",
+        "conduit/apps/articles/serializers.py",
+        "conduit/apps/articles/views.py"
+      ],
+      "track": "api",
+      "endpoint": {
+        "method": "POST",
+        "path": "/api/articles/{article_slug}/comments"
+      },
+      "path_params": [
+        {
+          "name": "article_slug",
+          "required": true,
+          "type": null
+        }
+      ],
+      "query_params": [],
+      "header_params": [],
+      "input_fields": [
+        "author",
+        "body",
+        "createdAt",
+        "id",
+        "updatedAt"
+      ],
+      "output_fields": [
+        "author",
+        "body",
+        "comment",
+        "createdAt",
+        "id",
+        "updatedAt"
+      ],
+      "auth_hint": "secured",
+      "entity_id": "entity_comment",
+      "view_class": "CommentsListCreateAPIView",
+      "serializer_class": "CommentSerializer",
+      "target_state": null,
+      "actor_hints": [
+        "user"
+      ]
+    },
+    {
+      "kind": "capability",
+      "id_hint": "cap_delete_comment",
+      "label": "DELETE /api/articles/{article_slug}/comments/{comment_pk}",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "source_of_truth": "imported",
+      "provenance": [
+        "conduit/apps/articles/urls.py#DELETE /api/articles/{article_slug}/comments/{comment_pk}",
+        "conduit/apps/articles/views.py"
+      ],
+      "track": "api",
+      "endpoint": {
+        "method": "DELETE",
+        "path": "/api/articles/{article_slug}/comments/{comment_pk}"
+      },
+      "path_params": [
+        {
+          "name": "article_slug",
+          "required": true,
+          "type": null
+        },
+        {
+          "name": "comment_pk",
+          "required": true,
+          "type": null
+        }
+      ],
+      "query_params": [],
+      "header_params": [],
+      "input_fields": [],
+      "output_fields": [],
+      "auth_hint": "secured",
+      "entity_id": "entity_comment",
+      "view_class": "CommentsDestroyAPIView",
+      "serializer_class": null,
+      "target_state": null,
+      "actor_hints": [
+        "user"
+      ]
+    },
+    {
+      "kind": "capability",
+      "id_hint": "cap_list_tags",
+      "label": "GET /api/tags",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "source_of_truth": "imported",
+      "provenance": [
+        "conduit/apps/articles/urls.py#GET /api/tags",
+        "conduit/apps/articles/serializers.py",
+        "conduit/apps/articles/views.py"
+      ],
+      "track": "api",
+      "endpoint": {
+        "method": "GET",
+        "path": "/api/tags"
+      },
+      "path_params": [],
+      "query_params": [],
+      "header_params": [],
+      "input_fields": [
+        "tag"
+      ],
+      "output_fields": [
+        "tag",
+        "tags"
+      ],
+      "auth_hint": "public",
+      "entity_id": "entity_tag",
+      "view_class": "TagListAPIView",
+      "serializer_class": "TagSerializer",
+      "target_state": null,
+      "actor_hints": [
+        "anonymous"
+      ]
+    },
+    {
+      "kind": "capability",
+      "id_hint": "cap_get_user",
+      "label": "GET /api/user",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "source_of_truth": "imported",
+      "provenance": [
+        "conduit/apps/authentication/urls.py#GET /api/user",
+        "conduit/apps/authentication/serializers.py",
+        "conduit/apps/authentication/views.py"
+      ],
+      "track": "api",
+      "endpoint": {
+        "method": "GET",
+        "path": "/api/user"
+      },
+      "path_params": [],
+      "query_params": [],
+      "header_params": [],
+      "input_fields": [
+        "email",
+        "password",
+        "profile",
+        "username"
+      ],
+      "output_fields": [
+        "bio",
+        "email",
+        "image",
+        "token",
+        "user",
+        "username"
+      ],
+      "auth_hint": "secured",
+      "entity_id": "entity_user",
+      "view_class": "UserRetrieveUpdateAPIView",
+      "serializer_class": "UserSerializer",
+      "target_state": null,
+      "actor_hints": [
+        "user"
+      ]
+    },
+    {
+      "kind": "capability",
+      "id_hint": "cap_update_user",
+      "label": "PUT /api/user",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "source_of_truth": "imported",
+      "provenance": [
+        "conduit/apps/authentication/urls.py#PUT /api/user",
+        "conduit/apps/authentication/serializers.py",
+        "conduit/apps/authentication/views.py"
+      ],
+      "track": "api",
+      "endpoint": {
+        "method": "PUT",
+        "path": "/api/user"
+      },
+      "path_params": [],
+      "query_params": [],
+      "header_params": [],
+      "input_fields": [
+        "email",
+        "password",
+        "profile",
+        "username"
+      ],
+      "output_fields": [
+        "bio",
+        "email",
+        "image",
+        "token",
+        "user",
+        "username"
+      ],
+      "auth_hint": "secured",
+      "entity_id": "entity_user",
+      "view_class": "UserRetrieveUpdateAPIView",
+      "serializer_class": "UserSerializer",
+      "target_state": null,
+      "actor_hints": [
+        "user"
+      ]
+    },
+    {
+      "kind": "capability",
+      "id_hint": "cap_create_user",
+      "label": "POST /api/users",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "source_of_truth": "imported",
+      "provenance": [
+        "conduit/apps/authentication/urls.py#POST /api/users",
+        "conduit/apps/authentication/serializers.py",
+        "conduit/apps/authentication/views.py"
+      ],
+      "track": "api",
+      "endpoint": {
+        "method": "POST",
+        "path": "/api/users"
+      },
+      "path_params": [],
+      "query_params": [],
+      "header_params": [],
+      "input_fields": [
+        "password"
+      ],
+      "output_fields": [
+        "token",
+        "user"
+      ],
+      "auth_hint": "public",
+      "entity_id": "entity_user",
+      "view_class": "RegistrationAPIView",
+      "serializer_class": "RegistrationSerializer",
+      "target_state": "registered",
+      "actor_hints": [
+        "anonymous"
+      ]
+    },
+    {
+      "kind": "capability",
+      "id_hint": "cap_sign_in_account",
+      "label": "Sign In Account",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "source_of_truth": "imported",
+      "provenance": [
+        "conduit/apps/authentication/urls.py#POST /api/users/login",
+        "conduit/apps/authentication/serializers.py",
+        "conduit/apps/authentication/views.py"
+      ],
+      "track": "api",
+      "endpoint": {
+        "method": "POST",
+        "path": "/api/users/login"
+      },
+      "path_params": [],
+      "query_params": [],
+      "header_params": [],
+      "input_fields": [
+        "user"
+      ],
+      "output_fields": [
+        "email",
+        "token",
+        "user",
+        "username"
+      ],
+      "auth_hint": "public",
+      "entity_id": "entity_account",
+      "view_class": "LoginAPIView",
+      "serializer_class": "LoginSerializer",
+      "target_state": "authenticated",
+      "actor_hints": [
+        "anonymous"
+      ]
+    },
+    {
+      "kind": "capability",
+      "id_hint": "cap_get_profile",
+      "label": "GET /api/profiles/{username}",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "source_of_truth": "imported",
+      "provenance": [
+        "conduit/apps/profiles/urls.py#GET /api/profiles/{username}",
+        "conduit/apps/profiles/serializers.py",
+        "conduit/apps/profiles/views.py"
+      ],
+      "track": "api",
+      "endpoint": {
+        "method": "GET",
+        "path": "/api/profiles/{username}"
+      },
+      "path_params": [
+        {
+          "name": "username",
+          "required": true,
+          "type": null
+        }
+      ],
+      "query_params": [],
+      "header_params": [],
+      "input_fields": [
+        "bio",
+        "following",
+        "image"
+      ],
+      "output_fields": [
+        "bio",
+        "following",
+        "image",
+        "profile",
+        "username"
+      ],
+      "auth_hint": "public",
+      "entity_id": "entity_profile",
+      "view_class": "ProfileRetrieveAPIView",
+      "serializer_class": "ProfileSerializer",
+      "target_state": null,
+      "actor_hints": [
+        "anonymous"
+      ]
+    },
+    {
+      "kind": "capability",
+      "id_hint": "cap_follow_profile",
+      "label": "Follow Profile",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "source_of_truth": "imported",
+      "provenance": [
+        "conduit/apps/profiles/urls.py#POST /api/profiles/{username}/follow",
+        "conduit/apps/profiles/serializers.py",
+        "conduit/apps/profiles/views.py"
+      ],
+      "track": "api",
+      "endpoint": {
+        "method": "POST",
+        "path": "/api/profiles/{username}/follow"
+      },
+      "path_params": [
+        {
+          "name": "username",
+          "required": true,
+          "type": null
+        }
+      ],
+      "query_params": [],
+      "header_params": [],
+      "input_fields": [
+        "bio",
+        "following",
+        "image"
+      ],
+      "output_fields": [
+        "bio",
+        "following",
+        "image",
+        "profile",
+        "username"
+      ],
+      "auth_hint": "secured",
+      "entity_id": "entity_profile",
+      "view_class": "ProfileFollowAPIView",
+      "serializer_class": "ProfileSerializer",
+      "target_state": "following",
+      "actor_hints": [
+        "user"
+      ]
+    },
+    {
+      "kind": "capability",
+      "id_hint": "cap_unfollow_profile",
+      "label": "Unfollow Profile",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "source_of_truth": "imported",
+      "provenance": [
+        "conduit/apps/profiles/urls.py#DELETE /api/profiles/{username}/follow",
+        "conduit/apps/profiles/serializers.py",
+        "conduit/apps/profiles/views.py"
+      ],
+      "track": "api",
+      "endpoint": {
+        "method": "DELETE",
+        "path": "/api/profiles/{username}/follow"
+      },
+      "path_params": [
+        {
+          "name": "username",
+          "required": true,
+          "type": null
+        }
+      ],
+      "query_params": [],
+      "header_params": [],
+      "input_fields": [
+        "bio",
+        "following",
+        "image"
+      ],
+      "output_fields": [
+        "bio",
+        "following",
+        "image",
+        "profile",
+        "username"
+      ],
+      "auth_hint": "secured",
+      "entity_id": "entity_profile",
+      "view_class": "ProfileFollowAPIView",
+      "serializer_class": "ProfileSerializer",
+      "target_state": "not_following",
+      "actor_hints": [
+        "user"
+      ]
+    }
+  ],
+  "routes": [
+    {
+      "path": "/api/articles",
+      "method": "GET",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "provenance": [
+        "conduit/apps/articles/urls.py#GET /api/articles"
+      ]
+    },
+    {
+      "path": "/api/articles",
+      "method": "POST",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "provenance": [
+        "conduit/apps/articles/urls.py#POST /api/articles"
+      ]
+    },
+    {
+      "path": "/api/articles/{slug}",
+      "method": "GET",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "provenance": [
+        "conduit/apps/articles/urls.py#GET /api/articles/{slug}"
+      ]
+    },
+    {
+      "path": "/api/articles/{slug}",
+      "method": "PUT",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "provenance": [
+        "conduit/apps/articles/urls.py#PUT /api/articles/{slug}"
+      ]
+    },
+    {
+      "path": "/api/articles/feed",
+      "method": "GET",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "provenance": [
+        "conduit/apps/articles/urls.py#GET /api/articles/feed"
+      ]
+    },
+    {
+      "path": "/api/articles/{article_slug}/favorite",
+      "method": "POST",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "provenance": [
+        "conduit/apps/articles/urls.py#POST /api/articles/{article_slug}/favorite"
+      ]
+    },
+    {
+      "path": "/api/articles/{article_slug}/favorite",
+      "method": "DELETE",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "provenance": [
+        "conduit/apps/articles/urls.py#DELETE /api/articles/{article_slug}/favorite"
+      ]
+    },
+    {
+      "path": "/api/articles/{article_slug}/comments",
+      "method": "GET",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "provenance": [
+        "conduit/apps/articles/urls.py#GET /api/articles/{article_slug}/comments"
+      ]
+    },
+    {
+      "path": "/api/articles/{article_slug}/comments",
+      "method": "POST",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "provenance": [
+        "conduit/apps/articles/urls.py#POST /api/articles/{article_slug}/comments"
+      ]
+    },
+    {
+      "path": "/api/articles/{article_slug}/comments/{comment_pk}",
+      "method": "DELETE",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "provenance": [
+        "conduit/apps/articles/urls.py#DELETE /api/articles/{article_slug}/comments/{comment_pk}"
+      ]
+    },
+    {
+      "path": "/api/tags",
+      "method": "GET",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "provenance": [
+        "conduit/apps/articles/urls.py#GET /api/tags"
+      ]
+    },
+    {
+      "path": "/api/user",
+      "method": "GET",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "provenance": [
+        "conduit/apps/authentication/urls.py#GET /api/user"
+      ]
+    },
+    {
+      "path": "/api/user",
+      "method": "PUT",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "provenance": [
+        "conduit/apps/authentication/urls.py#PUT /api/user"
+      ]
+    },
+    {
+      "path": "/api/users",
+      "method": "POST",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "provenance": [
+        "conduit/apps/authentication/urls.py#POST /api/users"
+      ]
+    },
+    {
+      "path": "/api/users/login",
+      "method": "POST",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "provenance": [
+        "conduit/apps/authentication/urls.py#POST /api/users/login"
+      ]
+    },
+    {
+      "path": "/api/profiles/{username}",
+      "method": "GET",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "provenance": [
+        "conduit/apps/profiles/urls.py#GET /api/profiles/{username}"
+      ]
+    },
+    {
+      "path": "/api/profiles/{username}/follow",
+      "method": "POST",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "provenance": [
+        "conduit/apps/profiles/urls.py#POST /api/profiles/{username}/follow"
+      ]
+    },
+    {
+      "path": "/api/profiles/{username}/follow",
+      "method": "DELETE",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "provenance": [
+        "conduit/apps/profiles/urls.py#DELETE /api/profiles/{username}/follow"
+      ]
+    }
+  ],
+  "stacks": [
+    "django"
+  ]
+}

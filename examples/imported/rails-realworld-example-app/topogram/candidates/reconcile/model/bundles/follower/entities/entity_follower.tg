@@ -1,0 +1,14 @@
+# imported confidence: high
+# imported source_kind: schema
+# imported provenance: db/schema.rb
+entity entity_follower {
+  name "Follower"
+  description "Candidate entity imported from brownfield schema evidence"
+
+  fields {
+    follower_id integer optional
+    following_id integer optional
+  }
+
+  status active
+}

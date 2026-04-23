@@ -1,0 +1,11 @@
+# imported confidence: high
+# imported source_kind: route_code
+# imported provenance: config/routes.rb#POST /api/articles/:slug/favorite
+capability cap_favorite_article {
+  name "Favorite Article"
+  description "Candidate capability imported from brownfield API evidence"
+
+  reads [entity_article]
+
+  status active
+}

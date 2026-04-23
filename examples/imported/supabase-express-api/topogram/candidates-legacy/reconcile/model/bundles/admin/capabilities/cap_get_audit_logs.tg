@@ -1,0 +1,11 @@
+# imported confidence: medium
+# imported source_kind: route_code
+# imported provenance: src/routes/admin.ts#GET /admin/audit-logs
+capability cap_get_audit_logs {
+  name "GET /admin/audit-logs"
+  description "Candidate capability imported from brownfield API evidence"
+
+  reads [entity_admin]
+
+  status active
+}

@@ -1,0 +1,14 @@
+# imported confidence: high
+# imported source_kind: openapi
+# imported provenance: src/docs/openapi.ts#GET /admin/audit-logs
+capability cap_list_audit_logs {
+  name "List audit logs"
+  description "Candidate capability imported from brownfield API evidence"
+
+  actors [user]
+
+  reads [entity_audit-log]
+  output [shape_output_list_audit_logs]
+
+  status active
+}

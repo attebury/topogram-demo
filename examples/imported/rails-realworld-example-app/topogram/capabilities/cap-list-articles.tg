@@ -1,0 +1,11 @@
+# imported confidence: high
+# imported source_kind: route_code
+# imported provenance: config/routes.rb#GET /api/articles
+capability cap_list_articles {
+  name "GET /api/articles"
+  description "Candidate capability imported from brownfield API evidence"
+
+  reads [entity_article]
+
+  status active
+}

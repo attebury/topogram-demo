@@ -1,0 +1,301 @@
+{
+  "entities": [
+    {
+      "kind": "entity",
+      "id_hint": "entity_country",
+      "label": "Country",
+      "confidence": "high",
+      "source_kind": "schema",
+      "source_of_truth": "imported",
+      "provenance": [
+        "CountriesSwiftUI/Repositories/Models/Country.swift"
+      ],
+      "track": "db",
+      "model_name": "Country",
+      "fields": [
+        {
+          "name": "name",
+          "field_type": "string",
+          "required": true,
+          "list": false,
+          "unique": false,
+          "primary_key": false
+        },
+        {
+          "name": "translations",
+          "field_type": "json",
+          "required": false,
+          "list": true,
+          "unique": false,
+          "primary_key": false
+        },
+        {
+          "name": "population",
+          "field_type": "int",
+          "required": true,
+          "list": false,
+          "unique": false,
+          "primary_key": false
+        },
+        {
+          "name": "flag",
+          "field_type": "url",
+          "required": false,
+          "list": false,
+          "unique": false,
+          "primary_key": false
+        }
+      ]
+    },
+    {
+      "kind": "entity",
+      "id_hint": "entity_currency",
+      "label": "Currency",
+      "confidence": "high",
+      "source_kind": "schema",
+      "source_of_truth": "imported",
+      "provenance": [
+        "CountriesSwiftUI/Repositories/Models/CountryCurrency.swift"
+      ],
+      "track": "db",
+      "model_name": "Currency",
+      "fields": [
+        {
+          "name": "symbol",
+          "field_type": "string",
+          "required": false,
+          "list": false,
+          "unique": true,
+          "primary_key": false
+        },
+        {
+          "name": "name",
+          "field_type": "string",
+          "required": true,
+          "list": false,
+          "unique": false,
+          "primary_key": false
+        }
+      ]
+    },
+    {
+      "kind": "entity",
+      "id_hint": "entity_country_detail",
+      "label": "Country Detail",
+      "confidence": "high",
+      "source_kind": "schema",
+      "source_of_truth": "imported",
+      "provenance": [
+        "CountriesSwiftUI/Repositories/Models/CountryDetails.swift"
+      ],
+      "track": "db",
+      "model_name": "CountryDetails",
+      "fields": [
+        {
+          "name": "capital",
+          "field_type": "string",
+          "required": true,
+          "list": false,
+          "unique": true,
+          "primary_key": false
+        },
+        {
+          "name": "currencies",
+          "field_type": "currency",
+          "required": true,
+          "list": true,
+          "unique": false,
+          "primary_key": false
+        },
+        {
+          "name": "neighbors",
+          "field_type": "country",
+          "required": false,
+          "list": true,
+          "unique": false,
+          "primary_key": false
+        }
+      ]
+    }
+  ],
+  "enums": [],
+  "relations": [
+    {
+      "kind": "relation",
+      "id_hint": "country_name_string",
+      "label": "country -> String",
+      "confidence": "medium",
+      "source_kind": "schema",
+      "source_of_truth": "imported",
+      "provenance": [
+        "CountriesSwiftUI/Repositories/Models/Country.swift"
+      ],
+      "track": "db",
+      "from_entity": "entity_country",
+      "to_entity": "entity_string",
+      "relation_field": "name",
+      "fields": [
+        "name"
+      ],
+      "references": [
+        "id"
+      ],
+      "relation_type": "one"
+    },
+    {
+      "kind": "relation",
+      "id_hint": "country_population_int",
+      "label": "country -> Int",
+      "confidence": "medium",
+      "source_kind": "schema",
+      "source_of_truth": "imported",
+      "provenance": [
+        "CountriesSwiftUI/Repositories/Models/Country.swift"
+      ],
+      "track": "db",
+      "from_entity": "entity_country",
+      "to_entity": "entity_int",
+      "relation_field": "population",
+      "fields": [
+        "population"
+      ],
+      "references": [
+        "id"
+      ],
+      "relation_type": "one"
+    },
+    {
+      "kind": "relation",
+      "id_hint": "country_flag_url",
+      "label": "country -> URL",
+      "confidence": "medium",
+      "source_kind": "schema",
+      "source_of_truth": "imported",
+      "provenance": [
+        "CountriesSwiftUI/Repositories/Models/Country.swift"
+      ],
+      "track": "db",
+      "from_entity": "entity_country",
+      "to_entity": "entity_url",
+      "relation_field": "flag",
+      "fields": [
+        "flag"
+      ],
+      "references": [
+        "id"
+      ],
+      "relation_type": "one"
+    },
+    {
+      "kind": "relation",
+      "id_hint": "currency_symbol_string",
+      "label": "currency -> String",
+      "confidence": "medium",
+      "source_kind": "schema",
+      "source_of_truth": "imported",
+      "provenance": [
+        "CountriesSwiftUI/Repositories/Models/CountryCurrency.swift"
+      ],
+      "track": "db",
+      "from_entity": "entity_currency",
+      "to_entity": "entity_string",
+      "relation_field": "symbol",
+      "fields": [
+        "symbol"
+      ],
+      "references": [
+        "id"
+      ],
+      "relation_type": "one"
+    },
+    {
+      "kind": "relation",
+      "id_hint": "currency_name_string",
+      "label": "currency -> String",
+      "confidence": "medium",
+      "source_kind": "schema",
+      "source_of_truth": "imported",
+      "provenance": [
+        "CountriesSwiftUI/Repositories/Models/CountryCurrency.swift"
+      ],
+      "track": "db",
+      "from_entity": "entity_currency",
+      "to_entity": "entity_string",
+      "relation_field": "name",
+      "fields": [
+        "name"
+      ],
+      "references": [
+        "id"
+      ],
+      "relation_type": "one"
+    },
+    {
+      "kind": "relation",
+      "id_hint": "country_detail_capital_string",
+      "label": "country_detail -> String",
+      "confidence": "medium",
+      "source_kind": "schema",
+      "source_of_truth": "imported",
+      "provenance": [
+        "CountriesSwiftUI/Repositories/Models/CountryDetails.swift"
+      ],
+      "track": "db",
+      "from_entity": "entity_country_detail",
+      "to_entity": "entity_string",
+      "relation_field": "capital",
+      "fields": [
+        "capital"
+      ],
+      "references": [
+        "id"
+      ],
+      "relation_type": "one"
+    },
+    {
+      "kind": "relation",
+      "id_hint": "country_detail_currencies_currency",
+      "label": "country_detail -> Currency",
+      "confidence": "medium",
+      "source_kind": "schema",
+      "source_of_truth": "imported",
+      "provenance": [
+        "CountriesSwiftUI/Repositories/Models/CountryDetails.swift"
+      ],
+      "track": "db",
+      "from_entity": "entity_country_detail",
+      "to_entity": "entity_currency",
+      "relation_field": "currencies",
+      "fields": [
+        "currencies"
+      ],
+      "references": [
+        "id"
+      ],
+      "relation_type": "many"
+    },
+    {
+      "kind": "relation",
+      "id_hint": "country_detail_neighbors_country",
+      "label": "country_detail -> Country",
+      "confidence": "medium",
+      "source_kind": "schema",
+      "source_of_truth": "imported",
+      "provenance": [
+        "CountriesSwiftUI/Repositories/Models/CountryDetails.swift"
+      ],
+      "track": "db",
+      "from_entity": "entity_country_detail",
+      "to_entity": "entity_country",
+      "relation_field": "neighbors",
+      "fields": [
+        "neighbors"
+      ],
+      "references": [
+        "id"
+      ],
+      "relation_type": "many"
+    }
+  ],
+  "indexes": []
+}

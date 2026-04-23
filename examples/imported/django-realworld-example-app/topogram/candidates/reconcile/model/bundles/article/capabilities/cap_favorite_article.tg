@@ -1,0 +1,18 @@
+# imported confidence: high
+# imported source_kind: route_code
+# imported provenance: conduit/apps/articles/urls.py#POST /api/articles/{article_slug}/favorite
+# imported provenance: conduit/apps/articles/serializers.py
+# imported provenance: conduit/apps/articles/views.py
+capability cap_favorite_article {
+  name "Favorite Article"
+  description "Candidate capability imported from brownfield API evidence"
+
+  actors [user]
+
+  reads [entity_article]
+
+  input [shape_input_favorite_article]
+  output [shape_output_favorite_article]
+
+  status active
+}

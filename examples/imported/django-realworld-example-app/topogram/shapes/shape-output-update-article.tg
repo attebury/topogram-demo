@@ -1,0 +1,20 @@
+shape shape_output_update_article {
+  name "Update Article Output"
+  description "Candidate shape imported from brownfield API evidence"
+
+  fields {
+    article string optional
+    author string optional
+    body string optional
+    createdAt string optional
+    description string optional
+    favorited string optional
+    favoritesCount string optional
+    slug string optional
+    tagList string optional
+    title string optional
+    updatedAt string optional
+  }
+
+  status active
+}

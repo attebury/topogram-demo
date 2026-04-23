@@ -1,0 +1,20 @@
+# imported confidence: high
+# imported source_kind: schema
+# imported provenance: src/schema.ts
+entity entity_workspace-membership {
+  name "Workspace Membership"
+  description "Candidate entity imported from brownfield schema evidence"
+
+  fields {
+    uuid uuid required
+    workspaceId uuid required
+    accountId uuid required
+    role workspace_membership_role optional
+  }
+
+  keys {
+    primary [uuid]
+  }
+
+  status active
+}

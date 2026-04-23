@@ -1,0 +1,23 @@
+# imported confidence: high
+# imported source_kind: schema
+# imported provenance: db/schema.rb
+entity entity_user {
+  name "User"
+  description "Candidate entity imported from brownfield schema evidence"
+
+  fields {
+    username string required
+    email string required
+    password_digest string required
+    image string optional
+    bio text optional
+    created_at datetime required
+    updated_at datetime required
+  }
+
+  keys {
+    unique [username, email]
+  }
+
+  status active
+}

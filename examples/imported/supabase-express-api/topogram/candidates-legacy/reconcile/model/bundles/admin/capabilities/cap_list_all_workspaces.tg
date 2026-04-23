@@ -1,0 +1,11 @@
+# imported confidence: medium
+# imported source_kind: route_code
+# imported provenance: src/routes/admin.ts#GET /admin/workspaces
+capability cap_list_all_workspaces {
+  name "GET /admin/workspaces"
+  description "Candidate capability imported from brownfield API evidence"
+
+  reads [entity_admin]
+
+  status active
+}

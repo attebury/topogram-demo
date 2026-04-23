@@ -1,0 +1,1057 @@
+{
+  "adopt_selector": null,
+  "adoption_plan_path": ".import/reconcile/adoption-plan.json",
+  "applied_items": [],
+  "approved_items": [],
+  "approved_review_groups": [],
+  "blocked_items": [],
+  "bootstrapped_topogram_root": false,
+  "bundle_blockers": [
+    {
+      "applied_items": [],
+      "approved_items": [],
+      "blocked_items": [
+        "dec_account",
+        "workflow_account"
+      ],
+      "blocking_dependencies": [
+        "workflow_review:account"
+      ],
+      "bundle": "account",
+      "pending_items": [
+        "cap_create_account",
+        "cap_list_accounts",
+        "cap_register_account",
+        "cap_sign_in_account",
+        "cap_update_account_role",
+        "cap_update_account_status",
+        "entity_account",
+        "shape_input_register_account",
+        "shape_input_sign_in_account",
+        "shape_output_list_accounts",
+        "shape_output_register_account",
+        "shape_output_sign_in_account"
+      ],
+      "skipped_items": []
+    },
+    {
+      "applied_items": [],
+      "approved_items": [],
+      "blocked_items": [
+        "dec_audit-log",
+        "workflow_audit-log"
+      ],
+      "blocking_dependencies": [
+        "workflow_review:audit-log"
+      ],
+      "bundle": "audit-log",
+      "pending_items": [
+        "cap_get_audit_log_stats",
+        "cap_list_audit_logs",
+        "entity_audit-log",
+        "shape_output_get_audit_log_stats",
+        "shape_output_list_audit_logs"
+      ],
+      "skipped_items": []
+    },
+    {
+      "applied_items": [],
+      "approved_items": [],
+      "blocked_items": [
+        "dec_profile",
+        "workflow_profile"
+      ],
+      "blocking_dependencies": [
+        "workflow_review:profile"
+      ],
+      "bundle": "profile",
+      "pending_items": [
+        "cap_get_profile",
+        "cap_update_profile",
+        "entity_profile",
+        "shape_input_update_profile",
+        "shape_output_get_profile"
+      ],
+      "skipped_items": []
+    },
+    {
+      "applied_items": [],
+      "approved_items": [],
+      "blocked_items": [
+        "dec_workspace",
+        "workflow_workspace"
+      ],
+      "blocking_dependencies": [
+        "workflow_review:workspace"
+      ],
+      "bundle": "workspace",
+      "pending_items": [
+        "cap_create_workspace",
+        "cap_delete_workspace",
+        "cap_get_workspace",
+        "cap_list_workspaces",
+        "cap_update_workspace",
+        "entity_workspace",
+        "shape_output_create_workspace",
+        "shape_output_get_workspace",
+        "shape_output_list_workspaces"
+      ],
+      "skipped_items": []
+    },
+    {
+      "applied_items": [],
+      "approved_items": [],
+      "blocked_items": [
+        "dec_workspace-membership",
+        "workflow_workspace-membership"
+      ],
+      "blocking_dependencies": [
+        "workflow_review:workspace-membership"
+      ],
+      "bundle": "workspace-membership",
+      "pending_items": [
+        "cap_create_workspace_membership",
+        "cap_delete_workspace_membership",
+        "cap_list_workspace_memberships",
+        "cap_update_workspace_membership_role",
+        "entity_workspace-membership",
+        "shape_input_create_workspace_membership"
+      ],
+      "skipped_items": []
+    },
+    {
+      "applied_items": [],
+      "approved_items": [],
+      "blocked_items": [],
+      "blocking_dependencies": [],
+      "bundle": "workspace-membership-role",
+      "pending_items": [
+        "workspace-membership_role"
+      ],
+      "skipped_items": []
+    }
+  ],
+  "bundle_priorities": [
+    {
+      "applied_items": 0,
+      "approved_items": 0,
+      "blocked_items": 2,
+      "bundle": "account",
+      "evidence": {
+        "capabilities": 6,
+        "docs": 0,
+        "entities": 1,
+        "enums": 0,
+        "screens": 0,
+        "shapes": 5,
+        "workflows": 1
+      },
+      "evidence_score": 64,
+      "next_review_groups": [
+        {
+          "id": "workflow_review:account",
+          "item_count": 2,
+          "label": "account",
+          "reason": "Workflow semantics for account need canonical review before promotion.",
+          "type": "workflow"
+        }
+      ],
+      "pending_items": 12,
+      "recommend_bundle_review_selector": "bundle-review:account",
+      "recommend_from_plan": false
+    },
+    {
+      "applied_items": 0,
+      "approved_items": 0,
+      "blocked_items": 2,
+      "bundle": "workspace",
+      "evidence": {
+        "capabilities": 5,
+        "docs": 0,
+        "entities": 1,
+        "enums": 0,
+        "screens": 0,
+        "shapes": 3,
+        "workflows": 1
+      },
+      "evidence_score": 52,
+      "next_review_groups": [
+        {
+          "id": "workflow_review:workspace",
+          "item_count": 2,
+          "label": "workspace",
+          "reason": "Workflow semantics for workspace need canonical review before promotion.",
+          "type": "workflow"
+        }
+      ],
+      "pending_items": 9,
+      "recommend_bundle_review_selector": "bundle-review:workspace",
+      "recommend_from_plan": false
+    },
+    {
+      "applied_items": 0,
+      "approved_items": 0,
+      "blocked_items": 2,
+      "bundle": "workspace-membership",
+      "evidence": {
+        "capabilities": 4,
+        "docs": 0,
+        "entities": 1,
+        "enums": 0,
+        "screens": 0,
+        "shapes": 1,
+        "workflows": 1
+      },
+      "evidence_score": 40,
+      "next_review_groups": [
+        {
+          "id": "workflow_review:workspace-membership",
+          "item_count": 2,
+          "label": "workspace-membership",
+          "reason": "Workflow semantics for workspace-membership need canonical review before promotion.",
+          "type": "workflow"
+        }
+      ],
+      "pending_items": 6,
+      "recommend_bundle_review_selector": "bundle-review:workspace-membership",
+      "recommend_from_plan": false
+    },
+    {
+      "applied_items": 0,
+      "approved_items": 0,
+      "blocked_items": 2,
+      "bundle": "audit-log",
+      "evidence": {
+        "capabilities": 2,
+        "docs": 0,
+        "entities": 1,
+        "enums": 0,
+        "screens": 0,
+        "shapes": 2,
+        "workflows": 1
+      },
+      "evidence_score": 31,
+      "next_review_groups": [
+        {
+          "id": "workflow_review:audit-log",
+          "item_count": 2,
+          "label": "audit-log",
+          "reason": "Workflow semantics for audit-log need canonical review before promotion.",
+          "type": "workflow"
+        }
+      ],
+      "pending_items": 5,
+      "recommend_bundle_review_selector": "bundle-review:audit-log",
+      "recommend_from_plan": false
+    },
+    {
+      "applied_items": 0,
+      "approved_items": 0,
+      "blocked_items": 2,
+      "bundle": "profile",
+      "evidence": {
+        "capabilities": 2,
+        "docs": 0,
+        "entities": 1,
+        "enums": 0,
+        "screens": 0,
+        "shapes": 2,
+        "workflows": 1
+      },
+      "evidence_score": 31,
+      "next_review_groups": [
+        {
+          "id": "workflow_review:profile",
+          "item_count": 2,
+          "label": "profile",
+          "reason": "Workflow semantics for profile need canonical review before promotion.",
+          "type": "workflow"
+        }
+      ],
+      "pending_items": 5,
+      "recommend_bundle_review_selector": "bundle-review:profile",
+      "recommend_from_plan": false
+    },
+    {
+      "applied_items": 0,
+      "approved_items": 0,
+      "blocked_items": 0,
+      "bundle": "workspace-membership-role",
+      "evidence": {
+        "capabilities": 0,
+        "docs": 0,
+        "entities": 0,
+        "enums": 1,
+        "screens": 0,
+        "shapes": 0,
+        "workflows": 0
+      },
+      "evidence_score": 2,
+      "next_review_groups": [],
+      "pending_items": 1,
+      "recommend_bundle_review_selector": null,
+      "recommend_from_plan": true
+    }
+  ],
+  "candidate_model_bundles": [
+    {
+      "adoption_plan": [
+        {
+          "action": "promote_entity",
+          "item": "entity_account",
+          "target": null
+        },
+        {
+          "action": "promote_capability",
+          "item": "cap_create_account",
+          "target": null
+        },
+        {
+          "action": "promote_capability",
+          "item": "cap_list_accounts",
+          "target": null
+        },
+        {
+          "action": "promote_capability",
+          "item": "cap_register_account",
+          "target": null
+        },
+        {
+          "action": "promote_capability",
+          "item": "cap_sign_in_account",
+          "target": null
+        },
+        {
+          "action": "promote_capability",
+          "item": "cap_update_account_role",
+          "target": null
+        },
+        {
+          "action": "promote_capability",
+          "item": "cap_update_account_status",
+          "target": null
+        },
+        {
+          "action": "promote_shape",
+          "item": "shape_input_register_account",
+          "target": null
+        },
+        {
+          "action": "promote_shape",
+          "item": "shape_input_sign_in_account",
+          "target": null
+        },
+        {
+          "action": "promote_shape",
+          "item": "shape_output_list_accounts",
+          "target": null
+        },
+        {
+          "action": "promote_shape",
+          "item": "shape_output_register_account",
+          "target": null
+        },
+        {
+          "action": "promote_shape",
+          "item": "shape_output_sign_in_account",
+          "target": null
+        },
+        {
+          "action": "promote_workflow_decision",
+          "canonical_rel_path": "decisions/decision-account.tg",
+          "item": "dec_account",
+          "source_path": ".import/reconcile/model/bundles/account/decisions/dec_account.tg",
+          "target": null
+        },
+        {
+          "action": "promote_workflow_doc",
+          "canonical_rel_path": "docs/workflows/workflow_account.md",
+          "doc_kind": "workflow",
+          "item": "workflow_account",
+          "source_path": ".import/reconcile/model/bundles/account/docs/workflows/workflow_account.md",
+          "target": null
+        }
+      ],
+      "capabilities": [
+        "cap_create_account",
+        "cap_list_accounts",
+        "cap_register_account",
+        "cap_sign_in_account",
+        "cap_update_account_role",
+        "cap_update_account_status"
+      ],
+      "docs": [],
+      "entities": [
+        "entity_account"
+      ],
+      "enums": [],
+      "id": "entity_account",
+      "label": "Account",
+      "merge_hints": {
+        "action": "promote_as_candidate_concept",
+        "canonicalEntityTarget": null,
+        "promoteCapabilities": [
+          "cap_create_account",
+          "cap_list_accounts",
+          "cap_register_account",
+          "cap_sign_in_account",
+          "cap_update_account_role",
+          "cap_update_account_status"
+        ],
+        "promoteDocs": [],
+        "promoteEnums": [],
+        "promoteScreens": [],
+        "promoteShapes": [
+          "shape_input_register_account",
+          "shape_input_sign_in_account",
+          "shape_output_list_accounts",
+          "shape_output_register_account",
+          "shape_output_sign_in_account"
+        ],
+        "promoteWorkflows": [
+          "workflow_account"
+        ]
+      },
+      "projection_impacts": [],
+      "projection_patches": [],
+      "screens": [],
+      "shapes": [
+        "shape_input_register_account",
+        "shape_input_sign_in_account",
+        "shape_output_list_accounts",
+        "shape_output_register_account",
+        "shape_output_sign_in_account"
+      ],
+      "slug": "account",
+      "ui_impacts": [],
+      "workflow_impacts": [
+        {
+          "items": [
+            "workflow_account"
+          ],
+          "kind": "workflow",
+          "reason": "Workflow semantics for account need canonical review before promotion.",
+          "review_group_id": "workflow_review:account"
+        }
+      ],
+      "workflows": [
+        "workflow_account"
+      ]
+    },
+    {
+      "adoption_plan": [
+        {
+          "action": "promote_entity",
+          "item": "entity_audit-log",
+          "target": null
+        },
+        {
+          "action": "promote_capability",
+          "item": "cap_get_audit_log_stats",
+          "target": null
+        },
+        {
+          "action": "promote_capability",
+          "item": "cap_list_audit_logs",
+          "target": null
+        },
+        {
+          "action": "promote_shape",
+          "item": "shape_output_get_audit_log_stats",
+          "target": null
+        },
+        {
+          "action": "promote_shape",
+          "item": "shape_output_list_audit_logs",
+          "target": null
+        },
+        {
+          "action": "promote_workflow_decision",
+          "canonical_rel_path": "decisions/decision-audit-log.tg",
+          "item": "dec_audit-log",
+          "source_path": ".import/reconcile/model/bundles/audit-log/decisions/dec_audit-log.tg",
+          "target": null
+        },
+        {
+          "action": "promote_workflow_doc",
+          "canonical_rel_path": "docs/workflows/workflow_audit-log.md",
+          "doc_kind": "workflow",
+          "item": "workflow_audit-log",
+          "source_path": ".import/reconcile/model/bundles/audit-log/docs/workflows/workflow_audit-log.md",
+          "target": null
+        }
+      ],
+      "capabilities": [
+        "cap_get_audit_log_stats",
+        "cap_list_audit_logs"
+      ],
+      "docs": [],
+      "entities": [
+        "entity_audit-log"
+      ],
+      "enums": [],
+      "id": "entity_audit-log",
+      "label": "Audit Log",
+      "merge_hints": {
+        "action": "promote_as_candidate_concept",
+        "canonicalEntityTarget": null,
+        "promoteCapabilities": [
+          "cap_get_audit_log_stats",
+          "cap_list_audit_logs"
+        ],
+        "promoteDocs": [],
+        "promoteEnums": [],
+        "promoteScreens": [],
+        "promoteShapes": [
+          "shape_output_get_audit_log_stats",
+          "shape_output_list_audit_logs"
+        ],
+        "promoteWorkflows": [
+          "workflow_audit-log"
+        ]
+      },
+      "projection_impacts": [],
+      "projection_patches": [],
+      "screens": [],
+      "shapes": [
+        "shape_output_get_audit_log_stats",
+        "shape_output_list_audit_logs"
+      ],
+      "slug": "audit-log",
+      "ui_impacts": [],
+      "workflow_impacts": [
+        {
+          "items": [
+            "workflow_audit-log"
+          ],
+          "kind": "workflow",
+          "reason": "Workflow semantics for audit-log need canonical review before promotion.",
+          "review_group_id": "workflow_review:audit-log"
+        }
+      ],
+      "workflows": [
+        "workflow_audit-log"
+      ]
+    },
+    {
+      "adoption_plan": [
+        {
+          "action": "promote_entity",
+          "item": "entity_profile",
+          "target": null
+        },
+        {
+          "action": "promote_capability",
+          "item": "cap_get_profile",
+          "target": null
+        },
+        {
+          "action": "promote_capability",
+          "item": "cap_update_profile",
+          "target": null
+        },
+        {
+          "action": "promote_shape",
+          "item": "shape_input_update_profile",
+          "target": null
+        },
+        {
+          "action": "promote_shape",
+          "item": "shape_output_get_profile",
+          "target": null
+        },
+        {
+          "action": "promote_workflow_decision",
+          "canonical_rel_path": "decisions/decision-profile.tg",
+          "item": "dec_profile",
+          "source_path": ".import/reconcile/model/bundles/profile/decisions/dec_profile.tg",
+          "target": null
+        },
+        {
+          "action": "promote_workflow_doc",
+          "canonical_rel_path": "docs/workflows/workflow_profile.md",
+          "doc_kind": "workflow",
+          "item": "workflow_profile",
+          "source_path": ".import/reconcile/model/bundles/profile/docs/workflows/workflow_profile.md",
+          "target": null
+        }
+      ],
+      "capabilities": [
+        "cap_get_profile",
+        "cap_update_profile"
+      ],
+      "docs": [],
+      "entities": [
+        "entity_profile"
+      ],
+      "enums": [],
+      "id": "entity_profile",
+      "label": "Profile",
+      "merge_hints": {
+        "action": "promote_as_candidate_concept",
+        "canonicalEntityTarget": null,
+        "promoteCapabilities": [
+          "cap_get_profile",
+          "cap_update_profile"
+        ],
+        "promoteDocs": [],
+        "promoteEnums": [],
+        "promoteScreens": [],
+        "promoteShapes": [
+          "shape_input_update_profile",
+          "shape_output_get_profile"
+        ],
+        "promoteWorkflows": [
+          "workflow_profile"
+        ]
+      },
+      "projection_impacts": [],
+      "projection_patches": [],
+      "screens": [],
+      "shapes": [
+        "shape_input_update_profile",
+        "shape_output_get_profile"
+      ],
+      "slug": "profile",
+      "ui_impacts": [],
+      "workflow_impacts": [
+        {
+          "items": [
+            "workflow_profile"
+          ],
+          "kind": "workflow",
+          "reason": "Workflow semantics for profile need canonical review before promotion.",
+          "review_group_id": "workflow_review:profile"
+        }
+      ],
+      "workflows": [
+        "workflow_profile"
+      ]
+    },
+    {
+      "adoption_plan": [
+        {
+          "action": "promote_entity",
+          "item": "entity_workspace",
+          "target": null
+        },
+        {
+          "action": "promote_capability",
+          "item": "cap_create_workspace",
+          "target": null
+        },
+        {
+          "action": "promote_capability",
+          "item": "cap_delete_workspace",
+          "target": null
+        },
+        {
+          "action": "promote_capability",
+          "item": "cap_get_workspace",
+          "target": null
+        },
+        {
+          "action": "promote_capability",
+          "item": "cap_list_workspaces",
+          "target": null
+        },
+        {
+          "action": "promote_capability",
+          "item": "cap_update_workspace",
+          "target": null
+        },
+        {
+          "action": "promote_shape",
+          "item": "shape_output_create_workspace",
+          "target": null
+        },
+        {
+          "action": "promote_shape",
+          "item": "shape_output_get_workspace",
+          "target": null
+        },
+        {
+          "action": "promote_shape",
+          "item": "shape_output_list_workspaces",
+          "target": null
+        },
+        {
+          "action": "promote_workflow_decision",
+          "canonical_rel_path": "decisions/decision-workspace.tg",
+          "item": "dec_workspace",
+          "source_path": ".import/reconcile/model/bundles/workspace/decisions/dec_workspace.tg",
+          "target": null
+        },
+        {
+          "action": "promote_workflow_doc",
+          "canonical_rel_path": "docs/workflows/workflow_workspace.md",
+          "doc_kind": "workflow",
+          "item": "workflow_workspace",
+          "source_path": ".import/reconcile/model/bundles/workspace/docs/workflows/workflow_workspace.md",
+          "target": null
+        }
+      ],
+      "capabilities": [
+        "cap_create_workspace",
+        "cap_delete_workspace",
+        "cap_get_workspace",
+        "cap_list_workspaces",
+        "cap_update_workspace"
+      ],
+      "docs": [],
+      "entities": [
+        "entity_workspace"
+      ],
+      "enums": [],
+      "id": "entity_workspace",
+      "label": "Workspace",
+      "merge_hints": {
+        "action": "promote_as_candidate_concept",
+        "canonicalEntityTarget": null,
+        "promoteCapabilities": [
+          "cap_create_workspace",
+          "cap_delete_workspace",
+          "cap_get_workspace",
+          "cap_list_workspaces",
+          "cap_update_workspace"
+        ],
+        "promoteDocs": [],
+        "promoteEnums": [],
+        "promoteScreens": [],
+        "promoteShapes": [
+          "shape_output_create_workspace",
+          "shape_output_get_workspace",
+          "shape_output_list_workspaces"
+        ],
+        "promoteWorkflows": [
+          "workflow_workspace"
+        ]
+      },
+      "projection_impacts": [],
+      "projection_patches": [],
+      "screens": [],
+      "shapes": [
+        "shape_output_create_workspace",
+        "shape_output_get_workspace",
+        "shape_output_list_workspaces"
+      ],
+      "slug": "workspace",
+      "ui_impacts": [],
+      "workflow_impacts": [
+        {
+          "items": [
+            "workflow_workspace"
+          ],
+          "kind": "workflow",
+          "reason": "Workflow semantics for workspace need canonical review before promotion.",
+          "review_group_id": "workflow_review:workspace"
+        }
+      ],
+      "workflows": [
+        "workflow_workspace"
+      ]
+    },
+    {
+      "adoption_plan": [
+        {
+          "action": "promote_entity",
+          "item": "entity_workspace-membership",
+          "target": null
+        },
+        {
+          "action": "promote_capability",
+          "item": "cap_create_workspace_membership",
+          "target": null
+        },
+        {
+          "action": "promote_capability",
+          "item": "cap_delete_workspace_membership",
+          "target": null
+        },
+        {
+          "action": "promote_capability",
+          "item": "cap_list_workspace_memberships",
+          "target": null
+        },
+        {
+          "action": "promote_capability",
+          "item": "cap_update_workspace_membership_role",
+          "target": null
+        },
+        {
+          "action": "promote_shape",
+          "item": "shape_input_create_workspace_membership",
+          "target": null
+        },
+        {
+          "action": "promote_workflow_decision",
+          "canonical_rel_path": "decisions/decision-workspace-membership.tg",
+          "item": "dec_workspace-membership",
+          "source_path": ".import/reconcile/model/bundles/workspace-membership/decisions/dec_workspace-membership.tg",
+          "target": null
+        },
+        {
+          "action": "promote_workflow_doc",
+          "canonical_rel_path": "docs/workflows/workflow_workspace-membership.md",
+          "doc_kind": "workflow",
+          "item": "workflow_workspace-membership",
+          "source_path": ".import/reconcile/model/bundles/workspace-membership/docs/workflows/workflow_workspace-membership.md",
+          "target": null
+        }
+      ],
+      "capabilities": [
+        "cap_create_workspace_membership",
+        "cap_delete_workspace_membership",
+        "cap_list_workspace_memberships",
+        "cap_update_workspace_membership_role"
+      ],
+      "docs": [],
+      "entities": [
+        "entity_workspace-membership"
+      ],
+      "enums": [],
+      "id": "entity_workspace-membership",
+      "label": "Workspace Membership",
+      "merge_hints": {
+        "action": "promote_as_candidate_concept",
+        "canonicalEntityTarget": null,
+        "promoteCapabilities": [
+          "cap_create_workspace_membership",
+          "cap_delete_workspace_membership",
+          "cap_list_workspace_memberships",
+          "cap_update_workspace_membership_role"
+        ],
+        "promoteDocs": [],
+        "promoteEnums": [],
+        "promoteScreens": [],
+        "promoteShapes": [
+          "shape_input_create_workspace_membership"
+        ],
+        "promoteWorkflows": [
+          "workflow_workspace-membership"
+        ]
+      },
+      "projection_impacts": [],
+      "projection_patches": [],
+      "screens": [],
+      "shapes": [
+        "shape_input_create_workspace_membership"
+      ],
+      "slug": "workspace-membership",
+      "ui_impacts": [],
+      "workflow_impacts": [
+        {
+          "items": [
+            "workflow_workspace-membership"
+          ],
+          "kind": "workflow",
+          "reason": "Workflow semantics for workspace-membership need canonical review before promotion.",
+          "review_group_id": "workflow_review:workspace-membership"
+        }
+      ],
+      "workflows": [
+        "workflow_workspace-membership"
+      ]
+    },
+    {
+      "adoption_plan": [
+        {
+          "action": "promote_enum",
+          "item": "workspace-membership_role",
+          "target": null
+        }
+      ],
+      "capabilities": [],
+      "docs": [],
+      "entities": [],
+      "enums": [
+        "workspace-membership_role"
+      ],
+      "id": "enum_workspace-membership_role",
+      "label": "Workspace Membership Role",
+      "merge_hints": {
+        "action": "promote_as_candidate_concept",
+        "canonicalEntityTarget": null,
+        "promoteCapabilities": [],
+        "promoteDocs": [],
+        "promoteEnums": [
+          "workspace-membership_role"
+        ],
+        "promoteScreens": [],
+        "promoteShapes": [],
+        "promoteWorkflows": []
+      },
+      "projection_impacts": [],
+      "projection_patches": [],
+      "screens": [],
+      "shapes": [],
+      "slug": "workspace-membership-role",
+      "ui_impacts": [],
+      "workflow_impacts": [],
+      "workflows": []
+    }
+  ],
+  "candidate_model_files": [
+    ".import/reconcile/model/bundles/account/README.md",
+    ".import/reconcile/model/bundles/account/capabilities/cap_create_account.tg",
+    ".import/reconcile/model/bundles/account/capabilities/cap_list_accounts.tg",
+    ".import/reconcile/model/bundles/account/capabilities/cap_register_account.tg",
+    ".import/reconcile/model/bundles/account/capabilities/cap_sign_in_account.tg",
+    ".import/reconcile/model/bundles/account/capabilities/cap_update_account_role.tg",
+    ".import/reconcile/model/bundles/account/capabilities/cap_update_account_status.tg",
+    ".import/reconcile/model/bundles/account/decisions/dec_account.tg",
+    ".import/reconcile/model/bundles/account/docs/workflows/workflow_account.md",
+    ".import/reconcile/model/bundles/account/entities/entity_account.tg",
+    ".import/reconcile/model/bundles/account/shapes/shape_input_register_account.tg",
+    ".import/reconcile/model/bundles/account/shapes/shape_input_sign_in_account.tg",
+    ".import/reconcile/model/bundles/account/shapes/shape_output_list_accounts.tg",
+    ".import/reconcile/model/bundles/account/shapes/shape_output_register_account.tg",
+    ".import/reconcile/model/bundles/account/shapes/shape_output_sign_in_account.tg",
+    ".import/reconcile/model/bundles/audit-log/README.md",
+    ".import/reconcile/model/bundles/audit-log/capabilities/cap_get_audit_log_stats.tg",
+    ".import/reconcile/model/bundles/audit-log/capabilities/cap_list_audit_logs.tg",
+    ".import/reconcile/model/bundles/audit-log/decisions/dec_audit-log.tg",
+    ".import/reconcile/model/bundles/audit-log/docs/workflows/workflow_audit-log.md",
+    ".import/reconcile/model/bundles/audit-log/entities/entity_audit-log.tg",
+    ".import/reconcile/model/bundles/audit-log/shapes/shape_output_get_audit_log_stats.tg",
+    ".import/reconcile/model/bundles/audit-log/shapes/shape_output_list_audit_logs.tg",
+    ".import/reconcile/model/bundles/profile/README.md",
+    ".import/reconcile/model/bundles/profile/capabilities/cap_get_profile.tg",
+    ".import/reconcile/model/bundles/profile/capabilities/cap_update_profile.tg",
+    ".import/reconcile/model/bundles/profile/decisions/dec_profile.tg",
+    ".import/reconcile/model/bundles/profile/docs/workflows/workflow_profile.md",
+    ".import/reconcile/model/bundles/profile/entities/entity_profile.tg",
+    ".import/reconcile/model/bundles/profile/shapes/shape_input_update_profile.tg",
+    ".import/reconcile/model/bundles/profile/shapes/shape_output_get_profile.tg",
+    ".import/reconcile/model/bundles/workspace-membership-role/README.md",
+    ".import/reconcile/model/bundles/workspace-membership-role/enums/workspace-membership_role.tg",
+    ".import/reconcile/model/bundles/workspace-membership/README.md",
+    ".import/reconcile/model/bundles/workspace-membership/capabilities/cap_create_workspace_membership.tg",
+    ".import/reconcile/model/bundles/workspace-membership/capabilities/cap_delete_workspace_membership.tg",
+    ".import/reconcile/model/bundles/workspace-membership/capabilities/cap_list_workspace_memberships.tg",
+    ".import/reconcile/model/bundles/workspace-membership/capabilities/cap_update_workspace_membership_role.tg",
+    ".import/reconcile/model/bundles/workspace-membership/decisions/dec_workspace-membership.tg",
+    ".import/reconcile/model/bundles/workspace-membership/docs/workflows/workflow_workspace-membership.md",
+    ".import/reconcile/model/bundles/workspace-membership/entities/entity_workspace-membership.tg",
+    ".import/reconcile/model/bundles/workspace-membership/shapes/shape_input_create_workspace_membership.tg",
+    ".import/reconcile/model/bundles/workspace/README.md",
+    ".import/reconcile/model/bundles/workspace/capabilities/cap_create_workspace.tg",
+    ".import/reconcile/model/bundles/workspace/capabilities/cap_delete_workspace.tg",
+    ".import/reconcile/model/bundles/workspace/capabilities/cap_get_workspace.tg",
+    ".import/reconcile/model/bundles/workspace/capabilities/cap_list_workspaces.tg",
+    ".import/reconcile/model/bundles/workspace/capabilities/cap_update_workspace.tg",
+    ".import/reconcile/model/bundles/workspace/decisions/dec_workspace.tg",
+    ".import/reconcile/model/bundles/workspace/docs/workflows/workflow_workspace.md",
+    ".import/reconcile/model/bundles/workspace/entities/entity_workspace.tg",
+    ".import/reconcile/model/bundles/workspace/shapes/shape_output_create_workspace.tg",
+    ".import/reconcile/model/bundles/workspace/shapes/shape_output_get_workspace.tg",
+    ".import/reconcile/model/bundles/workspace/shapes/shape_output_list_workspaces.tg"
+  ],
+  "projection_dependent_items": [],
+  "projection_review_groups": [],
+  "promoted": [],
+  "skipped": [
+    "docs/glossary/database.md",
+    "docs/glossary/debugging.md",
+    "docs/glossary/development.md",
+    "docs/workflows/lifecycle-flow.md",
+    "docs/workflows/review-workflow.md"
+  ],
+  "skipped_items": [],
+  "type": "reconcile_report",
+  "ui_review_groups": [],
+  "workflow_review_groups": [
+    {
+      "id": "workflow_review:account",
+      "items": [
+        {
+          "bundle": "account",
+          "item": "dec_account",
+          "kind": "decision",
+          "status": "needs_workflow_review"
+        },
+        {
+          "bundle": "account",
+          "item": "workflow_account",
+          "kind": "doc",
+          "status": "needs_workflow_review"
+        }
+      ],
+      "reason": "Workflow semantics for account need canonical review before promotion."
+    },
+    {
+      "id": "workflow_review:audit-log",
+      "items": [
+        {
+          "bundle": "audit-log",
+          "item": "dec_audit-log",
+          "kind": "decision",
+          "status": "needs_workflow_review"
+        },
+        {
+          "bundle": "audit-log",
+          "item": "workflow_audit-log",
+          "kind": "doc",
+          "status": "needs_workflow_review"
+        }
+      ],
+      "reason": "Workflow semantics for audit-log need canonical review before promotion."
+    },
+    {
+      "id": "workflow_review:profile",
+      "items": [
+        {
+          "bundle": "profile",
+          "item": "dec_profile",
+          "kind": "decision",
+          "status": "needs_workflow_review"
+        },
+        {
+          "bundle": "profile",
+          "item": "workflow_profile",
+          "kind": "doc",
+          "status": "needs_workflow_review"
+        }
+      ],
+      "reason": "Workflow semantics for profile need canonical review before promotion."
+    },
+    {
+      "id": "workflow_review:workspace",
+      "items": [
+        {
+          "bundle": "workspace",
+          "item": "dec_workspace",
+          "kind": "decision",
+          "status": "needs_workflow_review"
+        },
+        {
+          "bundle": "workspace",
+          "item": "workflow_workspace",
+          "kind": "doc",
+          "status": "needs_workflow_review"
+        }
+      ],
+      "reason": "Workflow semantics for workspace need canonical review before promotion."
+    },
+    {
+      "id": "workflow_review:workspace-membership",
+      "items": [
+        {
+          "bundle": "workspace-membership",
+          "item": "dec_workspace-membership",
+          "kind": "decision",
+          "status": "needs_workflow_review"
+        },
+        {
+          "bundle": "workspace-membership",
+          "item": "workflow_workspace-membership",
+          "kind": "doc",
+          "status": "needs_workflow_review"
+        }
+      ],
+      "reason": "Workflow semantics for workspace-membership need canonical review before promotion."
+    }
+  ],
+  "workspace": "/Users/attebury/Documents/topogram/trials/supabase-express-api/topogram",
+  "written_canonical_files": []
+}

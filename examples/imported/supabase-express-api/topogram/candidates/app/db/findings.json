@@ -1,0 +1,8 @@
+[
+  {
+    "kind": "drizzle_schema",
+    "file": "src/schema.ts",
+    "entity_count": 5,
+    "enum_count": 1
+  }
+]

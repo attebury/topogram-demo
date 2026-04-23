@@ -1,0 +1,25 @@
+{
+  "bootstrapped_topogram_root": false,
+  "imported": {
+    "api": {
+      "capability_count": 19,
+      "route_count": 20
+    },
+    "db": {
+      "entity_count": 7,
+      "enum_count": 0,
+      "relation_count": 3
+    },
+    "ui": {
+      "route_count": 0,
+      "screen_count": 0
+    },
+    "workflows": {
+      "transition_count": 6,
+      "workflow_count": 6
+    }
+  },
+  "topogram_available": false,
+  "type": "gap_report",
+  "workspace": "/Users/attebury/Documents/topogram/trials/rails-realworld-example-app"
+}

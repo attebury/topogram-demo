@@ -1,0 +1,12 @@
+shape shape_output_update_workspace {
+  name "Update Workspace Output"
+  description "Candidate shape imported from brownfield API evidence"
+
+  fields {
+    code string optional
+    data string optional
+    message string optional
+  }
+
+  status active
+}

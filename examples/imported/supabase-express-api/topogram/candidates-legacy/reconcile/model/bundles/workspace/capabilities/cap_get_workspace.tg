@@ -1,0 +1,14 @@
+# imported confidence: high
+# imported source_kind: openapi
+# imported provenance: src/docs/openapi.ts#GET /workspaces/{id}
+capability cap_get_workspace {
+  name "Get workspace details"
+  description "Candidate capability imported from brownfield API evidence"
+
+  actors [user]
+
+  reads [entity_workspace]
+  output [shape_output_get_workspace]
+
+  status active
+}

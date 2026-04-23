@@ -1,0 +1,1073 @@
+{
+  "approved_review_groups": [
+    "workflow_review:workspace",
+    "workflow_review:account",
+    "workflow_review:workspace-membership",
+    "workflow_review:audit-log",
+    "workflow_review:profile"
+  ],
+  "items": [
+    {
+      "blocking_dependencies": [],
+      "bundle": "account",
+      "canonical_path": "topogram/capabilities/cap-create-account.tg",
+      "canonical_rel_path": "capabilities/cap-create-account.tg",
+      "item": "cap_create_account",
+      "kind": "capability",
+      "projection_impacts": [],
+      "reason": "Promote this imported capability into canonical Topogram.",
+      "source_path": "candidates/reconcile/model/bundles/account/capabilities/cap_create_account.tg",
+      "status": "applied",
+      "suggested_action": "promote_capability",
+      "target": null,
+      "track": "capability",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "blocking_dependencies": [],
+      "bundle": "account",
+      "canonical_path": "topogram/capabilities/cap-list-accounts.tg",
+      "canonical_rel_path": "capabilities/cap-list-accounts.tg",
+      "item": "cap_list_accounts",
+      "kind": "capability",
+      "projection_impacts": [],
+      "reason": "Promote this imported capability into canonical Topogram.",
+      "source_path": "candidates/reconcile/model/bundles/account/capabilities/cap_list_accounts.tg",
+      "status": "applied",
+      "suggested_action": "promote_capability",
+      "target": null,
+      "track": "capability",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "blocking_dependencies": [],
+      "bundle": "account",
+      "canonical_path": "topogram/capabilities/cap-register-account.tg",
+      "canonical_rel_path": "capabilities/cap-register-account.tg",
+      "item": "cap_register_account",
+      "kind": "capability",
+      "projection_impacts": [],
+      "reason": "Promote this imported capability into canonical Topogram.",
+      "source_path": "candidates/reconcile/model/bundles/account/capabilities/cap_register_account.tg",
+      "status": "applied",
+      "suggested_action": "promote_capability",
+      "target": null,
+      "track": "capability",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "blocking_dependencies": [],
+      "bundle": "account",
+      "canonical_path": "topogram/capabilities/cap-sign-in-account.tg",
+      "canonical_rel_path": "capabilities/cap-sign-in-account.tg",
+      "item": "cap_sign_in_account",
+      "kind": "capability",
+      "projection_impacts": [],
+      "reason": "Promote this imported capability into canonical Topogram.",
+      "source_path": "candidates/reconcile/model/bundles/account/capabilities/cap_sign_in_account.tg",
+      "status": "applied",
+      "suggested_action": "promote_capability",
+      "target": null,
+      "track": "capability",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "blocking_dependencies": [],
+      "bundle": "account",
+      "canonical_path": "topogram/capabilities/cap-update-account-role.tg",
+      "canonical_rel_path": "capabilities/cap-update-account-role.tg",
+      "item": "cap_update_account_role",
+      "kind": "capability",
+      "projection_impacts": [],
+      "reason": "Promote this imported capability into canonical Topogram.",
+      "source_path": "candidates/reconcile/model/bundles/account/capabilities/cap_update_account_role.tg",
+      "status": "applied",
+      "suggested_action": "promote_capability",
+      "target": null,
+      "track": "capability",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "blocking_dependencies": [],
+      "bundle": "account",
+      "canonical_path": "topogram/capabilities/cap-update-account-status.tg",
+      "canonical_rel_path": "capabilities/cap-update-account-status.tg",
+      "item": "cap_update_account_status",
+      "kind": "capability",
+      "projection_impacts": [],
+      "reason": "Promote this imported capability into canonical Topogram.",
+      "source_path": "candidates/reconcile/model/bundles/account/capabilities/cap_update_account_status.tg",
+      "status": "applied",
+      "suggested_action": "promote_capability",
+      "target": null,
+      "track": "capability",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "blocking_dependencies": [
+        {
+          "id": "workflow_review:account",
+          "reason": "Workflow semantics for account need canonical review before promotion.",
+          "type": "workflow_review"
+        }
+      ],
+      "bundle": "account",
+      "canonical_path": "topogram/decisions/decision-account.tg",
+      "canonical_rel_path": "decisions/decision-account.tg",
+      "item": "dec_account",
+      "kind": "decision",
+      "projection_impacts": [],
+      "reason": "Promote this imported workflow decision into canonical Topogram decisions.",
+      "source_path": "candidates/reconcile/model/bundles/account/decisions/dec_account.tg",
+      "status": "applied",
+      "suggested_action": "promote_workflow_decision",
+      "target": null,
+      "track": "workflows",
+      "ui_impacts": [],
+      "workflow_impacts": [
+        {
+          "items": [
+            "workflow_account"
+          ],
+          "kind": "workflow",
+          "reason": "Workflow semantics for account need canonical review before promotion.",
+          "review_group_id": "workflow_review:account"
+        }
+      ]
+    },
+    {
+      "blocking_dependencies": [
+        {
+          "id": "workflow_review:account",
+          "reason": "Workflow semantics for account need canonical review before promotion.",
+          "type": "workflow_review"
+        }
+      ],
+      "bundle": "account",
+      "canonical_path": "topogram/docs/workflows/workflow_account.md",
+      "canonical_rel_path": "docs/workflows/workflow_account.md",
+      "item": "workflow_account",
+      "kind": "doc",
+      "projection_impacts": [],
+      "reason": "Promote this imported workflow doc into canonical Topogram workflow docs.",
+      "source_path": "candidates/reconcile/model/bundles/account/docs/workflows/workflow_account.md",
+      "status": "applied",
+      "suggested_action": "promote_workflow_doc",
+      "target": null,
+      "track": "workflows",
+      "ui_impacts": [],
+      "workflow_impacts": [
+        {
+          "items": [
+            "workflow_account"
+          ],
+          "kind": "workflow",
+          "reason": "Workflow semantics for account need canonical review before promotion.",
+          "review_group_id": "workflow_review:account"
+        }
+      ]
+    },
+    {
+      "blocking_dependencies": [],
+      "bundle": "account",
+      "canonical_path": "topogram/entities/entity-account.tg",
+      "canonical_rel_path": "entities/entity-account.tg",
+      "item": "entity_account",
+      "kind": "entity",
+      "projection_impacts": [],
+      "reason": "No canonical entity exists for this imported concept.",
+      "source_path": "candidates/reconcile/model/bundles/account/entities/entity_account.tg",
+      "status": "applied",
+      "suggested_action": "promote_entity",
+      "target": null,
+      "track": "entity",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "blocking_dependencies": [],
+      "bundle": "account",
+      "canonical_path": "topogram/shapes/shape-input-register-account.tg",
+      "canonical_rel_path": "shapes/shape-input-register-account.tg",
+      "item": "shape_input_register_account",
+      "kind": "shape",
+      "projection_impacts": [],
+      "reason": "Promote this imported shape into canonical Topogram.",
+      "source_path": "candidates/reconcile/model/bundles/account/shapes/shape_input_register_account.tg",
+      "status": "applied",
+      "suggested_action": "promote_shape",
+      "target": null,
+      "track": "shape",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "blocking_dependencies": [],
+      "bundle": "account",
+      "canonical_path": "topogram/shapes/shape-input-sign-in-account.tg",
+      "canonical_rel_path": "shapes/shape-input-sign-in-account.tg",
+      "item": "shape_input_sign_in_account",
+      "kind": "shape",
+      "projection_impacts": [],
+      "reason": "Promote this imported shape into canonical Topogram.",
+      "source_path": "candidates/reconcile/model/bundles/account/shapes/shape_input_sign_in_account.tg",
+      "status": "applied",
+      "suggested_action": "promote_shape",
+      "target": null,
+      "track": "shape",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "blocking_dependencies": [],
+      "bundle": "account",
+      "canonical_path": "topogram/shapes/shape-output-list-accounts.tg",
+      "canonical_rel_path": "shapes/shape-output-list-accounts.tg",
+      "item": "shape_output_list_accounts",
+      "kind": "shape",
+      "projection_impacts": [],
+      "reason": "Promote this imported shape into canonical Topogram.",
+      "source_path": "candidates/reconcile/model/bundles/account/shapes/shape_output_list_accounts.tg",
+      "status": "applied",
+      "suggested_action": "promote_shape",
+      "target": null,
+      "track": "shape",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "blocking_dependencies": [],
+      "bundle": "account",
+      "canonical_path": "topogram/shapes/shape-output-register-account.tg",
+      "canonical_rel_path": "shapes/shape-output-register-account.tg",
+      "item": "shape_output_register_account",
+      "kind": "shape",
+      "projection_impacts": [],
+      "reason": "Promote this imported shape into canonical Topogram.",
+      "source_path": "candidates/reconcile/model/bundles/account/shapes/shape_output_register_account.tg",
+      "status": "applied",
+      "suggested_action": "promote_shape",
+      "target": null,
+      "track": "shape",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "blocking_dependencies": [],
+      "bundle": "account",
+      "canonical_path": "topogram/shapes/shape-output-sign-in-account.tg",
+      "canonical_rel_path": "shapes/shape-output-sign-in-account.tg",
+      "item": "shape_output_sign_in_account",
+      "kind": "shape",
+      "projection_impacts": [],
+      "reason": "Promote this imported shape into canonical Topogram.",
+      "source_path": "candidates/reconcile/model/bundles/account/shapes/shape_output_sign_in_account.tg",
+      "status": "applied",
+      "suggested_action": "promote_shape",
+      "target": null,
+      "track": "shape",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "blocking_dependencies": [],
+      "bundle": "audit-log",
+      "canonical_path": "topogram/capabilities/cap-get-audit-log-stats.tg",
+      "canonical_rel_path": "capabilities/cap-get-audit-log-stats.tg",
+      "item": "cap_get_audit_log_stats",
+      "kind": "capability",
+      "projection_impacts": [],
+      "reason": "Promote this imported capability into canonical Topogram.",
+      "source_path": "candidates/reconcile/model/bundles/audit-log/capabilities/cap_get_audit_log_stats.tg",
+      "status": "applied",
+      "suggested_action": "promote_capability",
+      "target": null,
+      "track": "capability",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "blocking_dependencies": [],
+      "bundle": "audit-log",
+      "canonical_path": "topogram/capabilities/cap-list-audit-logs.tg",
+      "canonical_rel_path": "capabilities/cap-list-audit-logs.tg",
+      "item": "cap_list_audit_logs",
+      "kind": "capability",
+      "projection_impacts": [],
+      "reason": "Promote this imported capability into canonical Topogram.",
+      "source_path": "candidates/reconcile/model/bundles/audit-log/capabilities/cap_list_audit_logs.tg",
+      "status": "applied",
+      "suggested_action": "promote_capability",
+      "target": null,
+      "track": "capability",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "blocking_dependencies": [
+        {
+          "id": "workflow_review:audit-log",
+          "reason": "Workflow semantics for audit-log need canonical review before promotion.",
+          "type": "workflow_review"
+        }
+      ],
+      "bundle": "audit-log",
+      "canonical_path": "topogram/decisions/decision-audit-log.tg",
+      "canonical_rel_path": "decisions/decision-audit-log.tg",
+      "item": "dec_audit-log",
+      "kind": "decision",
+      "projection_impacts": [],
+      "reason": "Promote this imported workflow decision into canonical Topogram decisions.",
+      "source_path": "candidates/reconcile/model/bundles/audit-log/decisions/dec_audit-log.tg",
+      "status": "applied",
+      "suggested_action": "promote_workflow_decision",
+      "target": null,
+      "track": "workflows",
+      "ui_impacts": [],
+      "workflow_impacts": [
+        {
+          "items": [
+            "workflow_audit-log"
+          ],
+          "kind": "workflow",
+          "reason": "Workflow semantics for audit-log need canonical review before promotion.",
+          "review_group_id": "workflow_review:audit-log"
+        }
+      ]
+    },
+    {
+      "blocking_dependencies": [
+        {
+          "id": "workflow_review:audit-log",
+          "reason": "Workflow semantics for audit-log need canonical review before promotion.",
+          "type": "workflow_review"
+        }
+      ],
+      "bundle": "audit-log",
+      "canonical_path": "topogram/docs/workflows/workflow_audit-log.md",
+      "canonical_rel_path": "docs/workflows/workflow_audit-log.md",
+      "item": "workflow_audit-log",
+      "kind": "doc",
+      "projection_impacts": [],
+      "reason": "Promote this imported workflow doc into canonical Topogram workflow docs.",
+      "source_path": "candidates/reconcile/model/bundles/audit-log/docs/workflows/workflow_audit-log.md",
+      "status": "applied",
+      "suggested_action": "promote_workflow_doc",
+      "target": null,
+      "track": "workflows",
+      "ui_impacts": [],
+      "workflow_impacts": [
+        {
+          "items": [
+            "workflow_audit-log"
+          ],
+          "kind": "workflow",
+          "reason": "Workflow semantics for audit-log need canonical review before promotion.",
+          "review_group_id": "workflow_review:audit-log"
+        }
+      ]
+    },
+    {
+      "blocking_dependencies": [],
+      "bundle": "audit-log",
+      "canonical_path": "topogram/entities/entity-audit-log.tg",
+      "canonical_rel_path": "entities/entity-audit-log.tg",
+      "item": "entity_audit-log",
+      "kind": "entity",
+      "projection_impacts": [],
+      "reason": "No canonical entity exists for this imported concept.",
+      "source_path": "candidates/reconcile/model/bundles/audit-log/entities/entity_audit-log.tg",
+      "status": "applied",
+      "suggested_action": "promote_entity",
+      "target": null,
+      "track": "entity",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "blocking_dependencies": [],
+      "bundle": "audit-log",
+      "canonical_path": "topogram/shapes/shape-output-get-audit-log-stats.tg",
+      "canonical_rel_path": "shapes/shape-output-get-audit-log-stats.tg",
+      "item": "shape_output_get_audit_log_stats",
+      "kind": "shape",
+      "projection_impacts": [],
+      "reason": "Promote this imported shape into canonical Topogram.",
+      "source_path": "candidates/reconcile/model/bundles/audit-log/shapes/shape_output_get_audit_log_stats.tg",
+      "status": "applied",
+      "suggested_action": "promote_shape",
+      "target": null,
+      "track": "shape",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "blocking_dependencies": [],
+      "bundle": "audit-log",
+      "canonical_path": "topogram/shapes/shape-output-list-audit-logs.tg",
+      "canonical_rel_path": "shapes/shape-output-list-audit-logs.tg",
+      "item": "shape_output_list_audit_logs",
+      "kind": "shape",
+      "projection_impacts": [],
+      "reason": "Promote this imported shape into canonical Topogram.",
+      "source_path": "candidates/reconcile/model/bundles/audit-log/shapes/shape_output_list_audit_logs.tg",
+      "status": "applied",
+      "suggested_action": "promote_shape",
+      "target": null,
+      "track": "shape",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "blocking_dependencies": [],
+      "bundle": "profile",
+      "canonical_path": "topogram/capabilities/cap-get-profile.tg",
+      "canonical_rel_path": "capabilities/cap-get-profile.tg",
+      "item": "cap_get_profile",
+      "kind": "capability",
+      "projection_impacts": [],
+      "reason": "Promote this imported capability into canonical Topogram.",
+      "source_path": "candidates/reconcile/model/bundles/profile/capabilities/cap_get_profile.tg",
+      "status": "applied",
+      "suggested_action": "promote_capability",
+      "target": null,
+      "track": "capability",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "blocking_dependencies": [],
+      "bundle": "profile",
+      "canonical_path": "topogram/capabilities/cap-update-profile.tg",
+      "canonical_rel_path": "capabilities/cap-update-profile.tg",
+      "item": "cap_update_profile",
+      "kind": "capability",
+      "projection_impacts": [],
+      "reason": "Promote this imported capability into canonical Topogram.",
+      "source_path": "candidates/reconcile/model/bundles/profile/capabilities/cap_update_profile.tg",
+      "status": "applied",
+      "suggested_action": "promote_capability",
+      "target": null,
+      "track": "capability",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "blocking_dependencies": [
+        {
+          "id": "workflow_review:profile",
+          "reason": "Workflow semantics for profile need canonical review before promotion.",
+          "type": "workflow_review"
+        }
+      ],
+      "bundle": "profile",
+      "canonical_path": "topogram/decisions/decision-profile.tg",
+      "canonical_rel_path": "decisions/decision-profile.tg",
+      "item": "dec_profile",
+      "kind": "decision",
+      "projection_impacts": [],
+      "reason": "Promote this imported workflow decision into canonical Topogram decisions.",
+      "source_path": "candidates/reconcile/model/bundles/profile/decisions/dec_profile.tg",
+      "status": "applied",
+      "suggested_action": "promote_workflow_decision",
+      "target": null,
+      "track": "workflows",
+      "ui_impacts": [],
+      "workflow_impacts": [
+        {
+          "items": [
+            "workflow_profile"
+          ],
+          "kind": "workflow",
+          "reason": "Workflow semantics for profile need canonical review before promotion.",
+          "review_group_id": "workflow_review:profile"
+        }
+      ]
+    },
+    {
+      "blocking_dependencies": [
+        {
+          "id": "workflow_review:profile",
+          "reason": "Workflow semantics for profile need canonical review before promotion.",
+          "type": "workflow_review"
+        }
+      ],
+      "bundle": "profile",
+      "canonical_path": "topogram/docs/workflows/workflow_profile.md",
+      "canonical_rel_path": "docs/workflows/workflow_profile.md",
+      "item": "workflow_profile",
+      "kind": "doc",
+      "projection_impacts": [],
+      "reason": "Promote this imported workflow doc into canonical Topogram workflow docs.",
+      "source_path": "candidates/reconcile/model/bundles/profile/docs/workflows/workflow_profile.md",
+      "status": "applied",
+      "suggested_action": "promote_workflow_doc",
+      "target": null,
+      "track": "workflows",
+      "ui_impacts": [],
+      "workflow_impacts": [
+        {
+          "items": [
+            "workflow_profile"
+          ],
+          "kind": "workflow",
+          "reason": "Workflow semantics for profile need canonical review before promotion.",
+          "review_group_id": "workflow_review:profile"
+        }
+      ]
+    },
+    {
+      "blocking_dependencies": [],
+      "bundle": "profile",
+      "canonical_path": "topogram/entities/entity-profile.tg",
+      "canonical_rel_path": "entities/entity-profile.tg",
+      "item": "entity_profile",
+      "kind": "entity",
+      "projection_impacts": [],
+      "reason": "No canonical entity exists for this imported concept.",
+      "source_path": "candidates/reconcile/model/bundles/profile/entities/entity_profile.tg",
+      "status": "applied",
+      "suggested_action": "promote_entity",
+      "target": null,
+      "track": "entity",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "blocking_dependencies": [],
+      "bundle": "profile",
+      "canonical_path": "topogram/shapes/shape-input-update-profile.tg",
+      "canonical_rel_path": "shapes/shape-input-update-profile.tg",
+      "item": "shape_input_update_profile",
+      "kind": "shape",
+      "projection_impacts": [],
+      "reason": "Promote this imported shape into canonical Topogram.",
+      "source_path": "candidates/reconcile/model/bundles/profile/shapes/shape_input_update_profile.tg",
+      "status": "applied",
+      "suggested_action": "promote_shape",
+      "target": null,
+      "track": "shape",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "blocking_dependencies": [],
+      "bundle": "profile",
+      "canonical_path": "topogram/shapes/shape-output-get-profile.tg",
+      "canonical_rel_path": "shapes/shape-output-get-profile.tg",
+      "item": "shape_output_get_profile",
+      "kind": "shape",
+      "projection_impacts": [],
+      "reason": "Promote this imported shape into canonical Topogram.",
+      "source_path": "candidates/reconcile/model/bundles/profile/shapes/shape_output_get_profile.tg",
+      "status": "applied",
+      "suggested_action": "promote_shape",
+      "target": null,
+      "track": "shape",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "blocking_dependencies": [],
+      "bundle": "workspace",
+      "canonical_path": "topogram/capabilities/cap-create-workspace.tg",
+      "canonical_rel_path": "capabilities/cap-create-workspace.tg",
+      "item": "cap_create_workspace",
+      "kind": "capability",
+      "projection_impacts": [],
+      "reason": "Promote this imported capability into canonical Topogram.",
+      "source_path": "candidates/reconcile/model/bundles/workspace/capabilities/cap_create_workspace.tg",
+      "status": "applied",
+      "suggested_action": "promote_capability",
+      "target": null,
+      "track": "capability",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "blocking_dependencies": [],
+      "bundle": "workspace",
+      "canonical_path": "topogram/capabilities/cap-delete-workspace.tg",
+      "canonical_rel_path": "capabilities/cap-delete-workspace.tg",
+      "item": "cap_delete_workspace",
+      "kind": "capability",
+      "projection_impacts": [],
+      "reason": "Promote this imported capability into canonical Topogram.",
+      "source_path": "candidates/reconcile/model/bundles/workspace/capabilities/cap_delete_workspace.tg",
+      "status": "applied",
+      "suggested_action": "promote_capability",
+      "target": null,
+      "track": "capability",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "blocking_dependencies": [],
+      "bundle": "workspace",
+      "canonical_path": "topogram/capabilities/cap-get-workspace.tg",
+      "canonical_rel_path": "capabilities/cap-get-workspace.tg",
+      "item": "cap_get_workspace",
+      "kind": "capability",
+      "projection_impacts": [],
+      "reason": "Promote this imported capability into canonical Topogram.",
+      "source_path": "candidates/reconcile/model/bundles/workspace/capabilities/cap_get_workspace.tg",
+      "status": "applied",
+      "suggested_action": "promote_capability",
+      "target": null,
+      "track": "capability",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "blocking_dependencies": [],
+      "bundle": "workspace",
+      "canonical_path": "topogram/capabilities/cap-list-workspaces.tg",
+      "canonical_rel_path": "capabilities/cap-list-workspaces.tg",
+      "item": "cap_list_workspaces",
+      "kind": "capability",
+      "projection_impacts": [],
+      "reason": "Promote this imported capability into canonical Topogram.",
+      "source_path": "candidates/reconcile/model/bundles/workspace/capabilities/cap_list_workspaces.tg",
+      "status": "applied",
+      "suggested_action": "promote_capability",
+      "target": null,
+      "track": "capability",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "blocking_dependencies": [],
+      "bundle": "workspace",
+      "canonical_path": "topogram/capabilities/cap-update-workspace.tg",
+      "canonical_rel_path": "capabilities/cap-update-workspace.tg",
+      "item": "cap_update_workspace",
+      "kind": "capability",
+      "projection_impacts": [],
+      "reason": "Promote this imported capability into canonical Topogram.",
+      "source_path": "candidates/reconcile/model/bundles/workspace/capabilities/cap_update_workspace.tg",
+      "status": "applied",
+      "suggested_action": "promote_capability",
+      "target": null,
+      "track": "capability",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "blocking_dependencies": [
+        {
+          "id": "workflow_review:workspace",
+          "reason": "Workflow semantics for workspace need canonical review before promotion.",
+          "type": "workflow_review"
+        }
+      ],
+      "bundle": "workspace",
+      "canonical_path": "topogram/decisions/decision-workspace.tg",
+      "canonical_rel_path": "decisions/decision-workspace.tg",
+      "item": "dec_workspace",
+      "kind": "decision",
+      "projection_impacts": [],
+      "reason": "Promote this imported workflow decision into canonical Topogram decisions.",
+      "source_path": "candidates/reconcile/model/bundles/workspace/decisions/dec_workspace.tg",
+      "status": "applied",
+      "suggested_action": "promote_workflow_decision",
+      "target": null,
+      "track": "workflows",
+      "ui_impacts": [],
+      "workflow_impacts": [
+        {
+          "items": [
+            "workflow_workspace"
+          ],
+          "kind": "workflow",
+          "reason": "Workflow semantics for workspace need canonical review before promotion.",
+          "review_group_id": "workflow_review:workspace"
+        }
+      ]
+    },
+    {
+      "blocking_dependencies": [
+        {
+          "id": "workflow_review:workspace",
+          "reason": "Workflow semantics for workspace need canonical review before promotion.",
+          "type": "workflow_review"
+        }
+      ],
+      "bundle": "workspace",
+      "canonical_path": "topogram/docs/workflows/workflow_workspace.md",
+      "canonical_rel_path": "docs/workflows/workflow_workspace.md",
+      "item": "workflow_workspace",
+      "kind": "doc",
+      "projection_impacts": [],
+      "reason": "Promote this imported workflow doc into canonical Topogram workflow docs.",
+      "source_path": "candidates/reconcile/model/bundles/workspace/docs/workflows/workflow_workspace.md",
+      "status": "applied",
+      "suggested_action": "promote_workflow_doc",
+      "target": null,
+      "track": "workflows",
+      "ui_impacts": [],
+      "workflow_impacts": [
+        {
+          "items": [
+            "workflow_workspace"
+          ],
+          "kind": "workflow",
+          "reason": "Workflow semantics for workspace need canonical review before promotion.",
+          "review_group_id": "workflow_review:workspace"
+        }
+      ]
+    },
+    {
+      "blocking_dependencies": [],
+      "bundle": "workspace",
+      "canonical_path": "topogram/entities/entity-workspace.tg",
+      "canonical_rel_path": "entities/entity-workspace.tg",
+      "item": "entity_workspace",
+      "kind": "entity",
+      "projection_impacts": [],
+      "reason": "No canonical entity exists for this imported concept.",
+      "source_path": "candidates/reconcile/model/bundles/workspace/entities/entity_workspace.tg",
+      "status": "applied",
+      "suggested_action": "promote_entity",
+      "target": null,
+      "track": "entity",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "blocking_dependencies": [],
+      "bundle": "workspace",
+      "canonical_path": "topogram/shapes/shape-output-create-workspace.tg",
+      "canonical_rel_path": "shapes/shape-output-create-workspace.tg",
+      "item": "shape_output_create_workspace",
+      "kind": "shape",
+      "projection_impacts": [],
+      "reason": "Promote this imported shape into canonical Topogram.",
+      "source_path": "candidates/reconcile/model/bundles/workspace/shapes/shape_output_create_workspace.tg",
+      "status": "applied",
+      "suggested_action": "promote_shape",
+      "target": null,
+      "track": "shape",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "blocking_dependencies": [],
+      "bundle": "workspace",
+      "canonical_path": "topogram/shapes/shape-output-get-workspace.tg",
+      "canonical_rel_path": "shapes/shape-output-get-workspace.tg",
+      "item": "shape_output_get_workspace",
+      "kind": "shape",
+      "projection_impacts": [],
+      "reason": "Promote this imported shape into canonical Topogram.",
+      "source_path": "candidates/reconcile/model/bundles/workspace/shapes/shape_output_get_workspace.tg",
+      "status": "applied",
+      "suggested_action": "promote_shape",
+      "target": null,
+      "track": "shape",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "blocking_dependencies": [],
+      "bundle": "workspace",
+      "canonical_path": "topogram/shapes/shape-output-list-workspaces.tg",
+      "canonical_rel_path": "shapes/shape-output-list-workspaces.tg",
+      "item": "shape_output_list_workspaces",
+      "kind": "shape",
+      "projection_impacts": [],
+      "reason": "Promote this imported shape into canonical Topogram.",
+      "source_path": "candidates/reconcile/model/bundles/workspace/shapes/shape_output_list_workspaces.tg",
+      "status": "applied",
+      "suggested_action": "promote_shape",
+      "target": null,
+      "track": "shape",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "blocking_dependencies": [],
+      "bundle": "workspace-membership",
+      "canonical_path": "topogram/capabilities/cap-create-workspace-membership.tg",
+      "canonical_rel_path": "capabilities/cap-create-workspace-membership.tg",
+      "item": "cap_create_workspace_membership",
+      "kind": "capability",
+      "projection_impacts": [],
+      "reason": "Promote this imported capability into canonical Topogram.",
+      "source_path": "candidates/reconcile/model/bundles/workspace-membership/capabilities/cap_create_workspace_membership.tg",
+      "status": "applied",
+      "suggested_action": "promote_capability",
+      "target": null,
+      "track": "capability",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "blocking_dependencies": [],
+      "bundle": "workspace-membership",
+      "canonical_path": "topogram/capabilities/cap-delete-workspace-membership.tg",
+      "canonical_rel_path": "capabilities/cap-delete-workspace-membership.tg",
+      "item": "cap_delete_workspace_membership",
+      "kind": "capability",
+      "projection_impacts": [],
+      "reason": "Promote this imported capability into canonical Topogram.",
+      "source_path": "candidates/reconcile/model/bundles/workspace-membership/capabilities/cap_delete_workspace_membership.tg",
+      "status": "applied",
+      "suggested_action": "promote_capability",
+      "target": null,
+      "track": "capability",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "blocking_dependencies": [],
+      "bundle": "workspace-membership",
+      "canonical_path": "topogram/capabilities/cap-list-workspace-memberships.tg",
+      "canonical_rel_path": "capabilities/cap-list-workspace-memberships.tg",
+      "item": "cap_list_workspace_memberships",
+      "kind": "capability",
+      "projection_impacts": [],
+      "reason": "Promote this imported capability into canonical Topogram.",
+      "source_path": "candidates/reconcile/model/bundles/workspace-membership/capabilities/cap_list_workspace_memberships.tg",
+      "status": "applied",
+      "suggested_action": "promote_capability",
+      "target": null,
+      "track": "capability",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "blocking_dependencies": [],
+      "bundle": "workspace-membership",
+      "canonical_path": "topogram/capabilities/cap-update-workspace-membership-role.tg",
+      "canonical_rel_path": "capabilities/cap-update-workspace-membership-role.tg",
+      "item": "cap_update_workspace_membership_role",
+      "kind": "capability",
+      "projection_impacts": [],
+      "reason": "Promote this imported capability into canonical Topogram.",
+      "source_path": "candidates/reconcile/model/bundles/workspace-membership/capabilities/cap_update_workspace_membership_role.tg",
+      "status": "applied",
+      "suggested_action": "promote_capability",
+      "target": null,
+      "track": "capability",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "blocking_dependencies": [
+        {
+          "id": "workflow_review:workspace-membership",
+          "reason": "Workflow semantics for workspace-membership need canonical review before promotion.",
+          "type": "workflow_review"
+        }
+      ],
+      "bundle": "workspace-membership",
+      "canonical_path": "topogram/decisions/decision-workspace-membership.tg",
+      "canonical_rel_path": "decisions/decision-workspace-membership.tg",
+      "item": "dec_workspace-membership",
+      "kind": "decision",
+      "projection_impacts": [],
+      "reason": "Promote this imported workflow decision into canonical Topogram decisions.",
+      "source_path": "candidates/reconcile/model/bundles/workspace-membership/decisions/dec_workspace-membership.tg",
+      "status": "applied",
+      "suggested_action": "promote_workflow_decision",
+      "target": null,
+      "track": "workflows",
+      "ui_impacts": [],
+      "workflow_impacts": [
+        {
+          "items": [
+            "workflow_workspace-membership"
+          ],
+          "kind": "workflow",
+          "reason": "Workflow semantics for workspace-membership need canonical review before promotion.",
+          "review_group_id": "workflow_review:workspace-membership"
+        }
+      ]
+    },
+    {
+      "blocking_dependencies": [
+        {
+          "id": "workflow_review:workspace-membership",
+          "reason": "Workflow semantics for workspace-membership need canonical review before promotion.",
+          "type": "workflow_review"
+        }
+      ],
+      "bundle": "workspace-membership",
+      "canonical_path": "topogram/docs/workflows/workflow_workspace-membership.md",
+      "canonical_rel_path": "docs/workflows/workflow_workspace-membership.md",
+      "item": "workflow_workspace-membership",
+      "kind": "doc",
+      "projection_impacts": [],
+      "reason": "Promote this imported workflow doc into canonical Topogram workflow docs.",
+      "source_path": "candidates/reconcile/model/bundles/workspace-membership/docs/workflows/workflow_workspace-membership.md",
+      "status": "applied",
+      "suggested_action": "promote_workflow_doc",
+      "target": null,
+      "track": "workflows",
+      "ui_impacts": [],
+      "workflow_impacts": [
+        {
+          "items": [
+            "workflow_workspace-membership"
+          ],
+          "kind": "workflow",
+          "reason": "Workflow semantics for workspace-membership need canonical review before promotion.",
+          "review_group_id": "workflow_review:workspace-membership"
+        }
+      ]
+    },
+    {
+      "blocking_dependencies": [],
+      "bundle": "workspace-membership",
+      "canonical_path": "topogram/entities/entity-workspace-membership.tg",
+      "canonical_rel_path": "entities/entity-workspace-membership.tg",
+      "item": "entity_workspace-membership",
+      "kind": "entity",
+      "projection_impacts": [],
+      "reason": "No canonical entity exists for this imported concept.",
+      "source_path": "candidates/reconcile/model/bundles/workspace-membership/entities/entity_workspace-membership.tg",
+      "status": "applied",
+      "suggested_action": "promote_entity",
+      "target": null,
+      "track": "entity",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "blocking_dependencies": [],
+      "bundle": "workspace-membership",
+      "canonical_path": "topogram/shapes/shape-input-create-workspace-membership.tg",
+      "canonical_rel_path": "shapes/shape-input-create-workspace-membership.tg",
+      "item": "shape_input_create_workspace_membership",
+      "kind": "shape",
+      "projection_impacts": [],
+      "reason": "Promote this imported shape into canonical Topogram.",
+      "source_path": "candidates/reconcile/model/bundles/workspace-membership/shapes/shape_input_create_workspace_membership.tg",
+      "status": "applied",
+      "suggested_action": "promote_shape",
+      "target": null,
+      "track": "shape",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "blocking_dependencies": [],
+      "bundle": "workspace-membership-role",
+      "canonical_path": "topogram/enums/enum-workspace-membership-role.tg",
+      "canonical_rel_path": "enums/enum-workspace-membership-role.tg",
+      "item": "workspace-membership_role",
+      "kind": "enum",
+      "projection_impacts": [],
+      "reason": "Promote this imported enum into canonical Topogram.",
+      "source_path": "candidates/reconcile/model/bundles/workspace-membership-role/enums/workspace-membership_role.tg",
+      "status": "applied",
+      "suggested_action": "promote_enum",
+      "target": null,
+      "track": "enum",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    }
+  ],
+  "projection_review_groups": [],
+  "type": "reconcile_adoption_plan",
+  "ui_review_groups": [],
+  "workflow_review_groups": [
+    {
+      "id": "workflow_review:account",
+      "items": [
+        {
+          "bundle": "account",
+          "item": "dec_account",
+          "kind": "decision",
+          "status": "applied"
+        },
+        {
+          "bundle": "account",
+          "item": "workflow_account",
+          "kind": "doc",
+          "status": "applied"
+        }
+      ],
+      "reason": "Workflow semantics for account need canonical review before promotion."
+    },
+    {
+      "id": "workflow_review:audit-log",
+      "items": [
+        {
+          "bundle": "audit-log",
+          "item": "dec_audit-log",
+          "kind": "decision",
+          "status": "applied"
+        },
+        {
+          "bundle": "audit-log",
+          "item": "workflow_audit-log",
+          "kind": "doc",
+          "status": "applied"
+        }
+      ],
+      "reason": "Workflow semantics for audit-log need canonical review before promotion."
+    },
+    {
+      "id": "workflow_review:profile",
+      "items": [
+        {
+          "bundle": "profile",
+          "item": "dec_profile",
+          "kind": "decision",
+          "status": "applied"
+        },
+        {
+          "bundle": "profile",
+          "item": "workflow_profile",
+          "kind": "doc",
+          "status": "applied"
+        }
+      ],
+      "reason": "Workflow semantics for profile need canonical review before promotion."
+    },
+    {
+      "id": "workflow_review:workspace",
+      "items": [
+        {
+          "bundle": "workspace",
+          "item": "dec_workspace",
+          "kind": "decision",
+          "status": "applied"
+        },
+        {
+          "bundle": "workspace",
+          "item": "workflow_workspace",
+          "kind": "doc",
+          "status": "applied"
+        }
+      ],
+      "reason": "Workflow semantics for workspace need canonical review before promotion."
+    },
+    {
+      "id": "workflow_review:workspace-membership",
+      "items": [
+        {
+          "bundle": "workspace-membership",
+          "item": "dec_workspace-membership",
+          "kind": "decision",
+          "status": "applied"
+        },
+        {
+          "bundle": "workspace-membership",
+          "item": "workflow_workspace-membership",
+          "kind": "doc",
+          "status": "applied"
+        }
+      ],
+      "reason": "Workflow semantics for workspace-membership need canonical review before promotion."
+    }
+  ],
+  "workspace": "/Users/attebury/Documents/topogram/trials/supabase-express-api/topogram"
+}

@@ -1,0 +1,55 @@
+{
+  "bootstrapped_topogram_root": false,
+  "candidate_docs": [
+    {
+      "confidence": "low",
+      "id": "how",
+      "kind": "glossary",
+      "path": "candidates/docs/glossary/how.md",
+      "provenance": [
+        "README.md"
+      ],
+      "related_capabilities": [],
+      "related_entities": [],
+      "source_of_truth": "imported",
+      "title": "How"
+    },
+    {
+      "confidence": "low",
+      "id": "ruby",
+      "kind": "glossary",
+      "path": "candidates/docs/glossary/ruby.md",
+      "provenance": [
+        "README.md"
+      ],
+      "related_capabilities": [],
+      "related_entities": [],
+      "source_of_truth": "imported",
+      "title": "Ruby"
+    }
+  ],
+  "findings": [
+    {
+      "file": "/Users/attebury/Documents/topogram/trials/rails-realworld-example-app/README.md",
+      "relative_path": "README.md",
+      "term_candidates": [
+        "rails",
+        "how",
+        "ruby",
+        "realworld",
+        "you",
+        "clone",
+        "can",
+        "install"
+      ],
+      "title": "README",
+      "workflow_signals": []
+    }
+  ],
+  "source_count": 1,
+  "sources": [
+    "README.md"
+  ],
+  "type": "scan_docs_report",
+  "workspace": "/Users/attebury/Documents/topogram/trials/rails-realworld-example-app/topogram"
+}

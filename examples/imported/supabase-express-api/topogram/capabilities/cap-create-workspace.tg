@@ -1,0 +1,14 @@
+# imported confidence: high
+# imported source_kind: openapi
+# imported provenance: src/docs/openapi.ts#POST /workspaces
+capability cap_create_workspace {
+  name "Create new workspace"
+  description "Candidate capability imported from brownfield API evidence"
+
+  actors [user]
+
+  creates [entity_workspace]
+  output [shape_output_create_workspace]
+
+  status active
+}

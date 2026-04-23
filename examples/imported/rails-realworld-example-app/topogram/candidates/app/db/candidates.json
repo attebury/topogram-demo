@@ -1,0 +1,634 @@
+{
+  "entities": [
+    {
+      "kind": "entity",
+      "id_hint": "entity_article",
+      "label": "Article",
+      "confidence": "high",
+      "source_kind": "schema",
+      "source_of_truth": "imported",
+      "provenance": [
+        "db/schema.rb"
+      ],
+      "track": "db",
+      "table_name": "articles",
+      "fields": [
+        {
+          "name": "title",
+          "field_type": "string",
+          "required": true,
+          "list": false,
+          "unique": true,
+          "primary_key": false
+        },
+        {
+          "name": "slug",
+          "field_type": "string",
+          "required": false,
+          "list": false,
+          "unique": false,
+          "primary_key": false
+        },
+        {
+          "name": "description",
+          "field_type": "string",
+          "required": true,
+          "list": false,
+          "unique": false,
+          "primary_key": false
+        },
+        {
+          "name": "body",
+          "field_type": "text",
+          "required": true,
+          "list": false,
+          "unique": false,
+          "primary_key": false
+        },
+        {
+          "name": "user_id",
+          "field_type": "integer",
+          "required": true,
+          "list": false,
+          "unique": false,
+          "primary_key": false
+        },
+        {
+          "name": "created_at",
+          "field_type": "datetime",
+          "required": true,
+          "list": false,
+          "unique": false,
+          "primary_key": false
+        },
+        {
+          "name": "updated_at",
+          "field_type": "datetime",
+          "required": true,
+          "list": false,
+          "unique": false,
+          "primary_key": false
+        }
+      ],
+      "rails_model": "app/models/article.rb",
+      "rails_associations": {
+        "belongsTo": [
+          "user"
+        ],
+        "hasMany": [
+          "comments"
+        ],
+        "habtm": [
+          {
+            "association": "tags",
+            "join_table": null
+          }
+        ]
+      },
+      "noise_candidate": false,
+      "noise_reason": null
+    },
+    {
+      "kind": "entity",
+      "id_hint": "entity_articles-tag",
+      "label": "Articles Tag",
+      "confidence": "high",
+      "source_kind": "schema",
+      "source_of_truth": "imported",
+      "provenance": [
+        "db/schema.rb"
+      ],
+      "track": "db",
+      "table_name": "articles_tags",
+      "fields": [
+        {
+          "name": "article_id",
+          "field_type": "integer",
+          "required": true,
+          "list": false,
+          "unique": false,
+          "primary_key": false
+        },
+        {
+          "name": "tag_id",
+          "field_type": "integer",
+          "required": true,
+          "list": false,
+          "unique": false,
+          "primary_key": false
+        }
+      ],
+      "noise_candidate": true,
+      "noise_reason": "Rails HABTM join table backing article associations."
+    },
+    {
+      "kind": "entity",
+      "id_hint": "entity_articles-user",
+      "label": "Articles User",
+      "confidence": "high",
+      "source_kind": "schema",
+      "source_of_truth": "imported",
+      "provenance": [
+        "db/schema.rb"
+      ],
+      "track": "db",
+      "table_name": "articles_users",
+      "fields": [
+        {
+          "name": "article_id",
+          "field_type": "integer",
+          "required": true,
+          "list": false,
+          "unique": false,
+          "primary_key": false
+        },
+        {
+          "name": "user_id",
+          "field_type": "integer",
+          "required": true,
+          "list": false,
+          "unique": false,
+          "primary_key": false
+        }
+      ],
+      "noise_candidate": true,
+      "noise_reason": "Rails HABTM join table backing article associations."
+    },
+    {
+      "kind": "entity",
+      "id_hint": "entity_comment",
+      "label": "Comment",
+      "confidence": "high",
+      "source_kind": "schema",
+      "source_of_truth": "imported",
+      "provenance": [
+        "db/schema.rb"
+      ],
+      "track": "db",
+      "table_name": "comments",
+      "fields": [
+        {
+          "name": "body",
+          "field_type": "text",
+          "required": true,
+          "list": false,
+          "unique": false,
+          "primary_key": false
+        },
+        {
+          "name": "article_id",
+          "field_type": "integer",
+          "required": true,
+          "list": false,
+          "unique": false,
+          "primary_key": false
+        },
+        {
+          "name": "user_id",
+          "field_type": "integer",
+          "required": true,
+          "list": false,
+          "unique": false,
+          "primary_key": false
+        },
+        {
+          "name": "created_at",
+          "field_type": "datetime",
+          "required": true,
+          "list": false,
+          "unique": false,
+          "primary_key": false
+        },
+        {
+          "name": "updated_at",
+          "field_type": "datetime",
+          "required": true,
+          "list": false,
+          "unique": false,
+          "primary_key": false
+        }
+      ],
+      "rails_model": "app/models/comment.rb",
+      "rails_associations": {
+        "belongsTo": [
+          "user",
+          "article"
+        ],
+        "hasMany": [],
+        "habtm": []
+      },
+      "noise_candidate": false,
+      "noise_reason": null
+    },
+    {
+      "kind": "entity",
+      "id_hint": "entity_follower",
+      "label": "Follower",
+      "confidence": "high",
+      "source_kind": "schema",
+      "source_of_truth": "imported",
+      "provenance": [
+        "db/schema.rb"
+      ],
+      "track": "db",
+      "table_name": "followers",
+      "fields": [
+        {
+          "name": "follower_id",
+          "field_type": "integer",
+          "required": false,
+          "list": false,
+          "unique": false,
+          "primary_key": false
+        },
+        {
+          "name": "following_id",
+          "field_type": "integer",
+          "required": false,
+          "list": false,
+          "unique": false,
+          "primary_key": false
+        }
+      ],
+      "noise_candidate": true,
+      "noise_reason": "Rails self-join backing user follow relationships."
+    },
+    {
+      "kind": "entity",
+      "id_hint": "entity_tag",
+      "label": "Tag",
+      "confidence": "high",
+      "source_kind": "schema",
+      "source_of_truth": "imported",
+      "provenance": [
+        "db/schema.rb"
+      ],
+      "track": "db",
+      "table_name": "tags",
+      "fields": [
+        {
+          "name": "name",
+          "field_type": "string",
+          "required": false,
+          "list": false,
+          "unique": false,
+          "primary_key": false
+        },
+        {
+          "name": "created_at",
+          "field_type": "datetime",
+          "required": true,
+          "list": false,
+          "unique": false,
+          "primary_key": false
+        },
+        {
+          "name": "updated_at",
+          "field_type": "datetime",
+          "required": true,
+          "list": false,
+          "unique": false,
+          "primary_key": false
+        }
+      ],
+      "rails_model": "app/models/tag.rb",
+      "rails_associations": {
+        "belongsTo": [],
+        "hasMany": [],
+        "habtm": []
+      },
+      "noise_candidate": false,
+      "noise_reason": null
+    },
+    {
+      "kind": "entity",
+      "id_hint": "entity_user",
+      "label": "User",
+      "confidence": "high",
+      "source_kind": "schema",
+      "source_of_truth": "imported",
+      "provenance": [
+        "db/schema.rb"
+      ],
+      "track": "db",
+      "table_name": "users",
+      "fields": [
+        {
+          "name": "username",
+          "field_type": "string",
+          "required": true,
+          "list": false,
+          "unique": true,
+          "primary_key": false
+        },
+        {
+          "name": "email",
+          "field_type": "string",
+          "required": true,
+          "list": false,
+          "unique": true,
+          "primary_key": false
+        },
+        {
+          "name": "password_digest",
+          "field_type": "string",
+          "required": true,
+          "list": false,
+          "unique": false,
+          "primary_key": false
+        },
+        {
+          "name": "image",
+          "field_type": "string",
+          "required": false,
+          "list": false,
+          "unique": false,
+          "primary_key": false
+        },
+        {
+          "name": "bio",
+          "field_type": "text",
+          "required": false,
+          "list": false,
+          "unique": false,
+          "primary_key": false
+        },
+        {
+          "name": "created_at",
+          "field_type": "datetime",
+          "required": true,
+          "list": false,
+          "unique": false,
+          "primary_key": false
+        },
+        {
+          "name": "updated_at",
+          "field_type": "datetime",
+          "required": true,
+          "list": false,
+          "unique": false,
+          "primary_key": false
+        }
+      ],
+      "rails_model": "app/models/user.rb",
+      "rails_associations": {
+        "belongsTo": [],
+        "hasMany": [
+          "articles",
+          "comments"
+        ],
+        "habtm": [
+          {
+            "association": "following",
+            "join_table": "followers"
+          },
+          {
+            "association": "followers",
+            "join_table": "followers"
+          }
+        ]
+      },
+      "noise_candidate": false,
+      "noise_reason": null
+    }
+  ],
+  "enums": [],
+  "relations": [
+    {
+      "kind": "relation",
+      "id_hint": "entity-article-user-id-entity-user",
+      "label": "entity_article -> entity_user",
+      "confidence": "high",
+      "source_kind": "schema",
+      "source_of_truth": "imported",
+      "provenance": [
+        "db/schema.rb"
+      ],
+      "track": "db",
+      "from_entity": "entity_article",
+      "to_entity": "entity_user",
+      "relation_field": "user_id",
+      "fields": [
+        "user_id"
+      ],
+      "references": [
+        "id"
+      ]
+    },
+    {
+      "kind": "relation",
+      "id_hint": "entity-comment-article-id-entity-article",
+      "label": "entity_comment -> entity_article",
+      "confidence": "high",
+      "source_kind": "schema",
+      "source_of_truth": "imported",
+      "provenance": [
+        "db/schema.rb"
+      ],
+      "track": "db",
+      "from_entity": "entity_comment",
+      "to_entity": "entity_article",
+      "relation_field": "article_id",
+      "fields": [
+        "article_id"
+      ],
+      "references": [
+        "id"
+      ]
+    },
+    {
+      "kind": "relation",
+      "id_hint": "entity-comment-user-id-entity-user",
+      "label": "entity_comment -> entity_user",
+      "confidence": "high",
+      "source_kind": "schema",
+      "source_of_truth": "imported",
+      "provenance": [
+        "db/schema.rb"
+      ],
+      "track": "db",
+      "from_entity": "entity_comment",
+      "to_entity": "entity_user",
+      "relation_field": "user_id",
+      "fields": [
+        "user_id"
+      ],
+      "references": [
+        "id"
+      ]
+    }
+  ],
+  "indexes": [
+    {
+      "kind": "index",
+      "id_hint": "index_articles_on_slug",
+      "label": "Articles On Slug",
+      "confidence": "medium",
+      "source_kind": "schema",
+      "source_of_truth": "imported",
+      "provenance": [
+        "db/schema.rb"
+      ],
+      "track": "db",
+      "entity": "entity_article",
+      "fields": [
+        "slug"
+      ],
+      "unique": false
+    },
+    {
+      "kind": "index",
+      "id_hint": "index_articles_on_user_id",
+      "label": "Articles On User Id",
+      "confidence": "medium",
+      "source_kind": "schema",
+      "source_of_truth": "imported",
+      "provenance": [
+        "db/schema.rb"
+      ],
+      "track": "db",
+      "entity": "entity_article",
+      "fields": [
+        "user_id"
+      ],
+      "unique": false
+    },
+    {
+      "kind": "index",
+      "id_hint": "index_articles_users_on_article_id_and_user_id",
+      "label": "Articles Users On Article Id And User Id",
+      "confidence": "medium",
+      "source_kind": "schema",
+      "source_of_truth": "imported",
+      "provenance": [
+        "db/schema.rb"
+      ],
+      "track": "db",
+      "entity": "entity_articles-user",
+      "fields": [
+        "article_id",
+        "user_id"
+      ],
+      "unique": false
+    },
+    {
+      "kind": "index",
+      "id_hint": "index_comments_on_article_id",
+      "label": "Comments On Article Id",
+      "confidence": "medium",
+      "source_kind": "schema",
+      "source_of_truth": "imported",
+      "provenance": [
+        "db/schema.rb"
+      ],
+      "track": "db",
+      "entity": "entity_comment",
+      "fields": [
+        "article_id"
+      ],
+      "unique": false
+    },
+    {
+      "kind": "index",
+      "id_hint": "index_comments_on_user_id",
+      "label": "Comments On User Id",
+      "confidence": "medium",
+      "source_kind": "schema",
+      "source_of_truth": "imported",
+      "provenance": [
+        "db/schema.rb"
+      ],
+      "track": "db",
+      "entity": "entity_comment",
+      "fields": [
+        "user_id"
+      ],
+      "unique": false
+    },
+    {
+      "kind": "index",
+      "id_hint": "index_followers_on_follower_id",
+      "label": "Followers On Follower Id",
+      "confidence": "medium",
+      "source_kind": "schema",
+      "source_of_truth": "imported",
+      "provenance": [
+        "db/schema.rb"
+      ],
+      "track": "db",
+      "entity": "entity_follower",
+      "fields": [
+        "follower_id"
+      ],
+      "unique": false
+    },
+    {
+      "kind": "index",
+      "id_hint": "index_followers_on_following_id",
+      "label": "Followers On Following Id",
+      "confidence": "medium",
+      "source_kind": "schema",
+      "source_of_truth": "imported",
+      "provenance": [
+        "db/schema.rb"
+      ],
+      "track": "db",
+      "entity": "entity_follower",
+      "fields": [
+        "following_id"
+      ],
+      "unique": false
+    },
+    {
+      "kind": "index",
+      "id_hint": "index_tags_on_name",
+      "label": "Tags On Name",
+      "confidence": "medium",
+      "source_kind": "schema",
+      "source_of_truth": "imported",
+      "provenance": [
+        "db/schema.rb"
+      ],
+      "track": "db",
+      "entity": "entity_tag",
+      "fields": [
+        "name"
+      ],
+      "unique": true
+    },
+    {
+      "kind": "index",
+      "id_hint": "index_users_on_email",
+      "label": "Users On Email",
+      "confidence": "medium",
+      "source_kind": "schema",
+      "source_of_truth": "imported",
+      "provenance": [
+        "db/schema.rb"
+      ],
+      "track": "db",
+      "entity": "entity_user",
+      "fields": [
+        "email"
+      ],
+      "unique": true
+    },
+    {
+      "kind": "index",
+      "id_hint": "index_users_on_username",
+      "label": "Users On Username",
+      "confidence": "medium",
+      "source_kind": "schema",
+      "source_of_truth": "imported",
+      "provenance": [
+        "db/schema.rb"
+      ],
+      "track": "db",
+      "entity": "entity_user",
+      "fields": [
+        "username"
+      ],
+      "unique": true
+    }
+  ]
+}

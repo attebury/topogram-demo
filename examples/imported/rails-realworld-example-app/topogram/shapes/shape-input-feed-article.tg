@@ -1,0 +1,13 @@
+shape shape_input_feed_article {
+  name "Feed Article Input"
+  description "Candidate shape imported from brownfield API evidence"
+
+  fields {
+    body string optional
+    description string optional
+    tagList string optional
+    title string optional
+  }
+
+  status active
+}

@@ -1,0 +1,17 @@
+[
+  {
+    "kind": "swiftui_views",
+    "file": "CountriesSwiftUI/UI/CountriesList/CountriesListView.swift",
+    "screen_count": 1
+  },
+  {
+    "kind": "swiftui_views",
+    "file": "CountriesSwiftUI/UI/CountryDetails/CountryDetailsView.swift",
+    "screen_count": 1
+  },
+  {
+    "kind": "swiftui_views",
+    "file": "CountriesSwiftUI/UI/CountryDetails/ModalFlagView.swift",
+    "screen_count": 1
+  }
+]

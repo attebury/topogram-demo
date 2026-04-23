@@ -1,0 +1,14 @@
+# imported confidence: high
+# imported source_kind: route_code
+# imported provenance: config/routes.rb#DELETE /api/articles/:slug
+# imported provenance: app/controllers/articles_controller.rb
+capability cap_delete_article {
+  name "DELETE /api/articles/:slug"
+  description "Candidate capability imported from brownfield API evidence"
+
+  deletes [entity_article]
+
+  input [shape_input_delete_article]
+
+  status active
+}

@@ -1,0 +1,13 @@
+# imported confidence: high
+# imported source_kind: route_code
+# imported provenance: config/routes.rb#GET /api/profiles/:username
+# imported provenance: app/controllers/profiles_controller.rb
+capability cap_get_profile {
+  name "GET /api/profiles/:username"
+  description "Candidate capability imported from brownfield API evidence"
+
+  reads [entity_profile]
+  output [shape_output_get_profile]
+
+  status active
+}

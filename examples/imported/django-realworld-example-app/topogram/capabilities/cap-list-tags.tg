@@ -1,0 +1,16 @@
+# imported confidence: high
+# imported source_kind: route_code
+# imported provenance: conduit/apps/articles/urls.py#GET /api/tags
+# imported provenance: conduit/apps/articles/serializers.py
+# imported provenance: conduit/apps/articles/views.py
+capability cap_list_tags {
+  name "GET /api/tags"
+  description "Candidate capability imported from brownfield API evidence"
+
+  reads [entity_tag]
+
+  input [shape_input_list_tags]
+  output [shape_output_list_tags]
+
+  status active
+}

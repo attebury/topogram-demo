@@ -1,0 +1,10 @@
+shape shape_output_get_country_details {
+  name "Get Country Details Output"
+  description "Candidate shape imported from brownfield API evidence"
+
+  fields {
+    countrydetail string optional
+  }
+
+  status active
+}

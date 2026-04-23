@@ -1,0 +1,11 @@
+# imported confidence: medium
+# imported source_kind: route_code
+# imported provenance: src/server.ts#GET /health
+capability cap_response {
+  name "GET /health"
+  description "Candidate capability imported from brownfield API evidence"
+
+  reads [entity_health]
+
+  status active
+}

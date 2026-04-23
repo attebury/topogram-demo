@@ -1,0 +1,13 @@
+# imported confidence: high
+# imported source_kind: openapi
+# imported provenance: src/docs/openapi.ts#PATCH /workspaces/{id}
+capability cap_update_workspace {
+  name "Update workspace"
+  description "Candidate capability imported from brownfield API evidence"
+
+  actors [user]
+
+  updates [entity_workspace]
+
+  status active
+}

@@ -1,0 +1,256 @@
+{
+  "workflows": [
+    {
+      "kind": "workflow",
+      "id_hint": "workflow_account",
+      "label": "Account Workflow",
+      "confidence": "medium",
+      "source_kind": "generated_artifact",
+      "source_of_truth": "imported",
+      "provenance": [
+        "src/docs/openapi.ts#POST /login"
+      ],
+      "track": "workflows",
+      "entity_id": "entity_account",
+      "actor_hints": [
+        "anonymous",
+        "user"
+      ],
+      "related_capabilities": [
+        "cap_create_account",
+        "cap_list_accounts",
+        "cap_register_account",
+        "cap_sign_in_account",
+        "cap_update_account_role",
+        "cap_update_account_status"
+      ],
+      "documented": false
+    },
+    {
+      "kind": "workflow",
+      "id_hint": "workflow_profile",
+      "label": "Profile Workflow",
+      "confidence": "medium",
+      "source_kind": "generated_artifact",
+      "source_of_truth": "imported",
+      "provenance": [
+        "src/docs/openapi.ts#GET /me"
+      ],
+      "track": "workflows",
+      "entity_id": "entity_profile",
+      "actor_hints": [
+        "user"
+      ],
+      "related_capabilities": [
+        "cap_get_profile",
+        "cap_update_profile"
+      ],
+      "documented": false
+    },
+    {
+      "kind": "workflow",
+      "id_hint": "workflow_workspace",
+      "label": "Workspace Workflow",
+      "confidence": "medium",
+      "source_kind": "generated_artifact",
+      "source_of_truth": "imported",
+      "provenance": [
+        "src/docs/openapi.ts#GET /workspaces",
+        "src/docs/openapi.ts#GET /admin/workspaces"
+      ],
+      "track": "workflows",
+      "entity_id": "entity_workspace",
+      "actor_hints": [
+        "user"
+      ],
+      "related_capabilities": [
+        "cap_create_workspace",
+        "cap_delete_workspace",
+        "cap_get_workspace",
+        "cap_list_workspaces",
+        "cap_update_workspace"
+      ],
+      "documented": false
+    },
+    {
+      "kind": "workflow",
+      "id_hint": "workflow_workspace-membership",
+      "label": "Workspace Membership Workflow",
+      "confidence": "medium",
+      "source_kind": "generated_artifact",
+      "source_of_truth": "imported",
+      "provenance": [
+        "src/docs/openapi.ts#PUT /workspaces/{id}/members/{memberId}/role"
+      ],
+      "track": "workflows",
+      "entity_id": "entity_workspace-membership",
+      "actor_hints": [
+        "user"
+      ],
+      "related_capabilities": [
+        "cap_create_workspace_membership",
+        "cap_delete_workspace_membership",
+        "cap_list_workspace_memberships",
+        "cap_update_workspace_membership_role"
+      ],
+      "documented": false
+    },
+    {
+      "kind": "workflow",
+      "id_hint": "workflow_audit-log",
+      "label": "Audit Log Workflow",
+      "confidence": "medium",
+      "source_kind": "generated_artifact",
+      "source_of_truth": "imported",
+      "provenance": [
+        "src/docs/openapi.ts#GET /admin/audit-logs"
+      ],
+      "track": "workflows",
+      "entity_id": "entity_audit-log",
+      "actor_hints": [
+        "user"
+      ],
+      "related_capabilities": [
+        "cap_get_audit_log_stats",
+        "cap_list_audit_logs"
+      ],
+      "documented": false
+    }
+  ],
+  "workflow_states": [],
+  "workflow_transitions": [
+    {
+      "kind": "workflow_transition",
+      "id_hint": "workflow_account_cap_sign_in_account",
+      "label": "Sign In Account",
+      "confidence": "low",
+      "source_kind": "openapi",
+      "source_of_truth": "imported",
+      "provenance": [
+        "src/docs/openapi.ts#POST /login"
+      ],
+      "track": "workflows",
+      "workflow_id": "workflow_account",
+      "entity_id": "entity_account",
+      "capability_id": "cap_sign_in_account",
+      "actor_hints": [
+        "anonymous"
+      ],
+      "to_state": "authenticated"
+    },
+    {
+      "kind": "workflow_transition",
+      "id_hint": "workflow_account_cap_register_account",
+      "label": "Register Account",
+      "confidence": "low",
+      "source_kind": "openapi",
+      "source_of_truth": "imported",
+      "provenance": [
+        "src/docs/openapi.ts#POST /signup"
+      ],
+      "track": "workflows",
+      "workflow_id": "workflow_account",
+      "entity_id": "entity_account",
+      "capability_id": "cap_register_account",
+      "actor_hints": [
+        "anonymous"
+      ],
+      "to_state": "registered"
+    },
+    {
+      "kind": "workflow_transition",
+      "id_hint": "workflow_account_cap_create_account",
+      "label": "Create Account",
+      "confidence": "low",
+      "source_kind": "openapi",
+      "source_of_truth": "imported",
+      "provenance": [
+        "src/docs/openapi.ts#POST /admin/accounts"
+      ],
+      "track": "workflows",
+      "workflow_id": "workflow_account",
+      "entity_id": "entity_account",
+      "capability_id": "cap_create_account",
+      "actor_hints": [
+        "user"
+      ],
+      "to_state": "created"
+    },
+    {
+      "kind": "workflow_transition",
+      "id_hint": "workflow_workspace_cap_create_workspace",
+      "label": "Create Workspace",
+      "confidence": "low",
+      "source_kind": "openapi",
+      "source_of_truth": "imported",
+      "provenance": [
+        "src/docs/openapi.ts#POST /workspaces"
+      ],
+      "track": "workflows",
+      "workflow_id": "workflow_workspace",
+      "entity_id": "entity_workspace",
+      "capability_id": "cap_create_workspace",
+      "actor_hints": [
+        "user"
+      ],
+      "to_state": "created"
+    },
+    {
+      "kind": "workflow_transition",
+      "id_hint": "workflow_workspace_cap_delete_workspace",
+      "label": "Delete Workspace",
+      "confidence": "low",
+      "source_kind": "openapi",
+      "source_of_truth": "imported",
+      "provenance": [
+        "src/docs/openapi.ts#DELETE /workspaces/{id}"
+      ],
+      "track": "workflows",
+      "workflow_id": "workflow_workspace",
+      "entity_id": "entity_workspace",
+      "capability_id": "cap_delete_workspace",
+      "actor_hints": [
+        "user"
+      ],
+      "to_state": "deleted"
+    },
+    {
+      "kind": "workflow_transition",
+      "id_hint": "workflow_workspace-membership_cap_delete_workspace_membership",
+      "label": "Delete Workspace Membership",
+      "confidence": "low",
+      "source_kind": "openapi",
+      "source_of_truth": "imported",
+      "provenance": [
+        "src/docs/openapi.ts#DELETE /workspaces/{id}/members/{memberId}"
+      ],
+      "track": "workflows",
+      "workflow_id": "workflow_workspace-membership",
+      "entity_id": "entity_workspace-membership",
+      "capability_id": "cap_delete_workspace_membership",
+      "actor_hints": [
+        "user"
+      ],
+      "to_state": "deleted"
+    },
+    {
+      "kind": "workflow_transition",
+      "id_hint": "workflow_workspace-membership_cap_create_workspace_membership",
+      "label": "Create Workspace Membership",
+      "confidence": "low",
+      "source_kind": "openapi",
+      "source_of_truth": "imported",
+      "provenance": [
+        "src/docs/openapi.ts#POST /workspaces/{id}/members"
+      ],
+      "track": "workflows",
+      "workflow_id": "workflow_workspace-membership",
+      "entity_id": "entity_workspace-membership",
+      "capability_id": "cap_create_workspace_membership",
+      "actor_hints": [
+        "user"
+      ],
+      "to_state": "created"
+    }
+  ]
+}

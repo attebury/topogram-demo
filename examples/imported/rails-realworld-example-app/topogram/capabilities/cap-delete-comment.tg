@@ -1,0 +1,14 @@
+# imported confidence: high
+# imported source_kind: route_code
+# imported provenance: config/routes.rb#DELETE /api/articles/:slug/comments/:id
+# imported provenance: app/controllers/comments_controller.rb
+capability cap_delete_comment {
+  name "DELETE /api/articles/:slug/comments/:id"
+  description "Candidate capability imported from brownfield API evidence"
+
+  actors [user]
+
+  deletes [entity_comment]
+
+  status active
+}

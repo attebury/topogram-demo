@@ -1,0 +1,97 @@
+{
+  "bootstrapped_topogram_root": false,
+  "candidate_docs": [
+    {
+      "confidence": "low",
+      "id": "database",
+      "kind": "glossary",
+      "path": "candidates/docs/glossary/database.md",
+      "provenance": [
+        "README.md"
+      ],
+      "related_capabilities": [],
+      "related_entities": [],
+      "source_of_truth": "imported",
+      "title": "Database"
+    },
+    {
+      "confidence": "low",
+      "id": "debugging",
+      "kind": "glossary",
+      "path": "candidates/docs/glossary/debugging.md",
+      "provenance": [
+        "README.md"
+      ],
+      "related_capabilities": [],
+      "related_entities": [],
+      "source_of_truth": "imported",
+      "title": "Debugging"
+    },
+    {
+      "confidence": "low",
+      "id": "development",
+      "kind": "glossary",
+      "path": "candidates/docs/glossary/development.md",
+      "provenance": [
+        "README.md"
+      ],
+      "related_capabilities": [],
+      "related_entities": [],
+      "source_of_truth": "imported",
+      "title": "Development"
+    },
+    {
+      "confidence": "low",
+      "id": "review-workflow",
+      "kind": "workflow",
+      "path": "candidates/docs/workflows/review-workflow.md",
+      "provenance": [
+        "README.md"
+      ],
+      "related_capabilities": [],
+      "related_entities": [],
+      "source_of_truth": "imported",
+      "title": "Review Workflow"
+    },
+    {
+      "confidence": "low",
+      "id": "lifecycle-flow",
+      "kind": "workflow",
+      "path": "candidates/docs/workflows/lifecycle-flow.md",
+      "provenance": [
+        "README.md"
+      ],
+      "related_capabilities": [],
+      "related_entities": [],
+      "source_of_truth": "imported",
+      "title": "Lifecycle Flow"
+    }
+  ],
+  "findings": [
+    {
+      "file": "/Users/attebury/Documents/topogram/trials/supabase-express-api/README.md",
+      "relative_path": "README.md",
+      "term_candidates": [
+        "supabase",
+        "debugging",
+        "database",
+        "development",
+        "pnpm",
+        "token",
+        "workspaces",
+        "postgres"
+      ],
+      "title": "Supabase Express API",
+      "workflow_signals": [
+        "review_workflow",
+        "lifecycle_flow"
+      ]
+    }
+  ],
+  "source_count": 1,
+  "sources": [
+    "README.md"
+  ],
+  "type": "scan_docs_report",
+  "workspace": "/Users/attebury/Documents/topogram/trials/supabase-express-api/topogram"
+}

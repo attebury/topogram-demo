@@ -1,0 +1,14 @@
+# imported confidence: high
+# imported source_kind: openapi
+# imported provenance: src/docs/openapi.ts#GET /me
+capability cap_list_me {
+  name "Get current user profile"
+  description "Candidate capability imported from brownfield API evidence"
+
+  actors [user]
+
+  reads [entity_me]
+  output [shape_output_list_me]
+
+  status active
+}

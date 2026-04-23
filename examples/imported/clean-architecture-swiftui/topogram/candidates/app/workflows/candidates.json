@@ -1,0 +1,46 @@
+{
+  "workflows": [
+    {
+      "kind": "workflow",
+      "id_hint": "workflow_country",
+      "label": "Country Workflow",
+      "confidence": "medium",
+      "source_kind": "generated_artifact",
+      "source_of_truth": "imported",
+      "provenance": [
+        "CountriesSwiftUI/Repositories/WebAPI/CountriesWebRepository.swift#countries"
+      ],
+      "track": "workflows",
+      "entity_id": "entity_country",
+      "actor_hints": [
+        "anonymous"
+      ],
+      "related_capabilities": [
+        "cap_list_countries"
+      ],
+      "documented": false
+    },
+    {
+      "kind": "workflow",
+      "id_hint": "workflow_country_details",
+      "label": "Country Details Workflow",
+      "confidence": "medium",
+      "source_kind": "generated_artifact",
+      "source_of_truth": "imported",
+      "provenance": [
+        "CountriesSwiftUI/Repositories/WebAPI/CountriesWebRepository.swift#details"
+      ],
+      "track": "workflows",
+      "entity_id": "entity_country_details",
+      "actor_hints": [
+        "anonymous"
+      ],
+      "related_capabilities": [
+        "cap_get_country_details"
+      ],
+      "documented": false
+    }
+  ],
+  "workflow_states": [],
+  "workflow_transitions": []
+}

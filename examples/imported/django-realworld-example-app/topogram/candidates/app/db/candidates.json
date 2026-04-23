@@ -1,0 +1,414 @@
+{
+  "entities": [
+    {
+      "kind": "entity",
+      "id_hint": "entity_article",
+      "label": "Article",
+      "confidence": "high",
+      "source_kind": "schema",
+      "source_of_truth": "imported",
+      "provenance": [
+        "conduit/apps/articles/models.py"
+      ],
+      "track": "db",
+      "model_name": "Article",
+      "django_bases": [
+        "TimestampedModel"
+      ],
+      "fields": [
+        {
+          "name": "slug",
+          "field_type": "string",
+          "required": true,
+          "list": false,
+          "unique": true,
+          "primary_key": false
+        },
+        {
+          "name": "title",
+          "field_type": "string",
+          "required": true,
+          "list": false,
+          "unique": false,
+          "primary_key": false
+        },
+        {
+          "name": "description",
+          "field_type": "string",
+          "required": true,
+          "list": false,
+          "unique": false,
+          "primary_key": false
+        },
+        {
+          "name": "body",
+          "field_type": "string",
+          "required": true,
+          "list": false,
+          "unique": false,
+          "primary_key": false
+        },
+        {
+          "name": "author",
+          "field_type": "profile",
+          "required": true,
+          "list": false,
+          "unique": false,
+          "primary_key": false
+        },
+        {
+          "name": "tags",
+          "field_type": "tag",
+          "required": true,
+          "list": true,
+          "unique": false,
+          "primary_key": false
+        }
+      ]
+    },
+    {
+      "kind": "entity",
+      "id_hint": "entity_comment",
+      "label": "Comment",
+      "confidence": "high",
+      "source_kind": "schema",
+      "source_of_truth": "imported",
+      "provenance": [
+        "conduit/apps/articles/models.py"
+      ],
+      "track": "db",
+      "model_name": "Comment",
+      "django_bases": [
+        "TimestampedModel"
+      ],
+      "fields": [
+        {
+          "name": "body",
+          "field_type": "string",
+          "required": true,
+          "list": false,
+          "unique": false,
+          "primary_key": false
+        },
+        {
+          "name": "article",
+          "field_type": "article",
+          "required": true,
+          "list": false,
+          "unique": false,
+          "primary_key": false
+        },
+        {
+          "name": "author",
+          "field_type": "profile",
+          "required": true,
+          "list": false,
+          "unique": false,
+          "primary_key": false
+        }
+      ]
+    },
+    {
+      "kind": "entity",
+      "id_hint": "entity_tag",
+      "label": "Tag",
+      "confidence": "high",
+      "source_kind": "schema",
+      "source_of_truth": "imported",
+      "provenance": [
+        "conduit/apps/articles/models.py"
+      ],
+      "track": "db",
+      "model_name": "Tag",
+      "django_bases": [
+        "TimestampedModel"
+      ],
+      "fields": [
+        {
+          "name": "tag",
+          "field_type": "string",
+          "required": true,
+          "list": false,
+          "unique": false,
+          "primary_key": false
+        },
+        {
+          "name": "slug",
+          "field_type": "string",
+          "required": true,
+          "list": false,
+          "unique": true,
+          "primary_key": false
+        }
+      ]
+    },
+    {
+      "kind": "entity",
+      "id_hint": "entity_user",
+      "label": "User",
+      "confidence": "high",
+      "source_kind": "schema",
+      "source_of_truth": "imported",
+      "provenance": [
+        "conduit/apps/authentication/models.py"
+      ],
+      "track": "db",
+      "model_name": "User",
+      "django_bases": [
+        "AbstractBaseUser",
+        "PermissionsMixin",
+        "TimestampedModel"
+      ],
+      "fields": [
+        {
+          "name": "username",
+          "field_type": "string",
+          "required": true,
+          "list": false,
+          "unique": true,
+          "primary_key": false
+        },
+        {
+          "name": "email",
+          "field_type": "string",
+          "required": true,
+          "list": false,
+          "unique": true,
+          "primary_key": false
+        },
+        {
+          "name": "is_active",
+          "field_type": "boolean",
+          "required": true,
+          "list": false,
+          "unique": false,
+          "primary_key": false
+        },
+        {
+          "name": "is_staff",
+          "field_type": "boolean",
+          "required": true,
+          "list": false,
+          "unique": false,
+          "primary_key": false
+        }
+      ]
+    },
+    {
+      "kind": "entity",
+      "id_hint": "entity_profile",
+      "label": "Profile",
+      "confidence": "high",
+      "source_kind": "schema",
+      "source_of_truth": "imported",
+      "provenance": [
+        "conduit/apps/profiles/models.py"
+      ],
+      "track": "db",
+      "model_name": "Profile",
+      "django_bases": [
+        "TimestampedModel"
+      ],
+      "fields": [
+        {
+          "name": "user",
+          "field_type": "user",
+          "required": true,
+          "list": false,
+          "unique": false,
+          "primary_key": false
+        },
+        {
+          "name": "bio",
+          "field_type": "string",
+          "required": false,
+          "list": false,
+          "unique": false,
+          "primary_key": false
+        },
+        {
+          "name": "image",
+          "field_type": "string",
+          "required": false,
+          "list": false,
+          "unique": false,
+          "primary_key": false
+        },
+        {
+          "name": "follows",
+          "field_type": "profile",
+          "required": true,
+          "list": true,
+          "unique": false,
+          "primary_key": false
+        },
+        {
+          "name": "favorites",
+          "field_type": "article",
+          "required": true,
+          "list": true,
+          "unique": false,
+          "primary_key": false
+        }
+      ]
+    }
+  ],
+  "enums": [],
+  "relations": [
+    {
+      "kind": "relation",
+      "id_hint": "entity_article_author_entity_profile",
+      "label": "entity_article -> entity_profile",
+      "confidence": "medium",
+      "source_kind": "schema",
+      "source_of_truth": "imported",
+      "provenance": [
+        "conduit/apps/articles/models.py"
+      ],
+      "track": "db",
+      "from_entity": "entity_article",
+      "to_entity": "entity_profile",
+      "relation_field": "author",
+      "fields": [
+        "author"
+      ],
+      "references": [
+        "id"
+      ],
+      "relation_type": "foreignkey"
+    },
+    {
+      "kind": "relation",
+      "id_hint": "entity_article_tags_entity_tag",
+      "label": "entity_article -> entity_tag",
+      "confidence": "medium",
+      "source_kind": "schema",
+      "source_of_truth": "imported",
+      "provenance": [
+        "conduit/apps/articles/models.py"
+      ],
+      "track": "db",
+      "from_entity": "entity_article",
+      "to_entity": "entity_tag",
+      "relation_field": "tags",
+      "fields": [
+        "tags"
+      ],
+      "references": [
+        "id"
+      ],
+      "relation_type": "manytomanyfield"
+    },
+    {
+      "kind": "relation",
+      "id_hint": "entity_comment_article_entity_article",
+      "label": "entity_comment -> entity_article",
+      "confidence": "medium",
+      "source_kind": "schema",
+      "source_of_truth": "imported",
+      "provenance": [
+        "conduit/apps/articles/models.py"
+      ],
+      "track": "db",
+      "from_entity": "entity_comment",
+      "to_entity": "entity_article",
+      "relation_field": "article",
+      "fields": [
+        "article"
+      ],
+      "references": [
+        "id"
+      ],
+      "relation_type": "foreignkey"
+    },
+    {
+      "kind": "relation",
+      "id_hint": "entity_comment_author_entity_profile",
+      "label": "entity_comment -> entity_profile",
+      "confidence": "medium",
+      "source_kind": "schema",
+      "source_of_truth": "imported",
+      "provenance": [
+        "conduit/apps/articles/models.py"
+      ],
+      "track": "db",
+      "from_entity": "entity_comment",
+      "to_entity": "entity_profile",
+      "relation_field": "author",
+      "fields": [
+        "author"
+      ],
+      "references": [
+        "id"
+      ],
+      "relation_type": "foreignkey"
+    },
+    {
+      "kind": "relation",
+      "id_hint": "entity_profile_user_entity_user",
+      "label": "entity_profile -> entity_user",
+      "confidence": "medium",
+      "source_kind": "schema",
+      "source_of_truth": "imported",
+      "provenance": [
+        "conduit/apps/profiles/models.py"
+      ],
+      "track": "db",
+      "from_entity": "entity_profile",
+      "to_entity": "entity_user",
+      "relation_field": "user",
+      "fields": [
+        "user"
+      ],
+      "references": [
+        "id"
+      ],
+      "relation_type": "onetoonefield"
+    },
+    {
+      "kind": "relation",
+      "id_hint": "entity_profile_follows_entity_profile",
+      "label": "entity_profile -> entity_profile",
+      "confidence": "medium",
+      "source_kind": "schema",
+      "source_of_truth": "imported",
+      "provenance": [
+        "conduit/apps/profiles/models.py"
+      ],
+      "track": "db",
+      "from_entity": "entity_profile",
+      "to_entity": "entity_profile",
+      "relation_field": "follows",
+      "fields": [
+        "follows"
+      ],
+      "references": [
+        "id"
+      ],
+      "relation_type": "manytomanyfield"
+    },
+    {
+      "kind": "relation",
+      "id_hint": "entity_profile_favorites_entity_article",
+      "label": "entity_profile -> entity_article",
+      "confidence": "medium",
+      "source_kind": "schema",
+      "source_of_truth": "imported",
+      "provenance": [
+        "conduit/apps/profiles/models.py"
+      ],
+      "track": "db",
+      "from_entity": "entity_profile",
+      "to_entity": "entity_article",
+      "relation_field": "favorites",
+      "fields": [
+        "favorites"
+      ],
+      "references": [
+        "id"
+      ],
+      "relation_type": "manytomanyfield"
+    }
+  ],
+  "indexes": []
+}

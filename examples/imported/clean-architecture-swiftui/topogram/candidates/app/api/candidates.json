@@ -1,0 +1,91 @@
+{
+  "capabilities": [
+    {
+      "kind": "capability",
+      "id_hint": "cap_list_countries",
+      "label": "List Countries",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "source_of_truth": "imported",
+      "provenance": [
+        "CountriesSwiftUI/Repositories/WebAPI/CountriesWebRepository.swift#countries"
+      ],
+      "track": "api",
+      "endpoint": {
+        "method": "GET",
+        "path": "/all?fields=name,translations,population,flag,alpha3Code"
+      },
+      "path_params": [],
+      "query_params": [
+        {
+          "name": "fields",
+          "required": false,
+          "type": null
+        }
+      ],
+      "header_params": [],
+      "input_fields": [],
+      "output_fields": [
+        "country"
+      ],
+      "auth_hint": "public",
+      "entity_id": "entity_country",
+      "repository": "CountriesWebRepository",
+      "actor_hints": [
+        "anonymous"
+      ]
+    },
+    {
+      "kind": "capability",
+      "id_hint": "cap_get_country_details",
+      "label": "Get Country Details",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "source_of_truth": "imported",
+      "provenance": [
+        "CountriesSwiftUI/Repositories/WebAPI/CountriesWebRepository.swift#details"
+      ],
+      "track": "api",
+      "endpoint": {
+        "method": "GET",
+        "path": "/countryDetails"
+      },
+      "path_params": [],
+      "query_params": [],
+      "header_params": [],
+      "input_fields": [],
+      "output_fields": [
+        "countrydetail"
+      ],
+      "auth_hint": "public",
+      "entity_id": "entity_country_details",
+      "repository": "CountriesWebRepository",
+      "actor_hints": [
+        "anonymous"
+      ]
+    }
+  ],
+  "routes": [
+    {
+      "path": "/all?fields=name,translations,population,flag,alpha3Code",
+      "method": "GET",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "provenance": [
+        "CountriesSwiftUI/Repositories/WebAPI/CountriesWebRepository.swift#countries"
+      ]
+    },
+    {
+      "path": "/countryDetails",
+      "method": "GET",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "provenance": [
+        "CountriesSwiftUI/Repositories/WebAPI/CountriesWebRepository.swift#details"
+      ]
+    }
+  ],
+  "stacks": [
+    "swift_webapi"
+  ]
+}

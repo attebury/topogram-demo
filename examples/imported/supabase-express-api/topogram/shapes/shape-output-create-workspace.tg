@@ -1,0 +1,12 @@
+shape shape_output_create_workspace {
+  name "Create Workspace Output"
+  description "Candidate shape imported from brownfield API evidence"
+
+  fields {
+    membership string optional
+    profile string optional
+    workspace string optional
+  }
+
+  status active
+}

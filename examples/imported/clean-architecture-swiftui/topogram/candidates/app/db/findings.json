@@ -1,0 +1,17 @@
+[
+  {
+    "kind": "swiftdata_models",
+    "file": "CountriesSwiftUI/Repositories/Models/Country.swift",
+    "entity_count": 1
+  },
+  {
+    "kind": "swiftdata_models",
+    "file": "CountriesSwiftUI/Repositories/Models/CountryCurrency.swift",
+    "entity_count": 1
+  },
+  {
+    "kind": "swiftdata_models",
+    "file": "CountriesSwiftUI/Repositories/Models/CountryDetails.swift",
+    "entity_count": 1
+  }
+]

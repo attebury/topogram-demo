@@ -1,0 +1,12 @@
+shape shape_input_follow_profile {
+  name "Follow Profile Input"
+  description "Candidate shape imported from brownfield API evidence"
+
+  fields {
+    bio string optional
+    following string optional
+    image string optional
+  }
+
+  status active
+}

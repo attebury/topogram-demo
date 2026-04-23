@@ -1,0 +1,55 @@
+{
+  "db": [
+    {
+      "kind": "swiftdata_models",
+      "file": "CountriesSwiftUI/Repositories/Models/Country.swift",
+      "entity_count": 1
+    },
+    {
+      "kind": "swiftdata_models",
+      "file": "CountriesSwiftUI/Repositories/Models/CountryCurrency.swift",
+      "entity_count": 1
+    },
+    {
+      "kind": "swiftdata_models",
+      "file": "CountriesSwiftUI/Repositories/Models/CountryDetails.swift",
+      "entity_count": 1
+    }
+  ],
+  "api": [
+    {
+      "kind": "swift_webapi",
+      "files": [
+        "CountriesSwiftUI/Repositories/WebAPI/CountriesWebRepository.swift"
+      ],
+      "capability_count": 2
+    }
+  ],
+  "ui": [
+    {
+      "kind": "swiftui_views",
+      "file": "CountriesSwiftUI/UI/CountriesList/CountriesListView.swift",
+      "screen_count": 1
+    },
+    {
+      "kind": "swiftui_views",
+      "file": "CountriesSwiftUI/UI/CountryDetails/CountryDetailsView.swift",
+      "screen_count": 1
+    },
+    {
+      "kind": "swiftui_views",
+      "file": "CountriesSwiftUI/UI/CountryDetails/ModalFlagView.swift",
+      "screen_count": 1
+    }
+  ],
+  "workflows": [
+    {
+      "kind": "workflow_inference",
+      "workflow_count": 2,
+      "workflow_doc_signals": [
+        "review-workflow",
+        "lifecycle-flow"
+      ]
+    }
+  ]
+}

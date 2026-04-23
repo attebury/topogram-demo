@@ -1,0 +1,148 @@
+{
+  "screens": [
+    {
+      "kind": "screen",
+      "id_hint": "country_list",
+      "label": "Country List",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "source_of_truth": "imported",
+      "provenance": [
+        "CountriesSwiftUI/UI/CountriesList/CountriesListView.swift#CountriesList"
+      ],
+      "track": "ui",
+      "entity_id": "entity_country",
+      "concept_id": "entity_country",
+      "screen_kind": "list",
+      "route_path": "/countries",
+      "capability_hints": [
+        "cap_list_countries"
+      ]
+    },
+    {
+      "kind": "screen",
+      "id_hint": "country_detail",
+      "label": "Country Detail",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "source_of_truth": "imported",
+      "provenance": [
+        "CountriesSwiftUI/UI/CountryDetails/CountryDetailsView.swift#CountryDetails"
+      ],
+      "track": "ui",
+      "entity_id": "entity_country",
+      "concept_id": "entity_country",
+      "screen_kind": "detail",
+      "route_path": "/countries/:alpha3Code",
+      "capability_hints": [
+        "cap_get_country_details"
+      ]
+    },
+    {
+      "kind": "screen",
+      "id_hint": "country_flag_modal",
+      "label": "Country Flag Modal",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "source_of_truth": "imported",
+      "provenance": [
+        "CountriesSwiftUI/UI/CountryDetails/ModalFlagView.swift#ModalFlagView"
+      ],
+      "track": "ui",
+      "entity_id": "entity_country",
+      "concept_id": "entity_country",
+      "screen_kind": "flow",
+      "route_path": "/countries/:alpha3Code/flag",
+      "capability_hints": []
+    }
+  ],
+  "routes": [
+    {
+      "kind": "ui_route",
+      "id_hint": "country_list_route",
+      "label": "/countries",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "source_of_truth": "imported",
+      "provenance": [
+        "CountriesSwiftUI/UI/CountriesList/CountriesListView.swift#CountriesList"
+      ],
+      "track": "ui",
+      "screen_id": "country_list",
+      "entity_id": "entity_country",
+      "concept_id": "entity_country",
+      "path": "/countries"
+    },
+    {
+      "kind": "ui_route",
+      "id_hint": "country_detail_route",
+      "label": "/countries/:alpha3Code",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "source_of_truth": "imported",
+      "provenance": [
+        "CountriesSwiftUI/UI/CountryDetails/CountryDetailsView.swift#CountryDetails"
+      ],
+      "track": "ui",
+      "screen_id": "country_detail",
+      "entity_id": "entity_country",
+      "concept_id": "entity_country",
+      "path": "/countries/:alpha3Code"
+    },
+    {
+      "kind": "ui_route",
+      "id_hint": "country_flag_modal_route",
+      "label": "/countries/:alpha3Code/flag",
+      "confidence": "high",
+      "source_kind": "route_code",
+      "source_of_truth": "imported",
+      "provenance": [
+        "CountriesSwiftUI/UI/CountryDetails/ModalFlagView.swift#ModalFlagView"
+      ],
+      "track": "ui",
+      "screen_id": "country_flag_modal",
+      "entity_id": "entity_country",
+      "concept_id": "entity_country",
+      "path": "/countries/:alpha3Code/flag"
+    }
+  ],
+  "actions": [
+    {
+      "kind": "ui_action",
+      "id_hint": "country_list_cap_list_countries",
+      "label": "cap_list_countries",
+      "confidence": "medium",
+      "source_kind": "route_code",
+      "source_of_truth": "imported",
+      "provenance": [
+        "CountriesSwiftUI/UI/CountriesList/CountriesListView.swift#CountriesList"
+      ],
+      "track": "ui",
+      "screen_id": "country_list",
+      "entity_id": "entity_country",
+      "concept_id": "entity_country",
+      "capability_hint": "cap_list_countries",
+      "prominence": "primary"
+    },
+    {
+      "kind": "ui_action",
+      "id_hint": "country_detail_cap_get_country_details",
+      "label": "cap_get_country_details",
+      "confidence": "medium",
+      "source_kind": "route_code",
+      "source_of_truth": "imported",
+      "provenance": [
+        "CountriesSwiftUI/UI/CountryDetails/CountryDetailsView.swift#CountryDetails"
+      ],
+      "track": "ui",
+      "screen_id": "country_detail",
+      "entity_id": "entity_country",
+      "concept_id": "entity_country",
+      "capability_hint": "cap_get_country_details",
+      "prominence": "primary"
+    }
+  ],
+  "stacks": [
+    "swiftui"
+  ]
+}

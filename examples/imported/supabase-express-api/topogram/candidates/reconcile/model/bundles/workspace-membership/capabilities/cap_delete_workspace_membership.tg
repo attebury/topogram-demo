@@ -1,0 +1,13 @@
+# imported confidence: high
+# imported source_kind: openapi
+# imported provenance: src/docs/openapi.ts#DELETE /workspaces/{id}/members/{memberId}
+capability cap_delete_workspace_membership {
+  name "Remove workspace member"
+  description "Candidate capability imported from brownfield API evidence"
+
+  actors [user]
+
+  deletes [entity_workspace-membership]
+
+  status active
+}

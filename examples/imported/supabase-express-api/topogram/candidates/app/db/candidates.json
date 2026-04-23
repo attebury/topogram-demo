@@ -1,0 +1,227 @@
+{
+  "entities": [
+    {
+      "kind": "entity",
+      "id_hint": "entity_account",
+      "label": "Account",
+      "confidence": "high",
+      "source_kind": "schema",
+      "source_of_truth": "imported",
+      "provenance": [
+        "src/schema.ts"
+      ],
+      "track": "db",
+      "table_name": "accounts",
+      "fields": [
+        {
+          "name": "uuid",
+          "field_type": "uuid",
+          "required": true,
+          "list": false,
+          "unique": false,
+          "primary_key": true
+        },
+        {
+          "name": "fullName",
+          "field_type": "text",
+          "required": true,
+          "list": false,
+          "unique": false,
+          "primary_key": false
+        },
+        {
+          "name": "phone",
+          "field_type": "varchar",
+          "required": false,
+          "list": false,
+          "unique": false,
+          "primary_key": false
+        }
+      ]
+    },
+    {
+      "kind": "entity",
+      "id_hint": "entity_workspace",
+      "label": "Workspace",
+      "confidence": "high",
+      "source_kind": "schema",
+      "source_of_truth": "imported",
+      "provenance": [
+        "src/schema.ts"
+      ],
+      "track": "db",
+      "table_name": "workspaces",
+      "fields": [
+        {
+          "name": "uuid",
+          "field_type": "uuid",
+          "required": true,
+          "list": false,
+          "unique": false,
+          "primary_key": true
+        },
+        {
+          "name": "name",
+          "field_type": "text",
+          "required": true,
+          "list": false,
+          "unique": false,
+          "primary_key": false
+        },
+        {
+          "name": "description",
+          "field_type": "text",
+          "required": false,
+          "list": false,
+          "unique": false,
+          "primary_key": false
+        },
+        {
+          "name": "createdAt",
+          "field_type": "timestamp",
+          "required": false,
+          "list": false,
+          "unique": false,
+          "primary_key": false
+        }
+      ]
+    },
+    {
+      "kind": "entity",
+      "id_hint": "entity_profile",
+      "label": "Profile",
+      "confidence": "high",
+      "source_kind": "schema",
+      "source_of_truth": "imported",
+      "provenance": [
+        "src/schema.ts"
+      ],
+      "track": "db",
+      "table_name": "profiles",
+      "fields": [
+        {
+          "name": "uuid",
+          "field_type": "uuid",
+          "required": true,
+          "list": false,
+          "unique": false,
+          "primary_key": true
+        },
+        {
+          "name": "name",
+          "field_type": "text",
+          "required": true,
+          "list": false,
+          "unique": false,
+          "primary_key": false
+        },
+        {
+          "name": "createdAt",
+          "field_type": "timestamp",
+          "required": false,
+          "list": false,
+          "unique": false,
+          "primary_key": false
+        }
+      ]
+    },
+    {
+      "kind": "entity",
+      "id_hint": "entity_workspace-membership",
+      "label": "Workspace Membership",
+      "confidence": "high",
+      "source_kind": "schema",
+      "source_of_truth": "imported",
+      "provenance": [
+        "src/schema.ts"
+      ],
+      "track": "db",
+      "table_name": "workspace_memberships",
+      "fields": [
+        {
+          "name": "uuid",
+          "field_type": "uuid",
+          "required": true,
+          "list": false,
+          "unique": false,
+          "primary_key": true
+        },
+        {
+          "name": "workspaceId",
+          "field_type": "uuid",
+          "required": true,
+          "list": false,
+          "unique": false,
+          "primary_key": false
+        },
+        {
+          "name": "accountId",
+          "field_type": "uuid",
+          "required": true,
+          "list": false,
+          "unique": false,
+          "primary_key": false
+        },
+        {
+          "name": "role",
+          "field_type": "workspace-membership_role",
+          "required": false,
+          "list": false,
+          "unique": false,
+          "primary_key": false
+        }
+      ]
+    },
+    {
+      "kind": "entity",
+      "id_hint": "entity_audit-log",
+      "label": "Audit Log",
+      "confidence": "high",
+      "source_kind": "schema",
+      "source_of_truth": "imported",
+      "provenance": [
+        "src/schema.ts"
+      ],
+      "track": "db",
+      "table_name": "audit_logs",
+      "fields": [
+        {
+          "name": "uuid",
+          "field_type": "uuid",
+          "required": true,
+          "list": false,
+          "unique": false,
+          "primary_key": true
+        },
+        {
+          "name": "action",
+          "field_type": "text",
+          "required": true,
+          "list": false,
+          "unique": false,
+          "primary_key": false
+        }
+      ]
+    }
+  ],
+  "enums": [
+    {
+      "kind": "enum",
+      "id_hint": "workspace-membership_role",
+      "label": "Workspace Membership Role",
+      "confidence": "high",
+      "source_kind": "schema",
+      "source_of_truth": "imported",
+      "provenance": [
+        "src/schema.ts"
+      ],
+      "track": "db",
+      "values": [
+        "admin",
+        "user"
+      ]
+    }
+  ],
+  "relations": [],
+  "indexes": []
+}

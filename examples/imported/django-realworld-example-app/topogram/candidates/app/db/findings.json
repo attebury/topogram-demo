@@ -1,0 +1,17 @@
+[
+  {
+    "kind": "django_models",
+    "file": "conduit/apps/articles/models.py",
+    "entity_count": 3
+  },
+  {
+    "kind": "django_models",
+    "file": "conduit/apps/authentication/models.py",
+    "entity_count": 1
+  },
+  {
+    "kind": "django_models",
+    "file": "conduit/apps/profiles/models.py",
+    "entity_count": 1
+  }
+]

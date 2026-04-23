@@ -1,0 +1,11 @@
+# imported confidence: high
+# imported source_kind: route_code
+# imported provenance: config/routes.rb#PUT /api/articles/:slug
+capability cap_update_article {
+  name "PUT /api/articles/:slug"
+  description "Candidate capability imported from brownfield API evidence"
+
+  updates [entity_article]
+
+  status active
+}

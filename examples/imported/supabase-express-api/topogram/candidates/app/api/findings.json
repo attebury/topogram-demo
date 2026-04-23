@@ -1,0 +1,7 @@
+[
+  {
+    "kind": "openapi_code",
+    "file": "src/docs/openapi.ts",
+    "capability_count": 21
+  }
+]

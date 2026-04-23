@@ -1,0 +1,15 @@
+shape shape_output_list_comments {
+  name "List Comments Output"
+  description "Candidate shape imported from brownfield API evidence"
+
+  fields {
+    author string optional
+    body string optional
+    comments string optional
+    createdAt string optional
+    id string optional
+    updatedAt string optional
+  }
+
+  status active
+}

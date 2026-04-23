@@ -1,0 +1,25 @@
+{
+  "bootstrapped_topogram_root": false,
+  "imported": {
+    "api": {
+      "capability_count": 0,
+      "route_count": 0
+    },
+    "db": {
+      "entity_count": 0,
+      "enum_count": 0,
+      "relation_count": 0
+    },
+    "ui": {
+      "route_count": 0,
+      "screen_count": 0
+    },
+    "workflows": {
+      "transition_count": 0,
+      "workflow_count": 0
+    }
+  },
+  "topogram_available": false,
+  "type": "gap_report",
+  "workspace": "/Users/attebury/Documents/topogram/trials/django-realworld-example-app"
+}

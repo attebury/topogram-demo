@@ -1,0 +1,17 @@
+# imported confidence: high
+# imported source_kind: route_code
+# imported provenance: config/routes.rb#DELETE /api/articles/:slug/favorite
+# imported provenance: app/controllers/articles_controller.rb
+capability cap_unfavorite_article {
+  name "Unfavorite Article"
+  description "Candidate capability imported from brownfield API evidence"
+
+  actors [user]
+
+  deletes [entity_article]
+
+  input [shape_input_unfavorite_article]
+  output [shape_output_unfavorite_article]
+
+  status active
+}

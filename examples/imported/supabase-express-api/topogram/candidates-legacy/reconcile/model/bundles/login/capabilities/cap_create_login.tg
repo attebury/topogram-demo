@@ -1,0 +1,14 @@
+# imported confidence: high
+# imported source_kind: openapi
+# imported provenance: src/docs/openapi.ts#POST /login
+capability cap_create_login {
+  name "User login"
+  description "Candidate capability imported from brownfield API evidence"
+
+  creates [entity_login]
+
+  input [shape_input_create_login]
+  output [shape_output_create_login]
+
+  status active
+}

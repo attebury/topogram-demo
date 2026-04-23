@@ -1,0 +1,15 @@
+# imported confidence: high
+# imported source_kind: schema
+# imported provenance: db/schema.rb
+entity entity_tag {
+  name "Tag"
+  description "Candidate entity imported from brownfield schema evidence"
+
+  fields {
+    name string optional
+    created_at datetime required
+    updated_at datetime required
+  }
+
+  status active
+}

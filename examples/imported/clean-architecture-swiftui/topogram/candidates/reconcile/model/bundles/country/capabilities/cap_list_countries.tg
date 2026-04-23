@@ -1,0 +1,12 @@
+# imported confidence: high
+# imported source_kind: route_code
+# imported provenance: CountriesSwiftUI/Repositories/WebAPI/CountriesWebRepository.swift#countries
+capability cap_list_countries {
+  name "List Countries"
+  description "Candidate capability imported from brownfield API evidence"
+
+  reads [entity_country]
+  output [shape_output_list_countries]
+
+  status active
+}

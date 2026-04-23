@@ -1,0 +1,15 @@
+# imported confidence: high
+# imported source_kind: route_code
+# imported provenance: config/routes.rb#POST /api/users
+# imported provenance: app/controllers/users_controller.rb
+capability cap_create_user {
+  name "POST /api/users"
+  description "Candidate capability imported from brownfield API evidence"
+
+  creates [entity_user]
+
+  input [shape_input_create_user]
+  output [shape_output_create_user]
+
+  status active
+}

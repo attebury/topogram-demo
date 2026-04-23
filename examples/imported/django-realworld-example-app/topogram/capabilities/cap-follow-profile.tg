@@ -1,0 +1,18 @@
+# imported confidence: high
+# imported source_kind: route_code
+# imported provenance: conduit/apps/profiles/urls.py#POST /api/profiles/{username}/follow
+# imported provenance: conduit/apps/profiles/serializers.py
+# imported provenance: conduit/apps/profiles/views.py
+capability cap_follow_profile {
+  name "Follow Profile"
+  description "Candidate capability imported from brownfield API evidence"
+
+  actors [user]
+
+  reads [entity_profile]
+
+  input [shape_input_follow_profile]
+  output [shape_output_follow_profile]
+
+  status active
+}

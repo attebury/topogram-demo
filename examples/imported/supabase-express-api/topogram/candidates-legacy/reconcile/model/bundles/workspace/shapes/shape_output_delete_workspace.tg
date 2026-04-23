@@ -1,0 +1,12 @@
+shape shape_output_delete_workspace {
+  name "Delete Workspace Output"
+  description "Candidate shape imported from brownfield API evidence"
+
+  fields {
+    code string optional
+    data string optional
+    message string optional
+  }
+
+  status active
+}

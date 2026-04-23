@@ -1,0 +1,25 @@
+{
+  "db": [
+    {
+      "kind": "rails_schema",
+      "file": "db/schema.rb",
+      "entity_count": 7,
+      "relation_count": 3
+    }
+  ],
+  "api": [
+    {
+      "kind": "rails_routes",
+      "file": "config/routes.rb",
+      "route_count": 20
+    }
+  ],
+  "ui": [],
+  "workflows": [
+    {
+      "kind": "workflow_inference",
+      "workflow_count": 6,
+      "workflow_doc_signals": []
+    }
+  ]
+}

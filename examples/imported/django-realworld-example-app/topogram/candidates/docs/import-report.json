@@ -1,0 +1,96 @@
+{
+  "bootstrapped_topogram_root": true,
+  "candidate_docs": [
+    {
+      "confidence": "low",
+      "id": "install",
+      "kind": "glossary",
+      "path": "candidates/docs/glossary/install.md",
+      "provenance": [
+        "README.md"
+      ],
+      "related_capabilities": [],
+      "related_entities": [],
+      "source_of_truth": "imported",
+      "title": "Install"
+    },
+    {
+      "confidence": "low",
+      "id": "installation",
+      "kind": "glossary",
+      "path": "candidates/docs/glossary/installation.md",
+      "provenance": [
+        "README.md"
+      ],
+      "related_capabilities": [],
+      "related_entities": [],
+      "source_of_truth": "imported",
+      "title": "Installation"
+    },
+    {
+      "confidence": "low",
+      "id": "productionready",
+      "kind": "glossary",
+      "path": "candidates/docs/glossary/productionready.md",
+      "provenance": [
+        "README.md"
+      ],
+      "related_capabilities": [],
+      "related_entities": [],
+      "source_of_truth": "imported",
+      "title": "Productionready"
+    },
+    {
+      "confidence": "low",
+      "id": "pyenv",
+      "kind": "glossary",
+      "path": "candidates/docs/glossary/pyenv.md",
+      "provenance": [
+        "README.md"
+      ],
+      "related_capabilities": [],
+      "related_entities": [],
+      "source_of_truth": "imported",
+      "title": "Pyenv"
+    },
+    {
+      "confidence": "low",
+      "id": "lifecycle-flow",
+      "kind": "workflow",
+      "path": "candidates/docs/workflows/lifecycle-flow.md",
+      "provenance": [
+        "README.md"
+      ],
+      "related_capabilities": [],
+      "related_entities": [],
+      "source_of_truth": "imported",
+      "title": "Lifecycle Flow"
+    }
+  ],
+  "findings": [
+    {
+      "file": "/Users/attebury/Documents/topogram/trials/django-realworld-example-app/README.md",
+      "relative_path": "README.md",
+      "term_candidates": [
+        "productionready",
+        "pyenv",
+        "install",
+        "installation",
+        "git",
+        "productionready-django-api",
+        "virtualenv",
+        "clone"
+      ],
+      "title": "![Django DRF Example App](project-logo.png)",
+      "workflow_signals": [
+        "lifecycle_flow"
+      ]
+    }
+  ],
+  "source_count": 1,
+  "sources": [
+    "README.md"
+  ],
+  "type": "scan_docs_report",
+  "workspace": "/Users/attebury/Documents/topogram/trials/django-realworld-example-app/topogram"
+}

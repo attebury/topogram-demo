@@ -1,0 +1,9 @@
+{
+  "target": "clean-architecture-swiftui",
+  "display_name": "clean-architecture-swiftui",
+  "status": "closed",
+  "topogram_commit_tested": "396fd5c",
+  "last_verified_date": "2026-04-22",
+  "known_blockers": [],
+  "notes": "Seeded from the closed imported proof snapshot in topogram/trials/clean-architecture-swiftui."
+}

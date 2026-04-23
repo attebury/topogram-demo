@@ -1,0 +1,18 @@
+[
+  {
+    "file": "/Users/attebury/Documents/topogram/trials/rails-realworld-example-app/README.md",
+    "relative_path": "README.md",
+    "term_candidates": [
+      "rails",
+      "how",
+      "ruby",
+      "realworld",
+      "you",
+      "clone",
+      "can",
+      "install"
+    ],
+    "title": "README",
+    "workflow_signals": []
+  }
+]

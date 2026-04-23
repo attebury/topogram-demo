@@ -1,0 +1,11 @@
+# imported confidence: medium
+# imported source_kind: route_code
+# imported provenance: src/docs/swagger.ts#GET /docs
+capability cap_documentation {
+  name "GET /docs"
+  description "Candidate capability imported from brownfield API evidence"
+
+  reads [entity_doc]
+
+  status active
+}

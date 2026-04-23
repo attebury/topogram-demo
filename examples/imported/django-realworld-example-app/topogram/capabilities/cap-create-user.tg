@@ -1,0 +1,16 @@
+# imported confidence: high
+# imported source_kind: route_code
+# imported provenance: conduit/apps/authentication/urls.py#POST /api/users
+# imported provenance: conduit/apps/authentication/serializers.py
+# imported provenance: conduit/apps/authentication/views.py
+capability cap_create_user {
+  name "POST /api/users"
+  description "Candidate capability imported from brownfield API evidence"
+
+  creates [entity_user]
+
+  input [shape_input_create_user]
+  output [shape_output_create_user]
+
+  status active
+}

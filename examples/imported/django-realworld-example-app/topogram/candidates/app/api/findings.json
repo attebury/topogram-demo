@@ -1,0 +1,7 @@
+[
+  {
+    "kind": "django_routes",
+    "file": "conduit/urls.py",
+    "route_count": 18
+  }
+]

@@ -1,0 +1,15 @@
+# imported confidence: high
+# imported source_kind: openapi
+# imported provenance: src/docs/openapi.ts#PUT /admin/accounts/{id}/role
+# imported provenance: src/docs/openapi.ts#PUT /admin/accounts/{id}/status
+capability cap_update_admin {
+  name "Update account SuperAdmin status"
+  description "Candidate capability imported from brownfield API evidence"
+
+  actors [user]
+
+  updates [entity_admin]
+  output [shape_output_update_admin]
+
+  status active
+}

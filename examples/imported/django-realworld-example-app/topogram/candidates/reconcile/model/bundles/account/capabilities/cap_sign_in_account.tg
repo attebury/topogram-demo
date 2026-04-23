@@ -1,0 +1,16 @@
+# imported confidence: high
+# imported source_kind: route_code
+# imported provenance: conduit/apps/authentication/urls.py#POST /api/users/login
+# imported provenance: conduit/apps/authentication/serializers.py
+# imported provenance: conduit/apps/authentication/views.py
+capability cap_sign_in_account {
+  name "Sign In Account"
+  description "Candidate capability imported from brownfield API evidence"
+
+  reads [entity_account]
+
+  input [shape_input_sign_in_account]
+  output [shape_output_sign_in_account]
+
+  status active
+}

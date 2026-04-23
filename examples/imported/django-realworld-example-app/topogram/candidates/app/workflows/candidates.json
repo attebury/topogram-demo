@@ -1,0 +1,343 @@
+{
+  "workflows": [
+    {
+      "kind": "workflow",
+      "id_hint": "workflow_article",
+      "label": "Article Workflow",
+      "confidence": "medium",
+      "source_kind": "generated_artifact",
+      "source_of_truth": "imported",
+      "provenance": [
+        "conduit/apps/articles/urls.py#GET /api/articles",
+        "conduit/apps/articles/serializers.py",
+        "conduit/apps/articles/views.py"
+      ],
+      "track": "workflows",
+      "entity_id": "entity_article",
+      "actor_hints": [
+        "anonymous",
+        "user"
+      ],
+      "related_capabilities": [
+        "cap_create_article",
+        "cap_favorite_article",
+        "cap_feed_article",
+        "cap_get_article",
+        "cap_list_articles",
+        "cap_unfavorite_article",
+        "cap_update_article"
+      ],
+      "documented": false
+    },
+    {
+      "kind": "workflow",
+      "id_hint": "workflow_comment",
+      "label": "Comment Workflow",
+      "confidence": "medium",
+      "source_kind": "generated_artifact",
+      "source_of_truth": "imported",
+      "provenance": [
+        "conduit/apps/articles/urls.py#GET /api/articles/{article_slug}/comments",
+        "conduit/apps/articles/serializers.py",
+        "conduit/apps/articles/views.py"
+      ],
+      "track": "workflows",
+      "entity_id": "entity_comment",
+      "actor_hints": [
+        "anonymous",
+        "user"
+      ],
+      "related_capabilities": [
+        "cap_create_comment",
+        "cap_delete_comment",
+        "cap_list_comments"
+      ],
+      "documented": false
+    },
+    {
+      "kind": "workflow",
+      "id_hint": "workflow_tag",
+      "label": "Tag Workflow",
+      "confidence": "medium",
+      "source_kind": "generated_artifact",
+      "source_of_truth": "imported",
+      "provenance": [
+        "conduit/apps/articles/urls.py#GET /api/tags",
+        "conduit/apps/articles/serializers.py",
+        "conduit/apps/articles/views.py"
+      ],
+      "track": "workflows",
+      "entity_id": "entity_tag",
+      "actor_hints": [
+        "anonymous"
+      ],
+      "related_capabilities": [
+        "cap_list_tags"
+      ],
+      "documented": false
+    },
+    {
+      "kind": "workflow",
+      "id_hint": "workflow_user",
+      "label": "User Workflow",
+      "confidence": "medium",
+      "source_kind": "generated_artifact",
+      "source_of_truth": "imported",
+      "provenance": [
+        "conduit/apps/authentication/urls.py#GET /api/user",
+        "conduit/apps/authentication/serializers.py",
+        "conduit/apps/authentication/views.py"
+      ],
+      "track": "workflows",
+      "entity_id": "entity_user",
+      "actor_hints": [
+        "anonymous",
+        "user"
+      ],
+      "related_capabilities": [
+        "cap_create_user",
+        "cap_get_user",
+        "cap_update_user"
+      ],
+      "documented": false
+    },
+    {
+      "kind": "workflow",
+      "id_hint": "workflow_account",
+      "label": "Account Workflow",
+      "confidence": "medium",
+      "source_kind": "generated_artifact",
+      "source_of_truth": "imported",
+      "provenance": [
+        "conduit/apps/authentication/urls.py#POST /api/users/login",
+        "conduit/apps/authentication/serializers.py",
+        "conduit/apps/authentication/views.py"
+      ],
+      "track": "workflows",
+      "entity_id": "entity_account",
+      "actor_hints": [
+        "anonymous"
+      ],
+      "related_capabilities": [
+        "cap_sign_in_account"
+      ],
+      "documented": false
+    },
+    {
+      "kind": "workflow",
+      "id_hint": "workflow_profile",
+      "label": "Profile Workflow",
+      "confidence": "medium",
+      "source_kind": "generated_artifact",
+      "source_of_truth": "imported",
+      "provenance": [
+        "conduit/apps/profiles/urls.py#GET /api/profiles/{username}",
+        "conduit/apps/profiles/serializers.py",
+        "conduit/apps/profiles/views.py"
+      ],
+      "track": "workflows",
+      "entity_id": "entity_profile",
+      "actor_hints": [
+        "anonymous",
+        "user"
+      ],
+      "related_capabilities": [
+        "cap_follow_profile",
+        "cap_get_profile",
+        "cap_unfollow_profile"
+      ],
+      "documented": false
+    }
+  ],
+  "workflow_states": [],
+  "workflow_transitions": [
+    {
+      "kind": "workflow_transition",
+      "id_hint": "workflow_article_cap_create_article",
+      "label": "Create Article",
+      "confidence": "low",
+      "source_kind": "route_code",
+      "source_of_truth": "imported",
+      "provenance": [
+        "conduit/apps/articles/urls.py#POST /api/articles",
+        "conduit/apps/articles/serializers.py",
+        "conduit/apps/articles/views.py"
+      ],
+      "track": "workflows",
+      "workflow_id": "workflow_article",
+      "entity_id": "entity_article",
+      "capability_id": "cap_create_article",
+      "actor_hints": [
+        "user"
+      ],
+      "to_state": "created"
+    },
+    {
+      "kind": "workflow_transition",
+      "id_hint": "workflow_article_cap_favorite_article",
+      "label": "Favorite Article",
+      "confidence": "low",
+      "source_kind": "route_code",
+      "source_of_truth": "imported",
+      "provenance": [
+        "conduit/apps/articles/urls.py#POST /api/articles/{article_slug}/favorite",
+        "conduit/apps/articles/serializers.py",
+        "conduit/apps/articles/views.py"
+      ],
+      "track": "workflows",
+      "workflow_id": "workflow_article",
+      "entity_id": "entity_article",
+      "capability_id": "cap_favorite_article",
+      "actor_hints": [
+        "user"
+      ],
+      "to_state": "favorited"
+    },
+    {
+      "kind": "workflow_transition",
+      "id_hint": "workflow_article_cap_unfavorite_article",
+      "label": "Unfavorite Article",
+      "confidence": "low",
+      "source_kind": "route_code",
+      "source_of_truth": "imported",
+      "provenance": [
+        "conduit/apps/articles/urls.py#DELETE /api/articles/{article_slug}/favorite",
+        "conduit/apps/articles/serializers.py",
+        "conduit/apps/articles/views.py"
+      ],
+      "track": "workflows",
+      "workflow_id": "workflow_article",
+      "entity_id": "entity_article",
+      "capability_id": "cap_unfavorite_article",
+      "actor_hints": [
+        "user"
+      ],
+      "to_state": "not_favorited"
+    },
+    {
+      "kind": "workflow_transition",
+      "id_hint": "workflow_comment_cap_create_comment",
+      "label": "Create Comment",
+      "confidence": "low",
+      "source_kind": "route_code",
+      "source_of_truth": "imported",
+      "provenance": [
+        "conduit/apps/articles/urls.py#POST /api/articles/{article_slug}/comments",
+        "conduit/apps/articles/serializers.py",
+        "conduit/apps/articles/views.py"
+      ],
+      "track": "workflows",
+      "workflow_id": "workflow_comment",
+      "entity_id": "entity_comment",
+      "capability_id": "cap_create_comment",
+      "actor_hints": [
+        "user"
+      ],
+      "to_state": "created"
+    },
+    {
+      "kind": "workflow_transition",
+      "id_hint": "workflow_comment_cap_delete_comment",
+      "label": "Delete Comment",
+      "confidence": "low",
+      "source_kind": "route_code",
+      "source_of_truth": "imported",
+      "provenance": [
+        "conduit/apps/articles/urls.py#DELETE /api/articles/{article_slug}/comments/{comment_pk}",
+        "conduit/apps/articles/views.py"
+      ],
+      "track": "workflows",
+      "workflow_id": "workflow_comment",
+      "entity_id": "entity_comment",
+      "capability_id": "cap_delete_comment",
+      "actor_hints": [
+        "user"
+      ],
+      "to_state": "deleted"
+    },
+    {
+      "kind": "workflow_transition",
+      "id_hint": "workflow_user_cap_create_user",
+      "label": "Create User",
+      "confidence": "low",
+      "source_kind": "route_code",
+      "source_of_truth": "imported",
+      "provenance": [
+        "conduit/apps/authentication/urls.py#POST /api/users",
+        "conduit/apps/authentication/serializers.py",
+        "conduit/apps/authentication/views.py"
+      ],
+      "track": "workflows",
+      "workflow_id": "workflow_user",
+      "entity_id": "entity_user",
+      "capability_id": "cap_create_user",
+      "actor_hints": [
+        "anonymous"
+      ],
+      "to_state": "registered"
+    },
+    {
+      "kind": "workflow_transition",
+      "id_hint": "workflow_account_cap_sign_in_account",
+      "label": "Sign In Account",
+      "confidence": "low",
+      "source_kind": "route_code",
+      "source_of_truth": "imported",
+      "provenance": [
+        "conduit/apps/authentication/urls.py#POST /api/users/login",
+        "conduit/apps/authentication/serializers.py",
+        "conduit/apps/authentication/views.py"
+      ],
+      "track": "workflows",
+      "workflow_id": "workflow_account",
+      "entity_id": "entity_account",
+      "capability_id": "cap_sign_in_account",
+      "actor_hints": [
+        "anonymous"
+      ],
+      "to_state": "authenticated"
+    },
+    {
+      "kind": "workflow_transition",
+      "id_hint": "workflow_profile_cap_follow_profile",
+      "label": "Follow Profile",
+      "confidence": "low",
+      "source_kind": "route_code",
+      "source_of_truth": "imported",
+      "provenance": [
+        "conduit/apps/profiles/urls.py#POST /api/profiles/{username}/follow",
+        "conduit/apps/profiles/serializers.py",
+        "conduit/apps/profiles/views.py"
+      ],
+      "track": "workflows",
+      "workflow_id": "workflow_profile",
+      "entity_id": "entity_profile",
+      "capability_id": "cap_follow_profile",
+      "actor_hints": [
+        "user"
+      ],
+      "to_state": "following"
+    },
+    {
+      "kind": "workflow_transition",
+      "id_hint": "workflow_profile_cap_unfollow_profile",
+      "label": "Unfollow Profile",
+      "confidence": "low",
+      "source_kind": "route_code",
+      "source_of_truth": "imported",
+      "provenance": [
+        "conduit/apps/profiles/urls.py#DELETE /api/profiles/{username}/follow",
+        "conduit/apps/profiles/serializers.py",
+        "conduit/apps/profiles/views.py"
+      ],
+      "track": "workflows",
+      "workflow_id": "workflow_profile",
+      "entity_id": "entity_profile",
+      "capability_id": "cap_unfollow_profile",
+      "actor_hints": [
+        "user"
+      ],
+      "to_state": "not_following"
+    }
+  ]
+}

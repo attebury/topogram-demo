@@ -1,0 +1,15 @@
+# imported confidence: high
+# imported source_kind: route_code
+# imported provenance: config/routes.rb#DELETE /api/profiles/:username/follow
+# imported provenance: app/controllers/profiles_controller.rb
+capability cap_unfollow_profile {
+  name "Unfollow Profile"
+  description "Candidate capability imported from brownfield API evidence"
+
+  actors [user]
+
+  deletes [entity_profile]
+  output [shape_output_unfollow_profile]
+
+  status active
+}

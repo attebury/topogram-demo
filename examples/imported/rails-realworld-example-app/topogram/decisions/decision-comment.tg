@@ -1,0 +1,13 @@
+# imported confidence: medium
+# imported source_kind: generated_artifact
+# imported provenance: config/routes.rb#GET /api/articles/:slug/comments
+# imported provenance: app/controllers/comments_controller.rb
+decision dec_comment {
+  name "Comment Workflow"
+  description "Candidate workflow decision imported from brownfield evidence"
+
+  context [cap_create_comment, cap_delete_comment]
+  consequences [created, deleted]
+
+  status proposed
+}

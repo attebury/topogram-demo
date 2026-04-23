@@ -1,0 +1,9 @@
+[
+  {
+    "kind": "swift_webapi",
+    "files": [
+      "CountriesSwiftUI/Repositories/WebAPI/CountriesWebRepository.swift"
+    ],
+    "capability_count": 2
+  }
+]

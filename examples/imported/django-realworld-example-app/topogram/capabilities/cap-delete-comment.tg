@@ -1,0 +1,14 @@
+# imported confidence: high
+# imported source_kind: route_code
+# imported provenance: conduit/apps/articles/urls.py#DELETE /api/articles/{article_slug}/comments/{comment_pk}
+# imported provenance: conduit/apps/articles/views.py
+capability cap_delete_comment {
+  name "DELETE /api/articles/{article_slug}/comments/{comment_pk}"
+  description "Candidate capability imported from brownfield API evidence"
+
+  actors [user]
+
+  deletes [entity_comment]
+
+  status active
+}

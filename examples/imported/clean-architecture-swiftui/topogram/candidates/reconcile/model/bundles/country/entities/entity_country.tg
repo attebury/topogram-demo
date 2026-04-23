@@ -1,0 +1,16 @@
+# imported confidence: high
+# imported source_kind: schema
+# imported provenance: CountriesSwiftUI/Repositories/Models/Country.swift
+entity entity_country {
+  name "Country"
+  description "Candidate entity imported from brownfield schema evidence"
+
+  fields {
+    name string required
+    translations json optional
+    population int required
+    flag url optional
+  }
+
+  status active
+}

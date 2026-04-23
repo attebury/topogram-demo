@@ -1,0 +1,13 @@
+# imported confidence: high
+# imported source_kind: route_code
+# imported provenance: config/routes.rb#GET /api/articles/:slug/comments
+# imported provenance: app/controllers/comments_controller.rb
+capability cap_list_comments {
+  name "GET /api/articles/:slug/comments"
+  description "Candidate capability imported from brownfield API evidence"
+
+  reads [entity_comment]
+  output [shape_output_list_comments]
+
+  status active
+}

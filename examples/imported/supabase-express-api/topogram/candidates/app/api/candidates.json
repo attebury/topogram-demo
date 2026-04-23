@@ -1,0 +1,941 @@
+{
+  "capabilities": [
+    {
+      "kind": "capability",
+      "id_hint": "cap_sign_in_account",
+      "label": "User login",
+      "confidence": "high",
+      "source_kind": "openapi",
+      "source_of_truth": "imported",
+      "provenance": [
+        "src/docs/openapi.ts#POST /login"
+      ],
+      "track": "api",
+      "endpoint": {
+        "method": "POST",
+        "path": "/login"
+      },
+      "path_params": [],
+      "query_params": [],
+      "header_params": [],
+      "input_fields": [
+        "email",
+        "password"
+      ],
+      "output_fields": [
+        "account",
+        "token"
+      ],
+      "security_schemes": [],
+      "auth_hint": "public",
+      "entity_id": "entity_account",
+      "tags": [
+        "Authentication"
+      ],
+      "actor_hints": [
+        "anonymous"
+      ]
+    },
+    {
+      "kind": "capability",
+      "id_hint": "cap_register_account",
+      "label": "User registration",
+      "confidence": "high",
+      "source_kind": "openapi",
+      "source_of_truth": "imported",
+      "provenance": [
+        "src/docs/openapi.ts#POST /signup"
+      ],
+      "track": "api",
+      "endpoint": {
+        "method": "POST",
+        "path": "/signup"
+      },
+      "path_params": [],
+      "query_params": [],
+      "header_params": [],
+      "input_fields": [
+        "email",
+        "fullName",
+        "password",
+        "phone"
+      ],
+      "output_fields": [
+        "account",
+        "token"
+      ],
+      "security_schemes": [],
+      "auth_hint": "public",
+      "entity_id": "entity_account",
+      "tags": [
+        "Authentication"
+      ],
+      "actor_hints": [
+        "anonymous"
+      ]
+    },
+    {
+      "kind": "capability",
+      "id_hint": "cap_get_profile",
+      "label": "Get current user profile",
+      "confidence": "high",
+      "source_kind": "openapi",
+      "source_of_truth": "imported",
+      "provenance": [
+        "src/docs/openapi.ts#GET /me"
+      ],
+      "track": "api",
+      "endpoint": {
+        "method": "GET",
+        "path": "/me"
+      },
+      "path_params": [],
+      "query_params": [],
+      "header_params": [],
+      "input_fields": [],
+      "output_fields": [
+        "account",
+        "workspaceCount",
+        "workspaces"
+      ],
+      "security_schemes": [
+        "bearerAuth"
+      ],
+      "auth_hint": "secured",
+      "entity_id": "entity_profile",
+      "tags": [
+        "User"
+      ],
+      "actor_hints": [
+        "user"
+      ]
+    },
+    {
+      "kind": "capability",
+      "id_hint": "cap_list_workspaces",
+      "label": "List user workspaces",
+      "confidence": "high",
+      "source_kind": "openapi",
+      "source_of_truth": "imported",
+      "provenance": [
+        "src/docs/openapi.ts#GET /workspaces",
+        "src/docs/openapi.ts#GET /admin/workspaces"
+      ],
+      "track": "api",
+      "endpoint": {
+        "method": "GET",
+        "path": "/workspaces"
+      },
+      "path_params": [],
+      "query_params": [],
+      "header_params": [],
+      "input_fields": [],
+      "output_fields": [
+        "workspaces"
+      ],
+      "security_schemes": [
+        "bearerAuth"
+      ],
+      "auth_hint": "secured",
+      "entity_id": "entity_workspace",
+      "tags": [
+        "Workspaces"
+      ],
+      "actor_hints": [
+        "user"
+      ]
+    },
+    {
+      "kind": "capability",
+      "id_hint": "cap_create_workspace",
+      "label": "Create new workspace",
+      "confidence": "high",
+      "source_kind": "openapi",
+      "source_of_truth": "imported",
+      "provenance": [
+        "src/docs/openapi.ts#POST /workspaces"
+      ],
+      "track": "api",
+      "endpoint": {
+        "method": "POST",
+        "path": "/workspaces"
+      },
+      "path_params": [],
+      "query_params": [],
+      "header_params": [],
+      "input_fields": [],
+      "output_fields": [
+        "membership",
+        "profile",
+        "workspace"
+      ],
+      "security_schemes": [
+        "bearerAuth"
+      ],
+      "auth_hint": "secured",
+      "entity_id": "entity_workspace",
+      "tags": [
+        "Workspaces"
+      ],
+      "actor_hints": [
+        "user"
+      ]
+    },
+    {
+      "kind": "capability",
+      "id_hint": "cap_get_workspace",
+      "label": "Get workspace details",
+      "confidence": "high",
+      "source_kind": "openapi",
+      "source_of_truth": "imported",
+      "provenance": [
+        "src/docs/openapi.ts#GET /workspaces/{id}"
+      ],
+      "track": "api",
+      "endpoint": {
+        "method": "GET",
+        "path": "/workspaces/{id}"
+      },
+      "path_params": [
+        {
+          "name": "id",
+          "required": true,
+          "type": null
+        }
+      ],
+      "query_params": [],
+      "header_params": [],
+      "input_fields": [],
+      "output_fields": [
+        "memberCount",
+        "members",
+        "workspace"
+      ],
+      "security_schemes": [
+        "bearerAuth"
+      ],
+      "auth_hint": "secured",
+      "entity_id": "entity_workspace",
+      "tags": [
+        "Workspaces"
+      ],
+      "actor_hints": [
+        "user"
+      ]
+    },
+    {
+      "kind": "capability",
+      "id_hint": "cap_update_workspace",
+      "label": "Update workspace",
+      "confidence": "high",
+      "source_kind": "openapi",
+      "source_of_truth": "imported",
+      "provenance": [
+        "src/docs/openapi.ts#PATCH /workspaces/{id}"
+      ],
+      "track": "api",
+      "endpoint": {
+        "method": "PATCH",
+        "path": "/workspaces/{id}"
+      },
+      "path_params": [],
+      "query_params": [],
+      "header_params": [],
+      "input_fields": [],
+      "output_fields": [],
+      "security_schemes": [
+        "bearerAuth"
+      ],
+      "auth_hint": "secured",
+      "entity_id": "entity_workspace",
+      "tags": [
+        "Workspaces"
+      ],
+      "actor_hints": [
+        "user"
+      ]
+    },
+    {
+      "kind": "capability",
+      "id_hint": "cap_delete_workspace",
+      "label": "Delete workspace",
+      "confidence": "high",
+      "source_kind": "openapi",
+      "source_of_truth": "imported",
+      "provenance": [
+        "src/docs/openapi.ts#DELETE /workspaces/{id}"
+      ],
+      "track": "api",
+      "endpoint": {
+        "method": "DELETE",
+        "path": "/workspaces/{id}"
+      },
+      "path_params": [],
+      "query_params": [],
+      "header_params": [],
+      "input_fields": [],
+      "output_fields": [],
+      "security_schemes": [
+        "bearerAuth"
+      ],
+      "auth_hint": "secured",
+      "entity_id": "entity_workspace",
+      "tags": [
+        "Workspaces"
+      ],
+      "actor_hints": [
+        "user"
+      ]
+    },
+    {
+      "kind": "capability",
+      "id_hint": "cap_update_profile",
+      "label": "Update workspace profile",
+      "confidence": "high",
+      "source_kind": "openapi",
+      "source_of_truth": "imported",
+      "provenance": [
+        "src/docs/openapi.ts#PATCH /workspaces/{id}/profile"
+      ],
+      "track": "api",
+      "endpoint": {
+        "method": "PATCH",
+        "path": "/workspaces/{id}/profile"
+      },
+      "path_params": [],
+      "query_params": [],
+      "header_params": [],
+      "input_fields": [
+        "name"
+      ],
+      "output_fields": [],
+      "security_schemes": [
+        "bearerAuth"
+      ],
+      "auth_hint": "secured",
+      "entity_id": "entity_profile",
+      "tags": [
+        "Workspaces"
+      ],
+      "actor_hints": [
+        "user"
+      ]
+    },
+    {
+      "kind": "capability",
+      "id_hint": "cap_update_workspace_membership_role",
+      "label": "Update member role",
+      "confidence": "high",
+      "source_kind": "openapi",
+      "source_of_truth": "imported",
+      "provenance": [
+        "src/docs/openapi.ts#PUT /workspaces/{id}/members/{memberId}/role"
+      ],
+      "track": "api",
+      "endpoint": {
+        "method": "PUT",
+        "path": "/workspaces/{id}/members/{memberId}/role"
+      },
+      "path_params": [
+        {
+          "name": "id",
+          "required": true,
+          "type": null
+        },
+        {
+          "name": "memberId",
+          "required": true,
+          "type": null
+        }
+      ],
+      "query_params": [],
+      "header_params": [],
+      "input_fields": [],
+      "output_fields": [],
+      "security_schemes": [
+        "bearerAuth"
+      ],
+      "auth_hint": "secured",
+      "entity_id": "entity_workspace-membership",
+      "tags": [
+        "Members"
+      ],
+      "actor_hints": [
+        "user"
+      ]
+    },
+    {
+      "kind": "capability",
+      "id_hint": "cap_delete_workspace_membership",
+      "label": "Remove workspace member",
+      "confidence": "high",
+      "source_kind": "openapi",
+      "source_of_truth": "imported",
+      "provenance": [
+        "src/docs/openapi.ts#DELETE /workspaces/{id}/members/{memberId}"
+      ],
+      "track": "api",
+      "endpoint": {
+        "method": "DELETE",
+        "path": "/workspaces/{id}/members/{memberId}"
+      },
+      "path_params": [
+        {
+          "name": "id",
+          "required": true,
+          "type": null
+        },
+        {
+          "name": "memberId",
+          "required": true,
+          "type": null
+        }
+      ],
+      "query_params": [],
+      "header_params": [],
+      "input_fields": [],
+      "output_fields": [],
+      "security_schemes": [
+        "bearerAuth"
+      ],
+      "auth_hint": "secured",
+      "entity_id": "entity_workspace-membership",
+      "tags": [
+        "Members"
+      ],
+      "actor_hints": [
+        "user"
+      ]
+    },
+    {
+      "kind": "capability",
+      "id_hint": "cap_list_accounts",
+      "label": "List all accounts (SuperAdmin only)",
+      "confidence": "high",
+      "source_kind": "openapi",
+      "source_of_truth": "imported",
+      "provenance": [
+        "src/docs/openapi.ts#GET /admin/accounts"
+      ],
+      "track": "api",
+      "endpoint": {
+        "method": "GET",
+        "path": "/admin/accounts"
+      },
+      "path_params": [],
+      "query_params": [
+        {
+          "name": "limit",
+          "required": false,
+          "type": null
+        },
+        {
+          "name": "page",
+          "required": false,
+          "type": null
+        }
+      ],
+      "header_params": [],
+      "input_fields": [],
+      "output_fields": [
+        "accounts",
+        "pagination"
+      ],
+      "security_schemes": [
+        "bearerAuth"
+      ],
+      "auth_hint": "secured",
+      "entity_id": "entity_account",
+      "tags": [
+        "Admin"
+      ],
+      "actor_hints": [
+        "user"
+      ]
+    },
+    {
+      "kind": "capability",
+      "id_hint": "cap_create_account",
+      "label": "Create account for user (SuperAdmin only)",
+      "confidence": "high",
+      "source_kind": "openapi",
+      "source_of_truth": "imported",
+      "provenance": [
+        "src/docs/openapi.ts#POST /admin/accounts"
+      ],
+      "track": "api",
+      "endpoint": {
+        "method": "POST",
+        "path": "/admin/accounts"
+      },
+      "path_params": [],
+      "query_params": [],
+      "header_params": [],
+      "input_fields": [],
+      "output_fields": [],
+      "security_schemes": [
+        "bearerAuth"
+      ],
+      "auth_hint": "secured",
+      "entity_id": "entity_account",
+      "tags": [
+        "Admin"
+      ],
+      "actor_hints": [
+        "user"
+      ]
+    },
+    {
+      "kind": "capability",
+      "id_hint": "cap_list_workspace_memberships",
+      "label": "List workspace members",
+      "confidence": "high",
+      "source_kind": "openapi",
+      "source_of_truth": "imported",
+      "provenance": [
+        "src/docs/openapi.ts#GET /workspaces/{id}/members",
+        "src/docs/openapi.ts#GET /admin/memberships"
+      ],
+      "track": "api",
+      "endpoint": {
+        "method": "GET",
+        "path": "/workspaces/{id}/members"
+      },
+      "path_params": [],
+      "query_params": [],
+      "header_params": [],
+      "input_fields": [],
+      "output_fields": [],
+      "security_schemes": [
+        "bearerAuth"
+      ],
+      "auth_hint": "secured",
+      "entity_id": "entity_workspace-membership",
+      "tags": [
+        "Members"
+      ],
+      "actor_hints": [
+        "user"
+      ]
+    },
+    {
+      "kind": "capability",
+      "id_hint": "cap_create_workspace_membership",
+      "label": "Add workspace member",
+      "confidence": "high",
+      "source_kind": "openapi",
+      "source_of_truth": "imported",
+      "provenance": [
+        "src/docs/openapi.ts#POST /workspaces/{id}/members"
+      ],
+      "track": "api",
+      "endpoint": {
+        "method": "POST",
+        "path": "/workspaces/{id}/members"
+      },
+      "path_params": [],
+      "query_params": [],
+      "header_params": [],
+      "input_fields": [
+        "email",
+        "profileName",
+        "role"
+      ],
+      "output_fields": [],
+      "security_schemes": [
+        "bearerAuth"
+      ],
+      "auth_hint": "secured",
+      "entity_id": "entity_workspace-membership",
+      "tags": [
+        "Members"
+      ],
+      "actor_hints": [
+        "user"
+      ]
+    },
+    {
+      "kind": "capability",
+      "id_hint": "cap_update_account_role",
+      "label": "Update account SuperAdmin status",
+      "confidence": "high",
+      "source_kind": "openapi",
+      "source_of_truth": "imported",
+      "provenance": [
+        "src/docs/openapi.ts#PUT /admin/accounts/{id}/role"
+      ],
+      "track": "api",
+      "endpoint": {
+        "method": "PUT",
+        "path": "/admin/accounts/{id}/role"
+      },
+      "path_params": [],
+      "query_params": [],
+      "header_params": [],
+      "input_fields": [],
+      "output_fields": [],
+      "security_schemes": [
+        "bearerAuth"
+      ],
+      "auth_hint": "secured",
+      "entity_id": "entity_account",
+      "tags": [
+        "Admin"
+      ],
+      "actor_hints": [
+        "user"
+      ]
+    },
+    {
+      "kind": "capability",
+      "id_hint": "cap_update_account_status",
+      "label": "Update account status",
+      "confidence": "high",
+      "source_kind": "openapi",
+      "source_of_truth": "imported",
+      "provenance": [
+        "src/docs/openapi.ts#PUT /admin/accounts/{id}/status"
+      ],
+      "track": "api",
+      "endpoint": {
+        "method": "PUT",
+        "path": "/admin/accounts/{id}/status"
+      },
+      "path_params": [],
+      "query_params": [],
+      "header_params": [],
+      "input_fields": [],
+      "output_fields": [],
+      "security_schemes": [
+        "bearerAuth"
+      ],
+      "auth_hint": "secured",
+      "entity_id": "entity_account",
+      "tags": [
+        "Admin"
+      ],
+      "actor_hints": [
+        "user"
+      ]
+    },
+    {
+      "kind": "capability",
+      "id_hint": "cap_list_audit_logs",
+      "label": "List audit logs",
+      "confidence": "high",
+      "source_kind": "openapi",
+      "source_of_truth": "imported",
+      "provenance": [
+        "src/docs/openapi.ts#GET /admin/audit-logs"
+      ],
+      "track": "api",
+      "endpoint": {
+        "method": "GET",
+        "path": "/admin/audit-logs"
+      },
+      "path_params": [],
+      "query_params": [
+        {
+          "name": "action",
+          "required": false,
+          "type": null
+        },
+        {
+          "name": "actorId",
+          "required": false,
+          "type": null
+        },
+        {
+          "name": "endDate",
+          "required": false,
+          "type": null
+        },
+        {
+          "name": "entityId",
+          "required": false,
+          "type": null
+        },
+        {
+          "name": "entityType",
+          "required": false,
+          "type": null
+        },
+        {
+          "name": "limit",
+          "required": false,
+          "type": null
+        },
+        {
+          "name": "page",
+          "required": false,
+          "type": null
+        },
+        {
+          "name": "startDate",
+          "required": false,
+          "type": null
+        },
+        {
+          "name": "workspaceId",
+          "required": false,
+          "type": null
+        }
+      ],
+      "header_params": [],
+      "input_fields": [],
+      "output_fields": [
+        "auditLogs",
+        "filters",
+        "pagination"
+      ],
+      "security_schemes": [
+        "bearerAuth"
+      ],
+      "auth_hint": "secured",
+      "entity_id": "entity_audit-log",
+      "tags": [
+        "Admin"
+      ],
+      "actor_hints": [
+        "user"
+      ]
+    },
+    {
+      "kind": "capability",
+      "id_hint": "cap_get_audit_log_stats",
+      "label": "Get audit log statistics",
+      "confidence": "high",
+      "source_kind": "openapi",
+      "source_of_truth": "imported",
+      "provenance": [
+        "src/docs/openapi.ts#GET /admin/audit-logs/stats"
+      ],
+      "track": "api",
+      "endpoint": {
+        "method": "GET",
+        "path": "/admin/audit-logs/stats"
+      },
+      "path_params": [],
+      "query_params": [
+        {
+          "name": "days",
+          "required": false,
+          "type": null
+        }
+      ],
+      "header_params": [],
+      "input_fields": [],
+      "output_fields": [
+        "actionStats",
+        "endDate",
+        "period",
+        "startDate"
+      ],
+      "security_schemes": [
+        "bearerAuth"
+      ],
+      "auth_hint": "secured",
+      "entity_id": "entity_audit-log",
+      "tags": [
+        "Admin"
+      ],
+      "actor_hints": [
+        "user"
+      ]
+    }
+  ],
+  "routes": [
+    {
+      "path": "/login",
+      "method": "POST",
+      "confidence": "high",
+      "source_kind": "openapi",
+      "provenance": [
+        "src/docs/openapi.ts#POST /login"
+      ]
+    },
+    {
+      "path": "/signup",
+      "method": "POST",
+      "confidence": "high",
+      "source_kind": "openapi",
+      "provenance": [
+        "src/docs/openapi.ts#POST /signup"
+      ]
+    },
+    {
+      "path": "/me",
+      "method": "GET",
+      "confidence": "high",
+      "source_kind": "openapi",
+      "provenance": [
+        "src/docs/openapi.ts#GET /me"
+      ]
+    },
+    {
+      "path": "/workspaces",
+      "method": "GET",
+      "confidence": "high",
+      "source_kind": "openapi",
+      "provenance": [
+        "src/docs/openapi.ts#GET /workspaces"
+      ]
+    },
+    {
+      "path": "/workspaces",
+      "method": "POST",
+      "confidence": "high",
+      "source_kind": "openapi",
+      "provenance": [
+        "src/docs/openapi.ts#POST /workspaces"
+      ]
+    },
+    {
+      "path": "/workspaces/{id}",
+      "method": "GET",
+      "confidence": "high",
+      "source_kind": "openapi",
+      "provenance": [
+        "src/docs/openapi.ts#GET /workspaces/{id}"
+      ]
+    },
+    {
+      "path": "/workspaces/{id}",
+      "method": "PATCH",
+      "confidence": "high",
+      "source_kind": "openapi",
+      "provenance": [
+        "src/docs/openapi.ts#PATCH /workspaces/{id}"
+      ]
+    },
+    {
+      "path": "/workspaces/{id}",
+      "method": "DELETE",
+      "confidence": "high",
+      "source_kind": "openapi",
+      "provenance": [
+        "src/docs/openapi.ts#DELETE /workspaces/{id}"
+      ]
+    },
+    {
+      "path": "/workspaces/{id}/profile",
+      "method": "PATCH",
+      "confidence": "high",
+      "source_kind": "openapi",
+      "provenance": [
+        "src/docs/openapi.ts#PATCH /workspaces/{id}/profile"
+      ]
+    },
+    {
+      "path": "/workspaces/{id}/members/{memberId}/role",
+      "method": "PUT",
+      "confidence": "high",
+      "source_kind": "openapi",
+      "provenance": [
+        "src/docs/openapi.ts#PUT /workspaces/{id}/members/{memberId}/role"
+      ]
+    },
+    {
+      "path": "/workspaces/{id}/members/{memberId}",
+      "method": "DELETE",
+      "confidence": "high",
+      "source_kind": "openapi",
+      "provenance": [
+        "src/docs/openapi.ts#DELETE /workspaces/{id}/members/{memberId}"
+      ]
+    },
+    {
+      "path": "/admin/accounts",
+      "method": "GET",
+      "confidence": "high",
+      "source_kind": "openapi",
+      "provenance": [
+        "src/docs/openapi.ts#GET /admin/accounts"
+      ]
+    },
+    {
+      "path": "/admin/accounts",
+      "method": "POST",
+      "confidence": "high",
+      "source_kind": "openapi",
+      "provenance": [
+        "src/docs/openapi.ts#POST /admin/accounts"
+      ]
+    },
+    {
+      "path": "/admin/workspaces",
+      "method": "GET",
+      "confidence": "high",
+      "source_kind": "openapi",
+      "provenance": [
+        "src/docs/openapi.ts#GET /admin/workspaces"
+      ]
+    },
+    {
+      "path": "/workspaces/{id}/members",
+      "method": "GET",
+      "confidence": "high",
+      "source_kind": "openapi",
+      "provenance": [
+        "src/docs/openapi.ts#GET /workspaces/{id}/members"
+      ]
+    },
+    {
+      "path": "/workspaces/{id}/members",
+      "method": "POST",
+      "confidence": "high",
+      "source_kind": "openapi",
+      "provenance": [
+        "src/docs/openapi.ts#POST /workspaces/{id}/members"
+      ]
+    },
+    {
+      "path": "/admin/accounts/{id}/role",
+      "method": "PUT",
+      "confidence": "high",
+      "source_kind": "openapi",
+      "provenance": [
+        "src/docs/openapi.ts#PUT /admin/accounts/{id}/role"
+      ]
+    },
+    {
+      "path": "/admin/accounts/{id}/status",
+      "method": "PUT",
+      "confidence": "high",
+      "source_kind": "openapi",
+      "provenance": [
+        "src/docs/openapi.ts#PUT /admin/accounts/{id}/status"
+      ]
+    },
+    {
+      "path": "/admin/memberships",
+      "method": "GET",
+      "confidence": "high",
+      "source_kind": "openapi",
+      "provenance": [
+        "src/docs/openapi.ts#GET /admin/memberships"
+      ]
+    },
+    {
+      "path": "/admin/audit-logs",
+      "method": "GET",
+      "confidence": "high",
+      "source_kind": "openapi",
+      "provenance": [
+        "src/docs/openapi.ts#GET /admin/audit-logs"
+      ]
+    },
+    {
+      "path": "/admin/audit-logs/stats",
+      "method": "GET",
+      "confidence": "high",
+      "source_kind": "openapi",
+      "provenance": [
+        "src/docs/openapi.ts#GET /admin/audit-logs/stats"
+      ]
+    }
+  ],
+  "stacks": [
+    "openapi_code"
+  ]
+}

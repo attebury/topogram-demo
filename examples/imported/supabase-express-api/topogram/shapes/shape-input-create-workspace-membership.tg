@@ -1,0 +1,12 @@
+shape shape_input_create_workspace_membership {
+  name "Create Workspace Membership Input"
+  description "Candidate shape imported from brownfield API evidence"
+
+  fields {
+    email string optional
+    profileName string optional
+    role string optional
+  }
+
+  status active
+}

@@ -1,0 +1,18 @@
+# imported confidence: high
+# imported source_kind: route_code
+# imported provenance: conduit/apps/articles/urls.py#GET /api/articles/feed
+# imported provenance: conduit/apps/articles/serializers.py
+# imported provenance: conduit/apps/articles/views.py
+capability cap_feed_article {
+  name "Feed Article"
+  description "Candidate capability imported from brownfield API evidence"
+
+  actors [user]
+
+  reads [entity_article]
+
+  input [shape_input_feed_article]
+  output [shape_output_feed_article]
+
+  status active
+}
