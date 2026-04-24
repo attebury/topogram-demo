@@ -46,7 +46,7 @@ Every active imported target publishes:
 
 ## Verification
 
-Run the imported-proof verifier from the repo root:
+Run the imported-proof structure verifier from the repo root:
 
 ```bash
 node ./ops/verify-imported-targets.mjs
@@ -57,6 +57,23 @@ That command checks the active target inventory in [ops/active-targets.json](./o
 - `next_bundle === null`
 - `blocked_item_count === 0`
 - `applied_item_count > 0`
+
+Run the freshness verifier to compare active claims against the current Topogram checkout:
+
+```bash
+node ./ops/claim-freshness.mjs --topogram-repo ../topogram
+```
+
+That command reports freshness drift when:
+
+- `topogram_commit_tested` does not match the current Topogram commit you are comparing against
+- `last_verified_date` is older than the freshness window
+
+After rerunning and republishing a target, refresh its metadata with:
+
+```bash
+node ./ops/refresh-proof-status-metadata.mjs --topogram-repo ../topogram <slug>
+```
 
 ## Repo Layout
 
