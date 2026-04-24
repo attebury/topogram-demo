@@ -166,6 +166,10 @@ function main() {
       throw new Error(`${entry.slug} proof-status.json currently says ${proofStatus.status}; refresh only supports the published expected status ${entry.expected_status}`);
     }
 
+    if (proofStatus.display_name !== entry.display_name) {
+      throw new Error(`${entry.slug} proof-status display_name ${proofStatus.display_name} does not match active-targets ${entry.display_name}`);
+    }
+
     if (currentDerivedStatus !== proofStatus.status) {
       throw new Error(`${entry.slug} committed topogram snapshot currently derives ${currentDerivedStatus}, not ${proofStatus.status}`);
     }
@@ -192,7 +196,7 @@ function main() {
     const nextManifest = {
       version: 1,
       target: entry.slug,
-      display_name: proofStatus.display_name || entry.display_name,
+      display_name: entry.display_name,
       published_status: nextStatus.status,
       topogram_commit_tested: topogramCommit,
       last_verified_date: options.date,

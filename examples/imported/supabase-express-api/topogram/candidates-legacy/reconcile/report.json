@@ -1052,6 +1052,6 @@
       "reason": "Workflow semantics for workspace-membership need canonical review before promotion."
     }
   ],
-  "workspace": "/Users/attebury/Documents/topogram/trials/supabase-express-api/topogram",
+  "workspace": "historical:topogram/trials/supabase-express-api/topogram",
   "written_canonical_files": []
 }

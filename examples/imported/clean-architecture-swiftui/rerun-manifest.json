@@ -8,7 +8,7 @@
   "evidence_origin": "seeded_snapshot",
   "rerun_recipe_ref": "README.md#rerun",
   "source_tree_hash": "11aa864e320640515432a0cd24cb2caeb76473e775b2829fab55895319e628e6",
-  "topogram_tree_hash": "5a6c8532eafac458ba7561b9e9fb8fb8590779f25cada4886b248f3a8d1559e2",
+  "topogram_tree_hash": "32f131b557410a34b2191260752fe6d9dcc7c22bb3c72e47a65b7e8cafc95d02",
   "adoption_contract": {
     "next_bundle": null,
     "blocked_item_count": 0,

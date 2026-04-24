@@ -2,35 +2,30 @@
   {
     "slug": "supabase-express-api",
     "display_name": "supabase-express-api",
-    "source_trial_dir": "trials/supabase-express-api",
     "target_dir": "examples/imported/supabase-express-api",
     "expected_status": "closed"
   },
   {
     "slug": "eshoponweb",
     "display_name": "eShopOnWeb",
-    "source_trial_dir": "trials/eShopOnWeb",
     "target_dir": "examples/imported/eshoponweb",
     "expected_status": "closed"
   },
   {
     "slug": "clean-architecture-swiftui",
     "display_name": "clean-architecture-swiftui",
-    "source_trial_dir": "trials/clean-architecture-swiftui",
     "target_dir": "examples/imported/clean-architecture-swiftui",
     "expected_status": "closed"
   },
   {
     "slug": "rails-realworld-example-app",
     "display_name": "rails-realworld-example-app",
-    "source_trial_dir": "trials/rails-realworld-example-app",
     "target_dir": "examples/imported/rails-realworld-example-app",
     "expected_status": "closed"
   },
   {
     "slug": "django-realworld-example-app",
     "display_name": "django-realworld-example-app",
-    "source_trial_dir": "trials/django-realworld-example-app",
     "target_dir": "examples/imported/django-realworld-example-app",
     "expected_status": "closed"
   }

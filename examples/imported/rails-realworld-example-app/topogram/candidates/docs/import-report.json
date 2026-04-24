@@ -30,7 +30,7 @@
   ],
   "findings": [
     {
-      "file": "/Users/attebury/Documents/topogram/trials/rails-realworld-example-app/README.md",
+      "file": "historical:topogram/trials/rails-realworld-example-app/README.md",
       "relative_path": "README.md",
       "term_candidates": [
         "rails",
@@ -51,5 +51,5 @@
     "README.md"
   ],
   "type": "scan_docs_report",
-  "workspace": "/Users/attebury/Documents/topogram/trials/rails-realworld-example-app/topogram"
+  "workspace": "historical:topogram/trials/rails-realworld-example-app/topogram"
 }

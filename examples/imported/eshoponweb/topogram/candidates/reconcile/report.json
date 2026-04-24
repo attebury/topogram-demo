@@ -1626,6 +1626,6 @@
       "reason": "Workflow semantics for item need canonical review before promotion."
     }
   ],
-  "workspace": "/Users/attebury/Documents/topogram/trials/eShopOnWeb/topogram",
+  "workspace": "historical:topogram/trials/eShopOnWeb/topogram",
   "written_canonical_files": []
 }

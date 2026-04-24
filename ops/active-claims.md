@@ -1,14 +1,6 @@
 # Active Imported Claims
 
-The active imported proof set is intentionally small and explicit:
-
-- `supabase-express-api`
-- `eshoponweb`
-- `clean-architecture-swiftui`
-- `rails-realworld-example-app`
-- `django-realworld-example-app`
-
-The machine-readable inventory lives in [active-targets.json](./active-targets.json).
+The active imported proof set is intentionally small and explicit. The canonical inventory lives in [active-targets.json](./active-targets.json), and the browsable target index lives under [../examples/imported](../examples/imported/README.md).
 
 Active claims need two kinds of honesty:
 

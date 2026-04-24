@@ -470,6 +470,6 @@
       "reason": "Workflow semantics for country-details need canonical review before promotion."
     }
   ],
-  "workspace": "/Users/attebury/Documents/topogram/trials/clean-architecture-swiftui/topogram",
+  "workspace": "historical:topogram/trials/clean-architecture-swiftui/topogram",
   "written_canonical_files": []
 }

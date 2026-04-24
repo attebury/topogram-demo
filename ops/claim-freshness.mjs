@@ -96,7 +96,7 @@ export function assessClaimFreshness({
 
     return {
       slug: entry.slug,
-      display_name: proofStatus.display_name || entry.display_name,
+      display_name: entry.display_name,
       published_status: proofStatus.status,
       topogram_commit_tested: proofStatus.topogram_commit_tested,
       current_topogram_commit: topogramCommit,
