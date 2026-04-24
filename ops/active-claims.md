@@ -19,5 +19,7 @@ Use:
 
 - `node ./ops/verify-imported-targets.mjs`
 - `node ./ops/claim-freshness.mjs --topogram-repo ../topogram`
+- `node ./ops/capture-verification-receipt.mjs <slug> --topogram-repo ../topogram --rerun-root /path/to/rerun-workspace`
+- `node ./ops/refresh-proof-status-metadata.mjs --topogram-repo ../topogram <slug>`
 
-before treating the active set as current.
+before treating the active set as current. The metadata refresh step is now receipt-gated, so commit/date metadata cannot be bumped without a matching rerun receipt and a committed snapshot that matches it.
