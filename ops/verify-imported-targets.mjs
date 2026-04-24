@@ -4,6 +4,9 @@ import path from "node:path";
 
 const repoRoot = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
 const inventoryPath = path.join(repoRoot, "ops", "active-targets.json");
+const forbiddenHistoricalPrefixes = [
+  "/Users/attebury/Documents/topogram/trials/"
+];
 
 function readJson(filePath) {
   return JSON.parse(fs.readFileSync(filePath, "utf8"));
@@ -53,6 +56,23 @@ function hashDirectory(rootDir) {
   return hash.digest("hex");
 }
 
+function findForbiddenProvenance(rootDir) {
+  const matches = [];
+  for (const relativePath of listFiles(rootDir)) {
+    const absolutePath = path.join(rootDir, relativePath);
+    const contents = fs.readFileSync(absolutePath, "utf8");
+    for (const prefix of forbiddenHistoricalPrefixes) {
+      if (contents.includes(prefix)) {
+        matches.push({
+          file: relativePath,
+          prefix
+        });
+      }
+    }
+  }
+  return matches;
+}
+
 function extractReadmeStatus(readmeText, label) {
   const pattern = new RegExp(`- ${label}: ` + "`([^`]+)`");
   const match = readmeText.match(pattern);
@@ -88,9 +108,22 @@ for (const entry of inventory) {
   const derivedStatus = deriveStatus(adoptionStatus);
   const sourceTreeHash = hashDirectory(sourceDir);
   const topogramTreeHash = hashDirectory(topogramDir);
+  const forbiddenProvenance = findForbiddenProvenance(topogramDir);
+
+  if (path.basename(entry.target_dir) !== entry.slug) {
+    throw new Error(`${entry.slug} target_dir basename must match the slug`);
+  }
 
   if (proofStatus.status !== entry.expected_status) {
     throw new Error(`${entry.slug} expected published status ${entry.expected_status} but found ${proofStatus.status}`);
+  }
+
+  if (proofStatus.target !== entry.slug) {
+    throw new Error(`${entry.slug} proof-status target mismatch: found ${proofStatus.target}`);
+  }
+
+  if (proofStatus.display_name !== entry.display_name) {
+    throw new Error(`${entry.slug} proof-status display_name ${proofStatus.display_name} does not match active-targets ${entry.display_name}`);
   }
 
   if (proofStatus.status !== derivedStatus) {
@@ -107,6 +140,10 @@ for (const entry of inventory) {
 
   if (rerunManifest.target !== entry.slug) {
     throw new Error(`${entry.slug} rerun manifest target mismatch: found ${rerunManifest.target}`);
+  }
+
+  if (rerunManifest.display_name !== entry.display_name) {
+    throw new Error(`${entry.slug} rerun manifest display_name ${rerunManifest.display_name} does not match active-targets ${entry.display_name}`);
   }
 
   if (!["seeded_snapshot", "rerun_receipt"].includes(rerunManifest.evidence_origin)) {
@@ -149,6 +186,13 @@ for (const entry of inventory) {
 
   if ((proofStatus.last_verification_receipt_recorded_at || null) !== (rerunManifest.receipt_recorded_at || null)) {
     throw new Error(`${entry.slug} proof-status receipt timestamp does not match rerun manifest receipt timestamp`);
+  }
+
+  if (forbiddenProvenance.length > 0) {
+    const example = forbiddenProvenance[0];
+    throw new Error(
+      `${entry.slug} committed topogram snapshot still contains forbidden historical absolute provenance in ${example.file}: ${example.prefix}`
+    );
   }
 
   if (extractReadmeStatus(readmeText, "proof status") !== proofStatus.status) {

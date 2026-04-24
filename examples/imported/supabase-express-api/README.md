@@ -51,4 +51,4 @@ node ./ops/refresh-proof-status-metadata.mjs --topogram-repo "$TOPOGRAM_REPO" su
 - source snapshot: [`source/`](./source/)
 - committed imported outputs: [`topogram/`](./topogram/)
 - committed rerun evidence: [`rerun-manifest.json`](./rerun-manifest.json)
-- seeded from: `topogram/trials/supabase-express-api` at Topogram commit `396fd5c`
+- seeded from historical Topogram trial snapshot: `topogram/trials/supabase-express-api` at Topogram commit `396fd5c`

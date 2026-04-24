@@ -28,13 +28,7 @@ This repo owns the `examples/imported` side of that split.
 
 ## Active Imported Claims
 
-The current active imported claim set is:
-
-- `supabase-express-api`
-- `eshoponweb`
-- `clean-architecture-swiftui`
-- `rails-realworld-example-app`
-- `django-realworld-example-app`
+The canonical active imported claim set lives in [ops/active-targets.json](./ops/active-targets.json) and is surfaced as navigable targets under [examples/imported](./examples/imported/README.md).
 
 Every active imported target publishes:
 

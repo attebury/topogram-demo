@@ -1306,6 +1306,6 @@
       "reason": "Workflow semantics for user need canonical review before promotion."
     }
   ],
-  "workspace": "/Users/attebury/Documents/topogram/trials/django-realworld-example-app/topogram",
+  "workspace": "historical:topogram/trials/django-realworld-example-app/topogram",
   "written_canonical_files": []
 }

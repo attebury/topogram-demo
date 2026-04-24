@@ -27,6 +27,8 @@ It also checks that:
 
 - published `closed` statuses still match the stored adoption contract
 - the committed `rerun-manifest.json` hashes still match the committed `source/` and `topogram/` trees
+- `display_name` and target identity stay aligned across the inventory, `proof-status.json`, and `rerun-manifest.json`
+- the committed imported `topogram/` snapshot no longer carries stale machine-local provenance from the old `topogram/trials/...` paths
 - the README status lines still match `proof-status.json`
 
 ## Freshness Drift
