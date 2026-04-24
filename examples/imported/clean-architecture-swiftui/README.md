@@ -32,6 +32,15 @@ node ./src/cli.js reconcile "$TARGET_ROOT" --write
 node ./src/cli.js adoption status "$TARGET_ROOT" --write
 ```
 
+After the rerun, capture a local verification receipt and only refresh the published metadata after the committed `source/` and `topogram/` snapshot matches that rerun receipt:
+
+```bash
+cd "$TOPOGRAM_DEMO_REPO"
+node ./ops/capture-verification-receipt.mjs clean-architecture-swiftui --topogram-repo "$TOPOGRAM_REPO" --rerun-root "$TARGET_ROOT"
+# sync examples/imported/clean-architecture-swiftui/source and topogram from "$TARGET_ROOT" before refreshing metadata
+node ./ops/refresh-proof-status-metadata.mjs --topogram-repo "$TOPOGRAM_REPO" clean-architecture-swiftui
+```
+
 ## Current Limits
 
 - This repo stores a closed imported proof snapshot, not a continuously rerun upstream sync.
