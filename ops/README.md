@@ -18,11 +18,16 @@ The verifier checks that every active imported target has:
 
 - `README.md`
 - `proof-status.json`
+- `rerun-manifest.json`
 - `source/`
 - `topogram/`
 - `topogram/candidates/reconcile/adoption-status.json`
 
-It also checks that published `closed` statuses still match the stored adoption contract.
+It also checks that:
+
+- published `closed` statuses still match the stored adoption contract
+- the committed `rerun-manifest.json` hashes still match the committed `source/` and `topogram/` trees
+- the README status lines still match `proof-status.json`
 
 ## Freshness Drift
 
@@ -54,7 +59,7 @@ The receipt records:
 - a hash of the rerun workspace source tree
 - a hash of the rerun workspace `topogram/` tree
 
-Local receipts live under `ops/verification-receipts/` and are intentionally ignored by git.
+Local receipts live under `ops/verification-receipts/` and are intentionally ignored by git. They are local evidence used to unlock a committed manifest + metadata refresh; they are not the published proof artifact themselves.
 
 ## Refreshing Proof Metadata
 
@@ -65,6 +70,8 @@ Local receipts live under `ops/verification-receipts/` and are intentionally ign
 - the committed `examples/imported/<slug>/source` tree matches the rerun receipt hash
 - the committed `examples/imported/<slug>/topogram` tree matches the rerun receipt hash
 - the committed imported proof still derives the published structural status
+
+When that succeeds, it also writes the committed `rerun-manifest.json` for the target so the published claim points to a concrete committed evidence record instead of only a local receipt.
 
 Refresh one target after syncing the committed snapshot to the rerun output:
 

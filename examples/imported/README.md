@@ -8,6 +8,7 @@ Each target includes:
 - `topogram/`: the committed imported Topogram outputs
 - `README.md`: proof scope, rerun commands, and limits
 - `proof-status.json`: machine-readable proof metadata
+- `rerun-manifest.json`: committed rerun evidence tying the published metadata to the exact committed snapshot
 
 ## Active Imported Claim Set
 

@@ -89,7 +89,6 @@ function deriveStatus(adoptionStatus) {
 function listFiles(rootDir, currentDir = rootDir) {
   const entries = fs.readdirSync(currentDir, { withFileTypes: true });
   const files = [];
-
   for (const entry of entries) {
     const absolutePath = path.join(currentDir, entry.name);
     if (entry.isDirectory()) {
@@ -98,7 +97,6 @@ function listFiles(rootDir, currentDir = rootDir) {
       files.push(path.relative(rootDir, absolutePath));
     }
   }
-
   return files.sort();
 }
 
@@ -106,18 +104,14 @@ function hashDirectory(rootDir) {
   if (!fs.existsSync(rootDir)) {
     throw new Error(`Expected directory to exist: ${rootDir}`);
   }
-
   const hash = crypto.createHash("sha256");
-  const files = listFiles(rootDir);
-
-  for (const relativePath of files) {
+  for (const relativePath of listFiles(rootDir)) {
     const absolutePath = path.join(rootDir, relativePath);
     hash.update(relativePath);
     hash.update("\0");
     hash.update(fs.readFileSync(absolutePath));
     hash.update("\0");
   }
-
   return hash.digest("hex");
 }
 
@@ -136,6 +130,7 @@ function main() {
 
     const targetRoot = path.join(repoRoot, entry.target_dir);
     const proofStatusPath = path.join(targetRoot, "proof-status.json");
+    const rerunManifestPath = path.join(targetRoot, "rerun-manifest.json");
     const proofStatus = readJson(proofStatusPath);
     const receiptPath = path.join(options.receiptDir, `${entry.slug}.json`);
 
@@ -160,45 +155,31 @@ function main() {
     }
 
     if (receipt.topogram_commit_verified !== topogramCommit) {
-      throw new Error(
-        `${entry.slug} receipt commit ${receipt.topogram_commit_verified} does not match current Topogram ${topogramCommit}`
-      );
+      throw new Error(`${entry.slug} receipt commit ${receipt.topogram_commit_verified} does not match current Topogram ${topogramCommit}`);
     }
 
     if (receipt.rerun_status !== entry.expected_status) {
-      throw new Error(
-        `${entry.slug} receipt status ${receipt.rerun_status} does not match expected published status ${entry.expected_status}`
-      );
+      throw new Error(`${entry.slug} receipt status ${receipt.rerun_status} does not match expected published status ${entry.expected_status}`);
     }
 
     if (proofStatus.status !== entry.expected_status) {
-      throw new Error(
-        `${entry.slug} proof-status.json currently says ${proofStatus.status}; refresh only supports the published expected status ${entry.expected_status}`
-      );
+      throw new Error(`${entry.slug} proof-status.json currently says ${proofStatus.status}; refresh only supports the published expected status ${entry.expected_status}`);
     }
 
     if (currentDerivedStatus !== proofStatus.status) {
-      throw new Error(
-        `${entry.slug} committed topogram snapshot currently derives ${currentDerivedStatus}, not ${proofStatus.status}`
-      );
+      throw new Error(`${entry.slug} committed topogram snapshot currently derives ${currentDerivedStatus}, not ${proofStatus.status}`);
     }
 
     if (currentSourceHash !== receipt.rerun_source_tree_hash) {
-      throw new Error(
-        `${entry.slug} committed source snapshot does not match the captured rerun receipt. Sync examples/imported/${entry.slug}/source before refreshing metadata.`
-      );
+      throw new Error(`${entry.slug} committed source snapshot does not match the captured rerun receipt. Sync examples/imported/${entry.slug}/source before refreshing metadata.`);
     }
 
     if (currentTopogramHash !== receipt.rerun_topogram_tree_hash) {
-      throw new Error(
-        `${entry.slug} committed topogram snapshot does not match the captured rerun receipt. Sync examples/imported/${entry.slug}/topogram before refreshing metadata.`
-      );
+      throw new Error(`${entry.slug} committed topogram snapshot does not match the captured rerun receipt. Sync examples/imported/${entry.slug}/topogram before refreshing metadata.`);
     }
 
     if (refreshDate.getTime() !== receiptDate.getTime()) {
-      throw new Error(
-        `${entry.slug} refresh date ${options.date} does not match receipt date ${receipt.recorded_at.slice(0, 10)}`
-      );
+      throw new Error(`${entry.slug} refresh date ${options.date} does not match receipt date ${receipt.recorded_at.slice(0, 10)}`);
     }
 
     const nextStatus = {
@@ -208,10 +189,31 @@ function main() {
       last_verification_receipt_recorded_at: receipt.recorded_at
     };
 
+    const nextManifest = {
+      version: 1,
+      target: entry.slug,
+      display_name: proofStatus.display_name || entry.display_name,
+      published_status: nextStatus.status,
+      topogram_commit_tested: topogramCommit,
+      last_verified_date: options.date,
+      evidence_origin: "rerun_receipt",
+      rerun_recipe_ref: "README.md#rerun",
+      source_tree_hash: currentSourceHash,
+      topogram_tree_hash: currentTopogramHash,
+      adoption_contract: {
+        next_bundle: currentAdoptionStatus.next_bundle,
+        blocked_item_count: currentAdoptionStatus.blocked_item_count,
+        applied_item_count: currentAdoptionStatus.applied_item_count
+      },
+      receipt_recorded_at: receipt.recorded_at
+    };
+
     writeJson(proofStatusPath, nextStatus);
+    writeJson(rerunManifestPath, nextManifest);
     refreshed.push({
       slug: entry.slug,
       proof_status_path: path.relative(repoRoot, proofStatusPath),
+      rerun_manifest_path: path.relative(repoRoot, rerunManifestPath),
       receipt_path: path.relative(repoRoot, receiptPath),
       topogram_commit_tested: topogramCommit,
       last_verified_date: options.date
@@ -222,16 +224,7 @@ function main() {
     throw new Error("No matching targets were refreshed.");
   }
 
-  console.log(
-    JSON.stringify(
-      {
-        type: "proof_status_metadata_refresh",
-        refreshed_targets: refreshed
-      },
-      null,
-      2
-    )
-  );
+  console.log(JSON.stringify({ type: "proof_status_metadata_refresh", refreshed_targets: refreshed }, null, 2));
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {
