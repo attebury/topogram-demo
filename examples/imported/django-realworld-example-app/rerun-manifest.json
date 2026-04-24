@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "target": "django-realworld-example-app",
+  "display_name": "django-realworld-example-app",
+  "published_status": "closed",
+  "topogram_commit_tested": "396fd5c",
+  "last_verified_date": "2026-04-22",
+  "evidence_origin": "seeded_snapshot",
+  "rerun_recipe_ref": "README.md#rerun",
+  "source_tree_hash": "1ab03b5e1a477280778dc8aac952f24094f3d7d7a529970c5c04792ea28fccca",
+  "topogram_tree_hash": "b2731959e0e1dc53b1236d2b773d4ee6408e7ec7df5e11a5ba05dab4b5d2b440",
+  "adoption_contract": {
+    "next_bundle": null,
+    "blocked_item_count": 0,
+    "applied_item_count": 69
+  },
+  "receipt_recorded_at": null
+}

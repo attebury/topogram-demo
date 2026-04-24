@@ -41,6 +41,7 @@ Every active imported target publishes:
 - a source snapshot under `source/`
 - committed imported outputs under `topogram/`
 - a `proof-status.json`
+- a committed `rerun-manifest.json` tying the published status to the exact committed `source/` and `topogram/` trees
 - exact rerun commands
 - the adoption-status evidence used to justify its published status
 
@@ -69,7 +70,7 @@ That command reports freshness drift when:
 - `topogram_commit_tested` does not match the current Topogram commit you are comparing against
 - `last_verified_date` is older than the freshness window
 
-After rerunning a target, first capture a local verification receipt from the rerun workspace, then refresh metadata only after the committed `source/` and `topogram/` snapshots match that receipt:
+After rerunning a target, first capture a local verification receipt from the rerun workspace, then refresh metadata only after the committed `source/`, committed `topogram/`, and committed `rerun-manifest.json` all line up with that receipt:
 
 ```bash
 node ./ops/capture-verification-receipt.mjs <slug> --topogram-repo ../topogram --rerun-root /path/to/rerun-workspace

@@ -30,4 +30,4 @@ The published commit/date metadata should now be updated only through the receip
 3. sync the committed `source/` and `topogram/` snapshot to match the rerun workspace
 4. refresh `proof-status.json` metadata
 
-`refresh-proof-status-metadata.mjs` refuses to update the metadata unless those snapshot hashes and structural checks line up.
+`refresh-proof-status-metadata.mjs` refuses to update the metadata unless those snapshot hashes and structural checks line up, and it publishes a committed `rerun-manifest.json` at the same time so the claim points to concrete committed rerun evidence.
