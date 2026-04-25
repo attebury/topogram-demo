@@ -8,8 +8,6 @@ capability cap_list_tags {
   description "Candidate capability imported from brownfield API evidence"
 
   reads [entity_tag]
-
-  input [shape_input_list_tags]
   output [shape_output_list_tags]
 
   status active

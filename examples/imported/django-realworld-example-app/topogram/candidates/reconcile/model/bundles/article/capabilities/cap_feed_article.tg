@@ -10,8 +10,6 @@ capability cap_feed_article {
   actors [user]
 
   reads [entity_article]
-
-  input [shape_input_feed_article]
   output [shape_output_feed_article]
 
   status active

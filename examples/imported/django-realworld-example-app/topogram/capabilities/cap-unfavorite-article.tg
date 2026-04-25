@@ -10,8 +10,6 @@ capability cap_unfavorite_article {
   actors [user]
 
   deletes [entity_article]
-
-  input [shape_input_unfavorite_article]
   output [shape_output_unfavorite_article]
 
   status active

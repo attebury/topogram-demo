@@ -6,13 +6,17 @@ entity entity_article {
   description "Candidate entity imported from brownfield schema evidence"
 
   fields {
-    title string optional
+    title string required
     slug string optional
-    description string optional
-    body text optional
+    description string required
+    body text required
     user_id integer required
     created_at datetime required
     updated_at datetime required
+  }
+
+  keys {
+    unique [title]
   }
 
   status active

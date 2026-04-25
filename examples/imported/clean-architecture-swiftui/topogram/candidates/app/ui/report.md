@@ -2,5 +2,5 @@
 
 - Screens: 3
 - Routes: 3
-- Actions: 2
+- Actions: 7
 - Stacks: swiftui

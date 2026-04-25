@@ -1,0 +1,168 @@
+{
+  "actors_roles_vs_topogram": {
+    "actor_gap_candidates": [
+      {
+        "confidence": "medium",
+        "id": "actor_admin",
+        "inference": "phrases=3, participant_hits=0, permission_overlap=0",
+        "related_capabilities": [],
+        "related_docs": [
+          "lifecycle-flow"
+        ]
+      },
+      {
+        "confidence": "medium",
+        "id": "actor_user",
+        "inference": "phrases=2, participant_hits=0, permission_overlap=0",
+        "related_capabilities": [],
+        "related_docs": [
+          "lifecycle-flow"
+        ]
+      },
+      {
+        "confidence": "low",
+        "id": "actor_manager",
+        "inference": "phrases=1, participant_hits=0, permission_overlap=0",
+        "related_capabilities": [],
+        "related_docs": [
+          "lifecycle-flow"
+        ]
+      }
+    ],
+    "actors_missing_in_topogram": [
+      "actor_admin",
+      "actor_manager",
+      "actor_user"
+    ],
+    "journey_docs_missing_actor_links": [],
+    "journey_docs_missing_role_links": [],
+    "role_gap_candidates": [],
+    "roles_missing_in_topogram": [],
+    "secured_capabilities_without_canonical_roles": [],
+    "workflow_docs_missing_actor_links": [],
+    "workflow_docs_missing_role_links": []
+  },
+  "api_vs_topogram": {
+    "capabilities_missing_in_topogram": [
+      "cap_list_items",
+      "cap_create_item",
+      "cap_get_item"
+    ],
+    "endpoints_without_matching_capabilities": [
+      {
+        "capability": "cap_list_items",
+        "method": "GET",
+        "path": "/"
+      },
+      {
+        "capability": "cap_create_item",
+        "method": "POST",
+        "path": "/"
+      },
+      {
+        "capability": "cap_get_item",
+        "method": "GET",
+        "path": "/{orderId}"
+      }
+    ],
+    "field_mismatches": [],
+    "topogram_capabilities_without_imported_endpoint_evidence": []
+  },
+  "bootstrapped_topogram_root": false,
+  "db_vs_topogram": {
+    "entities_missing_in_topogram": [],
+    "enum_value_mismatches": [],
+    "enums_missing_in_topogram": [],
+    "field_mismatches": []
+  },
+  "docs_vs_topogram": {
+    "missing_glossary_docs": [],
+    "missing_workflow_docs": [],
+    "scanned_terms_missing_in_glossary": []
+  },
+  "topogram_available": true,
+  "type": "gap_report",
+  "ui_vs_topogram": {
+    "routes_missing_in_topogram": [
+      "/admin/catalog-items/create",
+      "/admin/catalog-items/:id/delete",
+      "/admin/catalog-items/:id",
+      "/admin/catalog-items/:id/edit",
+      "/admin",
+      "/logout",
+      "/account/confirm-email",
+      "/account/login",
+      "/account/logout",
+      "/account/register",
+      "/admin/edit-catalog-item",
+      "/admin",
+      "/basket/checkout",
+      "{handler?}",
+      "/basket/success",
+      "/error",
+      "/",
+      "/privacy",
+      "/account/lockout",
+      "/account/login-with2fa",
+      "/manage/change-password",
+      "/manage/disable2fa",
+      "/manage/enable-authenticator",
+      "/manage/external-login",
+      "/manage/generate-recovery-code",
+      "/manage/my-account",
+      "/manage/reset-authenticator",
+      "/manage/set-password",
+      "/manage/show-recover-code",
+      "/manage/two-factor-authentication",
+      "/order/detail",
+      "/order/my-orders"
+    ],
+    "screens_missing_in_topogram": [
+      "catalog_item_create",
+      "catalog_item_delete",
+      "catalog_item_detail",
+      "catalog_item_edit",
+      "catalog_item_list",
+      "account_logout",
+      "account_confirm_email",
+      "account_login",
+      "account_logout_page",
+      "account_register",
+      "catalog_item_admin_edit",
+      "catalog_item_admin",
+      "basket_checkout",
+      "basket",
+      "basket_success",
+      "error",
+      "catalog_home",
+      "privacy",
+      "lockout",
+      "login_with2fa",
+      "change_password",
+      "disable2fa",
+      "enable_authenticator",
+      "external_login",
+      "generate_recovery_code",
+      "my_account",
+      "reset_authenticator",
+      "set_password",
+      "show_recover_code",
+      "two_factor_authentication",
+      "order_detail",
+      "order_list"
+    ]
+  },
+  "workflows_vs_topogram": {
+    "transitions_without_canonical_workflow_representation": [
+      {
+        "capability": "cap_create_item",
+        "to_state": "created",
+        "workflow": "workflow_item"
+      }
+    ],
+    "workflows_missing_in_topogram": [
+      "workflow_item"
+    ]
+  },
+  "workspace": "/tmp/topogram-demo-eshoponweb-main-schzl5"
+}

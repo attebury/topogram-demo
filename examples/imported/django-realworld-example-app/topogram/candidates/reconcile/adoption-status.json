@@ -1,12 +1,14 @@
 {
+  "adopt_selector": null,
+  "adopt_write_mode": false,
   "adoption_plan_path": "candidates/reconcile/adoption-plan.json",
-  "applied_item_count": 69,
+  "applied_item_count": 66,
   "approved_item_count": 0,
   "approved_review_groups": [
     "workflow_review:article",
-    "workflow_review:profile",
     "workflow_review:user",
     "workflow_review:comment",
+    "workflow_review:profile",
     "workflow_review:tag",
     "workflow_review:account"
   ],
@@ -15,6 +17,7 @@
   "bundle_blockers": [
     {
       "applied_items": [
+        "account_journey",
         "cap_sign_in_account",
         "dec_account",
         "shape_input_sign_in_account",
@@ -30,6 +33,7 @@
     },
     {
       "applied_items": [
+        "article_journey",
         "cap_create_article",
         "cap_favorite_article",
         "cap_feed_article",
@@ -41,10 +45,6 @@
         "entity_article",
         "shape_input_create_article",
         "shape_input_favorite_article",
-        "shape_input_feed_article",
-        "shape_input_get_article",
-        "shape_input_list_articles",
-        "shape_input_unfavorite_article",
         "shape_input_update_article",
         "shape_output_create_article",
         "shape_output_favorite_article",
@@ -67,10 +67,10 @@
         "cap_create_comment",
         "cap_delete_comment",
         "cap_list_comments",
+        "comment_journey",
         "dec_comment",
         "entity_comment",
         "shape_input_create_comment",
-        "shape_input_list_comments",
         "shape_output_create_comment",
         "shape_output_list_comments",
         "workflow_comment"
@@ -89,9 +89,8 @@
         "cap_unfollow_profile",
         "dec_profile",
         "entity_profile",
+        "profile_journey",
         "shape_input_follow_profile",
-        "shape_input_get_profile",
-        "shape_input_unfollow_profile",
         "shape_output_follow_profile",
         "shape_output_get_profile",
         "shape_output_unfollow_profile",
@@ -109,8 +108,8 @@
         "cap_list_tags",
         "dec_tag",
         "entity_tag",
-        "shape_input_list_tags",
         "shape_output_list_tags",
+        "tag_journey",
         "workflow_tag"
       ],
       "approved_items": [],
@@ -128,11 +127,11 @@
         "dec_user",
         "entity_user",
         "shape_input_create_user",
-        "shape_input_get_user",
         "shape_input_update_user",
         "shape_output_create_user",
         "shape_output_get_user",
         "shape_output_update_user",
+        "user_journey",
         "workflow_user"
       ],
       "approved_items": [],
@@ -145,134 +144,991 @@
   ],
   "bundle_priorities": [
     {
-      "applied_items": 24,
+      "applied_items": 21,
       "approved_items": 0,
+      "auth_aging_summary": {
+        "escalationLevel": "stale_high_risk",
+        "escalationReason": "This bundle has stayed high risk for 18 reconcile runs in a row.",
+        "repeatCount": 18
+      },
+      "auth_claim_hints": [],
+      "auth_closure_summary": {
+        "adopted": 0,
+        "deferred": 0,
+        "label": "high risk",
+        "reason": "At least one inferred auth hint is still unresolved, so the recovered auth story for this bundle is not closed yet.",
+        "status": "high_risk",
+        "total": 5,
+        "unresolved": 5
+      },
+      "auth_ownership_hints": [],
+      "auth_permission_hints": [
+        {
+          "closure_reason": "No reviewed projection patch has been applied for this inferred auth hint yet.",
+          "closure_state": "unresolved",
+          "confidence": "medium",
+          "evidence": {
+            "capability_hits": 1,
+            "doc_hits": 1,
+            "provenance_hits": 0,
+            "route_hits": 1
+          },
+          "explanation": "Secured capability naming and imported route evidence suggest this permission may gate the recovered surface.",
+          "permission": "api.create",
+          "related_capabilities": [
+            "cap_create_article"
+          ],
+          "review_guidance": "Confirm whether permission `api.create` should gate the related auth-sensitive capabilities before promoting this bundle into canonical auth rules or UI visibility.",
+          "review_required": true,
+          "why_inferred": "Secured capability naming and imported route evidence suggest this permission may gate the recovered surface. This inference is based on 1 secured capability match, 1 route/resource match, 1 imported doc or policy match."
+        },
+        {
+          "closure_reason": "No reviewed projection patch has been applied for this inferred auth hint yet.",
+          "closure_state": "unresolved",
+          "confidence": "medium",
+          "evidence": {
+            "capability_hits": 1,
+            "doc_hits": 1,
+            "provenance_hits": 0,
+            "route_hits": 1
+          },
+          "explanation": "Secured capability naming and imported route evidence suggest this permission may gate the recovered surface.",
+          "permission": "api.favorite_article",
+          "related_capabilities": [
+            "cap_favorite_article"
+          ],
+          "review_guidance": "Confirm whether permission `api.favorite_article` should gate the related auth-sensitive capabilities before promoting this bundle into canonical auth rules or UI visibility.",
+          "review_required": true,
+          "why_inferred": "Secured capability naming and imported route evidence suggest this permission may gate the recovered surface. This inference is based on 1 secured capability match, 1 route/resource match, 1 imported doc or policy match."
+        },
+        {
+          "closure_reason": "No reviewed projection patch has been applied for this inferred auth hint yet.",
+          "closure_state": "unresolved",
+          "confidence": "medium",
+          "evidence": {
+            "capability_hits": 1,
+            "doc_hits": 1,
+            "provenance_hits": 0,
+            "route_hits": 1
+          },
+          "explanation": "Secured capability naming and imported route evidence suggest this permission may gate the recovered surface.",
+          "permission": "api.feed_article",
+          "related_capabilities": [
+            "cap_feed_article"
+          ],
+          "review_guidance": "Confirm whether permission `api.feed_article` should gate the related auth-sensitive capabilities before promoting this bundle into canonical auth rules or UI visibility.",
+          "review_required": true,
+          "why_inferred": "Secured capability naming and imported route evidence suggest this permission may gate the recovered surface. This inference is based on 1 secured capability match, 1 route/resource match, 1 imported doc or policy match."
+        },
+        {
+          "closure_reason": "No reviewed projection patch has been applied for this inferred auth hint yet.",
+          "closure_state": "unresolved",
+          "confidence": "medium",
+          "evidence": {
+            "capability_hits": 1,
+            "doc_hits": 1,
+            "provenance_hits": 0,
+            "route_hits": 1
+          },
+          "explanation": "Secured capability naming and imported route evidence suggest this permission may gate the recovered surface.",
+          "permission": "api.unfavorite_article",
+          "related_capabilities": [
+            "cap_unfavorite_article"
+          ],
+          "review_guidance": "Confirm whether permission `api.unfavorite_article` should gate the related auth-sensitive capabilities before promoting this bundle into canonical auth rules or UI visibility.",
+          "review_required": true,
+          "why_inferred": "Secured capability naming and imported route evidence suggest this permission may gate the recovered surface. This inference is based on 1 secured capability match, 1 route/resource match, 1 imported doc or policy match."
+        },
+        {
+          "closure_reason": "No reviewed projection patch has been applied for this inferred auth hint yet.",
+          "closure_state": "unresolved",
+          "confidence": "medium",
+          "evidence": {
+            "capability_hits": 1,
+            "doc_hits": 1,
+            "provenance_hits": 0,
+            "route_hits": 1
+          },
+          "explanation": "Secured capability naming and imported route evidence suggest this permission may gate the recovered surface.",
+          "permission": "api.update",
+          "related_capabilities": [
+            "cap_update_article"
+          ],
+          "review_guidance": "Confirm whether permission `api.update` should gate the related auth-sensitive capabilities before promoting this bundle into canonical auth rules or UI visibility.",
+          "review_required": true,
+          "why_inferred": "Secured capability naming and imported route evidence suggest this permission may gate the recovered surface. This inference is based on 1 secured capability match, 1 route/resource match, 1 imported doc or policy match."
+        }
+      ],
+      "auth_risk_rank": 3,
+      "auth_role_guidance": [],
       "blocked_items": 0,
       "bundle": "article",
       "evidence": {
+        "actors": 0,
         "capabilities": 7,
-        "docs": 0,
+        "docs": 1,
         "entities": 1,
         "enums": 0,
+        "roles": 0,
         "screens": 0,
-        "shapes": 14,
+        "shapes": 10,
         "workflows": 1
       },
-      "evidence_score": 97,
+      "evidence_score": 86,
       "is_complete": true,
+      "next_action": {
+        "kind": "complete",
+        "label": "No action required",
+        "reason": "This bundle has no blocked, approved, or pending work left.",
+        "safe_adopt_now_count": 0,
+        "selector": null,
+        "unlock_review_group_id": null,
+        "unlock_review_selector": null
+      },
       "next_review_groups": [],
+      "operator_summary": {
+        "authAging": {
+          "escalationLevel": "stale_high_risk",
+          "escalationReason": "This bundle has stayed high risk for 18 reconcile runs in a row.",
+          "repeatCount": 18
+        },
+        "authClaimHints": [],
+        "authClosureSummary": {
+          "adopted": 0,
+          "deferred": 0,
+          "label": "high risk",
+          "reason": "At least one inferred auth hint is still unresolved, so the recovered auth story for this bundle is not closed yet.",
+          "status": "high_risk",
+          "total": 5,
+          "unresolved": 5
+        },
+        "authOwnershipHints": [],
+        "authPermissionHints": [
+          {
+            "closure_reason": "No reviewed projection patch has been applied for this inferred auth hint yet.",
+            "closure_state": "unresolved",
+            "confidence": "medium",
+            "evidence": {
+              "capability_hits": 1,
+              "doc_hits": 1,
+              "provenance_hits": 0,
+              "route_hits": 1
+            },
+            "explanation": "Secured capability naming and imported route evidence suggest this permission may gate the recovered surface.",
+            "permission": "api.create",
+            "related_capabilities": [
+              "cap_create_article"
+            ],
+            "review_guidance": "Confirm whether permission `api.create` should gate the related auth-sensitive capabilities before promoting this bundle into canonical auth rules or UI visibility.",
+            "review_required": true,
+            "why_inferred": "Secured capability naming and imported route evidence suggest this permission may gate the recovered surface. This inference is based on 1 secured capability match, 1 route/resource match, 1 imported doc or policy match."
+          },
+          {
+            "closure_reason": "No reviewed projection patch has been applied for this inferred auth hint yet.",
+            "closure_state": "unresolved",
+            "confidence": "medium",
+            "evidence": {
+              "capability_hits": 1,
+              "doc_hits": 1,
+              "provenance_hits": 0,
+              "route_hits": 1
+            },
+            "explanation": "Secured capability naming and imported route evidence suggest this permission may gate the recovered surface.",
+            "permission": "api.favorite_article",
+            "related_capabilities": [
+              "cap_favorite_article"
+            ],
+            "review_guidance": "Confirm whether permission `api.favorite_article` should gate the related auth-sensitive capabilities before promoting this bundle into canonical auth rules or UI visibility.",
+            "review_required": true,
+            "why_inferred": "Secured capability naming and imported route evidence suggest this permission may gate the recovered surface. This inference is based on 1 secured capability match, 1 route/resource match, 1 imported doc or policy match."
+          },
+          {
+            "closure_reason": "No reviewed projection patch has been applied for this inferred auth hint yet.",
+            "closure_state": "unresolved",
+            "confidence": "medium",
+            "evidence": {
+              "capability_hits": 1,
+              "doc_hits": 1,
+              "provenance_hits": 0,
+              "route_hits": 1
+            },
+            "explanation": "Secured capability naming and imported route evidence suggest this permission may gate the recovered surface.",
+            "permission": "api.feed_article",
+            "related_capabilities": [
+              "cap_feed_article"
+            ],
+            "review_guidance": "Confirm whether permission `api.feed_article` should gate the related auth-sensitive capabilities before promoting this bundle into canonical auth rules or UI visibility.",
+            "review_required": true,
+            "why_inferred": "Secured capability naming and imported route evidence suggest this permission may gate the recovered surface. This inference is based on 1 secured capability match, 1 route/resource match, 1 imported doc or policy match."
+          },
+          {
+            "closure_reason": "No reviewed projection patch has been applied for this inferred auth hint yet.",
+            "closure_state": "unresolved",
+            "confidence": "medium",
+            "evidence": {
+              "capability_hits": 1,
+              "doc_hits": 1,
+              "provenance_hits": 0,
+              "route_hits": 1
+            },
+            "explanation": "Secured capability naming and imported route evidence suggest this permission may gate the recovered surface.",
+            "permission": "api.unfavorite_article",
+            "related_capabilities": [
+              "cap_unfavorite_article"
+            ],
+            "review_guidance": "Confirm whether permission `api.unfavorite_article` should gate the related auth-sensitive capabilities before promoting this bundle into canonical auth rules or UI visibility.",
+            "review_required": true,
+            "why_inferred": "Secured capability naming and imported route evidence suggest this permission may gate the recovered surface. This inference is based on 1 secured capability match, 1 route/resource match, 1 imported doc or policy match."
+          },
+          {
+            "closure_reason": "No reviewed projection patch has been applied for this inferred auth hint yet.",
+            "closure_state": "unresolved",
+            "confidence": "medium",
+            "evidence": {
+              "capability_hits": 1,
+              "doc_hits": 1,
+              "provenance_hits": 0,
+              "route_hits": 1
+            },
+            "explanation": "Secured capability naming and imported route evidence suggest this permission may gate the recovered surface.",
+            "permission": "api.update",
+            "related_capabilities": [
+              "cap_update_article"
+            ],
+            "review_guidance": "Confirm whether permission `api.update` should gate the related auth-sensitive capabilities before promoting this bundle into canonical auth rules or UI visibility.",
+            "review_required": true,
+            "why_inferred": "Secured capability naming and imported route evidence suggest this permission may gate the recovered surface. This inference is based on 1 secured capability match, 1 route/resource match, 1 imported doc or policy match."
+          }
+        ],
+        "authRoleGuidance": [],
+        "capabilityIds": [
+          "cap_create_article",
+          "cap_favorite_article",
+          "cap_feed_article",
+          "cap_get_article"
+        ],
+        "participants": {
+          "actors": [],
+          "label": "_none_",
+          "roles": []
+        },
+        "primaryConcept": "entity_article",
+        "primaryEntityId": "entity_article",
+        "routePaths": [],
+        "screenIds": [],
+        "whyThisBundle": "This bundle exists because entity evidence, API capability evidence, workflow evidence, doc evidence converges on the same article concept.",
+        "workflowIds": [
+          "workflow_article"
+        ]
+      },
       "pending_items": 0,
       "recommend_bundle_review_selector": null,
-      "recommend_from_plan": false
+      "recommend_from_plan": false,
+      "recommended_actor_role_actions": [],
+      "recommended_doc_drift_actions": [],
+      "recommended_doc_link_actions": [],
+      "recommended_doc_metadata_patch_actions": []
     },
     {
       "applied_items": 12,
       "approved_items": 0,
-      "blocked_items": 0,
-      "bundle": "profile",
-      "evidence": {
-        "capabilities": 3,
-        "docs": 0,
-        "entities": 1,
-        "enums": 0,
-        "screens": 0,
-        "shapes": 6,
-        "workflows": 1
+      "auth_aging_summary": {
+        "escalationLevel": "stale_high_risk",
+        "escalationReason": "This bundle has stayed high risk for 18 reconcile runs in a row.",
+        "repeatCount": 18
       },
-      "evidence_score": 49,
-      "is_complete": true,
-      "next_review_groups": [],
-      "pending_items": 0,
-      "recommend_bundle_review_selector": null,
-      "recommend_from_plan": false
-    },
-    {
-      "applied_items": 12,
-      "approved_items": 0,
+      "auth_claim_hints": [],
+      "auth_closure_summary": {
+        "adopted": 0,
+        "deferred": 0,
+        "label": "high risk",
+        "reason": "At least one inferred auth hint is still unresolved, so the recovered auth story for this bundle is not closed yet.",
+        "status": "high_risk",
+        "total": 2,
+        "unresolved": 2
+      },
+      "auth_ownership_hints": [],
+      "auth_permission_hints": [
+        {
+          "closure_reason": "No reviewed projection patch has been applied for this inferred auth hint yet.",
+          "closure_state": "unresolved",
+          "confidence": "medium",
+          "evidence": {
+            "capability_hits": 1,
+            "doc_hits": 1,
+            "provenance_hits": 0,
+            "route_hits": 1
+          },
+          "explanation": "Secured capability naming and imported route evidence suggest this permission may gate the recovered surface.",
+          "permission": "api.read",
+          "related_capabilities": [
+            "cap_get_user"
+          ],
+          "review_guidance": "Confirm whether permission `api.read` should gate the related auth-sensitive capabilities before promoting this bundle into canonical auth rules or UI visibility.",
+          "review_required": true,
+          "why_inferred": "Secured capability naming and imported route evidence suggest this permission may gate the recovered surface. This inference is based on 1 secured capability match, 1 route/resource match, 1 imported doc or policy match."
+        },
+        {
+          "closure_reason": "No reviewed projection patch has been applied for this inferred auth hint yet.",
+          "closure_state": "unresolved",
+          "confidence": "medium",
+          "evidence": {
+            "capability_hits": 1,
+            "doc_hits": 1,
+            "provenance_hits": 0,
+            "route_hits": 1
+          },
+          "explanation": "Secured capability naming and imported route evidence suggest this permission may gate the recovered surface.",
+          "permission": "api.update",
+          "related_capabilities": [
+            "cap_update_user"
+          ],
+          "review_guidance": "Confirm whether permission `api.update` should gate the related auth-sensitive capabilities before promoting this bundle into canonical auth rules or UI visibility.",
+          "review_required": true,
+          "why_inferred": "Secured capability naming and imported route evidence suggest this permission may gate the recovered surface. This inference is based on 1 secured capability match, 1 route/resource match, 1 imported doc or policy match."
+        }
+      ],
+      "auth_risk_rank": 3,
+      "auth_role_guidance": [],
       "blocked_items": 0,
       "bundle": "user",
       "evidence": {
+        "actors": 0,
         "capabilities": 3,
-        "docs": 0,
+        "docs": 1,
         "entities": 1,
         "enums": 0,
+        "roles": 0,
         "screens": 0,
-        "shapes": 6,
+        "shapes": 5,
         "workflows": 1
       },
-      "evidence_score": 49,
+      "evidence_score": 47,
       "is_complete": true,
+      "next_action": {
+        "kind": "complete",
+        "label": "No action required",
+        "reason": "This bundle has no blocked, approved, or pending work left.",
+        "safe_adopt_now_count": 0,
+        "selector": null,
+        "unlock_review_group_id": null,
+        "unlock_review_selector": null
+      },
       "next_review_groups": [],
+      "operator_summary": {
+        "authAging": {
+          "escalationLevel": "stale_high_risk",
+          "escalationReason": "This bundle has stayed high risk for 18 reconcile runs in a row.",
+          "repeatCount": 18
+        },
+        "authClaimHints": [],
+        "authClosureSummary": {
+          "adopted": 0,
+          "deferred": 0,
+          "label": "high risk",
+          "reason": "At least one inferred auth hint is still unresolved, so the recovered auth story for this bundle is not closed yet.",
+          "status": "high_risk",
+          "total": 2,
+          "unresolved": 2
+        },
+        "authOwnershipHints": [],
+        "authPermissionHints": [
+          {
+            "closure_reason": "No reviewed projection patch has been applied for this inferred auth hint yet.",
+            "closure_state": "unresolved",
+            "confidence": "medium",
+            "evidence": {
+              "capability_hits": 1,
+              "doc_hits": 1,
+              "provenance_hits": 0,
+              "route_hits": 1
+            },
+            "explanation": "Secured capability naming and imported route evidence suggest this permission may gate the recovered surface.",
+            "permission": "api.read",
+            "related_capabilities": [
+              "cap_get_user"
+            ],
+            "review_guidance": "Confirm whether permission `api.read` should gate the related auth-sensitive capabilities before promoting this bundle into canonical auth rules or UI visibility.",
+            "review_required": true,
+            "why_inferred": "Secured capability naming and imported route evidence suggest this permission may gate the recovered surface. This inference is based on 1 secured capability match, 1 route/resource match, 1 imported doc or policy match."
+          },
+          {
+            "closure_reason": "No reviewed projection patch has been applied for this inferred auth hint yet.",
+            "closure_state": "unresolved",
+            "confidence": "medium",
+            "evidence": {
+              "capability_hits": 1,
+              "doc_hits": 1,
+              "provenance_hits": 0,
+              "route_hits": 1
+            },
+            "explanation": "Secured capability naming and imported route evidence suggest this permission may gate the recovered surface.",
+            "permission": "api.update",
+            "related_capabilities": [
+              "cap_update_user"
+            ],
+            "review_guidance": "Confirm whether permission `api.update` should gate the related auth-sensitive capabilities before promoting this bundle into canonical auth rules or UI visibility.",
+            "review_required": true,
+            "why_inferred": "Secured capability naming and imported route evidence suggest this permission may gate the recovered surface. This inference is based on 1 secured capability match, 1 route/resource match, 1 imported doc or policy match."
+          }
+        ],
+        "authRoleGuidance": [],
+        "capabilityIds": [
+          "cap_create_user",
+          "cap_get_user",
+          "cap_update_user"
+        ],
+        "participants": {
+          "actors": [],
+          "label": "_none_",
+          "roles": []
+        },
+        "primaryConcept": "entity_user",
+        "primaryEntityId": "entity_user",
+        "routePaths": [],
+        "screenIds": [],
+        "whyThisBundle": "This bundle exists because entity evidence, API capability evidence, workflow evidence, doc evidence converges on the same user concept.",
+        "workflowIds": [
+          "workflow_user"
+        ]
+      },
       "pending_items": 0,
       "recommend_bundle_review_selector": null,
-      "recommend_from_plan": false
+      "recommend_from_plan": false,
+      "recommended_actor_role_actions": [],
+      "recommended_doc_drift_actions": [],
+      "recommended_doc_link_actions": [],
+      "recommended_doc_metadata_patch_actions": []
     },
     {
-      "applied_items": 10,
+      "applied_items": 11,
       "approved_items": 0,
+      "auth_aging_summary": {
+        "escalationLevel": "stale_high_risk",
+        "escalationReason": "This bundle has stayed high risk for 18 reconcile runs in a row.",
+        "repeatCount": 18
+      },
+      "auth_claim_hints": [],
+      "auth_closure_summary": {
+        "adopted": 0,
+        "deferred": 0,
+        "label": "high risk",
+        "reason": "At least one inferred auth hint is still unresolved, so the recovered auth story for this bundle is not closed yet.",
+        "status": "high_risk",
+        "total": 2,
+        "unresolved": 2
+      },
+      "auth_ownership_hints": [],
+      "auth_permission_hints": [
+        {
+          "closure_reason": "No reviewed projection patch has been applied for this inferred auth hint yet.",
+          "closure_state": "unresolved",
+          "confidence": "medium",
+          "evidence": {
+            "capability_hits": 1,
+            "doc_hits": 1,
+            "provenance_hits": 0,
+            "route_hits": 1
+          },
+          "explanation": "Secured capability naming and imported route evidence suggest this permission may gate the recovered surface.",
+          "permission": "api.follow_profile",
+          "related_capabilities": [
+            "cap_follow_profile"
+          ],
+          "review_guidance": "Confirm whether permission `api.follow_profile` should gate the related auth-sensitive capabilities before promoting this bundle into canonical auth rules or UI visibility.",
+          "review_required": true,
+          "why_inferred": "Secured capability naming and imported route evidence suggest this permission may gate the recovered surface. This inference is based on 1 secured capability match, 1 route/resource match, 1 imported doc or policy match."
+        },
+        {
+          "closure_reason": "No reviewed projection patch has been applied for this inferred auth hint yet.",
+          "closure_state": "unresolved",
+          "confidence": "medium",
+          "evidence": {
+            "capability_hits": 1,
+            "doc_hits": 1,
+            "provenance_hits": 0,
+            "route_hits": 1
+          },
+          "explanation": "Secured capability naming and imported route evidence suggest this permission may gate the recovered surface.",
+          "permission": "api.unfollow_profile",
+          "related_capabilities": [
+            "cap_unfollow_profile"
+          ],
+          "review_guidance": "Confirm whether permission `api.unfollow_profile` should gate the related auth-sensitive capabilities before promoting this bundle into canonical auth rules or UI visibility.",
+          "review_required": true,
+          "why_inferred": "Secured capability naming and imported route evidence suggest this permission may gate the recovered surface. This inference is based on 1 secured capability match, 1 route/resource match, 1 imported doc or policy match."
+        }
+      ],
+      "auth_risk_rank": 3,
+      "auth_role_guidance": [],
       "blocked_items": 0,
-      "bundle": "comment",
+      "bundle": "profile",
       "evidence": {
+        "actors": 0,
         "capabilities": 3,
-        "docs": 0,
+        "docs": 1,
         "entities": 1,
         "enums": 0,
+        "roles": 0,
         "screens": 0,
         "shapes": 4,
         "workflows": 1
       },
-      "evidence_score": 43,
+      "evidence_score": 44,
       "is_complete": true,
+      "next_action": {
+        "kind": "complete",
+        "label": "No action required",
+        "reason": "This bundle has no blocked, approved, or pending work left.",
+        "safe_adopt_now_count": 0,
+        "selector": null,
+        "unlock_review_group_id": null,
+        "unlock_review_selector": null
+      },
       "next_review_groups": [],
+      "operator_summary": {
+        "authAging": {
+          "escalationLevel": "stale_high_risk",
+          "escalationReason": "This bundle has stayed high risk for 18 reconcile runs in a row.",
+          "repeatCount": 18
+        },
+        "authClaimHints": [],
+        "authClosureSummary": {
+          "adopted": 0,
+          "deferred": 0,
+          "label": "high risk",
+          "reason": "At least one inferred auth hint is still unresolved, so the recovered auth story for this bundle is not closed yet.",
+          "status": "high_risk",
+          "total": 2,
+          "unresolved": 2
+        },
+        "authOwnershipHints": [],
+        "authPermissionHints": [
+          {
+            "closure_reason": "No reviewed projection patch has been applied for this inferred auth hint yet.",
+            "closure_state": "unresolved",
+            "confidence": "medium",
+            "evidence": {
+              "capability_hits": 1,
+              "doc_hits": 1,
+              "provenance_hits": 0,
+              "route_hits": 1
+            },
+            "explanation": "Secured capability naming and imported route evidence suggest this permission may gate the recovered surface.",
+            "permission": "api.follow_profile",
+            "related_capabilities": [
+              "cap_follow_profile"
+            ],
+            "review_guidance": "Confirm whether permission `api.follow_profile` should gate the related auth-sensitive capabilities before promoting this bundle into canonical auth rules or UI visibility.",
+            "review_required": true,
+            "why_inferred": "Secured capability naming and imported route evidence suggest this permission may gate the recovered surface. This inference is based on 1 secured capability match, 1 route/resource match, 1 imported doc or policy match."
+          },
+          {
+            "closure_reason": "No reviewed projection patch has been applied for this inferred auth hint yet.",
+            "closure_state": "unresolved",
+            "confidence": "medium",
+            "evidence": {
+              "capability_hits": 1,
+              "doc_hits": 1,
+              "provenance_hits": 0,
+              "route_hits": 1
+            },
+            "explanation": "Secured capability naming and imported route evidence suggest this permission may gate the recovered surface.",
+            "permission": "api.unfollow_profile",
+            "related_capabilities": [
+              "cap_unfollow_profile"
+            ],
+            "review_guidance": "Confirm whether permission `api.unfollow_profile` should gate the related auth-sensitive capabilities before promoting this bundle into canonical auth rules or UI visibility.",
+            "review_required": true,
+            "why_inferred": "Secured capability naming and imported route evidence suggest this permission may gate the recovered surface. This inference is based on 1 secured capability match, 1 route/resource match, 1 imported doc or policy match."
+          }
+        ],
+        "authRoleGuidance": [],
+        "capabilityIds": [
+          "cap_follow_profile",
+          "cap_get_profile",
+          "cap_unfollow_profile"
+        ],
+        "participants": {
+          "actors": [],
+          "label": "_none_",
+          "roles": []
+        },
+        "primaryConcept": "entity_profile",
+        "primaryEntityId": "entity_profile",
+        "routePaths": [],
+        "screenIds": [],
+        "whyThisBundle": "This bundle exists because entity evidence, API capability evidence, workflow evidence, doc evidence converges on the same profile concept.",
+        "workflowIds": [
+          "workflow_profile"
+        ]
+      },
       "pending_items": 0,
       "recommend_bundle_review_selector": null,
-      "recommend_from_plan": false
+      "recommend_from_plan": false,
+      "recommended_actor_role_actions": [],
+      "recommended_doc_drift_actions": [],
+      "recommended_doc_link_actions": [],
+      "recommended_doc_metadata_patch_actions": []
+    },
+    {
+      "applied_items": 10,
+      "approved_items": 0,
+      "auth_aging_summary": {
+        "escalationLevel": "stale_high_risk",
+        "escalationReason": "This bundle has stayed high risk for 18 reconcile runs in a row.",
+        "repeatCount": 18
+      },
+      "auth_claim_hints": [],
+      "auth_closure_summary": {
+        "adopted": 0,
+        "deferred": 0,
+        "label": "high risk",
+        "reason": "At least one inferred auth hint is still unresolved, so the recovered auth story for this bundle is not closed yet.",
+        "status": "high_risk",
+        "total": 2,
+        "unresolved": 2
+      },
+      "auth_ownership_hints": [],
+      "auth_permission_hints": [
+        {
+          "closure_reason": "No reviewed projection patch has been applied for this inferred auth hint yet.",
+          "closure_state": "unresolved",
+          "confidence": "medium",
+          "evidence": {
+            "capability_hits": 1,
+            "doc_hits": 1,
+            "provenance_hits": 0,
+            "route_hits": 1
+          },
+          "explanation": "Secured capability naming and imported route evidence suggest this permission may gate the recovered surface.",
+          "permission": "api.create",
+          "related_capabilities": [
+            "cap_create_comment"
+          ],
+          "review_guidance": "Confirm whether permission `api.create` should gate the related auth-sensitive capabilities before promoting this bundle into canonical auth rules or UI visibility.",
+          "review_required": true,
+          "why_inferred": "Secured capability naming and imported route evidence suggest this permission may gate the recovered surface. This inference is based on 1 secured capability match, 1 route/resource match, 1 imported doc or policy match."
+        },
+        {
+          "closure_reason": "No reviewed projection patch has been applied for this inferred auth hint yet.",
+          "closure_state": "unresolved",
+          "confidence": "medium",
+          "evidence": {
+            "capability_hits": 1,
+            "doc_hits": 1,
+            "provenance_hits": 0,
+            "route_hits": 1
+          },
+          "explanation": "Secured capability naming and imported route evidence suggest this permission may gate the recovered surface.",
+          "permission": "api.delete",
+          "related_capabilities": [
+            "cap_delete_comment"
+          ],
+          "review_guidance": "Confirm whether permission `api.delete` should gate the related auth-sensitive capabilities before promoting this bundle into canonical auth rules or UI visibility.",
+          "review_required": true,
+          "why_inferred": "Secured capability naming and imported route evidence suggest this permission may gate the recovered surface. This inference is based on 1 secured capability match, 1 route/resource match, 1 imported doc or policy match."
+        }
+      ],
+      "auth_risk_rank": 3,
+      "auth_role_guidance": [],
+      "blocked_items": 0,
+      "bundle": "comment",
+      "evidence": {
+        "actors": 0,
+        "capabilities": 3,
+        "docs": 1,
+        "entities": 1,
+        "enums": 0,
+        "roles": 0,
+        "screens": 0,
+        "shapes": 3,
+        "workflows": 1
+      },
+      "evidence_score": 41,
+      "is_complete": true,
+      "next_action": {
+        "kind": "complete",
+        "label": "No action required",
+        "reason": "This bundle has no blocked, approved, or pending work left.",
+        "safe_adopt_now_count": 0,
+        "selector": null,
+        "unlock_review_group_id": null,
+        "unlock_review_selector": null
+      },
+      "next_review_groups": [],
+      "operator_summary": {
+        "authAging": {
+          "escalationLevel": "stale_high_risk",
+          "escalationReason": "This bundle has stayed high risk for 18 reconcile runs in a row.",
+          "repeatCount": 18
+        },
+        "authClaimHints": [],
+        "authClosureSummary": {
+          "adopted": 0,
+          "deferred": 0,
+          "label": "high risk",
+          "reason": "At least one inferred auth hint is still unresolved, so the recovered auth story for this bundle is not closed yet.",
+          "status": "high_risk",
+          "total": 2,
+          "unresolved": 2
+        },
+        "authOwnershipHints": [],
+        "authPermissionHints": [
+          {
+            "closure_reason": "No reviewed projection patch has been applied for this inferred auth hint yet.",
+            "closure_state": "unresolved",
+            "confidence": "medium",
+            "evidence": {
+              "capability_hits": 1,
+              "doc_hits": 1,
+              "provenance_hits": 0,
+              "route_hits": 1
+            },
+            "explanation": "Secured capability naming and imported route evidence suggest this permission may gate the recovered surface.",
+            "permission": "api.create",
+            "related_capabilities": [
+              "cap_create_comment"
+            ],
+            "review_guidance": "Confirm whether permission `api.create` should gate the related auth-sensitive capabilities before promoting this bundle into canonical auth rules or UI visibility.",
+            "review_required": true,
+            "why_inferred": "Secured capability naming and imported route evidence suggest this permission may gate the recovered surface. This inference is based on 1 secured capability match, 1 route/resource match, 1 imported doc or policy match."
+          },
+          {
+            "closure_reason": "No reviewed projection patch has been applied for this inferred auth hint yet.",
+            "closure_state": "unresolved",
+            "confidence": "medium",
+            "evidence": {
+              "capability_hits": 1,
+              "doc_hits": 1,
+              "provenance_hits": 0,
+              "route_hits": 1
+            },
+            "explanation": "Secured capability naming and imported route evidence suggest this permission may gate the recovered surface.",
+            "permission": "api.delete",
+            "related_capabilities": [
+              "cap_delete_comment"
+            ],
+            "review_guidance": "Confirm whether permission `api.delete` should gate the related auth-sensitive capabilities before promoting this bundle into canonical auth rules or UI visibility.",
+            "review_required": true,
+            "why_inferred": "Secured capability naming and imported route evidence suggest this permission may gate the recovered surface. This inference is based on 1 secured capability match, 1 route/resource match, 1 imported doc or policy match."
+          }
+        ],
+        "authRoleGuidance": [],
+        "capabilityIds": [
+          "cap_create_comment",
+          "cap_delete_comment",
+          "cap_list_comments"
+        ],
+        "participants": {
+          "actors": [],
+          "label": "_none_",
+          "roles": []
+        },
+        "primaryConcept": "entity_comment",
+        "primaryEntityId": "entity_comment",
+        "routePaths": [],
+        "screenIds": [],
+        "whyThisBundle": "This bundle exists because entity evidence, API capability evidence, workflow evidence, doc evidence converges on the same comment concept.",
+        "workflowIds": [
+          "workflow_comment"
+        ]
+      },
+      "pending_items": 0,
+      "recommend_bundle_review_selector": null,
+      "recommend_from_plan": false,
+      "recommended_actor_role_actions": [],
+      "recommended_doc_drift_actions": [],
+      "recommended_doc_link_actions": [],
+      "recommended_doc_metadata_patch_actions": []
     },
     {
       "applied_items": 6,
       "approved_items": 0,
+      "auth_aging_summary": {
+        "escalationLevel": "none",
+        "escalationReason": "This bundle is not currently high risk.",
+        "repeatCount": 0
+      },
+      "auth_claim_hints": [],
+      "auth_closure_summary": {
+        "adopted": 0,
+        "deferred": 0,
+        "label": "no auth hints",
+        "reason": "This bundle does not currently carry inferred permission, claim, or ownership hints.",
+        "status": "no_auth_hints",
+        "total": 0,
+        "unresolved": 0
+      },
+      "auth_ownership_hints": [],
+      "auth_permission_hints": [],
+      "auth_risk_rank": 0,
+      "auth_role_guidance": [],
       "blocked_items": 0,
       "bundle": "tag",
       "evidence": {
+        "actors": 0,
         "capabilities": 1,
-        "docs": 0,
+        "docs": 1,
         "entities": 1,
         "enums": 0,
+        "roles": 0,
         "screens": 0,
-        "shapes": 2,
+        "shapes": 1,
         "workflows": 1
       },
-      "evidence_score": 25,
+      "evidence_score": 23,
       "is_complete": true,
+      "next_action": {
+        "kind": "complete",
+        "label": "No action required",
+        "reason": "This bundle has no blocked, approved, or pending work left.",
+        "safe_adopt_now_count": 0,
+        "selector": null,
+        "unlock_review_group_id": null,
+        "unlock_review_selector": null
+      },
       "next_review_groups": [],
+      "operator_summary": {
+        "authAging": {
+          "escalationLevel": "none",
+          "escalationReason": "This bundle is not currently high risk.",
+          "repeatCount": 0
+        },
+        "authClaimHints": [],
+        "authClosureSummary": {
+          "adopted": 0,
+          "deferred": 0,
+          "label": "no auth hints",
+          "reason": "This bundle does not currently carry inferred permission, claim, or ownership hints.",
+          "status": "no_auth_hints",
+          "total": 0,
+          "unresolved": 0
+        },
+        "authOwnershipHints": [],
+        "authPermissionHints": [],
+        "authRoleGuidance": [],
+        "capabilityIds": [
+          "cap_list_tags"
+        ],
+        "participants": {
+          "actors": [],
+          "label": "_none_",
+          "roles": []
+        },
+        "primaryConcept": "entity_tag",
+        "primaryEntityId": "entity_tag",
+        "routePaths": [],
+        "screenIds": [],
+        "whyThisBundle": "This bundle exists because entity evidence, API capability evidence, workflow evidence, doc evidence converges on the same tag concept.",
+        "workflowIds": [
+          "workflow_tag"
+        ]
+      },
       "pending_items": 0,
       "recommend_bundle_review_selector": null,
-      "recommend_from_plan": false
+      "recommend_from_plan": false,
+      "recommended_actor_role_actions": [],
+      "recommended_doc_drift_actions": [],
+      "recommended_doc_link_actions": [],
+      "recommended_doc_metadata_patch_actions": []
     },
     {
-      "applied_items": 5,
+      "applied_items": 6,
       "approved_items": 0,
+      "auth_aging_summary": {
+        "escalationLevel": "none",
+        "escalationReason": "This bundle is not currently high risk.",
+        "repeatCount": 0
+      },
+      "auth_claim_hints": [],
+      "auth_closure_summary": {
+        "adopted": 0,
+        "deferred": 0,
+        "label": "no auth hints",
+        "reason": "This bundle does not currently carry inferred permission, claim, or ownership hints.",
+        "status": "no_auth_hints",
+        "total": 0,
+        "unresolved": 0
+      },
+      "auth_ownership_hints": [],
+      "auth_permission_hints": [],
+      "auth_risk_rank": 0,
+      "auth_role_guidance": [],
       "blocked_items": 0,
       "bundle": "account",
       "evidence": {
+        "actors": 0,
         "capabilities": 1,
-        "docs": 0,
+        "docs": 1,
         "entities": 0,
         "enums": 0,
+        "roles": 0,
         "screens": 0,
         "shapes": 2,
         "workflows": 1
       },
-      "evidence_score": 17,
+      "evidence_score": 18,
       "is_complete": true,
+      "next_action": {
+        "kind": "complete",
+        "label": "No action required",
+        "reason": "This bundle has no blocked, approved, or pending work left.",
+        "safe_adopt_now_count": 0,
+        "selector": null,
+        "unlock_review_group_id": null,
+        "unlock_review_selector": null
+      },
       "next_review_groups": [],
+      "operator_summary": {
+        "authAging": {
+          "escalationLevel": "none",
+          "escalationReason": "This bundle is not currently high risk.",
+          "repeatCount": 0
+        },
+        "authClaimHints": [],
+        "authClosureSummary": {
+          "adopted": 0,
+          "deferred": 0,
+          "label": "no auth hints",
+          "reason": "This bundle does not currently carry inferred permission, claim, or ownership hints.",
+          "status": "no_auth_hints",
+          "total": 0,
+          "unresolved": 0
+        },
+        "authOwnershipHints": [],
+        "authPermissionHints": [],
+        "authRoleGuidance": [],
+        "capabilityIds": [
+          "cap_sign_in_account"
+        ],
+        "participants": {
+          "actors": [],
+          "label": "_none_",
+          "roles": []
+        },
+        "primaryConcept": "entity_account",
+        "primaryEntityId": "entity_account",
+        "routePaths": [],
+        "screenIds": [],
+        "whyThisBundle": "This bundle exists because API capability evidence, workflow evidence, doc evidence converges on the same account concept.",
+        "workflowIds": [
+          "workflow_account"
+        ]
+      },
       "pending_items": 0,
       "recommend_bundle_review_selector": null,
-      "recommend_from_plan": false
+      "recommend_from_plan": false,
+      "recommended_actor_role_actions": [],
+      "recommended_doc_drift_actions": [],
+      "recommended_doc_link_actions": [],
+      "recommended_doc_metadata_patch_actions": []
     }
   ],
   "next_bundle": null,
+  "preview_followup_guidance": [],
   "projection_review_groups": [],
+  "promoted_canonical_items": [],
   "type": "adoption_status",
   "ui_review_groups": [],
   "workflow_review_groups": [
@@ -385,5 +1241,5 @@
       "reason": "Workflow semantics for user need canonical review before promotion."
     }
   ],
-  "workspace": "historical:topogram/trials/django-realworld-example-app/topogram"
+  "workspace": "/tmp/topogram-demo-django-realworld-main-Z9jPjy/topogram"
 }

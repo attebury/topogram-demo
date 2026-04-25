@@ -1,11 +1,17 @@
 # imported confidence: high
 # imported source_kind: route_code
 # imported provenance: config/routes.rb#POST /api/articles
+# imported provenance: app/controllers/articles_controller.rb
 capability cap_create_article {
   name "POST /api/articles"
   description "Candidate capability imported from brownfield API evidence"
 
+  actors [user]
+
   creates [entity_article]
+
+  input [shape_input_create_article]
+  output [shape_output_create_article]
 
   status active
 }

@@ -8,8 +8,6 @@ capability cap_get_profile {
   description "Candidate capability imported from brownfield API evidence"
 
   reads [entity_profile]
-
-  input [shape_input_get_profile]
   output [shape_output_get_profile]
 
   status active

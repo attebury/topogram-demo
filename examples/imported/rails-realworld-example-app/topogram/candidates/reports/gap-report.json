@@ -1,25 +1,224 @@
 {
-  "bootstrapped_topogram_root": false,
-  "imported": {
-    "api": {
-      "capability_count": 19,
-      "route_count": 20
-    },
-    "db": {
-      "entity_count": 7,
-      "enum_count": 0,
-      "relation_count": 3
-    },
-    "ui": {
-      "route_count": 0,
-      "screen_count": 0
-    },
-    "workflows": {
-      "transition_count": 6,
-      "workflow_count": 6
-    }
+  "actors_roles_vs_topogram": {
+    "actor_gap_candidates": [],
+    "actors_missing_in_topogram": [],
+    "journey_docs_missing_actor_links": [],
+    "journey_docs_missing_role_links": [],
+    "role_gap_candidates": [],
+    "roles_missing_in_topogram": [],
+    "secured_capabilities_without_canonical_roles": [],
+    "workflow_docs_missing_actor_links": [],
+    "workflow_docs_missing_role_links": []
   },
-  "topogram_available": false,
+  "api_vs_topogram": {
+    "capabilities_missing_in_topogram": [
+      "cap_sign_in_account",
+      "cap_get_user",
+      "cap_create_user",
+      "cap_update_user",
+      "cap_favorite_article",
+      "cap_unfavorite_article",
+      "cap_list_articles",
+      "cap_create_article",
+      "cap_get_article",
+      "cap_update_article",
+      "cap_delete_article",
+      "cap_list_comments",
+      "cap_create_comment",
+      "cap_delete_comment",
+      "cap_feed_article",
+      "cap_get_profile",
+      "cap_follow_profile",
+      "cap_unfollow_profile",
+      "cap_list_tags"
+    ],
+    "endpoints_without_matching_capabilities": [
+      {
+        "capability": "cap_sign_in_account",
+        "method": "POST",
+        "path": "/api/auth/login"
+      },
+      {
+        "capability": "cap_get_user",
+        "method": "GET",
+        "path": "/api/users/{id}"
+      },
+      {
+        "capability": "cap_create_user",
+        "method": "POST",
+        "path": "/api/users"
+      },
+      {
+        "capability": "cap_update_user",
+        "method": "PUT",
+        "path": "/api/user"
+      },
+      {
+        "capability": "cap_favorite_article",
+        "method": "POST",
+        "path": "/api/articles/{slug}/favorite"
+      },
+      {
+        "capability": "cap_unfavorite_article",
+        "method": "DELETE",
+        "path": "/api/articles/{slug}/favorite"
+      },
+      {
+        "capability": "cap_list_articles",
+        "method": "GET",
+        "path": "/api/articles"
+      },
+      {
+        "capability": "cap_create_article",
+        "method": "POST",
+        "path": "/api/articles"
+      },
+      {
+        "capability": "cap_get_article",
+        "method": "GET",
+        "path": "/api/articles/{slug}"
+      },
+      {
+        "capability": "cap_update_article",
+        "method": "PUT",
+        "path": "/api/articles/{slug}"
+      },
+      {
+        "capability": "cap_delete_article",
+        "method": "DELETE",
+        "path": "/api/articles/{slug}"
+      },
+      {
+        "capability": "cap_list_comments",
+        "method": "GET",
+        "path": "/api/articles/{slug}/comments"
+      },
+      {
+        "capability": "cap_create_comment",
+        "method": "POST",
+        "path": "/api/articles/{slug}/comments"
+      },
+      {
+        "capability": "cap_delete_comment",
+        "method": "DELETE",
+        "path": "/api/articles/{slug}/comments/{id}"
+      },
+      {
+        "capability": "cap_feed_article",
+        "method": "GET",
+        "path": "/api/articles/feed"
+      },
+      {
+        "capability": "cap_get_profile",
+        "method": "GET",
+        "path": "/api/profiles/{username}"
+      },
+      {
+        "capability": "cap_follow_profile",
+        "method": "POST",
+        "path": "/api/profiles/{username}/follow"
+      },
+      {
+        "capability": "cap_unfollow_profile",
+        "method": "DELETE",
+        "path": "/api/profiles/{username}/follow"
+      },
+      {
+        "capability": "cap_list_tags",
+        "method": "GET",
+        "path": "/api/tags"
+      }
+    ],
+    "field_mismatches": [],
+    "topogram_capabilities_without_imported_endpoint_evidence": []
+  },
+  "bootstrapped_topogram_root": false,
+  "db_vs_topogram": {
+    "entities_missing_in_topogram": [
+      "article",
+      "articles-tag",
+      "articles-user",
+      "comment",
+      "follower",
+      "tag",
+      "user"
+    ],
+    "enum_value_mismatches": [],
+    "enums_missing_in_topogram": [],
+    "field_mismatches": []
+  },
+  "docs_vs_topogram": {
+    "missing_glossary_docs": [],
+    "missing_workflow_docs": [],
+    "scanned_terms_missing_in_glossary": []
+  },
+  "topogram_available": true,
   "type": "gap_report",
-  "workspace": "historical:topogram/trials/rails-realworld-example-app"
+  "ui_vs_topogram": {
+    "routes_missing_in_topogram": [],
+    "screens_missing_in_topogram": []
+  },
+  "workflows_vs_topogram": {
+    "transitions_without_canonical_workflow_representation": [
+      {
+        "capability": "cap_sign_in_account",
+        "to_state": "authenticated",
+        "workflow": "workflow_account"
+      },
+      {
+        "capability": "cap_create_user",
+        "to_state": "registered",
+        "workflow": "workflow_user"
+      },
+      {
+        "capability": "cap_favorite_article",
+        "to_state": "favorited",
+        "workflow": "workflow_article"
+      },
+      {
+        "capability": "cap_unfavorite_article",
+        "to_state": "not_favorited",
+        "workflow": "workflow_article"
+      },
+      {
+        "capability": "cap_create_article",
+        "to_state": "created",
+        "workflow": "workflow_article"
+      },
+      {
+        "capability": "cap_delete_article",
+        "to_state": "deleted",
+        "workflow": "workflow_article"
+      },
+      {
+        "capability": "cap_create_comment",
+        "to_state": "created",
+        "workflow": "workflow_comment"
+      },
+      {
+        "capability": "cap_delete_comment",
+        "to_state": "deleted",
+        "workflow": "workflow_comment"
+      },
+      {
+        "capability": "cap_follow_profile",
+        "to_state": "following",
+        "workflow": "workflow_profile"
+      },
+      {
+        "capability": "cap_unfollow_profile",
+        "to_state": "not_following",
+        "workflow": "workflow_profile"
+      }
+    ],
+    "workflows_missing_in_topogram": [
+      "workflow_account",
+      "workflow_user",
+      "workflow_article",
+      "workflow_comment",
+      "workflow_profile",
+      "workflow_tag"
+    ]
+  },
+  "workspace": "/tmp/topogram-demo-rails-realworld-main-QoVrjd"
 }

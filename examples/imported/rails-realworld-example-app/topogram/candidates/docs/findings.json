@@ -1,7 +1,9 @@
 [
   {
-    "file": "historical:topogram/trials/rails-realworld-example-app/README.md",
+    "actor_signals": [],
+    "file": "/tmp/topogram-demo-rails-realworld-main-QoVrjd/README.md",
     "relative_path": "README.md",
+    "role_signals": [],
     "term_candidates": [
       "rails",
       "how",

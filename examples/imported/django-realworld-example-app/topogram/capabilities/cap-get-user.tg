@@ -10,8 +10,6 @@ capability cap_get_user {
   actors [user]
 
   reads [entity_user]
-
-  input [shape_input_get_user]
   output [shape_output_get_user]
 
   status active

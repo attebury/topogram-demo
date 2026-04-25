@@ -7,8 +7,8 @@ This target shows that Topogram can import, reconcile, and adopt a non-web Swift
 ## Current Status
 
 - proof status: `closed`
-- Topogram commit tested: `396fd5c`
-- last verified date: `2026-04-22`
+- Topogram commit tested: `7b68b970`
+- last verified date: `2026-04-25`
 
 ## Rerun
 

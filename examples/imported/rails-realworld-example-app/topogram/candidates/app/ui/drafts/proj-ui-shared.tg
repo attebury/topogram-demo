@@ -1,0 +1,25 @@
+projection proj_ui_shared_imported_topogram_demo_rails_realworld_main_qovrjd {
+  name "Imported Shared UI Draft"
+  description "Drafted from imported UI candidates. Review and adapt before adoption."
+
+  platform ui_shared
+  realizes [
+    // add capability ids
+  ]
+  outputs [ui_contract]
+
+  ui_app_shell {
+    brand "Imported topogram demo rails realworld main qovrjd"
+    shell topbar
+  }
+
+  ui_screens {
+    // No imported screens detected
+  }
+
+  ui_navigation {
+
+  }
+
+  status proposed
+}

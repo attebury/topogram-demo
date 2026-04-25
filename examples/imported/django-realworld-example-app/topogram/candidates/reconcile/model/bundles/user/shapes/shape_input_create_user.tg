@@ -3,7 +3,9 @@ shape shape_input_create_user {
   description "Candidate shape imported from brownfield API evidence"
 
   fields {
+    email string optional
     password string optional
+    username string optional
   }
 
   status active

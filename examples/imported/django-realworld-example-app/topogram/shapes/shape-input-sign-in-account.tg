@@ -3,7 +3,8 @@ shape shape_input_sign_in_account {
   description "Candidate shape imported from brownfield API evidence"
 
   fields {
-    user string optional
+    email string optional
+    password string optional
   }
 
   status active

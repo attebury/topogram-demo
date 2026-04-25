@@ -1,0 +1,34 @@
+projection proj_ui_web_imported_topogram_demo_swiftui_main_ctn9xl {
+  name "Imported Web UI Draft"
+  description "Drafted from imported UI candidates. Review and adapt before adoption."
+
+  platform ui_web
+  realizes [
+    proj_ui_shared_imported_topogram_demo_swiftui_main_ctn9xl,
+    cap_get_country_details,
+    cap_list_countries
+  ]
+  outputs [ui_contract, web_app]
+
+  ui_routes {
+    screen country_list path /countries
+    screen country_detail path /countries/:alpha3Code
+    screen country_flag_modal path /countries/:alpha3Code/flag
+  }
+
+  ui_web {
+    screen country_list shell topbar
+    screen country_list collection list
+    screen country_detail present sheet
+    action cap_list_countries present button
+    action cap_get_country_details present button
+  }
+
+  generator_defaults {
+    profile react
+    language typescript
+    styling css
+  }
+
+  status proposed
+}
