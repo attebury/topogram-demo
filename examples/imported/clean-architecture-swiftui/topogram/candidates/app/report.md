@@ -18,7 +18,7 @@ Tracks: db, api, ui, workflows
 
 - Screens: 3
 - Routes: 3
-- Actions: 2
+- Actions: 7
 - Stacks: swiftui
 
 ## Workflows
@@ -26,3 +26,10 @@ Tracks: db, api, ui, workflows
 - Workflows: 2
 - States: 0
 - Transitions: 0
+
+## Verification
+
+- Verifications: 0
+- Scenarios: 0
+- Frameworks: none
+- Scripts: 0

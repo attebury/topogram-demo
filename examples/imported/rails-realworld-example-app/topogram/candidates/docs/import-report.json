@@ -1,5 +1,6 @@
 {
   "bootstrapped_topogram_root": false,
+  "candidate_actors": [],
   "candidate_docs": [
     {
       "confidence": "low",
@@ -28,10 +29,13 @@
       "title": "Ruby"
     }
   ],
+  "candidate_roles": [],
   "findings": [
     {
-      "file": "historical:topogram/trials/rails-realworld-example-app/README.md",
+      "actor_signals": [],
+      "file": "/tmp/topogram-demo-rails-realworld-main-QoVrjd/README.md",
       "relative_path": "README.md",
+      "role_signals": [],
       "term_candidates": [
         "rails",
         "how",
@@ -51,5 +55,5 @@
     "README.md"
   ],
   "type": "scan_docs_report",
-  "workspace": "historical:topogram/trials/rails-realworld-example-app/topogram"
+  "workspace": "/tmp/topogram-demo-rails-realworld-main-QoVrjd/topogram"
 }

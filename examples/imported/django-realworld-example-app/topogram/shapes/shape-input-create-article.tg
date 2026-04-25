@@ -4,14 +4,9 @@ shape shape_input_create_article {
 
   fields {
     body string optional
-    createdAt string optional
     description string optional
-    favorited string optional
-    favoritesCount string optional
-    slug string optional
     tagList string optional
     title string optional
-    updatedAt string optional
   }
 
   status active

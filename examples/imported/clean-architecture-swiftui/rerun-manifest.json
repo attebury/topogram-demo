@@ -3,16 +3,16 @@
   "target": "clean-architecture-swiftui",
   "display_name": "clean-architecture-swiftui",
   "published_status": "closed",
-  "topogram_commit_tested": "396fd5c",
-  "last_verified_date": "2026-04-22",
-  "evidence_origin": "seeded_snapshot",
+  "topogram_commit_tested": "7b68b970",
+  "last_verified_date": "2026-04-25",
+  "evidence_origin": "rerun_receipt",
   "rerun_recipe_ref": "README.md#rerun",
   "source_tree_hash": "11aa864e320640515432a0cd24cb2caeb76473e775b2829fab55895319e628e6",
-  "topogram_tree_hash": "32f131b557410a34b2191260752fe6d9dcc7c22bb3c72e47a65b7e8cafc95d02",
+  "topogram_tree_hash": "c2c64bf343709097a8b809cff51714cf9903f1a0840cfc9c940098d501ca97b1",
   "adoption_contract": {
     "next_bundle": null,
     "blocked_item_count": 0,
-    "applied_item_count": 14
+    "applied_item_count": 18
   },
-  "receipt_recorded_at": null
+  "receipt_recorded_at": "2026-04-25T05:16:17.987Z"
 }

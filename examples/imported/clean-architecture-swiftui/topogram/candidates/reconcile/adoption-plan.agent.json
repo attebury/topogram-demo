@@ -1,0 +1,1015 @@
+{
+  "accepted_items": [
+    "country:capability:cap_list_countries",
+    "country:decision:dec_country",
+    "country:doc:country_journey",
+    "country:doc:workflow_country",
+    "country:entity:entity_country",
+    "country:shape:shape_output_list_countries",
+    "country:ui:ui_country_detail",
+    "country:ui:ui_country_flag_modal",
+    "country:ui:ui_country_list",
+    "country-detail:entity:entity_country_detail",
+    "country-details:capability:cap_get_country_details",
+    "country-details:decision:dec_country_details",
+    "country-details:doc:country_details_journey",
+    "country-details:doc:workflow_country_details",
+    "country-details:shape:shape_output_get_country_details",
+    "currency:entity:entity_currency",
+    "flow-lifecycle-flow:actor:actor_user",
+    "flow-lifecycle-flow:doc:lifecycle-flow"
+  ],
+  "adoption_state_vocabulary": [
+    "accept",
+    "map",
+    "customize",
+    "stage",
+    "reject"
+  ],
+  "approved_review_groups": [
+    "workflow_review:country",
+    "workflow_review:country-details"
+  ],
+  "imported_proposal_surfaces": [
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "country",
+      "canonical_rel_path": "capabilities/cap-list-countries.tg",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "country:capability:cap_list_countries",
+      "item": "cap_list_countries",
+      "kind": "capability",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "country",
+        "canonical_rel_path": "capabilities/cap-list-countries.tg",
+        "source_path": "candidates/reconcile/model/bundles/country/capabilities/cap_list_countries.tg"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "review_required",
+        "reasons": [
+          "proposal_modeled_surface"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/country/capabilities/cap_list_countries.tg",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "capability",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "country",
+      "canonical_rel_path": "decisions/decision-country.tg",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "country:decision:dec_country",
+      "item": "dec_country",
+      "kind": "decision",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [
+        {
+          "id": "workflow_review:country",
+          "reason": "Workflow semantics for country need canonical review before promotion.",
+          "type": "workflow_review"
+        }
+      ],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "country",
+        "canonical_rel_path": "decisions/decision-country.tg",
+        "source_path": "candidates/reconcile/model/bundles/country/decisions/dec_country.tg"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [
+          {
+            "id": "workflow_review:country",
+            "reason": "Workflow semantics for country need canonical review before promotion.",
+            "type": "workflow_review"
+          }
+        ],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "manual_decision",
+        "reasons": [
+          "proposal_has_blocking_dependencies"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/country/decisions/dec_country.tg",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "workflows",
+      "ui_impacts": [],
+      "workflow_impacts": [
+        {
+          "items": [
+            "workflow_country"
+          ],
+          "kind": "workflow",
+          "reason": "Workflow semantics for country need canonical review before promotion.",
+          "review_group_id": "workflow_review:country"
+        }
+      ]
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "country",
+      "canonical_rel_path": "docs/journeys/country_journey.md",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "country:doc:country_journey",
+      "item": "country_journey",
+      "kind": "doc",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "country",
+        "canonical_rel_path": "docs/journeys/country_journey.md",
+        "source_path": "candidates/reconcile/model/bundles/country/docs/journeys/country_journey.md"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "review_required",
+        "reasons": [
+          "proposal_doc_surface"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/country/docs/journeys/country_journey.md",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "docs",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "country",
+      "canonical_rel_path": "docs/workflows/workflow_country.md",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "country:doc:workflow_country",
+      "item": "workflow_country",
+      "kind": "doc",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [
+        {
+          "id": "workflow_review:country",
+          "reason": "Workflow semantics for country need canonical review before promotion.",
+          "type": "workflow_review"
+        }
+      ],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "country",
+        "canonical_rel_path": "docs/workflows/workflow_country.md",
+        "source_path": "candidates/reconcile/model/bundles/country/docs/workflows/workflow_country.md"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [
+          {
+            "id": "workflow_review:country",
+            "reason": "Workflow semantics for country need canonical review before promotion.",
+            "type": "workflow_review"
+          }
+        ],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "manual_decision",
+        "reasons": [
+          "proposal_has_blocking_dependencies"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/country/docs/workflows/workflow_country.md",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "workflows",
+      "ui_impacts": [],
+      "workflow_impacts": [
+        {
+          "items": [
+            "workflow_country"
+          ],
+          "kind": "workflow",
+          "reason": "Workflow semantics for country need canonical review before promotion.",
+          "review_group_id": "workflow_review:country"
+        }
+      ]
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "country",
+      "canonical_rel_path": "entities/entity-country.tg",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "country:entity:entity_country",
+      "item": "entity_country",
+      "kind": "entity",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "country",
+        "canonical_rel_path": "entities/entity-country.tg",
+        "source_path": "candidates/reconcile/model/bundles/country/entities/entity_country.tg"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "review_required",
+        "reasons": [
+          "proposal_modeled_surface"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/country/entities/entity_country.tg",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "entity",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "country",
+      "canonical_rel_path": "shapes/shape-output-list-countries.tg",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "country:shape:shape_output_list_countries",
+      "item": "shape_output_list_countries",
+      "kind": "shape",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "country",
+        "canonical_rel_path": "shapes/shape-output-list-countries.tg",
+        "source_path": "candidates/reconcile/model/bundles/country/shapes/shape_output_list_countries.tg"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "review_required",
+        "reasons": [
+          "proposal_modeled_surface"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/country/shapes/shape_output_list_countries.tg",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "shape",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "country",
+      "canonical_rel_path": "docs/reports/ui-country_detail.md",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "country:ui:ui_country_detail",
+      "item": "ui_country_detail",
+      "kind": "ui",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "country",
+        "canonical_rel_path": "docs/reports/ui-country_detail.md",
+        "source_path": "candidates/reconcile/model/bundles/country/docs/reports/ui-country_detail.md"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "safe",
+        "reasons": [
+          "proposal_metadata_only"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/country/docs/reports/ui-country_detail.md",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "ui",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "country",
+      "canonical_rel_path": "docs/reports/ui-country_flag_modal.md",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "country:ui:ui_country_flag_modal",
+      "item": "ui_country_flag_modal",
+      "kind": "ui",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "country",
+        "canonical_rel_path": "docs/reports/ui-country_flag_modal.md",
+        "source_path": "candidates/reconcile/model/bundles/country/docs/reports/ui-country_flag_modal.md"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "safe",
+        "reasons": [
+          "proposal_metadata_only"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/country/docs/reports/ui-country_flag_modal.md",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "ui",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "country",
+      "canonical_rel_path": "docs/reports/ui-country_list.md",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "country:ui:ui_country_list",
+      "item": "ui_country_list",
+      "kind": "ui",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "country",
+        "canonical_rel_path": "docs/reports/ui-country_list.md",
+        "source_path": "candidates/reconcile/model/bundles/country/docs/reports/ui-country_list.md"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "safe",
+        "reasons": [
+          "proposal_metadata_only"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/country/docs/reports/ui-country_list.md",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "ui",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "country-detail",
+      "canonical_rel_path": "entities/entity-country-detail.tg",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "country-detail:entity:entity_country_detail",
+      "item": "entity_country_detail",
+      "kind": "entity",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "country-detail",
+        "canonical_rel_path": "entities/entity-country-detail.tg",
+        "source_path": "candidates/reconcile/model/bundles/country-detail/entities/entity_country_detail.tg"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "review_required",
+        "reasons": [
+          "proposal_modeled_surface"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/country-detail/entities/entity_country_detail.tg",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "entity",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "country-details",
+      "canonical_rel_path": "capabilities/cap-get-country-details.tg",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "country-details:capability:cap_get_country_details",
+      "item": "cap_get_country_details",
+      "kind": "capability",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "country-details",
+        "canonical_rel_path": "capabilities/cap-get-country-details.tg",
+        "source_path": "candidates/reconcile/model/bundles/country-details/capabilities/cap_get_country_details.tg"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "review_required",
+        "reasons": [
+          "proposal_modeled_surface"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/country-details/capabilities/cap_get_country_details.tg",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "capability",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "country-details",
+      "canonical_rel_path": "decisions/decision-country-details.tg",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "country-details:decision:dec_country_details",
+      "item": "dec_country_details",
+      "kind": "decision",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [
+        {
+          "id": "workflow_review:country-details",
+          "reason": "Workflow semantics for country-details need canonical review before promotion.",
+          "type": "workflow_review"
+        }
+      ],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "country-details",
+        "canonical_rel_path": "decisions/decision-country-details.tg",
+        "source_path": "candidates/reconcile/model/bundles/country-details/decisions/dec_country_details.tg"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [
+          {
+            "id": "workflow_review:country-details",
+            "reason": "Workflow semantics for country-details need canonical review before promotion.",
+            "type": "workflow_review"
+          }
+        ],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "manual_decision",
+        "reasons": [
+          "proposal_has_blocking_dependencies"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/country-details/decisions/dec_country_details.tg",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "workflows",
+      "ui_impacts": [],
+      "workflow_impacts": [
+        {
+          "items": [
+            "workflow_country_details"
+          ],
+          "kind": "workflow",
+          "reason": "Workflow semantics for country-details need canonical review before promotion.",
+          "review_group_id": "workflow_review:country-details"
+        }
+      ]
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "country-details",
+      "canonical_rel_path": "docs/journeys/country_details_journey.md",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "country-details:doc:country_details_journey",
+      "item": "country_details_journey",
+      "kind": "doc",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "country-details",
+        "canonical_rel_path": "docs/journeys/country_details_journey.md",
+        "source_path": "candidates/reconcile/model/bundles/country-details/docs/journeys/country_details_journey.md"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "review_required",
+        "reasons": [
+          "proposal_doc_surface"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/country-details/docs/journeys/country_details_journey.md",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "docs",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "country-details",
+      "canonical_rel_path": "docs/workflows/workflow_country_details.md",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "country-details:doc:workflow_country_details",
+      "item": "workflow_country_details",
+      "kind": "doc",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [
+        {
+          "id": "workflow_review:country-details",
+          "reason": "Workflow semantics for country-details need canonical review before promotion.",
+          "type": "workflow_review"
+        }
+      ],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "country-details",
+        "canonical_rel_path": "docs/workflows/workflow_country_details.md",
+        "source_path": "candidates/reconcile/model/bundles/country-details/docs/workflows/workflow_country_details.md"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [
+          {
+            "id": "workflow_review:country-details",
+            "reason": "Workflow semantics for country-details need canonical review before promotion.",
+            "type": "workflow_review"
+          }
+        ],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "manual_decision",
+        "reasons": [
+          "proposal_has_blocking_dependencies"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/country-details/docs/workflows/workflow_country_details.md",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "workflows",
+      "ui_impacts": [],
+      "workflow_impacts": [
+        {
+          "items": [
+            "workflow_country_details"
+          ],
+          "kind": "workflow",
+          "reason": "Workflow semantics for country-details need canonical review before promotion.",
+          "review_group_id": "workflow_review:country-details"
+        }
+      ]
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "country-details",
+      "canonical_rel_path": "shapes/shape-output-get-country-details.tg",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "country-details:shape:shape_output_get_country_details",
+      "item": "shape_output_get_country_details",
+      "kind": "shape",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "country-details",
+        "canonical_rel_path": "shapes/shape-output-get-country-details.tg",
+        "source_path": "candidates/reconcile/model/bundles/country-details/shapes/shape_output_get_country_details.tg"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "review_required",
+        "reasons": [
+          "proposal_modeled_surface"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/country-details/shapes/shape_output_get_country_details.tg",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "shape",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "currency",
+      "canonical_rel_path": "entities/entity-currency.tg",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "currency:entity:entity_currency",
+      "item": "entity_currency",
+      "kind": "entity",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "currency",
+        "canonical_rel_path": "entities/entity-currency.tg",
+        "source_path": "candidates/reconcile/model/bundles/currency/entities/entity_currency.tg"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "review_required",
+        "reasons": [
+          "proposal_modeled_surface"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/currency/entities/entity_currency.tg",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "entity",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "flow-lifecycle-flow",
+      "canonical_rel_path": "actors/actor-user.tg",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "flow-lifecycle-flow:actor:actor_user",
+      "item": "actor_user",
+      "kind": "actor",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "flow-lifecycle-flow",
+        "canonical_rel_path": "actors/actor-user.tg",
+        "source_path": "candidates/reconcile/model/bundles/flow-lifecycle-flow/actors/actor_user.tg"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [
+          "lifecycle-flow",
+          "review-workflow"
+        ],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "safe",
+        "reasons": [
+          "proposal_metadata_only"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/flow-lifecycle-flow/actors/actor_user.tg",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "actor",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "flow-lifecycle-flow",
+      "canonical_rel_path": "docs/workflows/lifecycle-flow.md",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "flow-lifecycle-flow:doc:lifecycle-flow",
+      "item": "lifecycle-flow",
+      "kind": "doc",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "flow-lifecycle-flow",
+        "canonical_rel_path": "docs/workflows/lifecycle-flow.md",
+        "source_path": "candidates/reconcile/model/bundles/flow-lifecycle-flow/docs/workflows/lifecycle-flow.md"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "safe",
+        "reasons": [
+          "proposal_metadata_only"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/flow-lifecycle-flow/docs/workflows/lifecycle-flow.md",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "workflows",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    }
+  ],
+  "rejected_items": [],
+  "requires_human_review": [],
+  "source_plan_type": "reconcile_adoption_plan",
+  "staged_items": [],
+  "terminology": {
+    "candidate_workspace_term": "candidate",
+    "non_canonical_adoption_state": "stage"
+  },
+  "type": "agent_adoption_plan",
+  "version": 1,
+  "workspace": "/tmp/topogram-demo-swiftui-main-ctN9XL/topogram"
+}

@@ -451,17 +451,7 @@
           }
         ],
         "header_params": [],
-        "input_fields": [
-          "body",
-          "createdAt",
-          "description",
-          "favorited",
-          "favoritesCount",
-          "slug",
-          "tagList",
-          "title",
-          "updatedAt"
-        ],
+        "input_fields": [],
         "output_fields": [
           "articles",
           "articlesCount",
@@ -523,14 +513,9 @@
         "header_params": [],
         "input_fields": [
           "body",
-          "createdAt",
           "description",
-          "favorited",
-          "favoritesCount",
-          "slug",
           "tagList",
-          "title",
-          "updatedAt"
+          "title"
         ],
         "output_fields": [
           "article",
@@ -596,17 +581,7 @@
           }
         ],
         "header_params": [],
-        "input_fields": [
-          "body",
-          "createdAt",
-          "description",
-          "favorited",
-          "favoritesCount",
-          "slug",
-          "tagList",
-          "title",
-          "updatedAt"
-        ],
+        "input_fields": [],
         "output_fields": [
           "article",
           "author",
@@ -673,14 +648,10 @@
         "header_params": [],
         "input_fields": [
           "body",
-          "createdAt",
           "description",
-          "favorited",
-          "favoritesCount",
           "slug",
           "tagList",
-          "title",
-          "updatedAt"
+          "title"
         ],
         "output_fields": [
           "article",
@@ -724,17 +695,7 @@
         "path_params": [],
         "query_params": [],
         "header_params": [],
-        "input_fields": [
-          "body",
-          "createdAt",
-          "description",
-          "favorited",
-          "favoritesCount",
-          "slug",
-          "tagList",
-          "title",
-          "updatedAt"
-        ],
+        "input_fields": [],
         "output_fields": [
           "articles",
           "articlesCount",
@@ -843,17 +804,7 @@
         ],
         "query_params": [],
         "header_params": [],
-        "input_fields": [
-          "body",
-          "createdAt",
-          "description",
-          "favorited",
-          "favoritesCount",
-          "slug",
-          "tagList",
-          "title",
-          "updatedAt"
-        ],
+        "input_fields": [],
         "output_fields": [
           "article",
           "author",
@@ -902,13 +853,7 @@
         ],
         "query_params": [],
         "header_params": [],
-        "input_fields": [
-          "author",
-          "body",
-          "createdAt",
-          "id",
-          "updatedAt"
-        ],
+        "input_fields": [],
         "output_fields": [
           "author",
           "body",
@@ -953,11 +898,7 @@
         "query_params": [],
         "header_params": [],
         "input_fields": [
-          "author",
-          "body",
-          "createdAt",
-          "id",
-          "updatedAt"
+          "body"
         ],
         "output_fields": [
           "author",
@@ -1037,9 +978,7 @@
         "path_params": [],
         "query_params": [],
         "header_params": [],
-        "input_fields": [
-          "tag"
-        ],
+        "input_fields": [],
         "output_fields": [
           "tag",
           "tags"
@@ -1073,12 +1012,7 @@
         "path_params": [],
         "query_params": [],
         "header_params": [],
-        "input_fields": [
-          "email",
-          "password",
-          "profile",
-          "username"
-        ],
+        "input_fields": [],
         "output_fields": [
           "bio",
           "email",
@@ -1117,9 +1051,10 @@
         "query_params": [],
         "header_params": [],
         "input_fields": [
+          "bio",
           "email",
+          "image",
           "password",
-          "profile",
           "username"
         ],
         "output_fields": [
@@ -1160,7 +1095,9 @@
         "query_params": [],
         "header_params": [],
         "input_fields": [
-          "password"
+          "email",
+          "password",
+          "username"
         ],
         "output_fields": [
           "token",
@@ -1196,7 +1133,8 @@
         "query_params": [],
         "header_params": [],
         "input_fields": [
-          "user"
+          "email",
+          "password"
         ],
         "output_fields": [
           "email",
@@ -1239,11 +1177,7 @@
         ],
         "query_params": [],
         "header_params": [],
-        "input_fields": [
-          "bio",
-          "following",
-          "image"
-        ],
+        "input_fields": [],
         "output_fields": [
           "bio",
           "following",
@@ -1333,11 +1267,7 @@
         ],
         "query_params": [],
         "header_params": [],
-        "input_fields": [
-          "bio",
-          "following",
-          "image"
-        ],
+        "input_fields": [],
         "output_fields": [
           "bio",
           "following",

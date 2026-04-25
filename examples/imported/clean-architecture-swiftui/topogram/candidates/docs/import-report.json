@@ -1,0 +1,139 @@
+{
+  "bootstrapped_topogram_root": false,
+  "candidate_actors": [
+    {
+      "confidence": "medium",
+      "evidence": [
+        {
+          "participant_pattern_count": 0,
+          "permission_overlap_count": 0,
+          "phrase_count": 2
+        }
+      ],
+      "id_hint": "actor_user",
+      "inference_summary": "phrases=2, participant_hits=0, permission_overlap=0",
+      "label": "User",
+      "provenance": [
+        "README.md"
+      ],
+      "related_capabilities": [],
+      "related_docs": [
+        "lifecycle-flow",
+        "review-workflow"
+      ],
+      "source_kind": "docs"
+    }
+  ],
+  "candidate_docs": [
+    {
+      "confidence": "low",
+      "id": "architecture",
+      "kind": "glossary",
+      "path": "candidates/docs/glossary/architecture.md",
+      "provenance": [
+        "README.md"
+      ],
+      "related_capabilities": [],
+      "related_entities": [],
+      "source_of_truth": "imported",
+      "title": "Architecture"
+    },
+    {
+      "confidence": "low",
+      "id": "business",
+      "kind": "glossary",
+      "path": "candidates/docs/glossary/business.md",
+      "provenance": [
+        "README.md"
+      ],
+      "related_capabilities": [],
+      "related_entities": [],
+      "source_of_truth": "imported",
+      "title": "Business"
+    },
+    {
+      "confidence": "low",
+      "id": "data",
+      "kind": "glossary",
+      "path": "candidates/docs/glossary/data.md",
+      "provenance": [
+        "README.md"
+      ],
+      "related_capabilities": [],
+      "related_entities": [],
+      "source_of_truth": "imported",
+      "title": "Data"
+    },
+    {
+      "confidence": "low",
+      "id": "layer",
+      "kind": "glossary",
+      "path": "candidates/docs/glossary/layer.md",
+      "provenance": [
+        "README.md"
+      ],
+      "related_capabilities": [],
+      "related_entities": [],
+      "source_of_truth": "imported",
+      "title": "Layer"
+    },
+    {
+      "confidence": "low",
+      "id": "review-workflow",
+      "kind": "workflow",
+      "path": "candidates/docs/workflows/review-workflow.md",
+      "provenance": [
+        "README.md"
+      ],
+      "related_capabilities": [],
+      "related_entities": [],
+      "source_of_truth": "imported",
+      "title": "Review Workflow"
+    },
+    {
+      "confidence": "low",
+      "id": "lifecycle-flow",
+      "kind": "workflow",
+      "path": "candidates/docs/workflows/lifecycle-flow.md",
+      "provenance": [
+        "README.md"
+      ],
+      "related_capabilities": [],
+      "related_entities": [],
+      "source_of_truth": "imported",
+      "title": "Lifecycle Flow"
+    }
+  ],
+  "candidate_roles": [],
+  "findings": [
+    {
+      "actor_signals": [
+        "actor_user"
+      ],
+      "file": "/tmp/topogram-demo-swiftui-main-ctN9XL/README.md",
+      "relative_path": "README.md",
+      "role_signals": [],
+      "term_candidates": [
+        "layer",
+        "data",
+        "architecture",
+        "business",
+        "logic",
+        "appstate",
+        "swiftui",
+        "access"
+      ],
+      "title": "Clean Architecture for SwiftUI + Combine",
+      "workflow_signals": [
+        "review_workflow",
+        "lifecycle_flow"
+      ]
+    }
+  ],
+  "source_count": 1,
+  "sources": [
+    "README.md"
+  ],
+  "type": "scan_docs_report",
+  "workspace": "/tmp/topogram-demo-swiftui-main-ctN9XL/topogram"
+}

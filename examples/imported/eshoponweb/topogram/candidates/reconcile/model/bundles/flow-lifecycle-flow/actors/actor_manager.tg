@@ -1,0 +1,11 @@
+# imported confidence: low
+# imported source_kind: docs
+# imported inference: phrases=1, participant_hits=0, permission_overlap=0
+# imported provenance: README.md
+# imported related_doc: lifecycle-flow
+actor actor_manager {
+  name "Manager"
+  description "Candidate actor inferred from existing documentation"
+
+  status proposed
+}

@@ -1,6 +1,8 @@
 {
+  "adopt_selector": null,
+  "adopt_write_mode": false,
   "adoption_plan_path": "candidates/reconcile/adoption-plan.json",
-  "applied_item_count": 37,
+  "applied_item_count": 47,
   "approved_item_count": 0,
   "approved_review_groups": [
     "workflow_review:item"
@@ -10,6 +12,7 @@
   "bundle_blockers": [
     {
       "applied_items": [
+        "basket_journey",
         "ui_basket",
         "ui_basket_checkout",
         "ui_basket_success"
@@ -23,6 +26,7 @@
     },
     {
       "applied_items": [
+        "catalog_item_journey",
         "ui_catalog_item_admin",
         "ui_catalog_item_admin_edit",
         "ui_catalog_item_create",
@@ -40,10 +44,25 @@
     },
     {
       "applied_items": [
+        "actor_admin",
+        "actor_manager",
+        "actor_user",
+        "lifecycle-flow"
+      ],
+      "approved_items": [],
+      "blocked_items": [],
+      "blocking_dependencies": [],
+      "bundle": "flow-lifecycle-flow",
+      "pending_items": [],
+      "skipped_items": []
+    },
+    {
+      "applied_items": [
         "cap_create_item",
         "cap_get_item",
         "cap_list_items",
         "dec_item",
+        "item_journey",
         "ui_catalog_home",
         "workflow_item"
       ],
@@ -56,6 +75,7 @@
     },
     {
       "applied_items": [
+        "order_journey",
         "ui_order_detail",
         "ui_order_list"
       ],
@@ -68,6 +88,7 @@
     },
     {
       "applied_items": [
+        "surface_account_journey",
         "ui_account_confirm_email",
         "ui_account_login",
         "ui_account_logout",
@@ -95,6 +116,7 @@
     },
     {
       "applied_items": [
+        "surface_app_journey",
         "ui_error",
         "ui_privacy"
       ],
@@ -108,14 +130,33 @@
   ],
   "bundle_priorities": [
     {
-      "applied_items": 6,
+      "applied_items": 7,
       "approved_items": 0,
+      "auth_aging_summary": {
+        "escalationLevel": "none",
+        "escalationReason": "This bundle is not currently high risk.",
+        "repeatCount": 0
+      },
+      "auth_claim_hints": [],
+      "auth_closure_summary": {
+        "adopted": 0,
+        "deferred": 0,
+        "label": "no auth hints",
+        "reason": "This bundle does not currently carry inferred permission, claim, or ownership hints.",
+        "status": "no_auth_hints",
+        "total": 0,
+        "unresolved": 0
+      },
+      "auth_ownership_hints": [],
+      "auth_permission_hints": [],
+      "auth_risk_rank": 0,
+      "auth_role_guidance": [],
       "blocked_items": 0,
       "bundle": "item",
       "evidence": {
         "actors": 0,
         "capabilities": 3,
-        "docs": 0,
+        "docs": 1,
         "entities": 0,
         "enums": 0,
         "roles": 0,
@@ -123,9 +164,60 @@
         "shapes": 0,
         "workflows": 1
       },
-      "evidence_score": 24,
+      "evidence_score": 25,
       "is_complete": true,
+      "next_action": {
+        "kind": "complete",
+        "label": "No action required",
+        "reason": "This bundle has no blocked, approved, or pending work left.",
+        "safe_adopt_now_count": 0,
+        "selector": null,
+        "unlock_review_group_id": null,
+        "unlock_review_selector": null
+      },
       "next_review_groups": [],
+      "operator_summary": {
+        "authAging": {
+          "escalationLevel": "none",
+          "escalationReason": "This bundle is not currently high risk.",
+          "repeatCount": 0
+        },
+        "authClaimHints": [],
+        "authClosureSummary": {
+          "adopted": 0,
+          "deferred": 0,
+          "label": "no auth hints",
+          "reason": "This bundle does not currently carry inferred permission, claim, or ownership hints.",
+          "status": "no_auth_hints",
+          "total": 0,
+          "unresolved": 0
+        },
+        "authOwnershipHints": [],
+        "authPermissionHints": [],
+        "authRoleGuidance": [],
+        "capabilityIds": [
+          "cap_create_item",
+          "cap_get_item",
+          "cap_list_items"
+        ],
+        "participants": {
+          "actors": [],
+          "label": "_none_",
+          "roles": []
+        },
+        "primaryConcept": "entity_item",
+        "primaryEntityId": "entity_item",
+        "routePaths": [
+          "/"
+        ],
+        "screenIds": [
+          "catalog_home"
+        ],
+        "whyThisBundle": "This bundle exists because API capability evidence, UI screen/route evidence, workflow evidence, doc evidence converges on the same item concept.",
+        "workflowIds": [
+          "workflow_item"
+        ]
+      },
       "pending_items": 0,
       "recommend_bundle_review_selector": null,
       "recommend_from_plan": false,
@@ -135,14 +227,33 @@
       "recommended_doc_metadata_patch_actions": []
     },
     {
-      "applied_items": 17,
+      "applied_items": 18,
       "approved_items": 0,
+      "auth_aging_summary": {
+        "escalationLevel": "none",
+        "escalationReason": "This bundle is not currently high risk.",
+        "repeatCount": 0
+      },
+      "auth_claim_hints": [],
+      "auth_closure_summary": {
+        "adopted": 0,
+        "deferred": 0,
+        "label": "no auth hints",
+        "reason": "This bundle does not currently carry inferred permission, claim, or ownership hints.",
+        "status": "no_auth_hints",
+        "total": 0,
+        "unresolved": 0
+      },
+      "auth_ownership_hints": [],
+      "auth_permission_hints": [],
+      "auth_risk_rank": 0,
+      "auth_role_guidance": [],
       "blocked_items": 0,
       "bundle": "surface-account",
       "evidence": {
         "actors": 0,
         "capabilities": 0,
-        "docs": 0,
+        "docs": 1,
         "entities": 0,
         "enums": 0,
         "roles": 0,
@@ -150,9 +261,60 @@
         "shapes": 0,
         "workflows": 0
       },
-      "evidence_score": 17,
+      "evidence_score": 18,
       "is_complete": true,
+      "next_action": {
+        "kind": "complete",
+        "label": "No action required",
+        "reason": "This bundle has no blocked, approved, or pending work left.",
+        "safe_adopt_now_count": 0,
+        "selector": null,
+        "unlock_review_group_id": null,
+        "unlock_review_selector": null
+      },
       "next_review_groups": [],
+      "operator_summary": {
+        "authAging": {
+          "escalationLevel": "none",
+          "escalationReason": "This bundle is not currently high risk.",
+          "repeatCount": 0
+        },
+        "authClaimHints": [],
+        "authClosureSummary": {
+          "adopted": 0,
+          "deferred": 0,
+          "label": "no auth hints",
+          "reason": "This bundle does not currently carry inferred permission, claim, or ownership hints.",
+          "status": "no_auth_hints",
+          "total": 0,
+          "unresolved": 0
+        },
+        "authOwnershipHints": [],
+        "authPermissionHints": [],
+        "authRoleGuidance": [],
+        "capabilityIds": [],
+        "participants": {
+          "actors": [],
+          "label": "_none_",
+          "roles": []
+        },
+        "primaryConcept": "account_confirm_email",
+        "primaryEntityId": null,
+        "routePaths": [
+          "/account/confirm-email",
+          "/account/login",
+          "/account/logout",
+          "/logout"
+        ],
+        "screenIds": [
+          "account_confirm_email",
+          "account_login",
+          "account_logout",
+          "account_logout_page"
+        ],
+        "whyThisBundle": "This bundle exists because UI screen/route evidence, doc evidence converges on the same account concept.",
+        "workflowIds": []
+      },
       "pending_items": 0,
       "recommend_bundle_review_selector": null,
       "recommend_from_plan": false,
@@ -162,14 +324,124 @@
       "recommended_doc_metadata_patch_actions": []
     },
     {
-      "applied_items": 7,
+      "applied_items": 4,
       "approved_items": 0,
+      "auth_aging_summary": {
+        "escalationLevel": "none",
+        "escalationReason": "This bundle is not currently high risk.",
+        "repeatCount": 0
+      },
+      "auth_claim_hints": [],
+      "auth_closure_summary": {
+        "adopted": 0,
+        "deferred": 0,
+        "label": "no auth hints",
+        "reason": "This bundle does not currently carry inferred permission, claim, or ownership hints.",
+        "status": "no_auth_hints",
+        "total": 0,
+        "unresolved": 0
+      },
+      "auth_ownership_hints": [],
+      "auth_permission_hints": [],
+      "auth_risk_rank": 0,
+      "auth_role_guidance": [],
+      "blocked_items": 0,
+      "bundle": "flow-lifecycle-flow",
+      "evidence": {
+        "actors": 3,
+        "capabilities": 0,
+        "docs": 1,
+        "entities": 0,
+        "enums": 0,
+        "roles": 0,
+        "screens": 0,
+        "shapes": 0,
+        "workflows": 0
+      },
+      "evidence_score": 10,
+      "is_complete": true,
+      "next_action": {
+        "kind": "complete",
+        "label": "No action required",
+        "reason": "This bundle has no blocked, approved, or pending work left.",
+        "safe_adopt_now_count": 0,
+        "selector": null,
+        "unlock_review_group_id": null,
+        "unlock_review_selector": null
+      },
+      "next_review_groups": [],
+      "operator_summary": {
+        "authAging": {
+          "escalationLevel": "none",
+          "escalationReason": "This bundle is not currently high risk.",
+          "repeatCount": 0
+        },
+        "authClaimHints": [],
+        "authClosureSummary": {
+          "adopted": 0,
+          "deferred": 0,
+          "label": "no auth hints",
+          "reason": "This bundle does not currently carry inferred permission, claim, or ownership hints.",
+          "status": "no_auth_hints",
+          "total": 0,
+          "unresolved": 0
+        },
+        "authOwnershipHints": [],
+        "authPermissionHints": [],
+        "authRoleGuidance": [],
+        "capabilityIds": [],
+        "participants": {
+          "actors": [
+            "actor_admin",
+            "actor_manager",
+            "actor_user"
+          ],
+          "label": "`actor_admin`, `actor_manager`, `actor_user`",
+          "roles": []
+        },
+        "primaryConcept": "flow_lifecycle-flow",
+        "primaryEntityId": null,
+        "routePaths": [],
+        "screenIds": [],
+        "whyThisBundle": "This bundle exists because doc evidence, actor/role evidence converges on the same lifecycle flow concept.",
+        "workflowIds": []
+      },
+      "pending_items": 0,
+      "recommend_bundle_review_selector": null,
+      "recommend_from_plan": false,
+      "recommended_actor_role_actions": [],
+      "recommended_doc_drift_actions": [],
+      "recommended_doc_link_actions": [],
+      "recommended_doc_metadata_patch_actions": []
+    },
+    {
+      "applied_items": 8,
+      "approved_items": 0,
+      "auth_aging_summary": {
+        "escalationLevel": "none",
+        "escalationReason": "This bundle is not currently high risk.",
+        "repeatCount": 0
+      },
+      "auth_claim_hints": [],
+      "auth_closure_summary": {
+        "adopted": 0,
+        "deferred": 0,
+        "label": "no auth hints",
+        "reason": "This bundle does not currently carry inferred permission, claim, or ownership hints.",
+        "status": "no_auth_hints",
+        "total": 0,
+        "unresolved": 0
+      },
+      "auth_ownership_hints": [],
+      "auth_permission_hints": [],
+      "auth_risk_rank": 0,
+      "auth_role_guidance": [],
       "blocked_items": 0,
       "bundle": "catalog-item",
       "evidence": {
         "actors": 0,
         "capabilities": 0,
-        "docs": 0,
+        "docs": 1,
         "entities": 0,
         "enums": 0,
         "roles": 0,
@@ -177,9 +449,155 @@
         "shapes": 0,
         "workflows": 0
       },
-      "evidence_score": 7,
+      "evidence_score": 8,
       "is_complete": true,
+      "next_action": {
+        "kind": "complete",
+        "label": "No action required",
+        "reason": "This bundle has no blocked, approved, or pending work left.",
+        "safe_adopt_now_count": 0,
+        "selector": null,
+        "unlock_review_group_id": null,
+        "unlock_review_selector": null
+      },
       "next_review_groups": [],
+      "operator_summary": {
+        "authAging": {
+          "escalationLevel": "none",
+          "escalationReason": "This bundle is not currently high risk.",
+          "repeatCount": 0
+        },
+        "authClaimHints": [],
+        "authClosureSummary": {
+          "adopted": 0,
+          "deferred": 0,
+          "label": "no auth hints",
+          "reason": "This bundle does not currently carry inferred permission, claim, or ownership hints.",
+          "status": "no_auth_hints",
+          "total": 0,
+          "unresolved": 0
+        },
+        "authOwnershipHints": [],
+        "authPermissionHints": [],
+        "authRoleGuidance": [],
+        "capabilityIds": [],
+        "participants": {
+          "actors": [],
+          "label": "_none_",
+          "roles": []
+        },
+        "primaryConcept": "entity_catalog-item",
+        "primaryEntityId": "entity_catalog-item",
+        "routePaths": [
+          "/admin/edit-catalog-item",
+          "/admin",
+          "/admin/catalog-items/create",
+          "/admin/catalog-items/:id/delete"
+        ],
+        "screenIds": [
+          "catalog_item_admin",
+          "catalog_item_admin_edit",
+          "catalog_item_create",
+          "catalog_item_delete"
+        ],
+        "whyThisBundle": "This bundle exists because UI screen/route evidence, doc evidence converges on the same catalog item concept.",
+        "workflowIds": []
+      },
+      "pending_items": 0,
+      "recommend_bundle_review_selector": null,
+      "recommend_from_plan": false,
+      "recommended_actor_role_actions": [],
+      "recommended_doc_drift_actions": [],
+      "recommended_doc_link_actions": [],
+      "recommended_doc_metadata_patch_actions": []
+    },
+    {
+      "applied_items": 4,
+      "approved_items": 0,
+      "auth_aging_summary": {
+        "escalationLevel": "none",
+        "escalationReason": "This bundle is not currently high risk.",
+        "repeatCount": 0
+      },
+      "auth_claim_hints": [],
+      "auth_closure_summary": {
+        "adopted": 0,
+        "deferred": 0,
+        "label": "no auth hints",
+        "reason": "This bundle does not currently carry inferred permission, claim, or ownership hints.",
+        "status": "no_auth_hints",
+        "total": 0,
+        "unresolved": 0
+      },
+      "auth_ownership_hints": [],
+      "auth_permission_hints": [],
+      "auth_risk_rank": 0,
+      "auth_role_guidance": [],
+      "blocked_items": 0,
+      "bundle": "basket",
+      "evidence": {
+        "actors": 0,
+        "capabilities": 0,
+        "docs": 1,
+        "entities": 0,
+        "enums": 0,
+        "roles": 0,
+        "screens": 3,
+        "shapes": 0,
+        "workflows": 0
+      },
+      "evidence_score": 4,
+      "is_complete": true,
+      "next_action": {
+        "kind": "complete",
+        "label": "No action required",
+        "reason": "This bundle has no blocked, approved, or pending work left.",
+        "safe_adopt_now_count": 0,
+        "selector": null,
+        "unlock_review_group_id": null,
+        "unlock_review_selector": null
+      },
+      "next_review_groups": [],
+      "operator_summary": {
+        "authAging": {
+          "escalationLevel": "none",
+          "escalationReason": "This bundle is not currently high risk.",
+          "repeatCount": 0
+        },
+        "authClaimHints": [],
+        "authClosureSummary": {
+          "adopted": 0,
+          "deferred": 0,
+          "label": "no auth hints",
+          "reason": "This bundle does not currently carry inferred permission, claim, or ownership hints.",
+          "status": "no_auth_hints",
+          "total": 0,
+          "unresolved": 0
+        },
+        "authOwnershipHints": [],
+        "authPermissionHints": [],
+        "authRoleGuidance": [],
+        "capabilityIds": [],
+        "participants": {
+          "actors": [],
+          "label": "_none_",
+          "roles": []
+        },
+        "primaryConcept": "entity_basket",
+        "primaryEntityId": "entity_basket",
+        "routePaths": [
+          "/basket/checkout",
+          "{handler?}",
+          "/basket/success"
+        ],
+        "screenIds": [
+          "basket",
+          "basket_checkout",
+          "basket_success"
+        ],
+        "whyThisBundle": "This bundle exists because UI screen/route evidence, doc evidence converges on the same basket concept.",
+        "workflowIds": []
+      },
       "pending_items": 0,
       "recommend_bundle_review_selector": null,
       "recommend_from_plan": false,
@@ -191,39 +609,31 @@
     {
       "applied_items": 3,
       "approved_items": 0,
-      "blocked_items": 0,
-      "bundle": "basket",
-      "evidence": {
-        "actors": 0,
-        "capabilities": 0,
-        "docs": 0,
-        "entities": 0,
-        "enums": 0,
-        "roles": 0,
-        "screens": 3,
-        "shapes": 0,
-        "workflows": 0
+      "auth_aging_summary": {
+        "escalationLevel": "none",
+        "escalationReason": "This bundle is not currently high risk.",
+        "repeatCount": 0
       },
-      "evidence_score": 3,
-      "is_complete": true,
-      "next_review_groups": [],
-      "pending_items": 0,
-      "recommend_bundle_review_selector": null,
-      "recommend_from_plan": false,
-      "recommended_actor_role_actions": [],
-      "recommended_doc_drift_actions": [],
-      "recommended_doc_link_actions": [],
-      "recommended_doc_metadata_patch_actions": []
-    },
-    {
-      "applied_items": 2,
-      "approved_items": 0,
+      "auth_claim_hints": [],
+      "auth_closure_summary": {
+        "adopted": 0,
+        "deferred": 0,
+        "label": "no auth hints",
+        "reason": "This bundle does not currently carry inferred permission, claim, or ownership hints.",
+        "status": "no_auth_hints",
+        "total": 0,
+        "unresolved": 0
+      },
+      "auth_ownership_hints": [],
+      "auth_permission_hints": [],
+      "auth_risk_rank": 0,
+      "auth_role_guidance": [],
       "blocked_items": 0,
       "bundle": "order",
       "evidence": {
         "actors": 0,
         "capabilities": 0,
-        "docs": 0,
+        "docs": 1,
         "entities": 0,
         "enums": 0,
         "roles": 0,
@@ -231,9 +641,56 @@
         "shapes": 0,
         "workflows": 0
       },
-      "evidence_score": 2,
+      "evidence_score": 3,
       "is_complete": true,
+      "next_action": {
+        "kind": "complete",
+        "label": "No action required",
+        "reason": "This bundle has no blocked, approved, or pending work left.",
+        "safe_adopt_now_count": 0,
+        "selector": null,
+        "unlock_review_group_id": null,
+        "unlock_review_selector": null
+      },
       "next_review_groups": [],
+      "operator_summary": {
+        "authAging": {
+          "escalationLevel": "none",
+          "escalationReason": "This bundle is not currently high risk.",
+          "repeatCount": 0
+        },
+        "authClaimHints": [],
+        "authClosureSummary": {
+          "adopted": 0,
+          "deferred": 0,
+          "label": "no auth hints",
+          "reason": "This bundle does not currently carry inferred permission, claim, or ownership hints.",
+          "status": "no_auth_hints",
+          "total": 0,
+          "unresolved": 0
+        },
+        "authOwnershipHints": [],
+        "authPermissionHints": [],
+        "authRoleGuidance": [],
+        "capabilityIds": [],
+        "participants": {
+          "actors": [],
+          "label": "_none_",
+          "roles": []
+        },
+        "primaryConcept": "entity_order",
+        "primaryEntityId": "entity_order",
+        "routePaths": [
+          "/order/detail",
+          "/order/my-orders"
+        ],
+        "screenIds": [
+          "order_detail",
+          "order_list"
+        ],
+        "whyThisBundle": "This bundle exists because UI screen/route evidence, doc evidence converges on the same order concept.",
+        "workflowIds": []
+      },
       "pending_items": 0,
       "recommend_bundle_review_selector": null,
       "recommend_from_plan": false,
@@ -243,14 +700,33 @@
       "recommended_doc_metadata_patch_actions": []
     },
     {
-      "applied_items": 2,
+      "applied_items": 3,
       "approved_items": 0,
+      "auth_aging_summary": {
+        "escalationLevel": "none",
+        "escalationReason": "This bundle is not currently high risk.",
+        "repeatCount": 0
+      },
+      "auth_claim_hints": [],
+      "auth_closure_summary": {
+        "adopted": 0,
+        "deferred": 0,
+        "label": "no auth hints",
+        "reason": "This bundle does not currently carry inferred permission, claim, or ownership hints.",
+        "status": "no_auth_hints",
+        "total": 0,
+        "unresolved": 0
+      },
+      "auth_ownership_hints": [],
+      "auth_permission_hints": [],
+      "auth_risk_rank": 0,
+      "auth_role_guidance": [],
       "blocked_items": 0,
       "bundle": "surface-app",
       "evidence": {
         "actors": 0,
         "capabilities": 0,
-        "docs": 0,
+        "docs": 1,
         "entities": 0,
         "enums": 0,
         "roles": 0,
@@ -258,9 +734,56 @@
         "shapes": 0,
         "workflows": 0
       },
-      "evidence_score": 2,
+      "evidence_score": 3,
       "is_complete": true,
+      "next_action": {
+        "kind": "complete",
+        "label": "No action required",
+        "reason": "This bundle has no blocked, approved, or pending work left.",
+        "safe_adopt_now_count": 0,
+        "selector": null,
+        "unlock_review_group_id": null,
+        "unlock_review_selector": null
+      },
       "next_review_groups": [],
+      "operator_summary": {
+        "authAging": {
+          "escalationLevel": "none",
+          "escalationReason": "This bundle is not currently high risk.",
+          "repeatCount": 0
+        },
+        "authClaimHints": [],
+        "authClosureSummary": {
+          "adopted": 0,
+          "deferred": 0,
+          "label": "no auth hints",
+          "reason": "This bundle does not currently carry inferred permission, claim, or ownership hints.",
+          "status": "no_auth_hints",
+          "total": 0,
+          "unresolved": 0
+        },
+        "authOwnershipHints": [],
+        "authPermissionHints": [],
+        "authRoleGuidance": [],
+        "capabilityIds": [],
+        "participants": {
+          "actors": [],
+          "label": "_none_",
+          "roles": []
+        },
+        "primaryConcept": "error",
+        "primaryEntityId": null,
+        "routePaths": [
+          "/error",
+          "/privacy"
+        ],
+        "screenIds": [
+          "error",
+          "privacy"
+        ],
+        "whyThisBundle": "This bundle exists because UI screen/route evidence, doc evidence converges on the same app concept.",
+        "workflowIds": []
+      },
       "pending_items": 0,
       "recommend_bundle_review_selector": null,
       "recommend_from_plan": false,
@@ -271,7 +794,9 @@
     }
   ],
   "next_bundle": null,
+  "preview_followup_guidance": [],
   "projection_review_groups": [],
+  "promoted_canonical_items": [],
   "type": "adoption_status",
   "ui_review_groups": [],
   "workflow_review_groups": [
@@ -294,5 +819,5 @@
       "reason": "Workflow semantics for item need canonical review before promotion."
     }
   ],
-  "workspace": "historical:topogram/trials/eShopOnWeb/topogram"
+  "workspace": "/tmp/topogram-demo-eshoponweb-main-schzl5/topogram"
 }

@@ -15,7 +15,26 @@ Workflows: 0
 Verifications: 0
 Workflow states: 0
 Workflow transitions: 0
-Docs: 0
+Docs: 1
+
+## Operator Summary
+
+- Primary concept: `account_confirm_email`
+- Primary entity: _none_
+- Participants: _none_
+- Main capabilities: _none_
+- Main screens: `account_confirm_email`, `account_login`, `account_logout`, `account_logout_page`
+- Main routes: `/account/confirm-email`, `/account/login`, `/account/logout`, `/logout`
+- Main workflows: _none_
+- Auth permission hints: _none_
+- Auth claim hints: _none_
+- Ownership hints: _none_
+- Auth role guidance: _none_
+- Auth closure: no auth hints (adopted=0, deferred=0, unresolved=0)
+
+## Why This Bundle Exists
+
+This bundle exists because UI screen/route evidence, doc evidence converges on the same account concept.
 
 ## Suggested Merge
 
@@ -23,6 +42,7 @@ Docs: 0
 
 ## Suggested Adoption
 
+- `promote_doc` `surface_account_journey`
 - `promote_ui_report` `ui_account_confirm_email`
 - `promote_ui_report` `ui_account_login`
 - `promote_ui_report` `ui_account_logout`
@@ -40,6 +60,11 @@ Docs: 0
 - `promote_ui_report` `ui_set_password`
 - `promote_ui_report` `ui_show_recover_code`
 - `promote_ui_report` `ui_two_factor_authentication`
+
+## Journey Drafts
+
+- `surface_account_journey` (Account Core Journey) -> `docs/journeys/surface_account_journey.md`
+- Promote reviewed journey drafts with `reconcile adopt journeys --write`.
 
 ## UI Evidence
 
@@ -60,3 +85,7 @@ Docs: 0
 - `set_password` settings at `/manage/set-password`
 - `show_recover_code` settings at `/manage/show-recover-code`
 - `two_factor_authentication` settings at `/manage/two-factor-authentication`
+
+## Doc Evidence
+
+- `surface_account_journey` (journey) from `src/BlazorAdmin/Pages/Logout.razor`, `src/Web/Areas/Identity/Pages/Account/ConfirmEmail.cshtml`

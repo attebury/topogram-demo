@@ -3,11 +3,7 @@ shape shape_input_create_comment {
   description "Candidate shape imported from brownfield API evidence"
 
   fields {
-    author string optional
     body string optional
-    createdAt string optional
-    id string optional
-    updatedAt string optional
   }
 
   status active

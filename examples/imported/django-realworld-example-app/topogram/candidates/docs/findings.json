@@ -1,7 +1,9 @@
 [
   {
-    "file": "historical:topogram/trials/django-realworld-example-app/README.md",
+    "actor_signals": [],
+    "file": "/tmp/topogram-demo-django-realworld-main-Z9jPjy/README.md",
     "relative_path": "README.md",
+    "role_signals": [],
     "term_candidates": [
       "productionready",
       "pyenv",

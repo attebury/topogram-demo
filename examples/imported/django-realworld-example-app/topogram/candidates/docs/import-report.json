@@ -1,5 +1,6 @@
 {
-  "bootstrapped_topogram_root": true,
+  "bootstrapped_topogram_root": false,
+  "candidate_actors": [],
   "candidate_docs": [
     {
       "confidence": "low",
@@ -67,10 +68,13 @@
       "title": "Lifecycle Flow"
     }
   ],
+  "candidate_roles": [],
   "findings": [
     {
-      "file": "historical:topogram/trials/django-realworld-example-app/README.md",
+      "actor_signals": [],
+      "file": "/tmp/topogram-demo-django-realworld-main-Z9jPjy/README.md",
       "relative_path": "README.md",
+      "role_signals": [],
       "term_candidates": [
         "productionready",
         "pyenv",
@@ -92,5 +96,5 @@
     "README.md"
   ],
   "type": "scan_docs_report",
-  "workspace": "historical:topogram/trials/django-realworld-example-app/topogram"
+  "workspace": "/tmp/topogram-demo-django-realworld-main-Z9jPjy/topogram"
 }

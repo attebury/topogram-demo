@@ -1,0 +1,26 @@
+[
+  {
+    "actor_signals": [
+      "actor_user",
+      "actor_manager",
+      "actor_admin"
+    ],
+    "file": "/tmp/topogram-demo-eshoponweb-main-schzl5/README.md",
+    "relative_path": "README.md",
+    "role_signals": [],
+    "term_candidates": [
+      "you",
+      "sample",
+      "running",
+      "application",
+      "can",
+      "net",
+      "core",
+      "asp"
+    ],
+    "title": "Microsoft eShopOnWeb ASP.NET Core Reference Application",
+    "workflow_signals": [
+      "lifecycle_flow"
+    ]
+  }
+]

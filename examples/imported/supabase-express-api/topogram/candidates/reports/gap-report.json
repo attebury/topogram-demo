@@ -1,25 +1,232 @@
 {
-  "bootstrapped_topogram_root": false,
-  "imported": {
-    "api": {
-      "capability_count": 19,
-      "route_count": 21
-    },
-    "db": {
-      "entity_count": 5,
-      "enum_count": 1,
-      "relation_count": 0
-    },
-    "ui": {
-      "route_count": 0,
-      "screen_count": 0
-    },
-    "workflows": {
-      "transition_count": 7,
-      "workflow_count": 5
-    }
+  "actors_roles_vs_topogram": {
+    "actor_gap_candidates": [
+      {
+        "confidence": "medium",
+        "id": "actor_admin",
+        "inference": "phrases=25, participant_hits=0, permission_overlap=0",
+        "related_capabilities": [],
+        "related_docs": [
+          "lifecycle-flow",
+          "review-workflow"
+        ]
+      },
+      {
+        "confidence": "medium",
+        "id": "actor_user",
+        "inference": "phrases=29, participant_hits=0, permission_overlap=0",
+        "related_capabilities": [],
+        "related_docs": [
+          "lifecycle-flow",
+          "review-workflow"
+        ]
+      }
+    ],
+    "actors_missing_in_topogram": [
+      "actor_admin",
+      "actor_user"
+    ],
+    "journey_docs_missing_actor_links": [],
+    "journey_docs_missing_role_links": [],
+    "role_gap_candidates": [],
+    "roles_missing_in_topogram": [],
+    "secured_capabilities_without_canonical_roles": [],
+    "workflow_docs_missing_actor_links": [],
+    "workflow_docs_missing_role_links": []
   },
-  "topogram_available": false,
+  "api_vs_topogram": {
+    "capabilities_missing_in_topogram": [
+      "cap_sign_in_account",
+      "cap_register_account",
+      "cap_get_profile",
+      "cap_list_workspaces",
+      "cap_create_workspace",
+      "cap_get_workspace",
+      "cap_update_workspace",
+      "cap_delete_workspace",
+      "cap_update_profile",
+      "cap_update_workspace_membership_role",
+      "cap_delete_workspace_membership",
+      "cap_list_accounts",
+      "cap_create_account",
+      "cap_list_workspace_memberships",
+      "cap_create_workspace_membership",
+      "cap_update_account_role",
+      "cap_update_account_status",
+      "cap_list_audit_logs",
+      "cap_get_audit_log_stats"
+    ],
+    "endpoints_without_matching_capabilities": [
+      {
+        "capability": "cap_sign_in_account",
+        "method": "POST",
+        "path": "/login"
+      },
+      {
+        "capability": "cap_register_account",
+        "method": "POST",
+        "path": "/signup"
+      },
+      {
+        "capability": "cap_get_profile",
+        "method": "GET",
+        "path": "/me"
+      },
+      {
+        "capability": "cap_list_workspaces",
+        "method": "GET",
+        "path": "/workspaces"
+      },
+      {
+        "capability": "cap_create_workspace",
+        "method": "POST",
+        "path": "/workspaces"
+      },
+      {
+        "capability": "cap_get_workspace",
+        "method": "GET",
+        "path": "/workspaces/{id}"
+      },
+      {
+        "capability": "cap_update_workspace",
+        "method": "PATCH",
+        "path": "/workspaces/{id}"
+      },
+      {
+        "capability": "cap_delete_workspace",
+        "method": "DELETE",
+        "path": "/workspaces/{id}"
+      },
+      {
+        "capability": "cap_update_profile",
+        "method": "PATCH",
+        "path": "/workspaces/{id}/profile"
+      },
+      {
+        "capability": "cap_update_workspace_membership_role",
+        "method": "PUT",
+        "path": "/workspaces/{id}/members/{memberId}/role"
+      },
+      {
+        "capability": "cap_delete_workspace_membership",
+        "method": "DELETE",
+        "path": "/workspaces/{id}/members/{memberId}"
+      },
+      {
+        "capability": "cap_list_accounts",
+        "method": "GET",
+        "path": "/admin/accounts"
+      },
+      {
+        "capability": "cap_create_account",
+        "method": "POST",
+        "path": "/admin/accounts"
+      },
+      {
+        "capability": "cap_list_workspace_memberships",
+        "method": "GET",
+        "path": "/workspaces/{id}/members"
+      },
+      {
+        "capability": "cap_create_workspace_membership",
+        "method": "POST",
+        "path": "/workspaces/{id}/members"
+      },
+      {
+        "capability": "cap_update_account_role",
+        "method": "PUT",
+        "path": "/admin/accounts/{id}/role"
+      },
+      {
+        "capability": "cap_update_account_status",
+        "method": "PUT",
+        "path": "/admin/accounts/{id}/status"
+      },
+      {
+        "capability": "cap_list_audit_logs",
+        "method": "GET",
+        "path": "/admin/audit-logs"
+      },
+      {
+        "capability": "cap_get_audit_log_stats",
+        "method": "GET",
+        "path": "/admin/audit-logs/stats"
+      }
+    ],
+    "field_mismatches": [],
+    "topogram_capabilities_without_imported_endpoint_evidence": []
+  },
+  "bootstrapped_topogram_root": false,
+  "db_vs_topogram": {
+    "entities_missing_in_topogram": [
+      "account",
+      "workspace",
+      "profile",
+      "workspace-membership",
+      "audit-log"
+    ],
+    "enum_value_mismatches": [],
+    "enums_missing_in_topogram": [
+      "workspace-membership_role"
+    ],
+    "field_mismatches": []
+  },
+  "docs_vs_topogram": {
+    "missing_glossary_docs": [],
+    "missing_workflow_docs": [],
+    "scanned_terms_missing_in_glossary": []
+  },
+  "topogram_available": true,
   "type": "gap_report",
-  "workspace": "historical:topogram/trials/supabase-express-api"
+  "ui_vs_topogram": {
+    "routes_missing_in_topogram": [],
+    "screens_missing_in_topogram": []
+  },
+  "workflows_vs_topogram": {
+    "transitions_without_canonical_workflow_representation": [
+      {
+        "capability": "cap_sign_in_account",
+        "to_state": "authenticated",
+        "workflow": "workflow_account"
+      },
+      {
+        "capability": "cap_register_account",
+        "to_state": "registered",
+        "workflow": "workflow_account"
+      },
+      {
+        "capability": "cap_create_account",
+        "to_state": "created",
+        "workflow": "workflow_account"
+      },
+      {
+        "capability": "cap_create_workspace",
+        "to_state": "created",
+        "workflow": "workflow_workspace"
+      },
+      {
+        "capability": "cap_delete_workspace",
+        "to_state": "deleted",
+        "workflow": "workflow_workspace"
+      },
+      {
+        "capability": "cap_delete_workspace_membership",
+        "to_state": "deleted",
+        "workflow": "workflow_workspace-membership"
+      },
+      {
+        "capability": "cap_create_workspace_membership",
+        "to_state": "created",
+        "workflow": "workflow_workspace-membership"
+      }
+    ],
+    "workflows_missing_in_topogram": [
+      "workflow_account",
+      "workflow_profile",
+      "workflow_workspace",
+      "workflow_workspace-membership",
+      "workflow_audit-log"
+    ]
+  },
+  "workspace": "/tmp/topogram-demo-supabase-main-FpTkIi"
 }

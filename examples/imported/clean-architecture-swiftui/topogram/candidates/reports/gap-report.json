@@ -1,0 +1,84 @@
+{
+  "actors_roles_vs_topogram": {
+    "actor_gap_candidates": [
+      {
+        "confidence": "medium",
+        "id": "actor_user",
+        "inference": "phrases=2, participant_hits=0, permission_overlap=0",
+        "related_capabilities": [],
+        "related_docs": [
+          "lifecycle-flow",
+          "review-workflow"
+        ]
+      }
+    ],
+    "actors_missing_in_topogram": [
+      "actor_user"
+    ],
+    "journey_docs_missing_actor_links": [],
+    "journey_docs_missing_role_links": [],
+    "role_gap_candidates": [],
+    "roles_missing_in_topogram": [],
+    "secured_capabilities_without_canonical_roles": [],
+    "workflow_docs_missing_actor_links": [],
+    "workflow_docs_missing_role_links": []
+  },
+  "api_vs_topogram": {
+    "capabilities_missing_in_topogram": [
+      "cap_list_countries",
+      "cap_get_country_details"
+    ],
+    "endpoints_without_matching_capabilities": [
+      {
+        "capability": "cap_list_countries",
+        "method": "GET",
+        "path": "/all?fields=name,translations,population,flag,alpha3Code"
+      },
+      {
+        "capability": "cap_get_country_details",
+        "method": "GET",
+        "path": "/countryDetails"
+      }
+    ],
+    "field_mismatches": [],
+    "topogram_capabilities_without_imported_endpoint_evidence": []
+  },
+  "bootstrapped_topogram_root": false,
+  "db_vs_topogram": {
+    "entities_missing_in_topogram": [
+      "country",
+      "currency",
+      "country_detail"
+    ],
+    "enum_value_mismatches": [],
+    "enums_missing_in_topogram": [],
+    "field_mismatches": []
+  },
+  "docs_vs_topogram": {
+    "missing_glossary_docs": [],
+    "missing_workflow_docs": [],
+    "scanned_terms_missing_in_glossary": []
+  },
+  "topogram_available": true,
+  "type": "gap_report",
+  "ui_vs_topogram": {
+    "routes_missing_in_topogram": [
+      "/countries",
+      "/countries/:alpha3Code",
+      "/countries/:alpha3Code/flag"
+    ],
+    "screens_missing_in_topogram": [
+      "country_list",
+      "country_detail",
+      "country_flag_modal"
+    ]
+  },
+  "workflows_vs_topogram": {
+    "transitions_without_canonical_workflow_representation": [],
+    "workflows_missing_in_topogram": [
+      "workflow_country",
+      "workflow_country_details"
+    ]
+  },
+  "workspace": "/tmp/topogram-demo-swiftui-main-ctN9XL"
+}

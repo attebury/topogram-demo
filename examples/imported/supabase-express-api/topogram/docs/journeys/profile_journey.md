@@ -1,0 +1,60 @@
+---
+id: profile_journey
+kind: journey
+title: Profile Lifecycle Flow
+status: inferred
+summary: Candidate profile journey inferred during reconcile from imported app evidence.
+source_of_truth: imported
+confidence: medium
+review_required: true
+related_entities:
+  - entity_profile
+related_capabilities:
+  - cap_get_profile
+  - cap_update_profile
+related_workflows:
+  - workflow_profile
+provenance:
+  - src/docs/openapi.ts#GET /me
+  - src/docs/openapi.ts#PATCH /workspaces/{id}/profile
+  - src/schema.ts
+tags:
+  - import
+  - journey
+---
+
+Candidate journey inferred during reconcile from imported capabilities, UI surfaces, and workflow evidence.
+
+Review and rewrite this draft before promoting it as canonical.
+
+The user intent centers on moving profile work through its lifecycle without losing context based on the brownfield capabilities, route evidence, and workflow signals recovered for this bundle.
+
+## Recovered Signals
+
+Capabilities: `cap_get_profile`, `cap_update_profile`
+Workflows: `workflow_profile`
+Rules: _none_
+Screens: _none_
+Routes: _none_
+
+## Happy Path
+
+1. The user enters the flow through the profile API surface.
+2. The recovered flow uses `cap_get_profile` to load or establish the current profile state.
+3. The user continues through `cap_update_profile` while keeping the recovered profile lifecycle coherent.
+
+## Alternate Paths
+
+- Workflow evidence such as `workflow_profile` should stay aligned with the journey instead of drifting into an undocumented lifecycle.
+- If the brownfield app enforces important constraints outside the imported model, capture them explicitly before promotion.
+- If only API evidence exists today, add UI or docs context before promoting this journey as canonical.
+
+## Change Review Notes
+
+Review this journey when changing profile capabilities, screen surfaces, route structure, or workflow transitions.
+
+## Promotion Notes
+
+- Canonical destination: `docs/journeys/profile_journey.md`.
+- Promote this draft with `reconcile adopt journeys --write` after reviewing participants, recovered signals, and change-review notes.
+- Keep the promoted journey aligned with bundle `profile` so future reconcile runs continue to explain the same user-goal flow.

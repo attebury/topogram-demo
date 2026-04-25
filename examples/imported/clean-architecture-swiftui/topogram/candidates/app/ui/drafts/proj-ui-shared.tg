@@ -1,0 +1,49 @@
+projection proj_ui_shared_imported_topogram_demo_swiftui_main_ctn9xl {
+  name "Imported Shared UI Draft"
+  description "Drafted from imported UI candidates. Review and adapt before adoption."
+
+  platform ui_shared
+  realizes [
+    cap_get_country_details,
+    cap_list_countries
+  ]
+  outputs [ui_contract]
+
+  ui_app_shell {
+    brand "Imported topogram demo swiftui main ctn9xl"
+    shell topbar
+    global_search true
+  }
+
+  ui_screens {
+    screen country_list kind list title "Country List" load cap_list_countries
+    screen country_detail kind detail title "Country Detail" load cap_get_country_details
+    screen country_flag_modal kind flow title "Country Flag Modal"
+  }
+
+  ui_collections {
+    screen country_list view list
+    screen country_list refresh pull_to_refresh
+    screen country_list search query
+  }
+
+  ui_actions {
+    screen country_list action cap_list_countries prominence primary
+    screen country_detail action cap_get_country_details prominence primary
+  }
+
+  ui_navigation {
+    group workspace label "Workspace" placement primary
+    screen country_list group workspace label "Country List" default true visible true
+    screen country_detail group workspace label "Country Detail" visible false pattern stack_navigation breadcrumb country_list sitemap exclude
+    screen country_flag_modal group workspace label "Country Flag Modal" visible false
+  }
+
+  ui_screen_regions {
+    screen country_list region toolbar pattern action_bar placement primary
+    screen country_list region results pattern search_results placement primary
+    screen country_detail region summary pattern detail_panel placement primary
+  }
+
+  status proposed
+}

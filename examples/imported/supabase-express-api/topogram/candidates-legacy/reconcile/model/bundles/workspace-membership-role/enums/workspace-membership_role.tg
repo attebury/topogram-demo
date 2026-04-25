@@ -1,6 +1,0 @@
-# imported confidence: high
-# imported source_kind: schema
-# imported provenance: src/schema.ts
-enum workspace-membership_role {
-  values [admin, user]
-}

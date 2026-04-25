@@ -3,16 +3,16 @@
   "target": "supabase-express-api",
   "display_name": "supabase-express-api",
   "published_status": "closed",
-  "topogram_commit_tested": "396fd5c",
-  "last_verified_date": "2026-04-22",
-  "evidence_origin": "seeded_snapshot",
+  "topogram_commit_tested": "7b68b970",
+  "last_verified_date": "2026-04-25",
+  "evidence_origin": "rerun_receipt",
   "rerun_recipe_ref": "README.md#rerun",
   "source_tree_hash": "bed018ab119b5d4ac92de7d5a6e8ecfdf92ad15f9cf46f63895e96bbd477e7e4",
-  "topogram_tree_hash": "a01bd90c3dc75de255b92df0dc285aeccff93775a370e1c50d41518d59f2bd84",
+  "topogram_tree_hash": "1a4cb5df46d062c78ad9daf0e434cad776b28312b25bbdecf26cfef5656ef880",
   "adoption_contract": {
     "next_bundle": null,
     "blocked_item_count": 0,
-    "applied_item_count": 48
+    "applied_item_count": 56
   },
-  "receipt_recorded_at": null
+  "receipt_recorded_at": "2026-04-25T05:01:41.121Z"
 }

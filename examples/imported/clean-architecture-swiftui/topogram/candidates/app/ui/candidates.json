@@ -108,6 +108,60 @@
   ],
   "actions": [
     {
+      "kind": "ui_shell",
+      "id_hint": "topbar_shell",
+      "label": "Topbar",
+      "confidence": "medium",
+      "source_kind": "layout_code",
+      "source_of_truth": "imported",
+      "provenance": [
+        "CountriesSwiftUI/UI/CountriesList/CountriesListView.swift",
+        "CountriesSwiftUI/UI/CountryDetails/ModalFlagView.swift"
+      ],
+      "track": "ui",
+      "shell_kind": "topbar"
+    },
+    {
+      "kind": "ui_navigation",
+      "id_hint": "swiftui_stack_navigation",
+      "label": "stack_navigation",
+      "confidence": "medium",
+      "source_kind": "layout_code",
+      "source_of_truth": "imported",
+      "provenance": [
+        "CountriesSwiftUI/UI/CountriesList/CountriesListView.swift",
+        "CountriesSwiftUI/UI/CountryDetails/ModalFlagView.swift"
+      ],
+      "track": "ui",
+      "navigation_pattern": "stack_navigation"
+    },
+    {
+      "kind": "ui_presentation",
+      "id_hint": "swiftui_pull_to_refresh",
+      "label": "pull_to_refresh",
+      "confidence": "low",
+      "source_kind": "layout_code",
+      "source_of_truth": "imported",
+      "provenance": [
+        "CountriesSwiftUI/UI/CountriesList/CountriesListView.swift"
+      ],
+      "track": "ui",
+      "presentation": "pull_to_refresh"
+    },
+    {
+      "kind": "ui_presentation",
+      "id_hint": "swiftui_search",
+      "label": "search",
+      "confidence": "low",
+      "source_kind": "layout_code",
+      "source_of_truth": "imported",
+      "provenance": [
+        "CountriesSwiftUI/UI/CountriesList/CountriesListView.swift"
+      ],
+      "track": "ui",
+      "presentation": "search"
+    },
+    {
       "kind": "ui_action",
       "id_hint": "country_list_cap_list_countries",
       "label": "cap_list_countries",
@@ -123,6 +177,19 @@
       "concept_id": "entity_country",
       "capability_hint": "cap_list_countries",
       "prominence": "primary"
+    },
+    {
+      "kind": "ui_presentation",
+      "id_hint": "swiftui_sheet",
+      "label": "sheet",
+      "confidence": "low",
+      "source_kind": "layout_code",
+      "source_of_truth": "imported",
+      "provenance": [
+        "CountriesSwiftUI/UI/CountryDetails/CountryDetailsView.swift"
+      ],
+      "track": "ui",
+      "presentation": "sheet"
     },
     {
       "kind": "ui_action",

@@ -1,7 +1,12 @@
 [
   {
-    "file": "historical:topogram/trials/supabase-express-api/README.md",
+    "actor_signals": [
+      "actor_user",
+      "actor_admin"
+    ],
+    "file": "/tmp/topogram-demo-supabase-main-FpTkIi/README.md",
     "relative_path": "README.md",
+    "role_signals": [],
     "term_candidates": [
       "supabase",
       "debugging",

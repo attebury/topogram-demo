@@ -10,8 +10,6 @@ capability cap_unfollow_profile {
   actors [user]
 
   deletes [entity_profile]
-
-  input [shape_input_unfollow_profile]
   output [shape_output_unfollow_profile]
 
   status active

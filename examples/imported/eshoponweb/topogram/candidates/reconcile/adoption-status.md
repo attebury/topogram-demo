@@ -3,9 +3,15 @@
 ## Summary
 
 - Plan: `candidates/reconcile/adoption-plan.json`
+- Selector: `none`
+- Write mode: no
 - Approved items: 0
-- Applied items: 37
+- Applied items: 47
 - Blocked items: 0
+
+## Next Best Action
+
+- None
 
 ## Next Bundle
 
@@ -13,12 +19,13 @@
 
 ## Bundle Priorities
 
-- `item`: next=_none_, bundle-review=_none_, from-plan=no
-- `surface-account`: next=_none_, bundle-review=_none_, from-plan=no
-- `catalog-item`: next=_none_, bundle-review=_none_, from-plan=no
-- `basket`: next=_none_, bundle-review=_none_, from-plan=no
-- `order`: next=_none_, bundle-review=_none_, from-plan=no
-- `surface-app`: next=_none_, bundle-review=_none_, from-plan=no
+- `item`: action=complete, why=This bundle has no blocked, approved, or pending work left., safe-now=0
+- `surface-account`: action=complete, why=This bundle has no blocked, approved, or pending work left., safe-now=0
+- `flow-lifecycle-flow`: action=complete, why=This bundle has no blocked, approved, or pending work left., safe-now=0
+- `catalog-item`: action=complete, why=This bundle has no blocked, approved, or pending work left., safe-now=0
+- `basket`: action=complete, why=This bundle has no blocked, approved, or pending work left., safe-now=0
+- `order`: action=complete, why=This bundle has no blocked, approved, or pending work left., safe-now=0
+- `surface-app`: action=complete, why=This bundle has no blocked, approved, or pending work left., safe-now=0
 
 ## Approved Review Groups
 

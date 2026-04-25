@@ -3,9 +3,10 @@ shape shape_input_update_user {
   description "Candidate shape imported from brownfield API evidence"
 
   fields {
+    bio string optional
     email string optional
+    image string optional
     password string optional
-    profile string optional
     username string optional
   }
 

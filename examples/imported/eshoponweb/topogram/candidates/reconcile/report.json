@@ -1,6 +1,19 @@
 {
   "adopt_selector": null,
+  "adopt_write_mode": true,
   "adoption_plan_items": [
+    {
+      "bundle": "basket",
+      "confidence": null,
+      "item": "basket_journey",
+      "kind": "doc",
+      "recommendation": null,
+      "related_capabilities": [],
+      "related_docs": [],
+      "related_rules": [],
+      "related_workflows": [],
+      "status": "applied"
+    },
     {
       "bundle": "basket",
       "confidence": null,
@@ -30,6 +43,18 @@
       "confidence": null,
       "item": "ui_basket_success",
       "kind": "ui",
+      "recommendation": null,
+      "related_capabilities": [],
+      "related_docs": [],
+      "related_rules": [],
+      "related_workflows": [],
+      "status": "applied"
+    },
+    {
+      "bundle": "catalog-item",
+      "confidence": null,
+      "item": "catalog_item_journey",
+      "kind": "doc",
       "recommendation": null,
       "related_capabilities": [],
       "related_docs": [],
@@ -122,6 +147,60 @@
       "status": "applied"
     },
     {
+      "bundle": "flow-lifecycle-flow",
+      "confidence": "medium",
+      "item": "actor_admin",
+      "kind": "actor",
+      "recommendation": "Promote this actor (medium) and link to docs `lifecycle-flow`.",
+      "related_capabilities": [],
+      "related_docs": [
+        "lifecycle-flow"
+      ],
+      "related_rules": [],
+      "related_workflows": [],
+      "status": "applied"
+    },
+    {
+      "bundle": "flow-lifecycle-flow",
+      "confidence": "medium",
+      "item": "actor_user",
+      "kind": "actor",
+      "recommendation": "Promote this actor (medium) and link to docs `lifecycle-flow`.",
+      "related_capabilities": [],
+      "related_docs": [
+        "lifecycle-flow"
+      ],
+      "related_rules": [],
+      "related_workflows": [],
+      "status": "applied"
+    },
+    {
+      "bundle": "flow-lifecycle-flow",
+      "confidence": "low",
+      "item": "actor_manager",
+      "kind": "actor",
+      "recommendation": "Promote this actor (low) and link to docs `lifecycle-flow`.",
+      "related_capabilities": [],
+      "related_docs": [
+        "lifecycle-flow"
+      ],
+      "related_rules": [],
+      "related_workflows": [],
+      "status": "applied"
+    },
+    {
+      "bundle": "flow-lifecycle-flow",
+      "confidence": null,
+      "item": "lifecycle-flow",
+      "kind": "doc",
+      "recommendation": null,
+      "related_capabilities": [],
+      "related_docs": [],
+      "related_rules": [],
+      "related_workflows": [],
+      "status": "applied"
+    },
+    {
       "bundle": "item",
       "confidence": null,
       "item": "cap_create_item",
@@ -172,6 +251,18 @@
     {
       "bundle": "item",
       "confidence": null,
+      "item": "item_journey",
+      "kind": "doc",
+      "recommendation": null,
+      "related_capabilities": [],
+      "related_docs": [],
+      "related_rules": [],
+      "related_workflows": [],
+      "status": "applied"
+    },
+    {
+      "bundle": "item",
+      "confidence": null,
       "item": "workflow_item",
       "kind": "doc",
       "recommendation": null,
@@ -196,6 +287,18 @@
     {
       "bundle": "order",
       "confidence": null,
+      "item": "order_journey",
+      "kind": "doc",
+      "recommendation": null,
+      "related_capabilities": [],
+      "related_docs": [],
+      "related_rules": [],
+      "related_workflows": [],
+      "status": "applied"
+    },
+    {
+      "bundle": "order",
+      "confidence": null,
       "item": "ui_order_detail",
       "kind": "ui",
       "recommendation": null,
@@ -210,6 +313,18 @@
       "confidence": null,
       "item": "ui_order_list",
       "kind": "ui",
+      "recommendation": null,
+      "related_capabilities": [],
+      "related_docs": [],
+      "related_rules": [],
+      "related_workflows": [],
+      "status": "applied"
+    },
+    {
+      "bundle": "surface-account",
+      "confidence": null,
+      "item": "surface_account_journey",
+      "kind": "doc",
       "recommendation": null,
       "related_capabilities": [],
       "related_docs": [],
@@ -424,6 +539,18 @@
     {
       "bundle": "surface-app",
       "confidence": null,
+      "item": "surface_app_journey",
+      "kind": "doc",
+      "recommendation": null,
+      "related_capabilities": [],
+      "related_docs": [],
+      "related_rules": [],
+      "related_workflows": [],
+      "status": "applied"
+    },
+    {
+      "bundle": "surface-app",
+      "confidence": null,
       "item": "ui_error",
       "kind": "ui",
       "recommendation": null,
@@ -447,11 +574,2375 @@
     }
   ],
   "adoption_plan_path": "candidates/reconcile/adoption-plan.json",
+  "agent_adoption_plan_items": [
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "basket",
+      "canonical_rel_path": "docs/journeys/basket_journey.md",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "basket:doc:basket_journey",
+      "item": "basket_journey",
+      "kind": "doc",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "basket",
+        "canonical_rel_path": "docs/journeys/basket_journey.md",
+        "source_path": "candidates/reconcile/model/bundles/basket/docs/journeys/basket_journey.md"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "review_required",
+        "reasons": [
+          "proposal_doc_surface"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/basket/docs/journeys/basket_journey.md",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "docs",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "basket",
+      "canonical_rel_path": "docs/reports/ui-basket.md",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "basket:ui:ui_basket",
+      "item": "ui_basket",
+      "kind": "ui",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "basket",
+        "canonical_rel_path": "docs/reports/ui-basket.md",
+        "source_path": "candidates/reconcile/model/bundles/basket/docs/reports/ui-basket.md"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "safe",
+        "reasons": [
+          "proposal_metadata_only"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/basket/docs/reports/ui-basket.md",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "ui",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "basket",
+      "canonical_rel_path": "docs/reports/ui-basket_checkout.md",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "basket:ui:ui_basket_checkout",
+      "item": "ui_basket_checkout",
+      "kind": "ui",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "basket",
+        "canonical_rel_path": "docs/reports/ui-basket_checkout.md",
+        "source_path": "candidates/reconcile/model/bundles/basket/docs/reports/ui-basket_checkout.md"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "safe",
+        "reasons": [
+          "proposal_metadata_only"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/basket/docs/reports/ui-basket_checkout.md",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "ui",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "basket",
+      "canonical_rel_path": "docs/reports/ui-basket_success.md",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "basket:ui:ui_basket_success",
+      "item": "ui_basket_success",
+      "kind": "ui",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "basket",
+        "canonical_rel_path": "docs/reports/ui-basket_success.md",
+        "source_path": "candidates/reconcile/model/bundles/basket/docs/reports/ui-basket_success.md"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "safe",
+        "reasons": [
+          "proposal_metadata_only"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/basket/docs/reports/ui-basket_success.md",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "ui",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "catalog-item",
+      "canonical_rel_path": "docs/journeys/catalog_item_journey.md",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "catalog-item:doc:catalog_item_journey",
+      "item": "catalog_item_journey",
+      "kind": "doc",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "catalog-item",
+        "canonical_rel_path": "docs/journeys/catalog_item_journey.md",
+        "source_path": "candidates/reconcile/model/bundles/catalog-item/docs/journeys/catalog_item_journey.md"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "review_required",
+        "reasons": [
+          "proposal_doc_surface"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/catalog-item/docs/journeys/catalog_item_journey.md",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "docs",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "catalog-item",
+      "canonical_rel_path": "docs/reports/ui-catalog_item_admin.md",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "catalog-item:ui:ui_catalog_item_admin",
+      "item": "ui_catalog_item_admin",
+      "kind": "ui",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "catalog-item",
+        "canonical_rel_path": "docs/reports/ui-catalog_item_admin.md",
+        "source_path": "candidates/reconcile/model/bundles/catalog-item/docs/reports/ui-catalog_item_admin.md"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "safe",
+        "reasons": [
+          "proposal_metadata_only"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/catalog-item/docs/reports/ui-catalog_item_admin.md",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "ui",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "catalog-item",
+      "canonical_rel_path": "docs/reports/ui-catalog_item_admin_edit.md",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "catalog-item:ui:ui_catalog_item_admin_edit",
+      "item": "ui_catalog_item_admin_edit",
+      "kind": "ui",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "catalog-item",
+        "canonical_rel_path": "docs/reports/ui-catalog_item_admin_edit.md",
+        "source_path": "candidates/reconcile/model/bundles/catalog-item/docs/reports/ui-catalog_item_admin_edit.md"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "safe",
+        "reasons": [
+          "proposal_metadata_only"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/catalog-item/docs/reports/ui-catalog_item_admin_edit.md",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "ui",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "catalog-item",
+      "canonical_rel_path": "docs/reports/ui-catalog_item_create.md",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "catalog-item:ui:ui_catalog_item_create",
+      "item": "ui_catalog_item_create",
+      "kind": "ui",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "catalog-item",
+        "canonical_rel_path": "docs/reports/ui-catalog_item_create.md",
+        "source_path": "candidates/reconcile/model/bundles/catalog-item/docs/reports/ui-catalog_item_create.md"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "safe",
+        "reasons": [
+          "proposal_metadata_only"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/catalog-item/docs/reports/ui-catalog_item_create.md",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "ui",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "catalog-item",
+      "canonical_rel_path": "docs/reports/ui-catalog_item_delete.md",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "catalog-item:ui:ui_catalog_item_delete",
+      "item": "ui_catalog_item_delete",
+      "kind": "ui",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "catalog-item",
+        "canonical_rel_path": "docs/reports/ui-catalog_item_delete.md",
+        "source_path": "candidates/reconcile/model/bundles/catalog-item/docs/reports/ui-catalog_item_delete.md"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "safe",
+        "reasons": [
+          "proposal_metadata_only"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/catalog-item/docs/reports/ui-catalog_item_delete.md",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "ui",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "catalog-item",
+      "canonical_rel_path": "docs/reports/ui-catalog_item_detail.md",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "catalog-item:ui:ui_catalog_item_detail",
+      "item": "ui_catalog_item_detail",
+      "kind": "ui",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "catalog-item",
+        "canonical_rel_path": "docs/reports/ui-catalog_item_detail.md",
+        "source_path": "candidates/reconcile/model/bundles/catalog-item/docs/reports/ui-catalog_item_detail.md"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "safe",
+        "reasons": [
+          "proposal_metadata_only"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/catalog-item/docs/reports/ui-catalog_item_detail.md",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "ui",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "catalog-item",
+      "canonical_rel_path": "docs/reports/ui-catalog_item_edit.md",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "catalog-item:ui:ui_catalog_item_edit",
+      "item": "ui_catalog_item_edit",
+      "kind": "ui",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "catalog-item",
+        "canonical_rel_path": "docs/reports/ui-catalog_item_edit.md",
+        "source_path": "candidates/reconcile/model/bundles/catalog-item/docs/reports/ui-catalog_item_edit.md"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "safe",
+        "reasons": [
+          "proposal_metadata_only"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/catalog-item/docs/reports/ui-catalog_item_edit.md",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "ui",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "catalog-item",
+      "canonical_rel_path": "docs/reports/ui-catalog_item_list.md",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "catalog-item:ui:ui_catalog_item_list",
+      "item": "ui_catalog_item_list",
+      "kind": "ui",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "catalog-item",
+        "canonical_rel_path": "docs/reports/ui-catalog_item_list.md",
+        "source_path": "candidates/reconcile/model/bundles/catalog-item/docs/reports/ui-catalog_item_list.md"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "safe",
+        "reasons": [
+          "proposal_metadata_only"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/catalog-item/docs/reports/ui-catalog_item_list.md",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "ui",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "flow-lifecycle-flow",
+      "canonical_rel_path": "actors/actor-admin.tg",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "flow-lifecycle-flow:actor:actor_admin",
+      "item": "actor_admin",
+      "kind": "actor",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "flow-lifecycle-flow",
+        "canonical_rel_path": "actors/actor-admin.tg",
+        "source_path": "candidates/reconcile/model/bundles/flow-lifecycle-flow/actors/actor_admin.tg"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [
+          "lifecycle-flow"
+        ],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "safe",
+        "reasons": [
+          "proposal_metadata_only"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/flow-lifecycle-flow/actors/actor_admin.tg",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "actor",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "flow-lifecycle-flow",
+      "canonical_rel_path": "actors/actor-user.tg",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "flow-lifecycle-flow:actor:actor_user",
+      "item": "actor_user",
+      "kind": "actor",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "flow-lifecycle-flow",
+        "canonical_rel_path": "actors/actor-user.tg",
+        "source_path": "candidates/reconcile/model/bundles/flow-lifecycle-flow/actors/actor_user.tg"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [
+          "lifecycle-flow"
+        ],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "safe",
+        "reasons": [
+          "proposal_metadata_only"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/flow-lifecycle-flow/actors/actor_user.tg",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "actor",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "flow-lifecycle-flow",
+      "canonical_rel_path": "actors/actor-manager.tg",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "flow-lifecycle-flow:actor:actor_manager",
+      "item": "actor_manager",
+      "kind": "actor",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "flow-lifecycle-flow",
+        "canonical_rel_path": "actors/actor-manager.tg",
+        "source_path": "candidates/reconcile/model/bundles/flow-lifecycle-flow/actors/actor_manager.tg"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [
+          "lifecycle-flow"
+        ],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "safe",
+        "reasons": [
+          "proposal_metadata_only"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/flow-lifecycle-flow/actors/actor_manager.tg",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "actor",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "flow-lifecycle-flow",
+      "canonical_rel_path": "docs/workflows/lifecycle-flow.md",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "flow-lifecycle-flow:doc:lifecycle-flow",
+      "item": "lifecycle-flow",
+      "kind": "doc",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "flow-lifecycle-flow",
+        "canonical_rel_path": "docs/workflows/lifecycle-flow.md",
+        "source_path": "candidates/reconcile/model/bundles/flow-lifecycle-flow/docs/workflows/lifecycle-flow.md"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "safe",
+        "reasons": [
+          "proposal_metadata_only"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/flow-lifecycle-flow/docs/workflows/lifecycle-flow.md",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "workflows",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "item",
+      "canonical_rel_path": "capabilities/cap-create-item.tg",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "item:capability:cap_create_item",
+      "item": "cap_create_item",
+      "kind": "capability",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "item",
+        "canonical_rel_path": "capabilities/cap-create-item.tg",
+        "source_path": "candidates/reconcile/model/bundles/item/capabilities/cap_create_item.tg"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "review_required",
+        "reasons": [
+          "proposal_modeled_surface"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/item/capabilities/cap_create_item.tg",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "capability",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "item",
+      "canonical_rel_path": "capabilities/cap-get-item.tg",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "item:capability:cap_get_item",
+      "item": "cap_get_item",
+      "kind": "capability",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "item",
+        "canonical_rel_path": "capabilities/cap-get-item.tg",
+        "source_path": "candidates/reconcile/model/bundles/item/capabilities/cap_get_item.tg"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "review_required",
+        "reasons": [
+          "proposal_modeled_surface"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/item/capabilities/cap_get_item.tg",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "capability",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "item",
+      "canonical_rel_path": "capabilities/cap-list-items.tg",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "item:capability:cap_list_items",
+      "item": "cap_list_items",
+      "kind": "capability",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "item",
+        "canonical_rel_path": "capabilities/cap-list-items.tg",
+        "source_path": "candidates/reconcile/model/bundles/item/capabilities/cap_list_items.tg"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "review_required",
+        "reasons": [
+          "proposal_modeled_surface"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/item/capabilities/cap_list_items.tg",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "capability",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "item",
+      "canonical_rel_path": "decisions/decision-item.tg",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "item:decision:dec_item",
+      "item": "dec_item",
+      "kind": "decision",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [
+        {
+          "id": "workflow_review:item",
+          "reason": "Workflow semantics for item need canonical review before promotion.",
+          "type": "workflow_review"
+        }
+      ],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "item",
+        "canonical_rel_path": "decisions/decision-item.tg",
+        "source_path": "candidates/reconcile/model/bundles/item/decisions/dec_item.tg"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [
+          {
+            "id": "workflow_review:item",
+            "reason": "Workflow semantics for item need canonical review before promotion.",
+            "type": "workflow_review"
+          }
+        ],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "manual_decision",
+        "reasons": [
+          "proposal_has_blocking_dependencies"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/item/decisions/dec_item.tg",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "workflows",
+      "ui_impacts": [],
+      "workflow_impacts": [
+        {
+          "items": [
+            "workflow_item"
+          ],
+          "kind": "workflow",
+          "reason": "Workflow semantics for item need canonical review before promotion.",
+          "review_group_id": "workflow_review:item"
+        }
+      ]
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "item",
+      "canonical_rel_path": "docs/journeys/item_journey.md",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "item:doc:item_journey",
+      "item": "item_journey",
+      "kind": "doc",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "item",
+        "canonical_rel_path": "docs/journeys/item_journey.md",
+        "source_path": "candidates/reconcile/model/bundles/item/docs/journeys/item_journey.md"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "review_required",
+        "reasons": [
+          "proposal_doc_surface"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/item/docs/journeys/item_journey.md",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "docs",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "item",
+      "canonical_rel_path": "docs/workflows/workflow_item.md",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "item:doc:workflow_item",
+      "item": "workflow_item",
+      "kind": "doc",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [
+        {
+          "id": "workflow_review:item",
+          "reason": "Workflow semantics for item need canonical review before promotion.",
+          "type": "workflow_review"
+        }
+      ],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "item",
+        "canonical_rel_path": "docs/workflows/workflow_item.md",
+        "source_path": "candidates/reconcile/model/bundles/item/docs/workflows/workflow_item.md"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [
+          {
+            "id": "workflow_review:item",
+            "reason": "Workflow semantics for item need canonical review before promotion.",
+            "type": "workflow_review"
+          }
+        ],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "manual_decision",
+        "reasons": [
+          "proposal_has_blocking_dependencies"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/item/docs/workflows/workflow_item.md",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "workflows",
+      "ui_impacts": [],
+      "workflow_impacts": [
+        {
+          "items": [
+            "workflow_item"
+          ],
+          "kind": "workflow",
+          "reason": "Workflow semantics for item need canonical review before promotion.",
+          "review_group_id": "workflow_review:item"
+        }
+      ]
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "item",
+      "canonical_rel_path": "docs/reports/ui-catalog_home.md",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "item:ui:ui_catalog_home",
+      "item": "ui_catalog_home",
+      "kind": "ui",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "item",
+        "canonical_rel_path": "docs/reports/ui-catalog_home.md",
+        "source_path": "candidates/reconcile/model/bundles/item/docs/reports/ui-catalog_home.md"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "safe",
+        "reasons": [
+          "proposal_metadata_only"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/item/docs/reports/ui-catalog_home.md",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "ui",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "order",
+      "canonical_rel_path": "docs/journeys/order_journey.md",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "order:doc:order_journey",
+      "item": "order_journey",
+      "kind": "doc",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "order",
+        "canonical_rel_path": "docs/journeys/order_journey.md",
+        "source_path": "candidates/reconcile/model/bundles/order/docs/journeys/order_journey.md"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "review_required",
+        "reasons": [
+          "proposal_doc_surface"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/order/docs/journeys/order_journey.md",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "docs",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "order",
+      "canonical_rel_path": "docs/reports/ui-order_detail.md",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "order:ui:ui_order_detail",
+      "item": "ui_order_detail",
+      "kind": "ui",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "order",
+        "canonical_rel_path": "docs/reports/ui-order_detail.md",
+        "source_path": "candidates/reconcile/model/bundles/order/docs/reports/ui-order_detail.md"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "safe",
+        "reasons": [
+          "proposal_metadata_only"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/order/docs/reports/ui-order_detail.md",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "ui",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "order",
+      "canonical_rel_path": "docs/reports/ui-order_list.md",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "order:ui:ui_order_list",
+      "item": "ui_order_list",
+      "kind": "ui",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "order",
+        "canonical_rel_path": "docs/reports/ui-order_list.md",
+        "source_path": "candidates/reconcile/model/bundles/order/docs/reports/ui-order_list.md"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "safe",
+        "reasons": [
+          "proposal_metadata_only"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/order/docs/reports/ui-order_list.md",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "ui",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "surface-account",
+      "canonical_rel_path": "docs/journeys/surface_account_journey.md",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "surface-account:doc:surface_account_journey",
+      "item": "surface_account_journey",
+      "kind": "doc",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "surface-account",
+        "canonical_rel_path": "docs/journeys/surface_account_journey.md",
+        "source_path": "candidates/reconcile/model/bundles/surface-account/docs/journeys/surface_account_journey.md"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "review_required",
+        "reasons": [
+          "proposal_doc_surface"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/surface-account/docs/journeys/surface_account_journey.md",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "docs",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "surface-account",
+      "canonical_rel_path": "docs/reports/ui-account_confirm_email.md",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "surface-account:ui:ui_account_confirm_email",
+      "item": "ui_account_confirm_email",
+      "kind": "ui",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "surface-account",
+        "canonical_rel_path": "docs/reports/ui-account_confirm_email.md",
+        "source_path": "candidates/reconcile/model/bundles/surface-account/docs/reports/ui-account_confirm_email.md"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "safe",
+        "reasons": [
+          "proposal_metadata_only"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/surface-account/docs/reports/ui-account_confirm_email.md",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "ui",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "surface-account",
+      "canonical_rel_path": "docs/reports/ui-account_login.md",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "surface-account:ui:ui_account_login",
+      "item": "ui_account_login",
+      "kind": "ui",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "surface-account",
+        "canonical_rel_path": "docs/reports/ui-account_login.md",
+        "source_path": "candidates/reconcile/model/bundles/surface-account/docs/reports/ui-account_login.md"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "safe",
+        "reasons": [
+          "proposal_metadata_only"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/surface-account/docs/reports/ui-account_login.md",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "ui",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "surface-account",
+      "canonical_rel_path": "docs/reports/ui-account_logout.md",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "surface-account:ui:ui_account_logout",
+      "item": "ui_account_logout",
+      "kind": "ui",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "surface-account",
+        "canonical_rel_path": "docs/reports/ui-account_logout.md",
+        "source_path": "candidates/reconcile/model/bundles/surface-account/docs/reports/ui-account_logout.md"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "safe",
+        "reasons": [
+          "proposal_metadata_only"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/surface-account/docs/reports/ui-account_logout.md",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "ui",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "surface-account",
+      "canonical_rel_path": "docs/reports/ui-account_logout_page.md",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "surface-account:ui:ui_account_logout_page",
+      "item": "ui_account_logout_page",
+      "kind": "ui",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "surface-account",
+        "canonical_rel_path": "docs/reports/ui-account_logout_page.md",
+        "source_path": "candidates/reconcile/model/bundles/surface-account/docs/reports/ui-account_logout_page.md"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "safe",
+        "reasons": [
+          "proposal_metadata_only"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/surface-account/docs/reports/ui-account_logout_page.md",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "ui",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "surface-account",
+      "canonical_rel_path": "docs/reports/ui-account_register.md",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "surface-account:ui:ui_account_register",
+      "item": "ui_account_register",
+      "kind": "ui",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "surface-account",
+        "canonical_rel_path": "docs/reports/ui-account_register.md",
+        "source_path": "candidates/reconcile/model/bundles/surface-account/docs/reports/ui-account_register.md"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "safe",
+        "reasons": [
+          "proposal_metadata_only"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/surface-account/docs/reports/ui-account_register.md",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "ui",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "surface-account",
+      "canonical_rel_path": "docs/reports/ui-change_password.md",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "surface-account:ui:ui_change_password",
+      "item": "ui_change_password",
+      "kind": "ui",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "surface-account",
+        "canonical_rel_path": "docs/reports/ui-change_password.md",
+        "source_path": "candidates/reconcile/model/bundles/surface-account/docs/reports/ui-change_password.md"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "safe",
+        "reasons": [
+          "proposal_metadata_only"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/surface-account/docs/reports/ui-change_password.md",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "ui",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "surface-account",
+      "canonical_rel_path": "docs/reports/ui-disable2fa.md",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "surface-account:ui:ui_disable2fa",
+      "item": "ui_disable2fa",
+      "kind": "ui",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "surface-account",
+        "canonical_rel_path": "docs/reports/ui-disable2fa.md",
+        "source_path": "candidates/reconcile/model/bundles/surface-account/docs/reports/ui-disable2fa.md"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "safe",
+        "reasons": [
+          "proposal_metadata_only"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/surface-account/docs/reports/ui-disable2fa.md",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "ui",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "surface-account",
+      "canonical_rel_path": "docs/reports/ui-enable_authenticator.md",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "surface-account:ui:ui_enable_authenticator",
+      "item": "ui_enable_authenticator",
+      "kind": "ui",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "surface-account",
+        "canonical_rel_path": "docs/reports/ui-enable_authenticator.md",
+        "source_path": "candidates/reconcile/model/bundles/surface-account/docs/reports/ui-enable_authenticator.md"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "safe",
+        "reasons": [
+          "proposal_metadata_only"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/surface-account/docs/reports/ui-enable_authenticator.md",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "ui",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "surface-account",
+      "canonical_rel_path": "docs/reports/ui-external_login.md",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "surface-account:ui:ui_external_login",
+      "item": "ui_external_login",
+      "kind": "ui",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "surface-account",
+        "canonical_rel_path": "docs/reports/ui-external_login.md",
+        "source_path": "candidates/reconcile/model/bundles/surface-account/docs/reports/ui-external_login.md"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "safe",
+        "reasons": [
+          "proposal_metadata_only"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/surface-account/docs/reports/ui-external_login.md",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "ui",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "surface-account",
+      "canonical_rel_path": "docs/reports/ui-generate_recovery_code.md",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "surface-account:ui:ui_generate_recovery_code",
+      "item": "ui_generate_recovery_code",
+      "kind": "ui",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "surface-account",
+        "canonical_rel_path": "docs/reports/ui-generate_recovery_code.md",
+        "source_path": "candidates/reconcile/model/bundles/surface-account/docs/reports/ui-generate_recovery_code.md"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "safe",
+        "reasons": [
+          "proposal_metadata_only"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/surface-account/docs/reports/ui-generate_recovery_code.md",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "ui",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "surface-account",
+      "canonical_rel_path": "docs/reports/ui-lockout.md",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "surface-account:ui:ui_lockout",
+      "item": "ui_lockout",
+      "kind": "ui",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "surface-account",
+        "canonical_rel_path": "docs/reports/ui-lockout.md",
+        "source_path": "candidates/reconcile/model/bundles/surface-account/docs/reports/ui-lockout.md"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "safe",
+        "reasons": [
+          "proposal_metadata_only"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/surface-account/docs/reports/ui-lockout.md",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "ui",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "surface-account",
+      "canonical_rel_path": "docs/reports/ui-login_with2fa.md",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "surface-account:ui:ui_login_with2fa",
+      "item": "ui_login_with2fa",
+      "kind": "ui",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "surface-account",
+        "canonical_rel_path": "docs/reports/ui-login_with2fa.md",
+        "source_path": "candidates/reconcile/model/bundles/surface-account/docs/reports/ui-login_with2fa.md"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "safe",
+        "reasons": [
+          "proposal_metadata_only"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/surface-account/docs/reports/ui-login_with2fa.md",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "ui",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "surface-account",
+      "canonical_rel_path": "docs/reports/ui-my_account.md",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "surface-account:ui:ui_my_account",
+      "item": "ui_my_account",
+      "kind": "ui",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "surface-account",
+        "canonical_rel_path": "docs/reports/ui-my_account.md",
+        "source_path": "candidates/reconcile/model/bundles/surface-account/docs/reports/ui-my_account.md"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "safe",
+        "reasons": [
+          "proposal_metadata_only"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/surface-account/docs/reports/ui-my_account.md",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "ui",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "surface-account",
+      "canonical_rel_path": "docs/reports/ui-reset_authenticator.md",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "surface-account:ui:ui_reset_authenticator",
+      "item": "ui_reset_authenticator",
+      "kind": "ui",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "surface-account",
+        "canonical_rel_path": "docs/reports/ui-reset_authenticator.md",
+        "source_path": "candidates/reconcile/model/bundles/surface-account/docs/reports/ui-reset_authenticator.md"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "safe",
+        "reasons": [
+          "proposal_metadata_only"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/surface-account/docs/reports/ui-reset_authenticator.md",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "ui",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "surface-account",
+      "canonical_rel_path": "docs/reports/ui-set_password.md",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "surface-account:ui:ui_set_password",
+      "item": "ui_set_password",
+      "kind": "ui",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "surface-account",
+        "canonical_rel_path": "docs/reports/ui-set_password.md",
+        "source_path": "candidates/reconcile/model/bundles/surface-account/docs/reports/ui-set_password.md"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "safe",
+        "reasons": [
+          "proposal_metadata_only"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/surface-account/docs/reports/ui-set_password.md",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "ui",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "surface-account",
+      "canonical_rel_path": "docs/reports/ui-show_recover_code.md",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "surface-account:ui:ui_show_recover_code",
+      "item": "ui_show_recover_code",
+      "kind": "ui",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "surface-account",
+        "canonical_rel_path": "docs/reports/ui-show_recover_code.md",
+        "source_path": "candidates/reconcile/model/bundles/surface-account/docs/reports/ui-show_recover_code.md"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "safe",
+        "reasons": [
+          "proposal_metadata_only"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/surface-account/docs/reports/ui-show_recover_code.md",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "ui",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "surface-account",
+      "canonical_rel_path": "docs/reports/ui-two_factor_authentication.md",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "surface-account:ui:ui_two_factor_authentication",
+      "item": "ui_two_factor_authentication",
+      "kind": "ui",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "surface-account",
+        "canonical_rel_path": "docs/reports/ui-two_factor_authentication.md",
+        "source_path": "candidates/reconcile/model/bundles/surface-account/docs/reports/ui-two_factor_authentication.md"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "safe",
+        "reasons": [
+          "proposal_metadata_only"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/surface-account/docs/reports/ui-two_factor_authentication.md",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "ui",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "surface-app",
+      "canonical_rel_path": "docs/journeys/surface_app_journey.md",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "surface-app:doc:surface_app_journey",
+      "item": "surface_app_journey",
+      "kind": "doc",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "surface-app",
+        "canonical_rel_path": "docs/journeys/surface_app_journey.md",
+        "source_path": "candidates/reconcile/model/bundles/surface-app/docs/journeys/surface_app_journey.md"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "review_required",
+        "reasons": [
+          "proposal_doc_surface"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/surface-app/docs/journeys/surface_app_journey.md",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "docs",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "surface-app",
+      "canonical_rel_path": "docs/reports/ui-error.md",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "surface-app:ui:ui_error",
+      "item": "ui_error",
+      "kind": "ui",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "surface-app",
+        "canonical_rel_path": "docs/reports/ui-error.md",
+        "source_path": "candidates/reconcile/model/bundles/surface-app/docs/reports/ui-error.md"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "safe",
+        "reasons": [
+          "proposal_metadata_only"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/surface-app/docs/reports/ui-error.md",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "ui",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "surface-app",
+      "canonical_rel_path": "docs/reports/ui-privacy.md",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "surface-app:ui:ui_privacy",
+      "item": "ui_privacy",
+      "kind": "ui",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "surface-app",
+        "canonical_rel_path": "docs/reports/ui-privacy.md",
+        "source_path": "candidates/reconcile/model/bundles/surface-app/docs/reports/ui-privacy.md"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "safe",
+        "reasons": [
+          "proposal_metadata_only"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/surface-app/docs/reports/ui-privacy.md",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "ui",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    }
+  ],
+  "agent_adoption_plan_path": "candidates/reconcile/adoption-plan.agent.json",
   "applied_items": [
+    "actor_admin",
+    "actor_manager",
+    "actor_user",
+    "basket_journey",
     "cap_create_item",
     "cap_get_item",
     "cap_list_items",
+    "catalog_item_journey",
     "dec_item",
+    "item_journey",
+    "lifecycle-flow",
+    "order_journey",
+    "surface_account_journey",
+    "surface_app_journey",
     "ui_account_confirm_email",
     "ui_account_login",
     "ui_account_logout",
@@ -495,6 +2986,7 @@
   "bundle_blockers": [
     {
       "applied_items": [
+        "basket_journey",
         "ui_basket",
         "ui_basket_checkout",
         "ui_basket_success"
@@ -508,6 +3000,7 @@
     },
     {
       "applied_items": [
+        "catalog_item_journey",
         "ui_catalog_item_admin",
         "ui_catalog_item_admin_edit",
         "ui_catalog_item_create",
@@ -525,10 +3018,25 @@
     },
     {
       "applied_items": [
+        "actor_admin",
+        "actor_manager",
+        "actor_user",
+        "lifecycle-flow"
+      ],
+      "approved_items": [],
+      "blocked_items": [],
+      "blocking_dependencies": [],
+      "bundle": "flow-lifecycle-flow",
+      "pending_items": [],
+      "skipped_items": []
+    },
+    {
+      "applied_items": [
         "cap_create_item",
         "cap_get_item",
         "cap_list_items",
         "dec_item",
+        "item_journey",
         "ui_catalog_home",
         "workflow_item"
       ],
@@ -541,6 +3049,7 @@
     },
     {
       "applied_items": [
+        "order_journey",
         "ui_order_detail",
         "ui_order_list"
       ],
@@ -553,6 +3062,7 @@
     },
     {
       "applied_items": [
+        "surface_account_journey",
         "ui_account_confirm_email",
         "ui_account_login",
         "ui_account_logout",
@@ -580,6 +3090,7 @@
     },
     {
       "applied_items": [
+        "surface_app_journey",
         "ui_error",
         "ui_privacy"
       ],
@@ -593,14 +3104,33 @@
   ],
   "bundle_priorities": [
     {
-      "applied_items": 6,
+      "applied_items": 7,
       "approved_items": 0,
+      "auth_aging_summary": {
+        "escalationLevel": "none",
+        "escalationReason": "This bundle is not currently high risk.",
+        "repeatCount": 0
+      },
+      "auth_claim_hints": [],
+      "auth_closure_summary": {
+        "adopted": 0,
+        "deferred": 0,
+        "label": "no auth hints",
+        "reason": "This bundle does not currently carry inferred permission, claim, or ownership hints.",
+        "status": "no_auth_hints",
+        "total": 0,
+        "unresolved": 0
+      },
+      "auth_ownership_hints": [],
+      "auth_permission_hints": [],
+      "auth_risk_rank": 0,
+      "auth_role_guidance": [],
       "blocked_items": 0,
       "bundle": "item",
       "evidence": {
         "actors": 0,
         "capabilities": 3,
-        "docs": 0,
+        "docs": 1,
         "entities": 0,
         "enums": 0,
         "roles": 0,
@@ -608,9 +3138,60 @@
         "shapes": 0,
         "workflows": 1
       },
-      "evidence_score": 24,
+      "evidence_score": 25,
       "is_complete": true,
+      "next_action": {
+        "kind": "complete",
+        "label": "No action required",
+        "reason": "This bundle has no blocked, approved, or pending work left.",
+        "safe_adopt_now_count": 0,
+        "selector": null,
+        "unlock_review_group_id": null,
+        "unlock_review_selector": null
+      },
       "next_review_groups": [],
+      "operator_summary": {
+        "authAging": {
+          "escalationLevel": "none",
+          "escalationReason": "This bundle is not currently high risk.",
+          "repeatCount": 0
+        },
+        "authClaimHints": [],
+        "authClosureSummary": {
+          "adopted": 0,
+          "deferred": 0,
+          "label": "no auth hints",
+          "reason": "This bundle does not currently carry inferred permission, claim, or ownership hints.",
+          "status": "no_auth_hints",
+          "total": 0,
+          "unresolved": 0
+        },
+        "authOwnershipHints": [],
+        "authPermissionHints": [],
+        "authRoleGuidance": [],
+        "capabilityIds": [
+          "cap_create_item",
+          "cap_get_item",
+          "cap_list_items"
+        ],
+        "participants": {
+          "actors": [],
+          "label": "_none_",
+          "roles": []
+        },
+        "primaryConcept": "entity_item",
+        "primaryEntityId": "entity_item",
+        "routePaths": [
+          "/"
+        ],
+        "screenIds": [
+          "catalog_home"
+        ],
+        "whyThisBundle": "This bundle exists because API capability evidence, UI screen/route evidence, workflow evidence, doc evidence converges on the same item concept.",
+        "workflowIds": [
+          "workflow_item"
+        ]
+      },
       "pending_items": 0,
       "recommend_bundle_review_selector": null,
       "recommend_from_plan": false,
@@ -620,14 +3201,33 @@
       "recommended_doc_metadata_patch_actions": []
     },
     {
-      "applied_items": 17,
+      "applied_items": 18,
       "approved_items": 0,
+      "auth_aging_summary": {
+        "escalationLevel": "none",
+        "escalationReason": "This bundle is not currently high risk.",
+        "repeatCount": 0
+      },
+      "auth_claim_hints": [],
+      "auth_closure_summary": {
+        "adopted": 0,
+        "deferred": 0,
+        "label": "no auth hints",
+        "reason": "This bundle does not currently carry inferred permission, claim, or ownership hints.",
+        "status": "no_auth_hints",
+        "total": 0,
+        "unresolved": 0
+      },
+      "auth_ownership_hints": [],
+      "auth_permission_hints": [],
+      "auth_risk_rank": 0,
+      "auth_role_guidance": [],
       "blocked_items": 0,
       "bundle": "surface-account",
       "evidence": {
         "actors": 0,
         "capabilities": 0,
-        "docs": 0,
+        "docs": 1,
         "entities": 0,
         "enums": 0,
         "roles": 0,
@@ -635,9 +3235,60 @@
         "shapes": 0,
         "workflows": 0
       },
-      "evidence_score": 17,
+      "evidence_score": 18,
       "is_complete": true,
+      "next_action": {
+        "kind": "complete",
+        "label": "No action required",
+        "reason": "This bundle has no blocked, approved, or pending work left.",
+        "safe_adopt_now_count": 0,
+        "selector": null,
+        "unlock_review_group_id": null,
+        "unlock_review_selector": null
+      },
       "next_review_groups": [],
+      "operator_summary": {
+        "authAging": {
+          "escalationLevel": "none",
+          "escalationReason": "This bundle is not currently high risk.",
+          "repeatCount": 0
+        },
+        "authClaimHints": [],
+        "authClosureSummary": {
+          "adopted": 0,
+          "deferred": 0,
+          "label": "no auth hints",
+          "reason": "This bundle does not currently carry inferred permission, claim, or ownership hints.",
+          "status": "no_auth_hints",
+          "total": 0,
+          "unresolved": 0
+        },
+        "authOwnershipHints": [],
+        "authPermissionHints": [],
+        "authRoleGuidance": [],
+        "capabilityIds": [],
+        "participants": {
+          "actors": [],
+          "label": "_none_",
+          "roles": []
+        },
+        "primaryConcept": "account_confirm_email",
+        "primaryEntityId": null,
+        "routePaths": [
+          "/account/confirm-email",
+          "/account/login",
+          "/account/logout",
+          "/logout"
+        ],
+        "screenIds": [
+          "account_confirm_email",
+          "account_login",
+          "account_logout",
+          "account_logout_page"
+        ],
+        "whyThisBundle": "This bundle exists because UI screen/route evidence, doc evidence converges on the same account concept.",
+        "workflowIds": []
+      },
       "pending_items": 0,
       "recommend_bundle_review_selector": null,
       "recommend_from_plan": false,
@@ -647,14 +3298,124 @@
       "recommended_doc_metadata_patch_actions": []
     },
     {
-      "applied_items": 7,
+      "applied_items": 4,
       "approved_items": 0,
+      "auth_aging_summary": {
+        "escalationLevel": "none",
+        "escalationReason": "This bundle is not currently high risk.",
+        "repeatCount": 0
+      },
+      "auth_claim_hints": [],
+      "auth_closure_summary": {
+        "adopted": 0,
+        "deferred": 0,
+        "label": "no auth hints",
+        "reason": "This bundle does not currently carry inferred permission, claim, or ownership hints.",
+        "status": "no_auth_hints",
+        "total": 0,
+        "unresolved": 0
+      },
+      "auth_ownership_hints": [],
+      "auth_permission_hints": [],
+      "auth_risk_rank": 0,
+      "auth_role_guidance": [],
+      "blocked_items": 0,
+      "bundle": "flow-lifecycle-flow",
+      "evidence": {
+        "actors": 3,
+        "capabilities": 0,
+        "docs": 1,
+        "entities": 0,
+        "enums": 0,
+        "roles": 0,
+        "screens": 0,
+        "shapes": 0,
+        "workflows": 0
+      },
+      "evidence_score": 10,
+      "is_complete": true,
+      "next_action": {
+        "kind": "complete",
+        "label": "No action required",
+        "reason": "This bundle has no blocked, approved, or pending work left.",
+        "safe_adopt_now_count": 0,
+        "selector": null,
+        "unlock_review_group_id": null,
+        "unlock_review_selector": null
+      },
+      "next_review_groups": [],
+      "operator_summary": {
+        "authAging": {
+          "escalationLevel": "none",
+          "escalationReason": "This bundle is not currently high risk.",
+          "repeatCount": 0
+        },
+        "authClaimHints": [],
+        "authClosureSummary": {
+          "adopted": 0,
+          "deferred": 0,
+          "label": "no auth hints",
+          "reason": "This bundle does not currently carry inferred permission, claim, or ownership hints.",
+          "status": "no_auth_hints",
+          "total": 0,
+          "unresolved": 0
+        },
+        "authOwnershipHints": [],
+        "authPermissionHints": [],
+        "authRoleGuidance": [],
+        "capabilityIds": [],
+        "participants": {
+          "actors": [
+            "actor_admin",
+            "actor_manager",
+            "actor_user"
+          ],
+          "label": "`actor_admin`, `actor_manager`, `actor_user`",
+          "roles": []
+        },
+        "primaryConcept": "flow_lifecycle-flow",
+        "primaryEntityId": null,
+        "routePaths": [],
+        "screenIds": [],
+        "whyThisBundle": "This bundle exists because doc evidence, actor/role evidence converges on the same lifecycle flow concept.",
+        "workflowIds": []
+      },
+      "pending_items": 0,
+      "recommend_bundle_review_selector": null,
+      "recommend_from_plan": false,
+      "recommended_actor_role_actions": [],
+      "recommended_doc_drift_actions": [],
+      "recommended_doc_link_actions": [],
+      "recommended_doc_metadata_patch_actions": []
+    },
+    {
+      "applied_items": 8,
+      "approved_items": 0,
+      "auth_aging_summary": {
+        "escalationLevel": "none",
+        "escalationReason": "This bundle is not currently high risk.",
+        "repeatCount": 0
+      },
+      "auth_claim_hints": [],
+      "auth_closure_summary": {
+        "adopted": 0,
+        "deferred": 0,
+        "label": "no auth hints",
+        "reason": "This bundle does not currently carry inferred permission, claim, or ownership hints.",
+        "status": "no_auth_hints",
+        "total": 0,
+        "unresolved": 0
+      },
+      "auth_ownership_hints": [],
+      "auth_permission_hints": [],
+      "auth_risk_rank": 0,
+      "auth_role_guidance": [],
       "blocked_items": 0,
       "bundle": "catalog-item",
       "evidence": {
         "actors": 0,
         "capabilities": 0,
-        "docs": 0,
+        "docs": 1,
         "entities": 0,
         "enums": 0,
         "roles": 0,
@@ -662,9 +3423,155 @@
         "shapes": 0,
         "workflows": 0
       },
-      "evidence_score": 7,
+      "evidence_score": 8,
       "is_complete": true,
+      "next_action": {
+        "kind": "complete",
+        "label": "No action required",
+        "reason": "This bundle has no blocked, approved, or pending work left.",
+        "safe_adopt_now_count": 0,
+        "selector": null,
+        "unlock_review_group_id": null,
+        "unlock_review_selector": null
+      },
       "next_review_groups": [],
+      "operator_summary": {
+        "authAging": {
+          "escalationLevel": "none",
+          "escalationReason": "This bundle is not currently high risk.",
+          "repeatCount": 0
+        },
+        "authClaimHints": [],
+        "authClosureSummary": {
+          "adopted": 0,
+          "deferred": 0,
+          "label": "no auth hints",
+          "reason": "This bundle does not currently carry inferred permission, claim, or ownership hints.",
+          "status": "no_auth_hints",
+          "total": 0,
+          "unresolved": 0
+        },
+        "authOwnershipHints": [],
+        "authPermissionHints": [],
+        "authRoleGuidance": [],
+        "capabilityIds": [],
+        "participants": {
+          "actors": [],
+          "label": "_none_",
+          "roles": []
+        },
+        "primaryConcept": "entity_catalog-item",
+        "primaryEntityId": "entity_catalog-item",
+        "routePaths": [
+          "/admin/edit-catalog-item",
+          "/admin",
+          "/admin/catalog-items/create",
+          "/admin/catalog-items/:id/delete"
+        ],
+        "screenIds": [
+          "catalog_item_admin",
+          "catalog_item_admin_edit",
+          "catalog_item_create",
+          "catalog_item_delete"
+        ],
+        "whyThisBundle": "This bundle exists because UI screen/route evidence, doc evidence converges on the same catalog item concept.",
+        "workflowIds": []
+      },
+      "pending_items": 0,
+      "recommend_bundle_review_selector": null,
+      "recommend_from_plan": false,
+      "recommended_actor_role_actions": [],
+      "recommended_doc_drift_actions": [],
+      "recommended_doc_link_actions": [],
+      "recommended_doc_metadata_patch_actions": []
+    },
+    {
+      "applied_items": 4,
+      "approved_items": 0,
+      "auth_aging_summary": {
+        "escalationLevel": "none",
+        "escalationReason": "This bundle is not currently high risk.",
+        "repeatCount": 0
+      },
+      "auth_claim_hints": [],
+      "auth_closure_summary": {
+        "adopted": 0,
+        "deferred": 0,
+        "label": "no auth hints",
+        "reason": "This bundle does not currently carry inferred permission, claim, or ownership hints.",
+        "status": "no_auth_hints",
+        "total": 0,
+        "unresolved": 0
+      },
+      "auth_ownership_hints": [],
+      "auth_permission_hints": [],
+      "auth_risk_rank": 0,
+      "auth_role_guidance": [],
+      "blocked_items": 0,
+      "bundle": "basket",
+      "evidence": {
+        "actors": 0,
+        "capabilities": 0,
+        "docs": 1,
+        "entities": 0,
+        "enums": 0,
+        "roles": 0,
+        "screens": 3,
+        "shapes": 0,
+        "workflows": 0
+      },
+      "evidence_score": 4,
+      "is_complete": true,
+      "next_action": {
+        "kind": "complete",
+        "label": "No action required",
+        "reason": "This bundle has no blocked, approved, or pending work left.",
+        "safe_adopt_now_count": 0,
+        "selector": null,
+        "unlock_review_group_id": null,
+        "unlock_review_selector": null
+      },
+      "next_review_groups": [],
+      "operator_summary": {
+        "authAging": {
+          "escalationLevel": "none",
+          "escalationReason": "This bundle is not currently high risk.",
+          "repeatCount": 0
+        },
+        "authClaimHints": [],
+        "authClosureSummary": {
+          "adopted": 0,
+          "deferred": 0,
+          "label": "no auth hints",
+          "reason": "This bundle does not currently carry inferred permission, claim, or ownership hints.",
+          "status": "no_auth_hints",
+          "total": 0,
+          "unresolved": 0
+        },
+        "authOwnershipHints": [],
+        "authPermissionHints": [],
+        "authRoleGuidance": [],
+        "capabilityIds": [],
+        "participants": {
+          "actors": [],
+          "label": "_none_",
+          "roles": []
+        },
+        "primaryConcept": "entity_basket",
+        "primaryEntityId": "entity_basket",
+        "routePaths": [
+          "/basket/checkout",
+          "{handler?}",
+          "/basket/success"
+        ],
+        "screenIds": [
+          "basket",
+          "basket_checkout",
+          "basket_success"
+        ],
+        "whyThisBundle": "This bundle exists because UI screen/route evidence, doc evidence converges on the same basket concept.",
+        "workflowIds": []
+      },
       "pending_items": 0,
       "recommend_bundle_review_selector": null,
       "recommend_from_plan": false,
@@ -676,39 +3583,31 @@
     {
       "applied_items": 3,
       "approved_items": 0,
-      "blocked_items": 0,
-      "bundle": "basket",
-      "evidence": {
-        "actors": 0,
-        "capabilities": 0,
-        "docs": 0,
-        "entities": 0,
-        "enums": 0,
-        "roles": 0,
-        "screens": 3,
-        "shapes": 0,
-        "workflows": 0
+      "auth_aging_summary": {
+        "escalationLevel": "none",
+        "escalationReason": "This bundle is not currently high risk.",
+        "repeatCount": 0
       },
-      "evidence_score": 3,
-      "is_complete": true,
-      "next_review_groups": [],
-      "pending_items": 0,
-      "recommend_bundle_review_selector": null,
-      "recommend_from_plan": false,
-      "recommended_actor_role_actions": [],
-      "recommended_doc_drift_actions": [],
-      "recommended_doc_link_actions": [],
-      "recommended_doc_metadata_patch_actions": []
-    },
-    {
-      "applied_items": 2,
-      "approved_items": 0,
+      "auth_claim_hints": [],
+      "auth_closure_summary": {
+        "adopted": 0,
+        "deferred": 0,
+        "label": "no auth hints",
+        "reason": "This bundle does not currently carry inferred permission, claim, or ownership hints.",
+        "status": "no_auth_hints",
+        "total": 0,
+        "unresolved": 0
+      },
+      "auth_ownership_hints": [],
+      "auth_permission_hints": [],
+      "auth_risk_rank": 0,
+      "auth_role_guidance": [],
       "blocked_items": 0,
       "bundle": "order",
       "evidence": {
         "actors": 0,
         "capabilities": 0,
-        "docs": 0,
+        "docs": 1,
         "entities": 0,
         "enums": 0,
         "roles": 0,
@@ -716,9 +3615,56 @@
         "shapes": 0,
         "workflows": 0
       },
-      "evidence_score": 2,
+      "evidence_score": 3,
       "is_complete": true,
+      "next_action": {
+        "kind": "complete",
+        "label": "No action required",
+        "reason": "This bundle has no blocked, approved, or pending work left.",
+        "safe_adopt_now_count": 0,
+        "selector": null,
+        "unlock_review_group_id": null,
+        "unlock_review_selector": null
+      },
       "next_review_groups": [],
+      "operator_summary": {
+        "authAging": {
+          "escalationLevel": "none",
+          "escalationReason": "This bundle is not currently high risk.",
+          "repeatCount": 0
+        },
+        "authClaimHints": [],
+        "authClosureSummary": {
+          "adopted": 0,
+          "deferred": 0,
+          "label": "no auth hints",
+          "reason": "This bundle does not currently carry inferred permission, claim, or ownership hints.",
+          "status": "no_auth_hints",
+          "total": 0,
+          "unresolved": 0
+        },
+        "authOwnershipHints": [],
+        "authPermissionHints": [],
+        "authRoleGuidance": [],
+        "capabilityIds": [],
+        "participants": {
+          "actors": [],
+          "label": "_none_",
+          "roles": []
+        },
+        "primaryConcept": "entity_order",
+        "primaryEntityId": "entity_order",
+        "routePaths": [
+          "/order/detail",
+          "/order/my-orders"
+        ],
+        "screenIds": [
+          "order_detail",
+          "order_list"
+        ],
+        "whyThisBundle": "This bundle exists because UI screen/route evidence, doc evidence converges on the same order concept.",
+        "workflowIds": []
+      },
       "pending_items": 0,
       "recommend_bundle_review_selector": null,
       "recommend_from_plan": false,
@@ -728,14 +3674,33 @@
       "recommended_doc_metadata_patch_actions": []
     },
     {
-      "applied_items": 2,
+      "applied_items": 3,
       "approved_items": 0,
+      "auth_aging_summary": {
+        "escalationLevel": "none",
+        "escalationReason": "This bundle is not currently high risk.",
+        "repeatCount": 0
+      },
+      "auth_claim_hints": [],
+      "auth_closure_summary": {
+        "adopted": 0,
+        "deferred": 0,
+        "label": "no auth hints",
+        "reason": "This bundle does not currently carry inferred permission, claim, or ownership hints.",
+        "status": "no_auth_hints",
+        "total": 0,
+        "unresolved": 0
+      },
+      "auth_ownership_hints": [],
+      "auth_permission_hints": [],
+      "auth_risk_rank": 0,
+      "auth_role_guidance": [],
       "blocked_items": 0,
       "bundle": "surface-app",
       "evidence": {
         "actors": 0,
         "capabilities": 0,
-        "docs": 0,
+        "docs": 1,
         "entities": 0,
         "enums": 0,
         "roles": 0,
@@ -743,9 +3708,56 @@
         "shapes": 0,
         "workflows": 0
       },
-      "evidence_score": 2,
+      "evidence_score": 3,
       "is_complete": true,
+      "next_action": {
+        "kind": "complete",
+        "label": "No action required",
+        "reason": "This bundle has no blocked, approved, or pending work left.",
+        "safe_adopt_now_count": 0,
+        "selector": null,
+        "unlock_review_group_id": null,
+        "unlock_review_selector": null
+      },
       "next_review_groups": [],
+      "operator_summary": {
+        "authAging": {
+          "escalationLevel": "none",
+          "escalationReason": "This bundle is not currently high risk.",
+          "repeatCount": 0
+        },
+        "authClaimHints": [],
+        "authClosureSummary": {
+          "adopted": 0,
+          "deferred": 0,
+          "label": "no auth hints",
+          "reason": "This bundle does not currently carry inferred permission, claim, or ownership hints.",
+          "status": "no_auth_hints",
+          "total": 0,
+          "unresolved": 0
+        },
+        "authOwnershipHints": [],
+        "authPermissionHints": [],
+        "authRoleGuidance": [],
+        "capabilityIds": [],
+        "participants": {
+          "actors": [],
+          "label": "_none_",
+          "roles": []
+        },
+        "primaryConcept": "error",
+        "primaryEntityId": null,
+        "routePaths": [
+          "/error",
+          "/privacy"
+        ],
+        "screenIds": [
+          "error",
+          "privacy"
+        ],
+        "whyThisBundle": "This bundle exists because UI screen/route evidence, doc evidence converges on the same app concept.",
+        "workflowIds": []
+      },
       "pending_items": 0,
       "recommend_bundle_review_selector": null,
       "recommend_from_plan": false,
@@ -760,6 +3772,14 @@
       "actor_details": [],
       "actors": [],
       "adoption_plan": [
+        {
+          "action": "promote_doc",
+          "canonical_rel_path": "docs/journeys/basket_journey.md",
+          "doc_kind": "journey",
+          "item": "basket_journey",
+          "source_path": "candidates/reconcile/model/bundles/basket/docs/journeys/basket_journey.md",
+          "target": null
+        },
         {
           "action": "promote_ui_report",
           "canonical_rel_path": "docs/reports/ui-basket.md",
@@ -782,21 +3802,30 @@
           "target": null
         }
       ],
+      "auth_claim_hints": [],
+      "auth_ownership_hints": [],
+      "auth_permission_hints": [],
+      "auth_role_guidance": [],
       "capabilities": [],
       "doc_drift_summaries": [],
       "doc_link_suggestions": [],
       "doc_metadata_patches": [],
-      "docs": [],
+      "docs": [
+        "basket_journey"
+      ],
       "entities": [],
       "enums": [],
       "id": "entity_basket",
       "label": "Basket",
+      "maintained_seam_candidates": [],
       "merge_hints": {
         "action": "promote_as_candidate_concept",
         "canonicalEntityTarget": null,
         "promoteActors": [],
         "promoteCapabilities": [],
-        "promoteDocs": [],
+        "promoteDocs": [
+          "basket_journey"
+        ],
         "promoteEnums": [],
         "promoteRoles": [],
         "promoteScreens": [
@@ -806,6 +3835,46 @@
         ],
         "promoteShapes": [],
         "promoteWorkflows": []
+      },
+      "operator_summary": {
+        "authAging": {
+          "escalationLevel": "none",
+          "escalationReason": "This bundle is not currently high risk.",
+          "repeatCount": 0
+        },
+        "authClaimHints": [],
+        "authClosureSummary": {
+          "adopted": 0,
+          "deferred": 0,
+          "label": "no auth hints",
+          "reason": "This bundle does not currently carry inferred permission, claim, or ownership hints.",
+          "status": "no_auth_hints",
+          "total": 0,
+          "unresolved": 0
+        },
+        "authOwnershipHints": [],
+        "authPermissionHints": [],
+        "authRoleGuidance": [],
+        "capabilityIds": [],
+        "participants": {
+          "actors": [],
+          "label": "_none_",
+          "roles": []
+        },
+        "primaryConcept": "entity_basket",
+        "primaryEntityId": "entity_basket",
+        "routePaths": [
+          "/basket/checkout",
+          "{handler?}",
+          "/basket/success"
+        ],
+        "screenIds": [
+          "basket",
+          "basket_checkout",
+          "basket_success"
+        ],
+        "whyThisBundle": "This bundle exists because UI screen/route evidence, doc evidence converges on the same basket concept.",
+        "workflowIds": []
       },
       "projection_impacts": [],
       "projection_patches": [],
@@ -826,6 +3895,10 @@
       "actor_details": [],
       "actors": [],
       "adoption_plan": [],
+      "auth_claim_hints": [],
+      "auth_ownership_hints": [],
+      "auth_permission_hints": [],
+      "auth_role_guidance": [],
       "capabilities": [],
       "doc_drift_summaries": [],
       "doc_link_suggestions": [],
@@ -835,6 +3908,7 @@
       "enums": [],
       "id": "entity_blazor-auth-state",
       "label": "Blazor Auth State",
+      "maintained_seam_candidates": [],
       "merge_hints": {
         "action": "promote_as_candidate_concept",
         "canonicalEntityTarget": null,
@@ -846,6 +3920,38 @@
         "promoteScreens": [],
         "promoteShapes": [],
         "promoteWorkflows": []
+      },
+      "operator_summary": {
+        "authAging": {
+          "escalationLevel": "none",
+          "escalationReason": "This bundle is not currently high risk.",
+          "repeatCount": 0
+        },
+        "authClaimHints": [],
+        "authClosureSummary": {
+          "adopted": 0,
+          "deferred": 0,
+          "label": "no auth hints",
+          "reason": "This bundle does not currently carry inferred permission, claim, or ownership hints.",
+          "status": "no_auth_hints",
+          "total": 0,
+          "unresolved": 0
+        },
+        "authOwnershipHints": [],
+        "authPermissionHints": [],
+        "authRoleGuidance": [],
+        "capabilityIds": [],
+        "participants": {
+          "actors": [],
+          "label": "_none_",
+          "roles": []
+        },
+        "primaryConcept": "entity_blazor-auth-state",
+        "primaryEntityId": "entity_blazor-auth-state",
+        "routePaths": [],
+        "screenIds": [],
+        "whyThisBundle": "This bundle exists because multiple imported signals point at the same blazor auth state concept.",
+        "workflowIds": []
       },
       "projection_impacts": [],
       "projection_patches": [],
@@ -862,6 +3968,10 @@
       "actor_details": [],
       "actors": [],
       "adoption_plan": [],
+      "auth_claim_hints": [],
+      "auth_ownership_hints": [],
+      "auth_permission_hints": [],
+      "auth_role_guidance": [],
       "capabilities": [],
       "doc_drift_summaries": [],
       "doc_link_suggestions": [],
@@ -871,6 +3981,7 @@
       "enums": [],
       "id": "entity_blazor-authenticated-app-shell",
       "label": "Blazor Authenticated App Shell",
+      "maintained_seam_candidates": [],
       "merge_hints": {
         "action": "promote_as_candidate_concept",
         "canonicalEntityTarget": null,
@@ -882,6 +3993,38 @@
         "promoteScreens": [],
         "promoteShapes": [],
         "promoteWorkflows": []
+      },
+      "operator_summary": {
+        "authAging": {
+          "escalationLevel": "none",
+          "escalationReason": "This bundle is not currently high risk.",
+          "repeatCount": 0
+        },
+        "authClaimHints": [],
+        "authClosureSummary": {
+          "adopted": 0,
+          "deferred": 0,
+          "label": "no auth hints",
+          "reason": "This bundle does not currently carry inferred permission, claim, or ownership hints.",
+          "status": "no_auth_hints",
+          "total": 0,
+          "unresolved": 0
+        },
+        "authOwnershipHints": [],
+        "authPermissionHints": [],
+        "authRoleGuidance": [],
+        "capabilityIds": [],
+        "participants": {
+          "actors": [],
+          "label": "_none_",
+          "roles": []
+        },
+        "primaryConcept": "entity_blazor-authenticated-app-shell",
+        "primaryEntityId": "entity_blazor-authenticated-app-shell",
+        "routePaths": [],
+        "screenIds": [],
+        "whyThisBundle": "This bundle exists because multiple imported signals point at the same blazor authenticated app shell concept.",
+        "workflowIds": []
       },
       "projection_impacts": [],
       "projection_patches": [],
@@ -898,6 +4041,10 @@
       "actor_details": [],
       "actors": [],
       "adoption_plan": [],
+      "auth_claim_hints": [],
+      "auth_ownership_hints": [],
+      "auth_permission_hints": [],
+      "auth_role_guidance": [],
       "capabilities": [],
       "doc_drift_summaries": [],
       "doc_link_suggestions": [],
@@ -907,6 +4054,7 @@
       "enums": [],
       "id": "entity_blazor-authenticated-route",
       "label": "Blazor Authenticated Route",
+      "maintained_seam_candidates": [],
       "merge_hints": {
         "action": "promote_as_candidate_concept",
         "canonicalEntityTarget": null,
@@ -918,6 +4066,38 @@
         "promoteScreens": [],
         "promoteShapes": [],
         "promoteWorkflows": []
+      },
+      "operator_summary": {
+        "authAging": {
+          "escalationLevel": "none",
+          "escalationReason": "This bundle is not currently high risk.",
+          "repeatCount": 0
+        },
+        "authClaimHints": [],
+        "authClosureSummary": {
+          "adopted": 0,
+          "deferred": 0,
+          "label": "no auth hints",
+          "reason": "This bundle does not currently carry inferred permission, claim, or ownership hints.",
+          "status": "no_auth_hints",
+          "total": 0,
+          "unresolved": 0
+        },
+        "authOwnershipHints": [],
+        "authPermissionHints": [],
+        "authRoleGuidance": [],
+        "capabilityIds": [],
+        "participants": {
+          "actors": [],
+          "label": "_none_",
+          "roles": []
+        },
+        "primaryConcept": "entity_blazor-authenticated-route",
+        "primaryEntityId": "entity_blazor-authenticated-route",
+        "routePaths": [],
+        "screenIds": [],
+        "whyThisBundle": "This bundle exists because multiple imported signals point at the same blazor authenticated route concept.",
+        "workflowIds": []
       },
       "projection_impacts": [],
       "projection_patches": [],
@@ -934,6 +4114,10 @@
       "actor_details": [],
       "actors": [],
       "adoption_plan": [],
+      "auth_claim_hints": [],
+      "auth_ownership_hints": [],
+      "auth_permission_hints": [],
+      "auth_role_guidance": [],
       "capabilities": [],
       "doc_drift_summaries": [],
       "doc_link_suggestions": [],
@@ -943,6 +4127,7 @@
       "enums": [],
       "id": "entity_blazor-route-table",
       "label": "Blazor Route Table",
+      "maintained_seam_candidates": [],
       "merge_hints": {
         "action": "promote_as_candidate_concept",
         "canonicalEntityTarget": null,
@@ -954,6 +4139,38 @@
         "promoteScreens": [],
         "promoteShapes": [],
         "promoteWorkflows": []
+      },
+      "operator_summary": {
+        "authAging": {
+          "escalationLevel": "none",
+          "escalationReason": "This bundle is not currently high risk.",
+          "repeatCount": 0
+        },
+        "authClaimHints": [],
+        "authClosureSummary": {
+          "adopted": 0,
+          "deferred": 0,
+          "label": "no auth hints",
+          "reason": "This bundle does not currently carry inferred permission, claim, or ownership hints.",
+          "status": "no_auth_hints",
+          "total": 0,
+          "unresolved": 0
+        },
+        "authOwnershipHints": [],
+        "authPermissionHints": [],
+        "authRoleGuidance": [],
+        "capabilityIds": [],
+        "participants": {
+          "actors": [],
+          "label": "_none_",
+          "roles": []
+        },
+        "primaryConcept": "entity_blazor-route-table",
+        "primaryEntityId": "entity_blazor-route-table",
+        "routePaths": [],
+        "screenIds": [],
+        "whyThisBundle": "This bundle exists because multiple imported signals point at the same blazor route table concept.",
+        "workflowIds": []
       },
       "projection_impacts": [],
       "projection_patches": [],
@@ -970,6 +4187,14 @@
       "actor_details": [],
       "actors": [],
       "adoption_plan": [
+        {
+          "action": "promote_doc",
+          "canonical_rel_path": "docs/journeys/catalog_item_journey.md",
+          "doc_kind": "journey",
+          "item": "catalog_item_journey",
+          "source_path": "candidates/reconcile/model/bundles/catalog-item/docs/journeys/catalog_item_journey.md",
+          "target": null
+        },
         {
           "action": "promote_ui_report",
           "canonical_rel_path": "docs/reports/ui-catalog_item_admin.md",
@@ -1020,21 +4245,30 @@
           "target": null
         }
       ],
+      "auth_claim_hints": [],
+      "auth_ownership_hints": [],
+      "auth_permission_hints": [],
+      "auth_role_guidance": [],
       "capabilities": [],
       "doc_drift_summaries": [],
       "doc_link_suggestions": [],
       "doc_metadata_patches": [],
-      "docs": [],
+      "docs": [
+        "catalog_item_journey"
+      ],
       "entities": [],
       "enums": [],
       "id": "entity_catalog-item",
       "label": "Catalog Item",
+      "maintained_seam_candidates": [],
       "merge_hints": {
         "action": "promote_as_candidate_concept",
         "canonicalEntityTarget": null,
         "promoteActors": [],
         "promoteCapabilities": [],
-        "promoteDocs": [],
+        "promoteDocs": [
+          "catalog_item_journey"
+        ],
         "promoteEnums": [],
         "promoteRoles": [],
         "promoteScreens": [
@@ -1048,6 +4282,48 @@
         ],
         "promoteShapes": [],
         "promoteWorkflows": []
+      },
+      "operator_summary": {
+        "authAging": {
+          "escalationLevel": "none",
+          "escalationReason": "This bundle is not currently high risk.",
+          "repeatCount": 0
+        },
+        "authClaimHints": [],
+        "authClosureSummary": {
+          "adopted": 0,
+          "deferred": 0,
+          "label": "no auth hints",
+          "reason": "This bundle does not currently carry inferred permission, claim, or ownership hints.",
+          "status": "no_auth_hints",
+          "total": 0,
+          "unresolved": 0
+        },
+        "authOwnershipHints": [],
+        "authPermissionHints": [],
+        "authRoleGuidance": [],
+        "capabilityIds": [],
+        "participants": {
+          "actors": [],
+          "label": "_none_",
+          "roles": []
+        },
+        "primaryConcept": "entity_catalog-item",
+        "primaryEntityId": "entity_catalog-item",
+        "routePaths": [
+          "/admin/edit-catalog-item",
+          "/admin",
+          "/admin/catalog-items/create",
+          "/admin/catalog-items/:id/delete"
+        ],
+        "screenIds": [
+          "catalog_item_admin",
+          "catalog_item_admin_edit",
+          "catalog_item_create",
+          "catalog_item_delete"
+        ],
+        "whyThisBundle": "This bundle exists because UI screen/route evidence, doc evidence converges on the same catalog item concept.",
+        "workflowIds": []
       },
       "projection_impacts": [],
       "projection_patches": [],
@@ -1069,6 +4345,165 @@
       "workflows": []
     },
     {
+      "actor_details": [
+        {
+          "id": "actor_admin",
+          "related_capabilities": [],
+          "related_docs": [
+            "lifecycle-flow"
+          ]
+        },
+        {
+          "id": "actor_manager",
+          "related_capabilities": [],
+          "related_docs": [
+            "lifecycle-flow"
+          ]
+        },
+        {
+          "id": "actor_user",
+          "related_capabilities": [],
+          "related_docs": [
+            "lifecycle-flow"
+          ]
+        }
+      ],
+      "actors": [
+        "actor_admin",
+        "actor_manager",
+        "actor_user"
+      ],
+      "adoption_plan": [
+        {
+          "action": "promote_actor",
+          "canonical_rel_path": "actors/actor-admin.tg",
+          "confidence": "medium",
+          "inference_summary": "phrases=3, participant_hits=0, permission_overlap=0",
+          "item": "actor_admin",
+          "related_capabilities": [],
+          "related_docs": [
+            "lifecycle-flow"
+          ],
+          "source_path": "candidates/reconcile/model/bundles/flow-lifecycle-flow/actors/actor_admin.tg",
+          "target": null
+        },
+        {
+          "action": "promote_actor",
+          "canonical_rel_path": "actors/actor-manager.tg",
+          "confidence": "low",
+          "inference_summary": "phrases=1, participant_hits=0, permission_overlap=0",
+          "item": "actor_manager",
+          "related_capabilities": [],
+          "related_docs": [
+            "lifecycle-flow"
+          ],
+          "source_path": "candidates/reconcile/model/bundles/flow-lifecycle-flow/actors/actor_manager.tg",
+          "target": null
+        },
+        {
+          "action": "promote_actor",
+          "canonical_rel_path": "actors/actor-user.tg",
+          "confidence": "medium",
+          "inference_summary": "phrases=2, participant_hits=0, permission_overlap=0",
+          "item": "actor_user",
+          "related_capabilities": [],
+          "related_docs": [
+            "lifecycle-flow"
+          ],
+          "source_path": "candidates/reconcile/model/bundles/flow-lifecycle-flow/actors/actor_user.tg",
+          "target": null
+        },
+        {
+          "action": "promote_workflow_doc",
+          "canonical_rel_path": "docs/workflows/lifecycle-flow.md",
+          "doc_kind": "workflow",
+          "item": "lifecycle-flow",
+          "source_path": "candidates/reconcile/model/bundles/flow-lifecycle-flow/docs/workflows/lifecycle-flow.md",
+          "target": null
+        }
+      ],
+      "auth_claim_hints": [],
+      "auth_ownership_hints": [],
+      "auth_permission_hints": [],
+      "auth_role_guidance": [],
+      "capabilities": [],
+      "doc_drift_summaries": [],
+      "doc_link_suggestions": [],
+      "doc_metadata_patches": [],
+      "docs": [
+        "lifecycle-flow"
+      ],
+      "entities": [],
+      "enums": [],
+      "id": "flow_lifecycle-flow",
+      "label": "Lifecycle Flow",
+      "maintained_seam_candidates": [],
+      "merge_hints": {
+        "action": "promote_as_candidate_concept",
+        "canonicalEntityTarget": null,
+        "promoteActors": [
+          "actor_admin",
+          "actor_manager",
+          "actor_user"
+        ],
+        "promoteCapabilities": [],
+        "promoteDocs": [
+          "lifecycle-flow"
+        ],
+        "promoteEnums": [],
+        "promoteRoles": [],
+        "promoteScreens": [],
+        "promoteShapes": [],
+        "promoteWorkflows": []
+      },
+      "operator_summary": {
+        "authAging": {
+          "escalationLevel": "none",
+          "escalationReason": "This bundle is not currently high risk.",
+          "repeatCount": 0
+        },
+        "authClaimHints": [],
+        "authClosureSummary": {
+          "adopted": 0,
+          "deferred": 0,
+          "label": "no auth hints",
+          "reason": "This bundle does not currently carry inferred permission, claim, or ownership hints.",
+          "status": "no_auth_hints",
+          "total": 0,
+          "unresolved": 0
+        },
+        "authOwnershipHints": [],
+        "authPermissionHints": [],
+        "authRoleGuidance": [],
+        "capabilityIds": [],
+        "participants": {
+          "actors": [
+            "actor_admin",
+            "actor_manager",
+            "actor_user"
+          ],
+          "label": "`actor_admin`, `actor_manager`, `actor_user`",
+          "roles": []
+        },
+        "primaryConcept": "flow_lifecycle-flow",
+        "primaryEntityId": null,
+        "routePaths": [],
+        "screenIds": [],
+        "whyThisBundle": "This bundle exists because doc evidence, actor/role evidence converges on the same lifecycle flow concept.",
+        "workflowIds": []
+      },
+      "projection_impacts": [],
+      "projection_patches": [],
+      "role_details": [],
+      "roles": [],
+      "screens": [],
+      "shapes": [],
+      "slug": "flow-lifecycle-flow",
+      "ui_impacts": [],
+      "workflow_impacts": [],
+      "workflows": []
+    },
+    {
       "actor_details": [],
       "actors": [],
       "adoption_plan": [
@@ -1085,6 +4520,14 @@
         {
           "action": "promote_capability",
           "item": "cap_list_items",
+          "target": null
+        },
+        {
+          "action": "promote_doc",
+          "canonical_rel_path": "docs/journeys/item_journey.md",
+          "doc_kind": "journey",
+          "item": "item_journey",
+          "source_path": "candidates/reconcile/model/bundles/item/docs/journeys/item_journey.md",
           "target": null
         },
         {
@@ -1110,6 +4553,10 @@
           "target": null
         }
       ],
+      "auth_claim_hints": [],
+      "auth_ownership_hints": [],
+      "auth_permission_hints": [],
+      "auth_role_guidance": [],
       "capabilities": [
         "cap_create_item",
         "cap_get_item",
@@ -1118,11 +4565,14 @@
       "doc_drift_summaries": [],
       "doc_link_suggestions": [],
       "doc_metadata_patches": [],
-      "docs": [],
+      "docs": [
+        "item_journey"
+      ],
       "entities": [],
       "enums": [],
       "id": "entity_item",
       "label": "Item",
+      "maintained_seam_candidates": [],
       "merge_hints": {
         "action": "promote_as_candidate_concept",
         "canonicalEntityTarget": null,
@@ -1132,7 +4582,9 @@
           "cap_get_item",
           "cap_list_items"
         ],
-        "promoteDocs": [],
+        "promoteDocs": [
+          "item_journey"
+        ],
         "promoteEnums": [],
         "promoteRoles": [],
         "promoteScreens": [
@@ -1140,6 +4592,48 @@
         ],
         "promoteShapes": [],
         "promoteWorkflows": [
+          "workflow_item"
+        ]
+      },
+      "operator_summary": {
+        "authAging": {
+          "escalationLevel": "none",
+          "escalationReason": "This bundle is not currently high risk.",
+          "repeatCount": 0
+        },
+        "authClaimHints": [],
+        "authClosureSummary": {
+          "adopted": 0,
+          "deferred": 0,
+          "label": "no auth hints",
+          "reason": "This bundle does not currently carry inferred permission, claim, or ownership hints.",
+          "status": "no_auth_hints",
+          "total": 0,
+          "unresolved": 0
+        },
+        "authOwnershipHints": [],
+        "authPermissionHints": [],
+        "authRoleGuidance": [],
+        "capabilityIds": [
+          "cap_create_item",
+          "cap_get_item",
+          "cap_list_items"
+        ],
+        "participants": {
+          "actors": [],
+          "label": "_none_",
+          "roles": []
+        },
+        "primaryConcept": "entity_item",
+        "primaryEntityId": "entity_item",
+        "routePaths": [
+          "/"
+        ],
+        "screenIds": [
+          "catalog_home"
+        ],
+        "whyThisBundle": "This bundle exists because API capability evidence, UI screen/route evidence, workflow evidence, doc evidence converges on the same item concept.",
+        "workflowIds": [
           "workflow_item"
         ]
       },
@@ -1172,6 +4666,14 @@
       "actors": [],
       "adoption_plan": [
         {
+          "action": "promote_doc",
+          "canonical_rel_path": "docs/journeys/order_journey.md",
+          "doc_kind": "journey",
+          "item": "order_journey",
+          "source_path": "candidates/reconcile/model/bundles/order/docs/journeys/order_journey.md",
+          "target": null
+        },
+        {
           "action": "promote_ui_report",
           "canonical_rel_path": "docs/reports/ui-order_detail.md",
           "item": "ui_order_detail",
@@ -1186,21 +4688,30 @@
           "target": null
         }
       ],
+      "auth_claim_hints": [],
+      "auth_ownership_hints": [],
+      "auth_permission_hints": [],
+      "auth_role_guidance": [],
       "capabilities": [],
       "doc_drift_summaries": [],
       "doc_link_suggestions": [],
       "doc_metadata_patches": [],
-      "docs": [],
+      "docs": [
+        "order_journey"
+      ],
       "entities": [],
       "enums": [],
       "id": "entity_order",
       "label": "Order",
+      "maintained_seam_candidates": [],
       "merge_hints": {
         "action": "promote_as_candidate_concept",
         "canonicalEntityTarget": null,
         "promoteActors": [],
         "promoteCapabilities": [],
-        "promoteDocs": [],
+        "promoteDocs": [
+          "order_journey"
+        ],
         "promoteEnums": [],
         "promoteRoles": [],
         "promoteScreens": [
@@ -1209,6 +4720,44 @@
         ],
         "promoteShapes": [],
         "promoteWorkflows": []
+      },
+      "operator_summary": {
+        "authAging": {
+          "escalationLevel": "none",
+          "escalationReason": "This bundle is not currently high risk.",
+          "repeatCount": 0
+        },
+        "authClaimHints": [],
+        "authClosureSummary": {
+          "adopted": 0,
+          "deferred": 0,
+          "label": "no auth hints",
+          "reason": "This bundle does not currently carry inferred permission, claim, or ownership hints.",
+          "status": "no_auth_hints",
+          "total": 0,
+          "unresolved": 0
+        },
+        "authOwnershipHints": [],
+        "authPermissionHints": [],
+        "authRoleGuidance": [],
+        "capabilityIds": [],
+        "participants": {
+          "actors": [],
+          "label": "_none_",
+          "roles": []
+        },
+        "primaryConcept": "entity_order",
+        "primaryEntityId": "entity_order",
+        "routePaths": [
+          "/order/detail",
+          "/order/my-orders"
+        ],
+        "screenIds": [
+          "order_detail",
+          "order_list"
+        ],
+        "whyThisBundle": "This bundle exists because UI screen/route evidence, doc evidence converges on the same order concept.",
+        "workflowIds": []
       },
       "projection_impacts": [],
       "projection_patches": [],
@@ -1228,6 +4777,10 @@
       "actor_details": [],
       "actors": [],
       "adoption_plan": [],
+      "auth_claim_hints": [],
+      "auth_ownership_hints": [],
+      "auth_permission_hints": [],
+      "auth_role_guidance": [],
       "capabilities": [],
       "doc_drift_summaries": [],
       "doc_link_suggestions": [],
@@ -1237,6 +4790,7 @@
       "enums": [],
       "id": "entity_razor-form-post",
       "label": "Razor Form Post",
+      "maintained_seam_candidates": [],
       "merge_hints": {
         "action": "promote_as_candidate_concept",
         "canonicalEntityTarget": null,
@@ -1248,6 +4802,38 @@
         "promoteScreens": [],
         "promoteShapes": [],
         "promoteWorkflows": []
+      },
+      "operator_summary": {
+        "authAging": {
+          "escalationLevel": "none",
+          "escalationReason": "This bundle is not currently high risk.",
+          "repeatCount": 0
+        },
+        "authClaimHints": [],
+        "authClosureSummary": {
+          "adopted": 0,
+          "deferred": 0,
+          "label": "no auth hints",
+          "reason": "This bundle does not currently carry inferred permission, claim, or ownership hints.",
+          "status": "no_auth_hints",
+          "total": 0,
+          "unresolved": 0
+        },
+        "authOwnershipHints": [],
+        "authPermissionHints": [],
+        "authRoleGuidance": [],
+        "capabilityIds": [],
+        "participants": {
+          "actors": [],
+          "label": "_none_",
+          "roles": []
+        },
+        "primaryConcept": "entity_razor-form-post",
+        "primaryEntityId": "entity_razor-form-post",
+        "routePaths": [],
+        "screenIds": [],
+        "whyThisBundle": "This bundle exists because multiple imported signals point at the same razor form post concept.",
+        "workflowIds": []
       },
       "projection_impacts": [],
       "projection_patches": [],
@@ -1264,6 +4850,10 @@
       "actor_details": [],
       "actors": [],
       "adoption_plan": [],
+      "auth_claim_hints": [],
+      "auth_ownership_hints": [],
+      "auth_permission_hints": [],
+      "auth_role_guidance": [],
       "capabilities": [],
       "doc_drift_summaries": [],
       "doc_link_suggestions": [],
@@ -1273,6 +4863,7 @@
       "enums": [],
       "id": "entity_razor-server-navigation",
       "label": "Razor Server Navigation",
+      "maintained_seam_candidates": [],
       "merge_hints": {
         "action": "promote_as_candidate_concept",
         "canonicalEntityTarget": null,
@@ -1284,6 +4875,38 @@
         "promoteScreens": [],
         "promoteShapes": [],
         "promoteWorkflows": []
+      },
+      "operator_summary": {
+        "authAging": {
+          "escalationLevel": "none",
+          "escalationReason": "This bundle is not currently high risk.",
+          "repeatCount": 0
+        },
+        "authClaimHints": [],
+        "authClosureSummary": {
+          "adopted": 0,
+          "deferred": 0,
+          "label": "no auth hints",
+          "reason": "This bundle does not currently carry inferred permission, claim, or ownership hints.",
+          "status": "no_auth_hints",
+          "total": 0,
+          "unresolved": 0
+        },
+        "authOwnershipHints": [],
+        "authPermissionHints": [],
+        "authRoleGuidance": [],
+        "capabilityIds": [],
+        "participants": {
+          "actors": [],
+          "label": "_none_",
+          "roles": []
+        },
+        "primaryConcept": "entity_razor-server-navigation",
+        "primaryEntityId": "entity_razor-server-navigation",
+        "routePaths": [],
+        "screenIds": [],
+        "whyThisBundle": "This bundle exists because multiple imported signals point at the same razor server navigation concept.",
+        "workflowIds": []
       },
       "projection_impacts": [],
       "projection_patches": [],
@@ -1300,6 +4923,14 @@
       "actor_details": [],
       "actors": [],
       "adoption_plan": [
+        {
+          "action": "promote_doc",
+          "canonical_rel_path": "docs/journeys/surface_account_journey.md",
+          "doc_kind": "journey",
+          "item": "surface_account_journey",
+          "source_path": "candidates/reconcile/model/bundles/surface-account/docs/journeys/surface_account_journey.md",
+          "target": null
+        },
         {
           "action": "promote_ui_report",
           "canonical_rel_path": "docs/reports/ui-account_confirm_email.md",
@@ -1420,21 +5051,30 @@
           "target": null
         }
       ],
+      "auth_claim_hints": [],
+      "auth_ownership_hints": [],
+      "auth_permission_hints": [],
+      "auth_role_guidance": [],
       "capabilities": [],
       "doc_drift_summaries": [],
       "doc_link_suggestions": [],
       "doc_metadata_patches": [],
-      "docs": [],
+      "docs": [
+        "surface_account_journey"
+      ],
       "entities": [],
       "enums": [],
       "id": "surface_account",
       "label": "Account",
+      "maintained_seam_candidates": [],
       "merge_hints": {
         "action": "promote_as_candidate_concept",
         "canonicalEntityTarget": null,
         "promoteActors": [],
         "promoteCapabilities": [],
-        "promoteDocs": [],
+        "promoteDocs": [
+          "surface_account_journey"
+        ],
         "promoteEnums": [],
         "promoteRoles": [],
         "promoteScreens": [
@@ -1458,6 +5098,48 @@
         ],
         "promoteShapes": [],
         "promoteWorkflows": []
+      },
+      "operator_summary": {
+        "authAging": {
+          "escalationLevel": "none",
+          "escalationReason": "This bundle is not currently high risk.",
+          "repeatCount": 0
+        },
+        "authClaimHints": [],
+        "authClosureSummary": {
+          "adopted": 0,
+          "deferred": 0,
+          "label": "no auth hints",
+          "reason": "This bundle does not currently carry inferred permission, claim, or ownership hints.",
+          "status": "no_auth_hints",
+          "total": 0,
+          "unresolved": 0
+        },
+        "authOwnershipHints": [],
+        "authPermissionHints": [],
+        "authRoleGuidance": [],
+        "capabilityIds": [],
+        "participants": {
+          "actors": [],
+          "label": "_none_",
+          "roles": []
+        },
+        "primaryConcept": "account_confirm_email",
+        "primaryEntityId": null,
+        "routePaths": [
+          "/account/confirm-email",
+          "/account/login",
+          "/account/logout",
+          "/logout"
+        ],
+        "screenIds": [
+          "account_confirm_email",
+          "account_login",
+          "account_logout",
+          "account_logout_page"
+        ],
+        "whyThisBundle": "This bundle exists because UI screen/route evidence, doc evidence converges on the same account concept.",
+        "workflowIds": []
       },
       "projection_impacts": [],
       "projection_patches": [],
@@ -1493,6 +5175,14 @@
       "actors": [],
       "adoption_plan": [
         {
+          "action": "promote_doc",
+          "canonical_rel_path": "docs/journeys/surface_app_journey.md",
+          "doc_kind": "journey",
+          "item": "surface_app_journey",
+          "source_path": "candidates/reconcile/model/bundles/surface-app/docs/journeys/surface_app_journey.md",
+          "target": null
+        },
+        {
           "action": "promote_ui_report",
           "canonical_rel_path": "docs/reports/ui-error.md",
           "item": "ui_error",
@@ -1507,21 +5197,30 @@
           "target": null
         }
       ],
+      "auth_claim_hints": [],
+      "auth_ownership_hints": [],
+      "auth_permission_hints": [],
+      "auth_role_guidance": [],
       "capabilities": [],
       "doc_drift_summaries": [],
       "doc_link_suggestions": [],
       "doc_metadata_patches": [],
-      "docs": [],
+      "docs": [
+        "surface_app_journey"
+      ],
       "entities": [],
       "enums": [],
       "id": "surface_app",
       "label": "App",
+      "maintained_seam_candidates": [],
       "merge_hints": {
         "action": "promote_as_candidate_concept",
         "canonicalEntityTarget": null,
         "promoteActors": [],
         "promoteCapabilities": [],
-        "promoteDocs": [],
+        "promoteDocs": [
+          "surface_app_journey"
+        ],
         "promoteEnums": [],
         "promoteRoles": [],
         "promoteScreens": [
@@ -1530,6 +5229,44 @@
         ],
         "promoteShapes": [],
         "promoteWorkflows": []
+      },
+      "operator_summary": {
+        "authAging": {
+          "escalationLevel": "none",
+          "escalationReason": "This bundle is not currently high risk.",
+          "repeatCount": 0
+        },
+        "authClaimHints": [],
+        "authClosureSummary": {
+          "adopted": 0,
+          "deferred": 0,
+          "label": "no auth hints",
+          "reason": "This bundle does not currently carry inferred permission, claim, or ownership hints.",
+          "status": "no_auth_hints",
+          "total": 0,
+          "unresolved": 0
+        },
+        "authOwnershipHints": [],
+        "authPermissionHints": [],
+        "authRoleGuidance": [],
+        "capabilityIds": [],
+        "participants": {
+          "actors": [],
+          "label": "_none_",
+          "roles": []
+        },
+        "primaryConcept": "error",
+        "primaryEntityId": null,
+        "routePaths": [
+          "/error",
+          "/privacy"
+        ],
+        "screenIds": [
+          "error",
+          "privacy"
+        ],
+        "whyThisBundle": "This bundle exists because UI screen/route evidence, doc evidence converges on the same app concept.",
+        "workflowIds": []
       },
       "projection_impacts": [],
       "projection_patches": [],
@@ -1548,6 +5285,7 @@
   ],
   "candidate_model_files": [
     "candidates/reconcile/model/bundles/basket/README.md",
+    "candidates/reconcile/model/bundles/basket/docs/journeys/basket_journey.md",
     "candidates/reconcile/model/bundles/basket/docs/reports/ui-basket.md",
     "candidates/reconcile/model/bundles/basket/docs/reports/ui-basket_checkout.md",
     "candidates/reconcile/model/bundles/basket/docs/reports/ui-basket_success.md",
@@ -1556,6 +5294,7 @@
     "candidates/reconcile/model/bundles/blazor-authenticated-route/README.md",
     "candidates/reconcile/model/bundles/blazor-route-table/README.md",
     "candidates/reconcile/model/bundles/catalog-item/README.md",
+    "candidates/reconcile/model/bundles/catalog-item/docs/journeys/catalog_item_journey.md",
     "candidates/reconcile/model/bundles/catalog-item/docs/reports/ui-catalog_item_admin.md",
     "candidates/reconcile/model/bundles/catalog-item/docs/reports/ui-catalog_item_admin_edit.md",
     "candidates/reconcile/model/bundles/catalog-item/docs/reports/ui-catalog_item_create.md",
@@ -1563,19 +5302,27 @@
     "candidates/reconcile/model/bundles/catalog-item/docs/reports/ui-catalog_item_detail.md",
     "candidates/reconcile/model/bundles/catalog-item/docs/reports/ui-catalog_item_edit.md",
     "candidates/reconcile/model/bundles/catalog-item/docs/reports/ui-catalog_item_list.md",
+    "candidates/reconcile/model/bundles/flow-lifecycle-flow/README.md",
+    "candidates/reconcile/model/bundles/flow-lifecycle-flow/actors/actor_admin.tg",
+    "candidates/reconcile/model/bundles/flow-lifecycle-flow/actors/actor_manager.tg",
+    "candidates/reconcile/model/bundles/flow-lifecycle-flow/actors/actor_user.tg",
+    "candidates/reconcile/model/bundles/flow-lifecycle-flow/docs/workflows/lifecycle-flow.md",
     "candidates/reconcile/model/bundles/item/README.md",
     "candidates/reconcile/model/bundles/item/capabilities/cap_create_item.tg",
     "candidates/reconcile/model/bundles/item/capabilities/cap_get_item.tg",
     "candidates/reconcile/model/bundles/item/capabilities/cap_list_items.tg",
     "candidates/reconcile/model/bundles/item/decisions/dec_item.tg",
+    "candidates/reconcile/model/bundles/item/docs/journeys/item_journey.md",
     "candidates/reconcile/model/bundles/item/docs/reports/ui-catalog_home.md",
     "candidates/reconcile/model/bundles/item/docs/workflows/workflow_item.md",
     "candidates/reconcile/model/bundles/order/README.md",
+    "candidates/reconcile/model/bundles/order/docs/journeys/order_journey.md",
     "candidates/reconcile/model/bundles/order/docs/reports/ui-order_detail.md",
     "candidates/reconcile/model/bundles/order/docs/reports/ui-order_list.md",
     "candidates/reconcile/model/bundles/razor-form-post/README.md",
     "candidates/reconcile/model/bundles/razor-server-navigation/README.md",
     "candidates/reconcile/model/bundles/surface-account/README.md",
+    "candidates/reconcile/model/bundles/surface-account/docs/journeys/surface_account_journey.md",
     "candidates/reconcile/model/bundles/surface-account/docs/reports/ui-account_confirm_email.md",
     "candidates/reconcile/model/bundles/surface-account/docs/reports/ui-account_login.md",
     "candidates/reconcile/model/bundles/surface-account/docs/reports/ui-account_logout.md",
@@ -1594,15 +5341,25 @@
     "candidates/reconcile/model/bundles/surface-account/docs/reports/ui-show_recover_code.md",
     "candidates/reconcile/model/bundles/surface-account/docs/reports/ui-two_factor_authentication.md",
     "candidates/reconcile/model/bundles/surface-app/README.md",
+    "candidates/reconcile/model/bundles/surface-app/docs/journeys/surface_app_journey.md",
     "candidates/reconcile/model/bundles/surface-app/docs/reports/ui-error.md",
     "candidates/reconcile/model/bundles/surface-app/docs/reports/ui-privacy.md"
   ],
   "projection_dependent_items": [],
   "projection_review_groups": [],
   "promoted": [],
+  "promoted_canonical_items": [],
   "refreshed_canonical_files": [],
-  "skipped": [],
+  "skipped": [
+    "docs/glossary/application.md",
+    "docs/glossary/running.md",
+    "docs/glossary/sample.md",
+    "docs/glossary/you.md",
+    "docs/import-report.md",
+    "docs/workflows/lifecycle-flow.md"
+  ],
   "skipped_items": [],
+  "staged_items": [],
   "suppressed_noise_bundles": [],
   "type": "reconcile_report",
   "ui_review_groups": [],
@@ -1626,6 +5383,6 @@
       "reason": "Workflow semantics for item need canonical review before promotion."
     }
   ],
-  "workspace": "historical:topogram/trials/eShopOnWeb/topogram",
+  "workspace": "/tmp/topogram-demo-eshoponweb-main-schzl5/topogram",
   "written_canonical_files": []
 }
