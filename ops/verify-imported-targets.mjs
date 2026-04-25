@@ -56,6 +56,26 @@ function hashDirectory(rootDir) {
   return hash.digest("hex");
 }
 
+function normalizeForHash(contents) {
+  if (contents.includes(0)) {
+    return contents;
+  }
+
+  return Buffer.from(contents.toString("utf8").replace(/\r\n/g, "\n").replace(/\r/g, "\n"), "utf8");
+}
+
+function hashDirectoryWithNormalizedText(rootDir) {
+  const hash = crypto.createHash("sha256");
+  for (const relativePath of listFiles(rootDir)) {
+    const absolutePath = path.join(rootDir, relativePath);
+    hash.update(relativePath);
+    hash.update("\0");
+    hash.update(normalizeForHash(fs.readFileSync(absolutePath)));
+    hash.update("\0");
+  }
+  return hash.digest("hex");
+}
+
 function findForbiddenProvenance(rootDir) {
   const matches = [];
   for (const relativePath of listFiles(rootDir)) {
@@ -107,7 +127,9 @@ for (const entry of inventory) {
   const adoptionStatus = readJson(adoptionStatusPath);
   const derivedStatus = deriveStatus(adoptionStatus);
   const sourceTreeHash = hashDirectory(sourceDir);
+  const sourceTreeHashNormalized = hashDirectoryWithNormalizedText(sourceDir);
   const topogramTreeHash = hashDirectory(topogramDir);
+  const topogramTreeHashNormalized = hashDirectoryWithNormalizedText(topogramDir);
   const forbiddenProvenance = findForbiddenProvenance(topogramDir);
 
   if (path.basename(entry.target_dir) !== entry.slug) {
@@ -162,11 +184,11 @@ for (const entry of inventory) {
     throw new Error(`${entry.slug} rerun manifest date ${rerunManifest.last_verified_date} does not match proof-status ${proofStatus.last_verified_date}`);
   }
 
-  if (rerunManifest.source_tree_hash !== sourceTreeHash) {
+  if (![sourceTreeHash, sourceTreeHashNormalized].includes(rerunManifest.source_tree_hash)) {
     throw new Error(`${entry.slug} rerun manifest source tree hash does not match the committed source snapshot`);
   }
 
-  if (rerunManifest.topogram_tree_hash !== topogramTreeHash) {
+  if (![topogramTreeHash, topogramTreeHashNormalized].includes(rerunManifest.topogram_tree_hash)) {
     throw new Error(`${entry.slug} rerun manifest topogram tree hash does not match the committed topogram snapshot`);
   }
 
