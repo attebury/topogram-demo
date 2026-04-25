@@ -1,5 +1,51 @@
 {
   "bootstrapped_topogram_root": false,
+  "candidate_actors": [
+    {
+      "confidence": "medium",
+      "evidence": [
+        {
+          "participant_pattern_count": 0,
+          "permission_overlap_count": 0,
+          "phrase_count": 25
+        }
+      ],
+      "id_hint": "actor_admin",
+      "inference_summary": "phrases=25, participant_hits=0, permission_overlap=0",
+      "label": "Admin",
+      "provenance": [
+        "README.md"
+      ],
+      "related_capabilities": [],
+      "related_docs": [
+        "lifecycle-flow",
+        "review-workflow"
+      ],
+      "source_kind": "docs"
+    },
+    {
+      "confidence": "medium",
+      "evidence": [
+        {
+          "participant_pattern_count": 0,
+          "permission_overlap_count": 0,
+          "phrase_count": 29
+        }
+      ],
+      "id_hint": "actor_user",
+      "inference_summary": "phrases=29, participant_hits=0, permission_overlap=0",
+      "label": "User",
+      "provenance": [
+        "README.md"
+      ],
+      "related_capabilities": [],
+      "related_docs": [
+        "lifecycle-flow",
+        "review-workflow"
+      ],
+      "source_kind": "docs"
+    }
+  ],
   "candidate_docs": [
     {
       "confidence": "low",
@@ -67,10 +113,16 @@
       "title": "Lifecycle Flow"
     }
   ],
+  "candidate_roles": [],
   "findings": [
     {
-      "file": "historical:topogram/trials/supabase-express-api/README.md",
+      "actor_signals": [
+        "actor_user",
+        "actor_admin"
+      ],
+      "file": "/tmp/topogram-demo-supabase-main-FpTkIi/README.md",
       "relative_path": "README.md",
+      "role_signals": [],
       "term_candidates": [
         "supabase",
         "debugging",
@@ -93,5 +145,5 @@
     "README.md"
   ],
   "type": "scan_docs_report",
-  "workspace": "historical:topogram/trials/supabase-express-api/topogram"
+  "workspace": "/tmp/topogram-demo-supabase-main-FpTkIi/topogram"
 }

@@ -1,0 +1,3077 @@
+{
+  "accepted_items": [
+    "account:capability:cap_create_account",
+    "account:capability:cap_list_accounts",
+    "account:capability:cap_register_account",
+    "account:capability:cap_sign_in_account",
+    "account:capability:cap_update_account_role",
+    "account:capability:cap_update_account_status",
+    "account:decision:dec_account",
+    "account:doc:account_journey",
+    "account:doc:workflow_account",
+    "account:entity:entity_account",
+    "account:shape:shape_input_register_account",
+    "account:shape:shape_input_sign_in_account",
+    "account:shape:shape_output_list_accounts",
+    "account:shape:shape_output_register_account",
+    "account:shape:shape_output_sign_in_account",
+    "audit-log:capability:cap_get_audit_log_stats",
+    "audit-log:capability:cap_list_audit_logs",
+    "audit-log:decision:dec_audit-log",
+    "audit-log:doc:audit_log_journey",
+    "audit-log:doc:workflow_audit-log",
+    "audit-log:entity:entity_audit-log",
+    "audit-log:shape:shape_output_get_audit_log_stats",
+    "audit-log:shape:shape_output_list_audit_logs",
+    "flow-lifecycle-flow:actor:actor_admin",
+    "flow-lifecycle-flow:actor:actor_user",
+    "flow-lifecycle-flow:doc:lifecycle-flow",
+    "profile:capability:cap_get_profile",
+    "profile:capability:cap_update_profile",
+    "profile:decision:dec_profile",
+    "profile:doc:profile_journey",
+    "profile:doc:workflow_profile",
+    "profile:entity:entity_profile",
+    "profile:shape:shape_input_update_profile",
+    "profile:shape:shape_output_get_profile",
+    "workspace:capability:cap_create_workspace",
+    "workspace:capability:cap_delete_workspace",
+    "workspace:capability:cap_get_workspace",
+    "workspace:capability:cap_list_workspaces",
+    "workspace:capability:cap_update_workspace",
+    "workspace:decision:dec_workspace",
+    "workspace:doc:workflow_workspace",
+    "workspace:doc:workspace_journey",
+    "workspace:entity:entity_workspace",
+    "workspace:shape:shape_output_create_workspace",
+    "workspace:shape:shape_output_get_workspace",
+    "workspace:shape:shape_output_list_workspaces",
+    "workspace-membership:capability:cap_create_workspace_membership",
+    "workspace-membership:capability:cap_delete_workspace_membership",
+    "workspace-membership:capability:cap_list_workspace_memberships",
+    "workspace-membership:capability:cap_update_workspace_membership_role",
+    "workspace-membership:decision:dec_workspace-membership",
+    "workspace-membership:doc:workflow_workspace-membership",
+    "workspace-membership:doc:workspace_membership_journey",
+    "workspace-membership:entity:entity_workspace-membership",
+    "workspace-membership:shape:shape_input_create_workspace_membership",
+    "workspace-membership-role:enum:workspace-membership_role"
+  ],
+  "adoption_state_vocabulary": [
+    "accept",
+    "map",
+    "customize",
+    "stage",
+    "reject"
+  ],
+  "approved_review_groups": [
+    "workflow_review:account",
+    "workflow_review:audit-log",
+    "workflow_review:profile",
+    "workflow_review:workspace",
+    "workflow_review:workspace-membership"
+  ],
+  "imported_proposal_surfaces": [
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "account",
+      "canonical_rel_path": "capabilities/cap-create-account.tg",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "account:capability:cap_create_account",
+      "item": "cap_create_account",
+      "kind": "capability",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "account",
+        "canonical_rel_path": "capabilities/cap-create-account.tg",
+        "source_path": "candidates/reconcile/model/bundles/account/capabilities/cap_create_account.tg"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "review_required",
+        "reasons": [
+          "proposal_modeled_surface"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/account/capabilities/cap_create_account.tg",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "capability",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "account",
+      "canonical_rel_path": "capabilities/cap-list-accounts.tg",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "account:capability:cap_list_accounts",
+      "item": "cap_list_accounts",
+      "kind": "capability",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "account",
+        "canonical_rel_path": "capabilities/cap-list-accounts.tg",
+        "source_path": "candidates/reconcile/model/bundles/account/capabilities/cap_list_accounts.tg"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "review_required",
+        "reasons": [
+          "proposal_modeled_surface"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/account/capabilities/cap_list_accounts.tg",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "capability",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "account",
+      "canonical_rel_path": "capabilities/cap-register-account.tg",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "account:capability:cap_register_account",
+      "item": "cap_register_account",
+      "kind": "capability",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "account",
+        "canonical_rel_path": "capabilities/cap-register-account.tg",
+        "source_path": "candidates/reconcile/model/bundles/account/capabilities/cap_register_account.tg"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "review_required",
+        "reasons": [
+          "proposal_modeled_surface"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/account/capabilities/cap_register_account.tg",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "capability",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "account",
+      "canonical_rel_path": "capabilities/cap-sign-in-account.tg",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "account:capability:cap_sign_in_account",
+      "item": "cap_sign_in_account",
+      "kind": "capability",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "account",
+        "canonical_rel_path": "capabilities/cap-sign-in-account.tg",
+        "source_path": "candidates/reconcile/model/bundles/account/capabilities/cap_sign_in_account.tg"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "review_required",
+        "reasons": [
+          "proposal_modeled_surface"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/account/capabilities/cap_sign_in_account.tg",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "capability",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "account",
+      "canonical_rel_path": "capabilities/cap-update-account-role.tg",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "account:capability:cap_update_account_role",
+      "item": "cap_update_account_role",
+      "kind": "capability",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "account",
+        "canonical_rel_path": "capabilities/cap-update-account-role.tg",
+        "source_path": "candidates/reconcile/model/bundles/account/capabilities/cap_update_account_role.tg"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "review_required",
+        "reasons": [
+          "proposal_modeled_surface"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/account/capabilities/cap_update_account_role.tg",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "capability",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "account",
+      "canonical_rel_path": "capabilities/cap-update-account-status.tg",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "account:capability:cap_update_account_status",
+      "item": "cap_update_account_status",
+      "kind": "capability",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "account",
+        "canonical_rel_path": "capabilities/cap-update-account-status.tg",
+        "source_path": "candidates/reconcile/model/bundles/account/capabilities/cap_update_account_status.tg"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "review_required",
+        "reasons": [
+          "proposal_modeled_surface"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/account/capabilities/cap_update_account_status.tg",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "capability",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "account",
+      "canonical_rel_path": "decisions/decision-account.tg",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "account:decision:dec_account",
+      "item": "dec_account",
+      "kind": "decision",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [
+        {
+          "id": "workflow_review:account",
+          "reason": "Workflow semantics for account need canonical review before promotion.",
+          "type": "workflow_review"
+        }
+      ],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "account",
+        "canonical_rel_path": "decisions/decision-account.tg",
+        "source_path": "candidates/reconcile/model/bundles/account/decisions/dec_account.tg"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [
+          {
+            "id": "workflow_review:account",
+            "reason": "Workflow semantics for account need canonical review before promotion.",
+            "type": "workflow_review"
+          }
+        ],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "manual_decision",
+        "reasons": [
+          "proposal_has_blocking_dependencies"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/account/decisions/dec_account.tg",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "workflows",
+      "ui_impacts": [],
+      "workflow_impacts": [
+        {
+          "items": [
+            "workflow_account"
+          ],
+          "kind": "workflow",
+          "reason": "Workflow semantics for account need canonical review before promotion.",
+          "review_group_id": "workflow_review:account"
+        }
+      ]
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "account",
+      "canonical_rel_path": "docs/journeys/account_journey.md",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "account:doc:account_journey",
+      "item": "account_journey",
+      "kind": "doc",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "account",
+        "canonical_rel_path": "docs/journeys/account_journey.md",
+        "source_path": "candidates/reconcile/model/bundles/account/docs/journeys/account_journey.md"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "review_required",
+        "reasons": [
+          "proposal_doc_surface"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/account/docs/journeys/account_journey.md",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "docs",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "account",
+      "canonical_rel_path": "docs/workflows/workflow_account.md",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "account:doc:workflow_account",
+      "item": "workflow_account",
+      "kind": "doc",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [
+        {
+          "id": "workflow_review:account",
+          "reason": "Workflow semantics for account need canonical review before promotion.",
+          "type": "workflow_review"
+        }
+      ],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "account",
+        "canonical_rel_path": "docs/workflows/workflow_account.md",
+        "source_path": "candidates/reconcile/model/bundles/account/docs/workflows/workflow_account.md"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [
+          {
+            "id": "workflow_review:account",
+            "reason": "Workflow semantics for account need canonical review before promotion.",
+            "type": "workflow_review"
+          }
+        ],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "manual_decision",
+        "reasons": [
+          "proposal_has_blocking_dependencies"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/account/docs/workflows/workflow_account.md",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "workflows",
+      "ui_impacts": [],
+      "workflow_impacts": [
+        {
+          "items": [
+            "workflow_account"
+          ],
+          "kind": "workflow",
+          "reason": "Workflow semantics for account need canonical review before promotion.",
+          "review_group_id": "workflow_review:account"
+        }
+      ]
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "account",
+      "canonical_rel_path": "entities/entity-account.tg",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "account:entity:entity_account",
+      "item": "entity_account",
+      "kind": "entity",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "account",
+        "canonical_rel_path": "entities/entity-account.tg",
+        "source_path": "candidates/reconcile/model/bundles/account/entities/entity_account.tg"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "review_required",
+        "reasons": [
+          "proposal_modeled_surface"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/account/entities/entity_account.tg",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "entity",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "account",
+      "canonical_rel_path": "shapes/shape-input-register-account.tg",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "account:shape:shape_input_register_account",
+      "item": "shape_input_register_account",
+      "kind": "shape",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "account",
+        "canonical_rel_path": "shapes/shape-input-register-account.tg",
+        "source_path": "candidates/reconcile/model/bundles/account/shapes/shape_input_register_account.tg"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "review_required",
+        "reasons": [
+          "proposal_modeled_surface"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/account/shapes/shape_input_register_account.tg",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "shape",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "account",
+      "canonical_rel_path": "shapes/shape-input-sign-in-account.tg",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "account:shape:shape_input_sign_in_account",
+      "item": "shape_input_sign_in_account",
+      "kind": "shape",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "account",
+        "canonical_rel_path": "shapes/shape-input-sign-in-account.tg",
+        "source_path": "candidates/reconcile/model/bundles/account/shapes/shape_input_sign_in_account.tg"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "review_required",
+        "reasons": [
+          "proposal_modeled_surface"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/account/shapes/shape_input_sign_in_account.tg",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "shape",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "account",
+      "canonical_rel_path": "shapes/shape-output-list-accounts.tg",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "account:shape:shape_output_list_accounts",
+      "item": "shape_output_list_accounts",
+      "kind": "shape",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "account",
+        "canonical_rel_path": "shapes/shape-output-list-accounts.tg",
+        "source_path": "candidates/reconcile/model/bundles/account/shapes/shape_output_list_accounts.tg"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "review_required",
+        "reasons": [
+          "proposal_modeled_surface"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/account/shapes/shape_output_list_accounts.tg",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "shape",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "account",
+      "canonical_rel_path": "shapes/shape-output-register-account.tg",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "account:shape:shape_output_register_account",
+      "item": "shape_output_register_account",
+      "kind": "shape",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "account",
+        "canonical_rel_path": "shapes/shape-output-register-account.tg",
+        "source_path": "candidates/reconcile/model/bundles/account/shapes/shape_output_register_account.tg"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "review_required",
+        "reasons": [
+          "proposal_modeled_surface"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/account/shapes/shape_output_register_account.tg",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "shape",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "account",
+      "canonical_rel_path": "shapes/shape-output-sign-in-account.tg",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "account:shape:shape_output_sign_in_account",
+      "item": "shape_output_sign_in_account",
+      "kind": "shape",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "account",
+        "canonical_rel_path": "shapes/shape-output-sign-in-account.tg",
+        "source_path": "candidates/reconcile/model/bundles/account/shapes/shape_output_sign_in_account.tg"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "review_required",
+        "reasons": [
+          "proposal_modeled_surface"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/account/shapes/shape_output_sign_in_account.tg",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "shape",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "audit-log",
+      "canonical_rel_path": "capabilities/cap-get-audit-log-stats.tg",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "audit-log:capability:cap_get_audit_log_stats",
+      "item": "cap_get_audit_log_stats",
+      "kind": "capability",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "audit-log",
+        "canonical_rel_path": "capabilities/cap-get-audit-log-stats.tg",
+        "source_path": "candidates/reconcile/model/bundles/audit-log/capabilities/cap_get_audit_log_stats.tg"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "review_required",
+        "reasons": [
+          "proposal_modeled_surface"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/audit-log/capabilities/cap_get_audit_log_stats.tg",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "capability",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "audit-log",
+      "canonical_rel_path": "capabilities/cap-list-audit-logs.tg",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "audit-log:capability:cap_list_audit_logs",
+      "item": "cap_list_audit_logs",
+      "kind": "capability",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "audit-log",
+        "canonical_rel_path": "capabilities/cap-list-audit-logs.tg",
+        "source_path": "candidates/reconcile/model/bundles/audit-log/capabilities/cap_list_audit_logs.tg"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "review_required",
+        "reasons": [
+          "proposal_modeled_surface"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/audit-log/capabilities/cap_list_audit_logs.tg",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "capability",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "audit-log",
+      "canonical_rel_path": "decisions/decision-audit-log.tg",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "audit-log:decision:dec_audit-log",
+      "item": "dec_audit-log",
+      "kind": "decision",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [
+        {
+          "id": "workflow_review:audit-log",
+          "reason": "Workflow semantics for audit-log need canonical review before promotion.",
+          "type": "workflow_review"
+        }
+      ],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "audit-log",
+        "canonical_rel_path": "decisions/decision-audit-log.tg",
+        "source_path": "candidates/reconcile/model/bundles/audit-log/decisions/dec_audit-log.tg"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [
+          {
+            "id": "workflow_review:audit-log",
+            "reason": "Workflow semantics for audit-log need canonical review before promotion.",
+            "type": "workflow_review"
+          }
+        ],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "manual_decision",
+        "reasons": [
+          "proposal_has_blocking_dependencies"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/audit-log/decisions/dec_audit-log.tg",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "workflows",
+      "ui_impacts": [],
+      "workflow_impacts": [
+        {
+          "items": [
+            "workflow_audit-log"
+          ],
+          "kind": "workflow",
+          "reason": "Workflow semantics for audit-log need canonical review before promotion.",
+          "review_group_id": "workflow_review:audit-log"
+        }
+      ]
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "audit-log",
+      "canonical_rel_path": "docs/journeys/audit_log_journey.md",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "audit-log:doc:audit_log_journey",
+      "item": "audit_log_journey",
+      "kind": "doc",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "audit-log",
+        "canonical_rel_path": "docs/journeys/audit_log_journey.md",
+        "source_path": "candidates/reconcile/model/bundles/audit-log/docs/journeys/audit_log_journey.md"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "review_required",
+        "reasons": [
+          "proposal_doc_surface"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/audit-log/docs/journeys/audit_log_journey.md",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "docs",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "audit-log",
+      "canonical_rel_path": "docs/workflows/workflow_audit-log.md",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "audit-log:doc:workflow_audit-log",
+      "item": "workflow_audit-log",
+      "kind": "doc",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [
+        {
+          "id": "workflow_review:audit-log",
+          "reason": "Workflow semantics for audit-log need canonical review before promotion.",
+          "type": "workflow_review"
+        }
+      ],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "audit-log",
+        "canonical_rel_path": "docs/workflows/workflow_audit-log.md",
+        "source_path": "candidates/reconcile/model/bundles/audit-log/docs/workflows/workflow_audit-log.md"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [
+          {
+            "id": "workflow_review:audit-log",
+            "reason": "Workflow semantics for audit-log need canonical review before promotion.",
+            "type": "workflow_review"
+          }
+        ],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "manual_decision",
+        "reasons": [
+          "proposal_has_blocking_dependencies"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/audit-log/docs/workflows/workflow_audit-log.md",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "workflows",
+      "ui_impacts": [],
+      "workflow_impacts": [
+        {
+          "items": [
+            "workflow_audit-log"
+          ],
+          "kind": "workflow",
+          "reason": "Workflow semantics for audit-log need canonical review before promotion.",
+          "review_group_id": "workflow_review:audit-log"
+        }
+      ]
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "audit-log",
+      "canonical_rel_path": "entities/entity-audit-log.tg",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "audit-log:entity:entity_audit-log",
+      "item": "entity_audit-log",
+      "kind": "entity",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "audit-log",
+        "canonical_rel_path": "entities/entity-audit-log.tg",
+        "source_path": "candidates/reconcile/model/bundles/audit-log/entities/entity_audit-log.tg"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "review_required",
+        "reasons": [
+          "proposal_modeled_surface"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/audit-log/entities/entity_audit-log.tg",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "entity",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "audit-log",
+      "canonical_rel_path": "shapes/shape-output-get-audit-log-stats.tg",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "audit-log:shape:shape_output_get_audit_log_stats",
+      "item": "shape_output_get_audit_log_stats",
+      "kind": "shape",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "audit-log",
+        "canonical_rel_path": "shapes/shape-output-get-audit-log-stats.tg",
+        "source_path": "candidates/reconcile/model/bundles/audit-log/shapes/shape_output_get_audit_log_stats.tg"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "review_required",
+        "reasons": [
+          "proposal_modeled_surface"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/audit-log/shapes/shape_output_get_audit_log_stats.tg",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "shape",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "audit-log",
+      "canonical_rel_path": "shapes/shape-output-list-audit-logs.tg",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "audit-log:shape:shape_output_list_audit_logs",
+      "item": "shape_output_list_audit_logs",
+      "kind": "shape",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "audit-log",
+        "canonical_rel_path": "shapes/shape-output-list-audit-logs.tg",
+        "source_path": "candidates/reconcile/model/bundles/audit-log/shapes/shape_output_list_audit_logs.tg"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "review_required",
+        "reasons": [
+          "proposal_modeled_surface"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/audit-log/shapes/shape_output_list_audit_logs.tg",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "shape",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "flow-lifecycle-flow",
+      "canonical_rel_path": "actors/actor-admin.tg",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "flow-lifecycle-flow:actor:actor_admin",
+      "item": "actor_admin",
+      "kind": "actor",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "flow-lifecycle-flow",
+        "canonical_rel_path": "actors/actor-admin.tg",
+        "source_path": "candidates/reconcile/model/bundles/flow-lifecycle-flow/actors/actor_admin.tg"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [
+          "lifecycle-flow",
+          "review-workflow"
+        ],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "safe",
+        "reasons": [
+          "proposal_metadata_only"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/flow-lifecycle-flow/actors/actor_admin.tg",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "actor",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "flow-lifecycle-flow",
+      "canonical_rel_path": "actors/actor-user.tg",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "flow-lifecycle-flow:actor:actor_user",
+      "item": "actor_user",
+      "kind": "actor",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "flow-lifecycle-flow",
+        "canonical_rel_path": "actors/actor-user.tg",
+        "source_path": "candidates/reconcile/model/bundles/flow-lifecycle-flow/actors/actor_user.tg"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [
+          "lifecycle-flow",
+          "review-workflow"
+        ],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "safe",
+        "reasons": [
+          "proposal_metadata_only"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/flow-lifecycle-flow/actors/actor_user.tg",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "actor",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "flow-lifecycle-flow",
+      "canonical_rel_path": "docs/workflows/lifecycle-flow.md",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "flow-lifecycle-flow:doc:lifecycle-flow",
+      "item": "lifecycle-flow",
+      "kind": "doc",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "flow-lifecycle-flow",
+        "canonical_rel_path": "docs/workflows/lifecycle-flow.md",
+        "source_path": "candidates/reconcile/model/bundles/flow-lifecycle-flow/docs/workflows/lifecycle-flow.md"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "safe",
+        "reasons": [
+          "proposal_metadata_only"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/flow-lifecycle-flow/docs/workflows/lifecycle-flow.md",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "workflows",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "profile",
+      "canonical_rel_path": "capabilities/cap-get-profile.tg",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "profile:capability:cap_get_profile",
+      "item": "cap_get_profile",
+      "kind": "capability",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "profile",
+        "canonical_rel_path": "capabilities/cap-get-profile.tg",
+        "source_path": "candidates/reconcile/model/bundles/profile/capabilities/cap_get_profile.tg"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "review_required",
+        "reasons": [
+          "proposal_modeled_surface"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/profile/capabilities/cap_get_profile.tg",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "capability",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "profile",
+      "canonical_rel_path": "capabilities/cap-update-profile.tg",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "profile:capability:cap_update_profile",
+      "item": "cap_update_profile",
+      "kind": "capability",
+      "maintained_seam_candidates": [
+        {
+          "allowed_change_classes": [
+            "review_required",
+            "safe"
+          ],
+          "confidence": 0.62,
+          "drift_signals": [
+            "emitted_contract_changed",
+            "workflow_state_changed"
+          ],
+          "emitted_dependencies": [
+            "cap_update_profile",
+            "workflow_profile"
+          ],
+          "kind": "route_glue",
+          "label": "workspace profile route update handling",
+          "maintained_modules": [
+            "src/handlers/profiles/profiles.methods.ts"
+          ],
+          "match_reasons": [
+            "path token corroboration: `profile`",
+            "proposal/seam kind alignment: `capability` -> `route_glue`",
+            "semantic overlap: `cap_update_profile`"
+          ],
+          "output_id": "output_src",
+          "ownership_class": "contract_bound",
+          "seam_id": "seam_workspace_profile_route_update_handling",
+          "status": "review_required"
+        }
+      ],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "profile",
+        "canonical_rel_path": "capabilities/cap-update-profile.tg",
+        "source_path": "candidates/reconcile/model/bundles/profile/capabilities/cap_update_profile.tg"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "review_required",
+        "reasons": [
+          "proposal_modeled_surface"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/profile/capabilities/cap_update_profile.tg",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "capability",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "profile",
+      "canonical_rel_path": "decisions/decision-profile.tg",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "profile:decision:dec_profile",
+      "item": "dec_profile",
+      "kind": "decision",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [
+        {
+          "id": "workflow_review:profile",
+          "reason": "Workflow semantics for profile need canonical review before promotion.",
+          "type": "workflow_review"
+        }
+      ],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "profile",
+        "canonical_rel_path": "decisions/decision-profile.tg",
+        "source_path": "candidates/reconcile/model/bundles/profile/decisions/dec_profile.tg"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [
+          {
+            "id": "workflow_review:profile",
+            "reason": "Workflow semantics for profile need canonical review before promotion.",
+            "type": "workflow_review"
+          }
+        ],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "manual_decision",
+        "reasons": [
+          "proposal_has_blocking_dependencies"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/profile/decisions/dec_profile.tg",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "workflows",
+      "ui_impacts": [],
+      "workflow_impacts": [
+        {
+          "items": [
+            "workflow_profile"
+          ],
+          "kind": "workflow",
+          "reason": "Workflow semantics for profile need canonical review before promotion.",
+          "review_group_id": "workflow_review:profile"
+        }
+      ]
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "profile",
+      "canonical_rel_path": "docs/journeys/profile_journey.md",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "profile:doc:profile_journey",
+      "item": "profile_journey",
+      "kind": "doc",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "profile",
+        "canonical_rel_path": "docs/journeys/profile_journey.md",
+        "source_path": "candidates/reconcile/model/bundles/profile/docs/journeys/profile_journey.md"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "review_required",
+        "reasons": [
+          "proposal_doc_surface"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/profile/docs/journeys/profile_journey.md",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "docs",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "profile",
+      "canonical_rel_path": "docs/workflows/workflow_profile.md",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "profile:doc:workflow_profile",
+      "item": "workflow_profile",
+      "kind": "doc",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [
+        {
+          "id": "workflow_review:profile",
+          "reason": "Workflow semantics for profile need canonical review before promotion.",
+          "type": "workflow_review"
+        }
+      ],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "profile",
+        "canonical_rel_path": "docs/workflows/workflow_profile.md",
+        "source_path": "candidates/reconcile/model/bundles/profile/docs/workflows/workflow_profile.md"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [
+          {
+            "id": "workflow_review:profile",
+            "reason": "Workflow semantics for profile need canonical review before promotion.",
+            "type": "workflow_review"
+          }
+        ],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "manual_decision",
+        "reasons": [
+          "proposal_has_blocking_dependencies"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/profile/docs/workflows/workflow_profile.md",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "workflows",
+      "ui_impacts": [],
+      "workflow_impacts": [
+        {
+          "items": [
+            "workflow_profile"
+          ],
+          "kind": "workflow",
+          "reason": "Workflow semantics for profile need canonical review before promotion.",
+          "review_group_id": "workflow_review:profile"
+        }
+      ]
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "profile",
+      "canonical_rel_path": "entities/entity-profile.tg",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "profile:entity:entity_profile",
+      "item": "entity_profile",
+      "kind": "entity",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "profile",
+        "canonical_rel_path": "entities/entity-profile.tg",
+        "source_path": "candidates/reconcile/model/bundles/profile/entities/entity_profile.tg"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "review_required",
+        "reasons": [
+          "proposal_modeled_surface"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/profile/entities/entity_profile.tg",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "entity",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "profile",
+      "canonical_rel_path": "shapes/shape-input-update-profile.tg",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "profile:shape:shape_input_update_profile",
+      "item": "shape_input_update_profile",
+      "kind": "shape",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "profile",
+        "canonical_rel_path": "shapes/shape-input-update-profile.tg",
+        "source_path": "candidates/reconcile/model/bundles/profile/shapes/shape_input_update_profile.tg"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "review_required",
+        "reasons": [
+          "proposal_modeled_surface"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/profile/shapes/shape_input_update_profile.tg",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "shape",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "profile",
+      "canonical_rel_path": "shapes/shape-output-get-profile.tg",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "profile:shape:shape_output_get_profile",
+      "item": "shape_output_get_profile",
+      "kind": "shape",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "profile",
+        "canonical_rel_path": "shapes/shape-output-get-profile.tg",
+        "source_path": "candidates/reconcile/model/bundles/profile/shapes/shape_output_get_profile.tg"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "review_required",
+        "reasons": [
+          "proposal_modeled_surface"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/profile/shapes/shape_output_get_profile.tg",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "shape",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "workspace",
+      "canonical_rel_path": "capabilities/cap-create-workspace.tg",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "workspace:capability:cap_create_workspace",
+      "item": "cap_create_workspace",
+      "kind": "capability",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "workspace",
+        "canonical_rel_path": "capabilities/cap-create-workspace.tg",
+        "source_path": "candidates/reconcile/model/bundles/workspace/capabilities/cap_create_workspace.tg"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "review_required",
+        "reasons": [
+          "proposal_modeled_surface"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/workspace/capabilities/cap_create_workspace.tg",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "capability",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "workspace",
+      "canonical_rel_path": "capabilities/cap-delete-workspace.tg",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "workspace:capability:cap_delete_workspace",
+      "item": "cap_delete_workspace",
+      "kind": "capability",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "workspace",
+        "canonical_rel_path": "capabilities/cap-delete-workspace.tg",
+        "source_path": "candidates/reconcile/model/bundles/workspace/capabilities/cap_delete_workspace.tg"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "review_required",
+        "reasons": [
+          "proposal_modeled_surface"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/workspace/capabilities/cap_delete_workspace.tg",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "capability",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "workspace",
+      "canonical_rel_path": "capabilities/cap-get-workspace.tg",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "workspace:capability:cap_get_workspace",
+      "item": "cap_get_workspace",
+      "kind": "capability",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "workspace",
+        "canonical_rel_path": "capabilities/cap-get-workspace.tg",
+        "source_path": "candidates/reconcile/model/bundles/workspace/capabilities/cap_get_workspace.tg"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "review_required",
+        "reasons": [
+          "proposal_modeled_surface"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/workspace/capabilities/cap_get_workspace.tg",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "capability",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "workspace",
+      "canonical_rel_path": "capabilities/cap-list-workspaces.tg",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "workspace:capability:cap_list_workspaces",
+      "item": "cap_list_workspaces",
+      "kind": "capability",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "workspace",
+        "canonical_rel_path": "capabilities/cap-list-workspaces.tg",
+        "source_path": "candidates/reconcile/model/bundles/workspace/capabilities/cap_list_workspaces.tg"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "review_required",
+        "reasons": [
+          "proposal_modeled_surface"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/workspace/capabilities/cap_list_workspaces.tg",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "capability",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "workspace",
+      "canonical_rel_path": "capabilities/cap-update-workspace.tg",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "workspace:capability:cap_update_workspace",
+      "item": "cap_update_workspace",
+      "kind": "capability",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "workspace",
+        "canonical_rel_path": "capabilities/cap-update-workspace.tg",
+        "source_path": "candidates/reconcile/model/bundles/workspace/capabilities/cap_update_workspace.tg"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "review_required",
+        "reasons": [
+          "proposal_modeled_surface"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/workspace/capabilities/cap_update_workspace.tg",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "capability",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "workspace",
+      "canonical_rel_path": "decisions/decision-workspace.tg",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "workspace:decision:dec_workspace",
+      "item": "dec_workspace",
+      "kind": "decision",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [
+        {
+          "id": "workflow_review:workspace",
+          "reason": "Workflow semantics for workspace need canonical review before promotion.",
+          "type": "workflow_review"
+        }
+      ],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "workspace",
+        "canonical_rel_path": "decisions/decision-workspace.tg",
+        "source_path": "candidates/reconcile/model/bundles/workspace/decisions/dec_workspace.tg"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [
+          {
+            "id": "workflow_review:workspace",
+            "reason": "Workflow semantics for workspace need canonical review before promotion.",
+            "type": "workflow_review"
+          }
+        ],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "manual_decision",
+        "reasons": [
+          "proposal_has_blocking_dependencies"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/workspace/decisions/dec_workspace.tg",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "workflows",
+      "ui_impacts": [],
+      "workflow_impacts": [
+        {
+          "items": [
+            "workflow_workspace"
+          ],
+          "kind": "workflow",
+          "reason": "Workflow semantics for workspace need canonical review before promotion.",
+          "review_group_id": "workflow_review:workspace"
+        }
+      ]
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "workspace",
+      "canonical_rel_path": "docs/workflows/workflow_workspace.md",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "workspace:doc:workflow_workspace",
+      "item": "workflow_workspace",
+      "kind": "doc",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [
+        {
+          "id": "workflow_review:workspace",
+          "reason": "Workflow semantics for workspace need canonical review before promotion.",
+          "type": "workflow_review"
+        }
+      ],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "workspace",
+        "canonical_rel_path": "docs/workflows/workflow_workspace.md",
+        "source_path": "candidates/reconcile/model/bundles/workspace/docs/workflows/workflow_workspace.md"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [
+          {
+            "id": "workflow_review:workspace",
+            "reason": "Workflow semantics for workspace need canonical review before promotion.",
+            "type": "workflow_review"
+          }
+        ],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "manual_decision",
+        "reasons": [
+          "proposal_has_blocking_dependencies"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/workspace/docs/workflows/workflow_workspace.md",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "workflows",
+      "ui_impacts": [],
+      "workflow_impacts": [
+        {
+          "items": [
+            "workflow_workspace"
+          ],
+          "kind": "workflow",
+          "reason": "Workflow semantics for workspace need canonical review before promotion.",
+          "review_group_id": "workflow_review:workspace"
+        }
+      ]
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "workspace",
+      "canonical_rel_path": "docs/journeys/workspace_journey.md",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "workspace:doc:workspace_journey",
+      "item": "workspace_journey",
+      "kind": "doc",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "workspace",
+        "canonical_rel_path": "docs/journeys/workspace_journey.md",
+        "source_path": "candidates/reconcile/model/bundles/workspace/docs/journeys/workspace_journey.md"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "review_required",
+        "reasons": [
+          "proposal_doc_surface"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/workspace/docs/journeys/workspace_journey.md",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "docs",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "workspace",
+      "canonical_rel_path": "entities/entity-workspace.tg",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "workspace:entity:entity_workspace",
+      "item": "entity_workspace",
+      "kind": "entity",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "workspace",
+        "canonical_rel_path": "entities/entity-workspace.tg",
+        "source_path": "candidates/reconcile/model/bundles/workspace/entities/entity_workspace.tg"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "review_required",
+        "reasons": [
+          "proposal_modeled_surface"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/workspace/entities/entity_workspace.tg",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "entity",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "workspace",
+      "canonical_rel_path": "shapes/shape-output-create-workspace.tg",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "workspace:shape:shape_output_create_workspace",
+      "item": "shape_output_create_workspace",
+      "kind": "shape",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "workspace",
+        "canonical_rel_path": "shapes/shape-output-create-workspace.tg",
+        "source_path": "candidates/reconcile/model/bundles/workspace/shapes/shape_output_create_workspace.tg"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "review_required",
+        "reasons": [
+          "proposal_modeled_surface"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/workspace/shapes/shape_output_create_workspace.tg",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "shape",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "workspace",
+      "canonical_rel_path": "shapes/shape-output-get-workspace.tg",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "workspace:shape:shape_output_get_workspace",
+      "item": "shape_output_get_workspace",
+      "kind": "shape",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "workspace",
+        "canonical_rel_path": "shapes/shape-output-get-workspace.tg",
+        "source_path": "candidates/reconcile/model/bundles/workspace/shapes/shape_output_get_workspace.tg"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "review_required",
+        "reasons": [
+          "proposal_modeled_surface"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/workspace/shapes/shape_output_get_workspace.tg",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "shape",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "workspace",
+      "canonical_rel_path": "shapes/shape-output-list-workspaces.tg",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "workspace:shape:shape_output_list_workspaces",
+      "item": "shape_output_list_workspaces",
+      "kind": "shape",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "workspace",
+        "canonical_rel_path": "shapes/shape-output-list-workspaces.tg",
+        "source_path": "candidates/reconcile/model/bundles/workspace/shapes/shape_output_list_workspaces.tg"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "review_required",
+        "reasons": [
+          "proposal_modeled_surface"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/workspace/shapes/shape_output_list_workspaces.tg",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "shape",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "workspace-membership",
+      "canonical_rel_path": "capabilities/cap-create-workspace-membership.tg",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "workspace-membership:capability:cap_create_workspace_membership",
+      "item": "cap_create_workspace_membership",
+      "kind": "capability",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "workspace-membership",
+        "canonical_rel_path": "capabilities/cap-create-workspace-membership.tg",
+        "source_path": "candidates/reconcile/model/bundles/workspace-membership/capabilities/cap_create_workspace_membership.tg"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "review_required",
+        "reasons": [
+          "proposal_modeled_surface"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/workspace-membership/capabilities/cap_create_workspace_membership.tg",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "capability",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "workspace-membership",
+      "canonical_rel_path": "capabilities/cap-delete-workspace-membership.tg",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "workspace-membership:capability:cap_delete_workspace_membership",
+      "item": "cap_delete_workspace_membership",
+      "kind": "capability",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "workspace-membership",
+        "canonical_rel_path": "capabilities/cap-delete-workspace-membership.tg",
+        "source_path": "candidates/reconcile/model/bundles/workspace-membership/capabilities/cap_delete_workspace_membership.tg"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "review_required",
+        "reasons": [
+          "proposal_modeled_surface"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/workspace-membership/capabilities/cap_delete_workspace_membership.tg",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "capability",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "workspace-membership",
+      "canonical_rel_path": "capabilities/cap-list-workspace-memberships.tg",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "workspace-membership:capability:cap_list_workspace_memberships",
+      "item": "cap_list_workspace_memberships",
+      "kind": "capability",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "workspace-membership",
+        "canonical_rel_path": "capabilities/cap-list-workspace-memberships.tg",
+        "source_path": "candidates/reconcile/model/bundles/workspace-membership/capabilities/cap_list_workspace_memberships.tg"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "review_required",
+        "reasons": [
+          "proposal_modeled_surface"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/workspace-membership/capabilities/cap_list_workspace_memberships.tg",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "capability",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "workspace-membership",
+      "canonical_rel_path": "capabilities/cap-update-workspace-membership-role.tg",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "workspace-membership:capability:cap_update_workspace_membership_role",
+      "item": "cap_update_workspace_membership_role",
+      "kind": "capability",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "workspace-membership",
+        "canonical_rel_path": "capabilities/cap-update-workspace-membership-role.tg",
+        "source_path": "candidates/reconcile/model/bundles/workspace-membership/capabilities/cap_update_workspace_membership_role.tg"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "review_required",
+        "reasons": [
+          "proposal_modeled_surface"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/workspace-membership/capabilities/cap_update_workspace_membership_role.tg",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "capability",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "workspace-membership",
+      "canonical_rel_path": "decisions/decision-workspace-membership.tg",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "workspace-membership:decision:dec_workspace-membership",
+      "item": "dec_workspace-membership",
+      "kind": "decision",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [
+        {
+          "id": "workflow_review:workspace-membership",
+          "reason": "Workflow semantics for workspace-membership need canonical review before promotion.",
+          "type": "workflow_review"
+        }
+      ],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "workspace-membership",
+        "canonical_rel_path": "decisions/decision-workspace-membership.tg",
+        "source_path": "candidates/reconcile/model/bundles/workspace-membership/decisions/dec_workspace-membership.tg"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [
+          {
+            "id": "workflow_review:workspace-membership",
+            "reason": "Workflow semantics for workspace-membership need canonical review before promotion.",
+            "type": "workflow_review"
+          }
+        ],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "manual_decision",
+        "reasons": [
+          "proposal_has_blocking_dependencies"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/workspace-membership/decisions/dec_workspace-membership.tg",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "workflows",
+      "ui_impacts": [],
+      "workflow_impacts": [
+        {
+          "items": [
+            "workflow_workspace-membership"
+          ],
+          "kind": "workflow",
+          "reason": "Workflow semantics for workspace-membership need canonical review before promotion.",
+          "review_group_id": "workflow_review:workspace-membership"
+        }
+      ]
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "workspace-membership",
+      "canonical_rel_path": "docs/workflows/workflow_workspace-membership.md",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "workspace-membership:doc:workflow_workspace-membership",
+      "item": "workflow_workspace-membership",
+      "kind": "doc",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [
+        {
+          "id": "workflow_review:workspace-membership",
+          "reason": "Workflow semantics for workspace-membership need canonical review before promotion.",
+          "type": "workflow_review"
+        }
+      ],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "workspace-membership",
+        "canonical_rel_path": "docs/workflows/workflow_workspace-membership.md",
+        "source_path": "candidates/reconcile/model/bundles/workspace-membership/docs/workflows/workflow_workspace-membership.md"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [
+          {
+            "id": "workflow_review:workspace-membership",
+            "reason": "Workflow semantics for workspace-membership need canonical review before promotion.",
+            "type": "workflow_review"
+          }
+        ],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "manual_decision",
+        "reasons": [
+          "proposal_has_blocking_dependencies"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/workspace-membership/docs/workflows/workflow_workspace-membership.md",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "workflows",
+      "ui_impacts": [],
+      "workflow_impacts": [
+        {
+          "items": [
+            "workflow_workspace-membership"
+          ],
+          "kind": "workflow",
+          "reason": "Workflow semantics for workspace-membership need canonical review before promotion.",
+          "review_group_id": "workflow_review:workspace-membership"
+        }
+      ]
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "workspace-membership",
+      "canonical_rel_path": "docs/journeys/workspace_membership_journey.md",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "workspace-membership:doc:workspace_membership_journey",
+      "item": "workspace_membership_journey",
+      "kind": "doc",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "workspace-membership",
+        "canonical_rel_path": "docs/journeys/workspace_membership_journey.md",
+        "source_path": "candidates/reconcile/model/bundles/workspace-membership/docs/journeys/workspace_membership_journey.md"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "review_required",
+        "reasons": [
+          "proposal_doc_surface"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/workspace-membership/docs/journeys/workspace_membership_journey.md",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "docs",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "workspace-membership",
+      "canonical_rel_path": "entities/entity-workspace-membership.tg",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "workspace-membership:entity:entity_workspace-membership",
+      "item": "entity_workspace-membership",
+      "kind": "entity",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "workspace-membership",
+        "canonical_rel_path": "entities/entity-workspace-membership.tg",
+        "source_path": "candidates/reconcile/model/bundles/workspace-membership/entities/entity_workspace-membership.tg"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "review_required",
+        "reasons": [
+          "proposal_modeled_surface"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/workspace-membership/entities/entity_workspace-membership.tg",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "entity",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "workspace-membership",
+      "canonical_rel_path": "shapes/shape-input-create-workspace-membership.tg",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "workspace-membership:shape:shape_input_create_workspace_membership",
+      "item": "shape_input_create_workspace_membership",
+      "kind": "shape",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "workspace-membership",
+        "canonical_rel_path": "shapes/shape-input-create-workspace-membership.tg",
+        "source_path": "candidates/reconcile/model/bundles/workspace-membership/shapes/shape_input_create_workspace_membership.tg"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "review_required",
+        "reasons": [
+          "proposal_modeled_surface"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/workspace-membership/shapes/shape_input_create_workspace_membership.tg",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "shape",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    },
+    {
+      "available_actions": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "bundle": "workspace-membership-role",
+      "canonical_rel_path": "enums/enum-workspace-membership-role.tg",
+      "current_state": "accept",
+      "human_review_required": false,
+      "id": "workspace-membership-role:enum:workspace-membership_role",
+      "item": "workspace-membership_role",
+      "kind": "enum",
+      "maintained_seam_candidates": [],
+      "mapping_suggestions": [],
+      "projection_impacts": [],
+      "provenance": {
+        "bundle": "workspace-membership-role",
+        "canonical_rel_path": "enums/enum-workspace-membership-role.tg",
+        "source_path": "candidates/reconcile/model/bundles/workspace-membership-role/enums/workspace-membership_role.tg"
+      },
+      "recommended_state": "accept",
+      "requirements": {
+        "blocking_dependencies": [],
+        "related_capabilities": [],
+        "related_docs": [],
+        "related_rules": [],
+        "related_workflows": []
+      },
+      "review_boundary": {
+        "automation_class": "safe",
+        "reasons": [
+          "proposal_metadata_only"
+        ]
+      },
+      "source_path": "candidates/reconcile/model/bundles/workspace-membership-role/enums/workspace-membership_role.tg",
+      "supported_states": [
+        "accept",
+        "map",
+        "customize",
+        "stage",
+        "reject"
+      ],
+      "track": "enum",
+      "ui_impacts": [],
+      "workflow_impacts": []
+    }
+  ],
+  "rejected_items": [],
+  "requires_human_review": [],
+  "source_plan_type": "reconcile_adoption_plan",
+  "staged_items": [],
+  "terminology": {
+    "candidate_workspace_term": "candidate",
+    "non_canonical_adoption_state": "stage"
+  },
+  "type": "agent_adoption_plan",
+  "version": 1,
+  "workspace": "/tmp/topogram-demo-supabase-main-FpTkIi/topogram"
+}
