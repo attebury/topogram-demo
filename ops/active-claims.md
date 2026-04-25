@@ -15,3 +15,5 @@ Use:
 - `node ./ops/refresh-proof-status-metadata.mjs --topogram-repo ../topogram <slug>`
 
 before treating the active set as current. The metadata refresh step is now receipt-gated, so commit/date metadata cannot be bumped without a matching rerun receipt and a committed snapshot that matches it.
+
+Those checks also run automatically in GitHub Actions through [`.github/workflows/imported-proof-freshness.yml`](../.github/workflows/imported-proof-freshness.yml), which compares the active claims against `attebury/topogram` `main` on PRs, pushes, a weekday schedule, and manual dispatch.
