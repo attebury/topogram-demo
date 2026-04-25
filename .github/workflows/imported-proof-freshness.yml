@@ -14,10 +14,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout topogram-demo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version: "20"
 
@@ -29,17 +29,17 @@ jobs:
     needs: verify-imported-targets
     steps:
       - name: Checkout topogram-demo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Checkout topogram main
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           repository: attebury/topogram
           ref: main
           path: topogram
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version: "20"
 
