@@ -64,6 +64,8 @@ That command reports freshness drift when:
 - `topogram_commit_tested` does not match the current Topogram commit you are comparing against
 - `last_verified_date` is older than the freshness window
 
+GitHub Actions also runs this freshness check automatically in [`.github/workflows/imported-proof-freshness.yml`](./.github/workflows/imported-proof-freshness.yml) on pull requests, pushes to `main`, weekday schedule, and manual dispatch.
+
 After rerunning a target, first capture a local verification receipt from the rerun workspace, then refresh metadata only after the committed `source/`, committed `topogram/`, and committed `rerun-manifest.json` all line up with that receipt:
 
 ```bash

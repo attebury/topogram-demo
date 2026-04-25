@@ -46,6 +46,12 @@ The freshness report flags targets as stale when:
 
 Use this after pulling or merging Topogram changes that could affect imported-proof claims.
 
+The same check now runs automatically in GitHub Actions via [`.github/workflows/imported-proof-freshness.yml`](../.github/workflows/imported-proof-freshness.yml). That workflow:
+
+- verifies the committed imported targets on every PR and push to `main`
+- compares the active claim set against `attebury/topogram` `main`
+- runs on a weekday schedule and supports manual dispatch for on-demand freshness checks
+
 ## Capturing Verification Receipts
 
 After a real rerun into a temp workspace, capture a local verification receipt:
