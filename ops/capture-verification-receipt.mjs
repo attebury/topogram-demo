@@ -1,7 +1,7 @@
 import childProcess from "node:child_process";
-import crypto from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
+import { hashDirectory } from "./tree-hash.mjs";
 
 const repoRoot = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
 const inventoryPath = path.join(repoRoot, "ops", "active-targets.json");
@@ -82,44 +82,6 @@ function deriveStatus(adoptionStatus) {
   return isClosed ? "closed" : "partial";
 }
 
-function listFiles(rootDir, includeRelativePath = () => true, currentDir = rootDir) {
-  const entries = fs.readdirSync(currentDir, { withFileTypes: true });
-  const files = [];
-
-  for (const entry of entries) {
-    const absolutePath = path.join(currentDir, entry.name);
-    const relativePath = path.relative(rootDir, absolutePath);
-    if (entry.isDirectory()) {
-      if (includeRelativePath(relativePath)) {
-        files.push(...listFiles(rootDir, includeRelativePath, absolutePath));
-      }
-    } else if (includeRelativePath(relativePath)) {
-      files.push(relativePath);
-    }
-  }
-
-  return files.sort();
-}
-
-function hashDirectory(rootDir, includeRelativePath = () => true) {
-  if (!fs.existsSync(rootDir)) {
-    throw new Error(`Expected directory to exist: ${rootDir}`);
-  }
-
-  const hash = crypto.createHash("sha256");
-  const files = listFiles(rootDir, includeRelativePath);
-
-  for (const relativePath of files) {
-    const absolutePath = path.join(rootDir, relativePath);
-    hash.update(relativePath);
-    hash.update("\0");
-    hash.update(fs.readFileSync(absolutePath));
-    hash.update("\0");
-  }
-
-  return hash.digest("hex");
-}
-
 function main() {
   const options = parseArgs(process.argv.slice(2));
   const inventory = readJson(inventoryPath);
@@ -161,8 +123,11 @@ function main() {
       blocked_item_count: adoptionStatus.blocked_item_count,
       applied_item_count: adoptionStatus.applied_item_count
     },
-    rerun_source_tree_hash: hashDirectory(rerunRoot, (relativePath) => relativePath !== "topogram" && !relativePath.startsWith(`topogram${path.sep}`)),
-    rerun_topogram_tree_hash: hashDirectory(rerunTopogramDir)
+    rerun_source_tree_hash: hashDirectory(rerunRoot, {
+      includeRelativePath: (relativePath) => relativePath !== "topogram" && !relativePath.startsWith(`topogram${path.sep}`),
+      normalizeText: true
+    }),
+    rerun_topogram_tree_hash: hashDirectory(rerunTopogramDir, { normalizeText: true })
   };
 
   const receiptPath = path.join(options.receiptDir, `${entry.slug}.json`);

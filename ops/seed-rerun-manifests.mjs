@@ -1,6 +1,6 @@
-import crypto from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
+import { hashDirectory } from "./tree-hash.mjs";
 
 const repoRoot = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
 const inventoryPath = path.join(repoRoot, "ops", "active-targets.json");
@@ -11,32 +11,6 @@ function readJson(filePath) {
 
 function writeJson(filePath, value) {
   fs.writeFileSync(filePath, `${JSON.stringify(value, null, 2)}\n`, "utf8");
-}
-
-function listFiles(rootDir, currentDir = rootDir) {
-  const entries = fs.readdirSync(currentDir, { withFileTypes: true });
-  const files = [];
-  for (const entry of entries) {
-    const absolutePath = path.join(currentDir, entry.name);
-    if (entry.isDirectory()) {
-      files.push(...listFiles(rootDir, absolutePath));
-    } else {
-      files.push(path.relative(rootDir, absolutePath));
-    }
-  }
-  return files.sort();
-}
-
-function hashDirectory(rootDir) {
-  const hash = crypto.createHash("sha256");
-  for (const relativePath of listFiles(rootDir)) {
-    const absolutePath = path.join(rootDir, relativePath);
-    hash.update(relativePath);
-    hash.update("\0");
-    hash.update(fs.readFileSync(absolutePath));
-    hash.update("\0");
-  }
-  return hash.digest("hex");
 }
 
 function parseArgs(argv) {
@@ -75,8 +49,8 @@ for (const entry of inventory) {
     last_verified_date: proofStatus.last_verified_date,
     evidence_origin: "seeded_snapshot",
     rerun_recipe_ref: "README.md#rerun",
-    source_tree_hash: hashDirectory(path.join(targetRoot, "source")),
-    topogram_tree_hash: hashDirectory(path.join(targetRoot, "topogram")),
+    source_tree_hash: hashDirectory(path.join(targetRoot, "source"), { normalizeText: true }),
+    topogram_tree_hash: hashDirectory(path.join(targetRoot, "topogram"), { normalizeText: true }),
     adoption_contract: {
       next_bundle: adoptionStatus.next_bundle,
       blocked_item_count: adoptionStatus.blocked_item_count,

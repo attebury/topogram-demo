@@ -1,7 +1,7 @@
 import childProcess from "node:child_process";
-import crypto from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
+import { hashDirectory } from "./tree-hash.mjs";
 
 const repoRoot = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
 const inventoryPath = path.join(repoRoot, "ops", "active-targets.json");
@@ -86,35 +86,6 @@ function deriveStatus(adoptionStatus) {
   return isClosed ? "closed" : "partial";
 }
 
-function listFiles(rootDir, currentDir = rootDir) {
-  const entries = fs.readdirSync(currentDir, { withFileTypes: true });
-  const files = [];
-  for (const entry of entries) {
-    const absolutePath = path.join(currentDir, entry.name);
-    if (entry.isDirectory()) {
-      files.push(...listFiles(rootDir, absolutePath));
-    } else {
-      files.push(path.relative(rootDir, absolutePath));
-    }
-  }
-  return files.sort();
-}
-
-function hashDirectory(rootDir) {
-  if (!fs.existsSync(rootDir)) {
-    throw new Error(`Expected directory to exist: ${rootDir}`);
-  }
-  const hash = crypto.createHash("sha256");
-  for (const relativePath of listFiles(rootDir)) {
-    const absolutePath = path.join(rootDir, relativePath);
-    hash.update(relativePath);
-    hash.update("\0");
-    hash.update(fs.readFileSync(absolutePath));
-    hash.update("\0");
-  }
-  return hash.digest("hex");
-}
-
 function main() {
   const options = parseArgs(process.argv.slice(2));
   const refreshDate = parseIsoDate(options.date);
@@ -147,8 +118,8 @@ function main() {
     const adoptionStatusPath = path.join(topogramDir, "candidates", "reconcile", "adoption-status.json");
     const currentAdoptionStatus = readJson(adoptionStatusPath);
     const currentDerivedStatus = deriveStatus(currentAdoptionStatus);
-    const currentSourceHash = hashDirectory(sourceDir);
-    const currentTopogramHash = hashDirectory(topogramDir);
+    const currentSourceHash = hashDirectory(sourceDir, { normalizeText: true });
+    const currentTopogramHash = hashDirectory(topogramDir, { normalizeText: true });
 
     if (receipt.slug !== entry.slug) {
       throw new Error(`${entry.slug} receipt slug mismatch: found ${receipt.slug}`);

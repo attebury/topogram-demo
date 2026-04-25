@@ -1,6 +1,6 @@
-import crypto from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
+import { hashDirectory } from "./tree-hash.mjs";
 
 const repoRoot = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
 const inventoryPath = path.join(repoRoot, "ops", "active-targets.json");
@@ -30,54 +30,21 @@ function deriveStatus(adoptionStatus) {
   return isClosed ? "closed" : "partial";
 }
 
-function listFiles(rootDir, currentDir = rootDir) {
-  const entries = fs.readdirSync(currentDir, { withFileTypes: true });
-  const files = [];
-  for (const entry of entries) {
-    const absolutePath = path.join(currentDir, entry.name);
-    if (entry.isDirectory()) {
-      files.push(...listFiles(rootDir, absolutePath));
-    } else {
-      files.push(path.relative(rootDir, absolutePath));
-    }
-  }
-  return files.sort();
-}
-
-function hashDirectory(rootDir) {
-  const hash = crypto.createHash("sha256");
-  for (const relativePath of listFiles(rootDir)) {
-    const absolutePath = path.join(rootDir, relativePath);
-    hash.update(relativePath);
-    hash.update("\0");
-    hash.update(fs.readFileSync(absolutePath));
-    hash.update("\0");
-  }
-  return hash.digest("hex");
-}
-
-function normalizeForHash(contents) {
-  if (contents.includes(0)) {
-    return contents;
-  }
-
-  return Buffer.from(contents.toString("utf8").replace(/\r\n/g, "\n").replace(/\r/g, "\n"), "utf8");
-}
-
-function hashDirectoryWithNormalizedText(rootDir) {
-  const hash = crypto.createHash("sha256");
-  for (const relativePath of listFiles(rootDir)) {
-    const absolutePath = path.join(rootDir, relativePath);
-    hash.update(relativePath);
-    hash.update("\0");
-    hash.update(normalizeForHash(fs.readFileSync(absolutePath)));
-    hash.update("\0");
-  }
-  return hash.digest("hex");
-}
-
 function findForbiddenProvenance(rootDir) {
   const matches = [];
+  function listFiles(rootDir, currentDir = rootDir) {
+    const entries = fs.readdirSync(currentDir, { withFileTypes: true });
+    const files = [];
+    for (const entry of entries) {
+      const absolutePath = path.join(currentDir, entry.name);
+      if (entry.isDirectory()) {
+        files.push(...listFiles(rootDir, absolutePath));
+      } else {
+        files.push(path.relative(rootDir, absolutePath));
+      }
+    }
+    return files.sort();
+  }
   for (const relativePath of listFiles(rootDir)) {
     const absolutePath = path.join(rootDir, relativePath);
     const contents = fs.readFileSync(absolutePath, "utf8");
@@ -126,10 +93,8 @@ for (const entry of inventory) {
   const rerunManifest = readJson(rerunManifestPath);
   const adoptionStatus = readJson(adoptionStatusPath);
   const derivedStatus = deriveStatus(adoptionStatus);
-  const sourceTreeHash = hashDirectory(sourceDir);
-  const sourceTreeHashNormalized = hashDirectoryWithNormalizedText(sourceDir);
-  const topogramTreeHash = hashDirectory(topogramDir);
-  const topogramTreeHashNormalized = hashDirectoryWithNormalizedText(topogramDir);
+  const sourceTreeHash = hashDirectory(sourceDir, { normalizeText: true });
+  const topogramTreeHash = hashDirectory(topogramDir, { normalizeText: true });
   const forbiddenProvenance = findForbiddenProvenance(topogramDir);
 
   if (path.basename(entry.target_dir) !== entry.slug) {
@@ -184,11 +149,11 @@ for (const entry of inventory) {
     throw new Error(`${entry.slug} rerun manifest date ${rerunManifest.last_verified_date} does not match proof-status ${proofStatus.last_verified_date}`);
   }
 
-  if (![sourceTreeHash, sourceTreeHashNormalized].includes(rerunManifest.source_tree_hash)) {
+  if (rerunManifest.source_tree_hash !== sourceTreeHash) {
     throw new Error(`${entry.slug} rerun manifest source tree hash does not match the committed source snapshot`);
   }
 
-  if (![topogramTreeHash, topogramTreeHashNormalized].includes(rerunManifest.topogram_tree_hash)) {
+  if (rerunManifest.topogram_tree_hash !== topogramTreeHash) {
     throw new Error(`${entry.slug} rerun manifest topogram tree hash does not match the committed topogram snapshot`);
   }
 
