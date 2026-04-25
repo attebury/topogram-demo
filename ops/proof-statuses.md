@@ -23,7 +23,7 @@ An active imported claim is freshness-current only when:
 
 That means a target can remain structurally `closed` while still being freshness-stale and needing rerun attention.
 
-The published commit/date metadata should now be updated only through the receipt-gated flow:
+The published commit/date metadata should only be updated through the receipt-gated flow:
 
 1. rerun the imported target into a workspace outside the repo
 2. capture a verification receipt from that rerun workspace
