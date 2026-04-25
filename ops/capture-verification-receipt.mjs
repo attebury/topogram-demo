@@ -59,7 +59,7 @@ function parseArgs(argv) {
 }
 
 function resolveGitShortSha(repoPath, ref) {
-  const run = childProcess.spawnSync("git", ["-C", repoPath, "rev-parse", "--short", ref], {
+  const run = childProcess.spawnSync("git", ["-C", repoPath, "rev-parse", "--short=8", ref], {
     encoding: "utf8",
     env: {
       ...process.env,
