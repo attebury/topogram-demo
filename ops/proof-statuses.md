@@ -23,6 +23,12 @@ An active imported claim is freshness-current only when:
 
 That means a target can remain structurally `closed` while still being freshness-stale and needing rerun attention.
 
+The automated freshness workflow now turns that state into an explicit ops signal:
+
+- the workflow artifact preserves the JSON freshness report
+- the workflow summary names stale targets directly
+- non-PR runs open or update a single `Imported proof freshness drift` issue until the active set is current again
+
 The published commit/date metadata should only be updated through the receipt-gated flow:
 
 1. rerun the imported target into a workspace outside the repo

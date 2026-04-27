@@ -39,9 +39,11 @@ Run this from the repo root to compare the active claims against a Topogram chec
 node ./ops/claim-freshness.mjs --topogram-repo ../topogram
 ```
 
+By default, the script compares against the latest proof-affecting commit in `topogram`, not blindly against every merge to `main`. The current proof-affecting scope is `engine/**`.
+
 The freshness report flags targets as stale when:
 
-- `topogram_commit_tested` is behind the compared Topogram commit
+- `topogram_commit_tested` is behind the compared proof-affecting Topogram commit
 - `last_verified_date` is older than the freshness window
 
 Use this after pulling or merging Topogram changes that could affect imported-proof claims.
@@ -51,6 +53,9 @@ The same check now runs automatically in GitHub Actions via [`.github/workflows/
 - verifies the committed imported targets on every PR and push to `main`
 - compares the active claim set against `attebury/topogram` `main`
 - runs on a weekday schedule and supports manual dispatch for on-demand freshness checks
+- uploads the JSON freshness report as a workflow artifact
+- writes a job summary that names stale targets directly
+- opens or updates a single `Imported proof freshness drift` tracking issue on non-PR runs when claims go stale, and closes it again when the active set is current
 
 ## Capturing Verification Receipts
 

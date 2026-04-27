@@ -1,6 +1,6 @@
-import childProcess from "node:child_process";
 import fs from "node:fs";
 import path from "node:path";
+import { resolveTopogramProofCommit } from "./topogram-proof-ref.mjs";
 
 const repoRoot = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
 const inventoryPath = path.join(repoRoot, "ops", "active-targets.json");
@@ -41,22 +41,6 @@ function parseArgs(argv) {
   return options;
 }
 
-function resolveGitShortSha(repoPath, ref) {
-  const run = childProcess.spawnSync("git", ["-C", repoPath, "rev-parse", "--short=8", ref], {
-    encoding: "utf8",
-    env: {
-      ...process.env,
-      PATH: process.env.PATH || ""
-    }
-  });
-
-  if (run.status !== 0) {
-    throw new Error(`Unable to resolve git ref ${ref} in ${repoPath}:\n${run.stderr || run.stdout}`);
-  }
-
-  return run.stdout.trim();
-}
-
 function parseIsoDate(value) {
   const parsed = new Date(`${value}T00:00:00Z`);
   if (Number.isNaN(parsed.getTime())) {
@@ -73,6 +57,7 @@ function diffDays(later, earlier) {
 export function assessClaimFreshness({
   inventory,
   topogramCommit,
+  resolvePublishedProofCommit,
   maxAgeDays,
   today,
   repoRootDir = repoRoot
@@ -83,10 +68,11 @@ export function assessClaimFreshness({
     const lastVerifiedDate = parseIsoDate(proofStatus.last_verified_date);
     const ageDays = diffDays(today, lastVerifiedDate);
     const reasons = [];
+    const publishedProofCommit = resolvePublishedProofCommit(proofStatus.topogram_commit_tested);
 
-    if (proofStatus.topogram_commit_tested !== topogramCommit) {
+    if (publishedProofCommit !== topogramCommit) {
       reasons.push(
-        `topogram_commit_tested=${proofStatus.topogram_commit_tested} does not match current ${topogramCommit}`
+        `topogram_commit_tested=${proofStatus.topogram_commit_tested} resolves to proof commit ${publishedProofCommit}, not current ${topogramCommit}`
       );
     }
 
@@ -99,6 +85,7 @@ export function assessClaimFreshness({
       display_name: entry.display_name,
       published_status: proofStatus.status,
       topogram_commit_tested: proofStatus.topogram_commit_tested,
+      published_proof_affecting_topogram_commit: publishedProofCommit,
       current_topogram_commit: topogramCommit,
       last_verified_date: proofStatus.last_verified_date,
       verification_age_days: ageDays,
@@ -126,10 +113,11 @@ function main() {
   }
 
   const inventory = readJson(inventoryPath);
-  const topogramCommit = resolveGitShortSha(options.topogramRepo, options.topogramRef);
+  const topogramCommit = resolveTopogramProofCommit(options.topogramRepo, options.topogramRef);
   const report = assessClaimFreshness({
     inventory,
     topogramCommit,
+    resolvePublishedProofCommit: (ref) => resolveTopogramProofCommit(options.topogramRepo, ref),
     maxAgeDays: options.maxAgeDays,
     today: new Date()
   });

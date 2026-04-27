@@ -1,5 +1,9 @@
 name: Imported Proof Freshness
 
+permissions:
+  contents: read
+  issues: write
+
 on:
   pull_request:
   push:
@@ -37,6 +41,7 @@ jobs:
           repository: attebury/topogram
           ref: main
           path: topogram
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v6
@@ -44,4 +49,102 @@ jobs:
           node-version: "20"
 
       - name: Check imported claim freshness
-        run: node ./ops/claim-freshness.mjs --topogram-repo ./topogram
+        id: freshness
+        run: |
+          set +e
+          node ./ops/claim-freshness.mjs --topogram-repo ./topogram > freshness-report.json
+          exit_code=$?
+          set -e
+
+          if [ ! -s freshness-report.json ]; then
+            node --input-type=module -e "import fs from 'node:fs'; fs.writeFileSync('freshness-report.json', JSON.stringify({ type: 'claim_freshness_report', checked_at: new Date().toISOString().slice(0, 10), stale_target_count: -1, assessed_targets: [], workflow_error: 'claim-freshness.mjs exited before emitting a JSON report' }, null, 2));"
+          fi
+
+          cat freshness-report.json
+
+          stale_count=$(node --input-type=module -e "import fs from 'node:fs'; const report = JSON.parse(fs.readFileSync('freshness-report.json', 'utf8')); console.log(report.stale_target_count);")
+
+          echo "exit_code=$exit_code" >> "$GITHUB_OUTPUT"
+          echo "stale_count=$stale_count" >> "$GITHUB_OUTPUT"
+
+      - name: Render freshness summary
+        if: always()
+        run: |
+          node ./ops/render-freshness-markdown.mjs --input freshness-report.json --mode summary > freshness-summary.md
+          cat freshness-summary.md >> "$GITHUB_STEP_SUMMARY"
+
+          if [ "${{ steps.freshness.outputs.stale_count }}" != "0" ]; then
+            node ./ops/render-freshness-markdown.mjs --input freshness-report.json --mode issue > freshness-issue.md
+          fi
+
+      - name: Upload freshness artifact
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: imported-proof-freshness-report
+          path: |
+            freshness-report.json
+            freshness-summary.md
+            freshness-issue.md
+          if-no-files-found: ignore
+
+      - name: Open or update freshness tracking issue
+        if: ${{ always() && github.event_name != 'pull_request' && steps.freshness.outputs.stale_count != '0' }}
+        uses: actions/github-script@v8
+        with:
+          script: |
+            const fs = require("node:fs");
+            const title = "Imported proof freshness drift";
+            const body = fs.readFileSync("freshness-issue.md", "utf8");
+            const { owner, repo } = context.repo;
+            const { data: issues } = await github.rest.issues.listForRepo({
+              owner,
+              repo,
+              state: "open",
+              per_page: 100
+            });
+            const existing = issues.find((issue) => issue.title === title && !issue.pull_request);
+
+            if (existing) {
+              await github.rest.issues.update({
+                owner,
+                repo,
+                issue_number: existing.number,
+                body
+              });
+            } else {
+              await github.rest.issues.create({
+                owner,
+                repo,
+                title,
+                body
+              });
+            }
+
+      - name: Close freshness tracking issue when current
+        if: ${{ always() && github.event_name != 'pull_request' && steps.freshness.outputs.stale_count == '0' }}
+        uses: actions/github-script@v8
+        with:
+          script: |
+            const title = "Imported proof freshness drift";
+            const { owner, repo } = context.repo;
+            const { data: issues } = await github.rest.issues.listForRepo({
+              owner,
+              repo,
+              state: "open",
+              per_page: 100
+            });
+            const existing = issues.find((issue) => issue.title === title && !issue.pull_request);
+
+            if (existing) {
+              await github.rest.issues.update({
+                owner,
+                repo,
+                issue_number: existing.number,
+                state: "closed"
+              });
+            }
+
+      - name: Fail on freshness drift
+        if: ${{ steps.freshness.outputs.exit_code != '0' }}
+        run: exit 1
