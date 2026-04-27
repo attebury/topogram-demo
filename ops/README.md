@@ -64,6 +64,48 @@ Manual dispatch supports:
 
 Single-target manual runs still upload a report and render a summary, but they do not open or close the global drift issue.
 
+## Alpha Operator Playbook
+
+Treat imported-proof freshness as part of the alpha trust contract.
+
+Use a single-target rerun when:
+
+- one target is stale on a manual `scope=single` check
+- one target is stale after a proof-affecting Topogram change and the rest of the active set is still current
+- you are validating the loop on a canonical example such as `eshoponweb`
+
+Use a full active-set rerun when:
+
+- a non-PR freshness run opens or updates the global `Imported proof freshness drift` issue
+- multiple active targets are stale
+- you are preparing alpha-facing demo or release material after proof-affecting `topogram` changes
+
+For each stale target, the canonical operator loop is:
+
+```bash
+node ./ops/rerun-imported-target.mjs <slug> --topogram-repo ../topogram --target-root /tmp/topogram-demo-<slug>-refresh
+node ./ops/capture-verification-receipt.mjs <slug> --topogram-repo ../topogram --rerun-root /tmp/topogram-demo-<slug>-refresh
+rsync -a --delete --exclude topogram /tmp/topogram-demo-<slug>-refresh/ ./examples/imported/<slug>/source/
+rsync -a --delete /tmp/topogram-demo-<slug>-refresh/topogram/ ./examples/imported/<slug>/topogram/
+node ./ops/refresh-proof-status-metadata.mjs --topogram-repo ../topogram <slug>
+```
+
+A successful refresh means:
+
+- `rerun-imported-target.mjs` ends with `next_bundle: null`
+- `capture-verification-receipt.mjs` accepts the rerun workspace
+- the committed `source/` and `topogram/` trees are synced from that rerun workspace
+- `refresh-proof-status-metadata.mjs` succeeds without bypasses
+
+Before closing drift, these must be green from the repo root:
+
+```bash
+node ./ops/verify-imported-targets.mjs
+node ./ops/claim-freshness.mjs --topogram-repo ../topogram
+```
+
+The current alpha rehearsal was completed on `2026-04-27` against Topogram commit `d7e3a029` (proof-affecting commit `4f29546c`) and closed all 5 active imported targets through this exact loop.
+
 ## Rerunning Imported Targets
 
 Run a real imported-target rerun from the repo root with:

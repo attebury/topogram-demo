@@ -72,7 +72,7 @@
   "findings": [
     {
       "actor_signals": [],
-      "file": "/tmp/topogram-demo-django-realworld-main-Z9jPjy/README.md",
+      "file": "/tmp/topogram-demo-django-realworld-example-app-refresh/README.md",
       "relative_path": "README.md",
       "role_signals": [],
       "term_candidates": [
@@ -96,5 +96,5 @@
     "README.md"
   ],
   "type": "scan_docs_report",
-  "workspace": "/tmp/topogram-demo-django-realworld-main-Z9jPjy/topogram"
+  "workspace": "/tmp/topogram-demo-django-realworld-example-app-refresh/topogram"
 }

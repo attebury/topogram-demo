@@ -16,6 +16,8 @@ Use this repo for:
 - proof status and rerun commands
 - proof-ops verification for the active imported claim set
 
+The alpha operator playbook for keeping those imported claims current lives in [ops/README.md](./ops/README.md).
+
 ## Example Taxonomy
 
 Topogram uses three example relationships:

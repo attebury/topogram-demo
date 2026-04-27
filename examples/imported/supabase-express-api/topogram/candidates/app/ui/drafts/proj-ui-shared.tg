@@ -1,4 +1,4 @@
-projection proj_ui_shared_imported_topogram_demo_supabase_main_fptkii {
+projection proj_ui_shared_imported_topogram_demo_supabase_express_api_refresh {
   name "Imported Shared UI Draft"
   description "Drafted from imported UI candidates. Review and adapt before adoption."
 
@@ -9,7 +9,7 @@ projection proj_ui_shared_imported_topogram_demo_supabase_main_fptkii {
   outputs [ui_contract]
 
   ui_app_shell {
-    brand "Imported topogram demo supabase main fptkii"
+    brand "Imported topogram demo supabase express api refresh"
     shell topbar
   }
 

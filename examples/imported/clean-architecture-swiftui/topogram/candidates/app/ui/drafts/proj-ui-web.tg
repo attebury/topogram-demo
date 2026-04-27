@@ -1,10 +1,10 @@
-projection proj_ui_web_imported_topogram_demo_swiftui_main_ctn9xl {
+projection proj_ui_web_imported_topogram_demo_clean_architecture_swiftui_refresh {
   name "Imported Web UI Draft"
   description "Drafted from imported UI candidates. Review and adapt before adoption."
 
   platform ui_web
   realizes [
-    proj_ui_shared_imported_topogram_demo_swiftui_main_ctn9xl,
+    proj_ui_shared_imported_topogram_demo_clean_architecture_swiftui_refresh,
     cap_get_country_details,
     cap_list_countries
   ]

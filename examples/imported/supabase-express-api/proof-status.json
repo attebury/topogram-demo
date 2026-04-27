@@ -2,9 +2,9 @@
   "target": "supabase-express-api",
   "display_name": "supabase-express-api",
   "status": "closed",
-  "topogram_commit_tested": "7b68b970",
-  "last_verified_date": "2026-04-25",
+  "topogram_commit_tested": "d7e3a029",
+  "last_verified_date": "2026-04-27",
   "known_blockers": [],
   "notes": "Seeded from the historical closed imported proof snapshot migrated from topogram/trials/supabase-express-api.",
-  "last_verification_receipt_recorded_at": "2026-04-25T05:01:41.121Z"
+  "last_verification_receipt_recorded_at": "2026-04-27T15:33:27.135Z"
 }

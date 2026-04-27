@@ -27,19 +27,6 @@
   "candidate_docs": [
     {
       "confidence": "low",
-      "id": "architecture",
-      "kind": "glossary",
-      "path": "candidates/docs/glossary/architecture.md",
-      "provenance": [
-        "README.md"
-      ],
-      "related_capabilities": [],
-      "related_entities": [],
-      "source_of_truth": "imported",
-      "title": "Architecture"
-    },
-    {
-      "confidence": "low",
       "id": "business",
       "kind": "glossary",
       "path": "candidates/docs/glossary/business.md",
@@ -110,7 +97,7 @@
       "actor_signals": [
         "actor_user"
       ],
-      "file": "/tmp/topogram-demo-swiftui-main-ctN9XL/README.md",
+      "file": "/tmp/topogram-demo-clean-architecture-swiftui-refresh/README.md",
       "relative_path": "README.md",
       "role_signals": [],
       "term_candidates": [
@@ -135,5 +122,5 @@
     "README.md"
   ],
   "type": "scan_docs_report",
-  "workspace": "/tmp/topogram-demo-swiftui-main-ctN9XL/topogram"
+  "workspace": "/tmp/topogram-demo-clean-architecture-swiftui-refresh/topogram"
 }

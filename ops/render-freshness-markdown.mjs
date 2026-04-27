@@ -39,7 +39,23 @@ function staleTargets(report) {
 }
 
 function rerunCommand(target) {
-  return `node ./ops/rerun-imported-target.mjs ${target.slug} --topogram-repo ../topogram`;
+  return `node ./ops/rerun-imported-target.mjs ${target.slug} --topogram-repo ../topogram --target-root /tmp/topogram-demo-${target.slug}-refresh`;
+}
+
+function receiptCommand(target) {
+  return `node ./ops/capture-verification-receipt.mjs ${target.slug} --topogram-repo ../topogram --rerun-root /tmp/topogram-demo-${target.slug}-refresh`;
+}
+
+function syncSourceCommand(target) {
+  return `rsync -a --delete --exclude topogram /tmp/topogram-demo-${target.slug}-refresh/ ./examples/imported/${target.slug}/source/`;
+}
+
+function syncTopogramCommand(target) {
+  return `rsync -a --delete /tmp/topogram-demo-${target.slug}-refresh/topogram/ ./examples/imported/${target.slug}/topogram/`;
+}
+
+function refreshCommand(target) {
+  return `node ./ops/refresh-proof-status-metadata.mjs --topogram-repo ../topogram ${target.slug}`;
 }
 
 function renderTargetList(targets) {
@@ -56,6 +72,10 @@ function renderTargetCommands(targets) {
     lines.push("");
     lines.push("  ```bash");
     lines.push(`  ${rerunCommand(target)}`);
+    lines.push(`  ${receiptCommand(target)}`);
+    lines.push(`  ${syncSourceCommand(target)}`);
+    lines.push(`  ${syncTopogramCommand(target)}`);
+    lines.push(`  ${refreshCommand(target)}`);
     lines.push("  ```");
     lines.push("");
   }

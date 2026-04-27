@@ -7,8 +7,8 @@ This target shows that Topogram can import, reconcile, and adopt a Django RealWo
 ## Current Status
 
 - proof status: `closed`
-- Topogram commit tested: `7b68b970`
-- last verified date: `2026-04-25`
+- Topogram commit tested: `d7e3a029`
+- last verified date: `2026-04-27`
 
 ## Rerun
 

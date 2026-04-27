@@ -1,4 +1,4 @@
-projection proj_ui_shared_imported_topogram_demo_django_realworld_main_z9jpjy {
+projection proj_ui_shared_imported_topogram_demo_django_realworld_example_app_refresh {
   name "Imported Shared UI Draft"
   description "Drafted from imported UI candidates. Review and adapt before adoption."
 
@@ -9,7 +9,7 @@ projection proj_ui_shared_imported_topogram_demo_django_realworld_main_z9jpjy {
   outputs [ui_contract]
 
   ui_app_shell {
-    brand "Imported topogram demo django realworld main z9jpjy"
+    brand "Imported topogram demo django realworld example app refresh"
     shell topbar
   }
 

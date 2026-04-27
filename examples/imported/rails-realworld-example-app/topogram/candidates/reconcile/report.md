@@ -68,11 +68,11 @@
 
 ## Bundle Priorities
 
-- `article`: action=complete, why=This bundle has no blocked, approved, or pending work left., safe-now=0, permission-hints=4, auth-closure=high_risk, auth-aging=stale_high_risk, high-risk-runs=17, auth-priority=3
-- `user`: action=complete, why=This bundle has no blocked, approved, or pending work left., safe-now=0, permission-hints=2, auth-closure=high_risk, auth-aging=stale_high_risk, high-risk-runs=17, auth-priority=3
-- `comment`: action=complete, why=This bundle has no blocked, approved, or pending work left., safe-now=0, permission-hints=2, auth-closure=high_risk, auth-aging=stale_high_risk, high-risk-runs=17, auth-priority=3
-- `profile`: action=complete, why=This bundle has no blocked, approved, or pending work left., safe-now=0, permission-hints=2, auth-closure=high_risk, auth-aging=stale_high_risk, high-risk-runs=17, auth-priority=3
-- `tag`: action=complete, why=This bundle has no blocked, approved, or pending work left., safe-now=0, permission-hints=1, auth-closure=high_risk, auth-aging=stale_high_risk, high-risk-runs=17, auth-priority=3
+- `article`: action=complete, why=This bundle has no blocked, approved, or pending work left., safe-now=0, permission-hints=4, auth-closure=high_risk, auth-aging=stale_high_risk, high-risk-runs=25, auth-priority=3
+- `user`: action=complete, why=This bundle has no blocked, approved, or pending work left., safe-now=0, permission-hints=2, auth-closure=high_risk, auth-aging=stale_high_risk, high-risk-runs=25, auth-priority=3
+- `comment`: action=complete, why=This bundle has no blocked, approved, or pending work left., safe-now=0, permission-hints=2, auth-closure=high_risk, auth-aging=stale_high_risk, high-risk-runs=25, auth-priority=3
+- `profile`: action=complete, why=This bundle has no blocked, approved, or pending work left., safe-now=0, permission-hints=2, auth-closure=high_risk, auth-aging=stale_high_risk, high-risk-runs=25, auth-priority=3
+- `tag`: action=complete, why=This bundle has no blocked, approved, or pending work left., safe-now=0, permission-hints=1, auth-closure=high_risk, auth-aging=stale_high_risk, high-risk-runs=25, auth-priority=3
 - `account`: action=complete, why=This bundle has no blocked, approved, or pending work left., safe-now=0
 
 ## Suppressed Noise Bundles
@@ -114,7 +114,7 @@
   - ownership hints _none_
   - auth role guidance _none_
   - auth closure high risk (adopted=0, deferred=0, unresolved=4)
-  - auth escalation escalated (high-risk runs=17)
+  - auth escalation escalated (high-risk runs=25)
   - why This bundle exists because entity evidence, API capability evidence, workflow evidence, doc evidence converges on the same article concept.
   - permission permission `api.create` (medium) <- `cap_create_article`
     - closure unresolved
@@ -147,7 +147,7 @@
   - ownership hints _none_
   - auth role guidance _none_
   - auth closure high risk (adopted=0, deferred=0, unresolved=2)
-  - auth escalation escalated (high-risk runs=17)
+  - auth escalation escalated (high-risk runs=25)
   - why This bundle exists because entity evidence, API capability evidence, workflow evidence, doc evidence converges on the same comment concept.
   - permission permission `api.create` (medium) <- `cap_create_comment`
     - closure unresolved
@@ -170,7 +170,7 @@
   - ownership hints _none_
   - auth role guidance _none_
   - auth closure high risk (adopted=0, deferred=0, unresolved=2)
-  - auth escalation escalated (high-risk runs=17)
+  - auth escalation escalated (high-risk runs=25)
   - why This bundle exists because API capability evidence, workflow evidence, doc evidence converges on the same profile concept.
   - permission permission `api.follow_profile` (medium) <- `cap_follow_profile`
     - closure unresolved
@@ -193,7 +193,7 @@
   - ownership hints _none_
   - auth role guidance _none_
   - auth closure high risk (adopted=0, deferred=0, unresolved=1)
-  - auth escalation escalated (high-risk runs=17)
+  - auth escalation escalated (high-risk runs=25)
   - why This bundle exists because entity evidence, API capability evidence, workflow evidence, doc evidence converges on the same tag concept.
   - permission permission `api.read` (medium) <- `cap_list_tags`
     - closure unresolved
@@ -211,7 +211,7 @@
   - ownership hints _none_
   - auth role guidance _none_
   - auth closure high risk (adopted=0, deferred=0, unresolved=2)
-  - auth escalation escalated (high-risk runs=17)
+  - auth escalation escalated (high-risk runs=25)
   - why This bundle exists because entity evidence, API capability evidence, workflow evidence, doc evidence converges on the same user concept.
   - permission permission `api.read` (medium) <- `cap_get_user`
     - closure unresolved

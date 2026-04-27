@@ -3,16 +3,16 @@
   "target": "rails-realworld-example-app",
   "display_name": "rails-realworld-example-app",
   "published_status": "closed",
-  "topogram_commit_tested": "7b68b970",
-  "last_verified_date": "2026-04-25",
+  "topogram_commit_tested": "d7e3a029",
+  "last_verified_date": "2026-04-27",
   "evidence_origin": "rerun_receipt",
   "rerun_recipe_ref": "README.md#rerun",
   "source_tree_hash": "0169858876c0363fa89d87b942d6f3a9264669550154053fa0aba1d736fba078",
-  "topogram_tree_hash": "58f8a823d4295b89b3e9b99e9337c922b64abe6fa3f65db5d6cce884dd794017",
+  "topogram_tree_hash": "30fd4fdd1eac2d2e87dbc3110025ca485416d752e988c65f5a0d833e7f4de539",
   "adoption_contract": {
     "next_bundle": null,
     "blocked_item_count": 0,
     "applied_item_count": 71
   },
-  "receipt_recorded_at": "2026-04-25T05:11:26.261Z"
+  "receipt_recorded_at": "2026-04-27T15:33:35.949Z"
 }
