@@ -1,0 +1,120 @@
+import fs from "node:fs";
+
+function parseArgs(argv) {
+  const options = {
+    inputPath: null,
+    mode: "summary"
+  };
+
+  for (let index = 0; index < argv.length; index += 1) {
+    const token = argv[index];
+    if (token === "--input") {
+      options.inputPath = argv[index + 1];
+      index += 1;
+    } else if (token === "--mode") {
+      options.mode = argv[index + 1];
+      index += 1;
+    } else {
+      throw new Error(`Unknown argument: ${token}`);
+    }
+  }
+
+  if (!options.inputPath) {
+    throw new Error("Expected --input <path>");
+  }
+
+  if (!["summary", "issue"].includes(options.mode)) {
+    throw new Error(`Expected --mode summary|issue, received ${options.mode}`);
+  }
+
+  return options;
+}
+
+function readJson(filePath) {
+  return JSON.parse(fs.readFileSync(filePath, "utf8"));
+}
+
+function staleTargets(report) {
+  return (report.assessed_targets || []).filter((target) => target.freshness_state === "stale");
+}
+
+function renderTargetList(targets) {
+  return targets.map((target) => {
+    const reasons = target.stale_reasons?.length ? `: ${target.stale_reasons.join("; ")}` : "";
+    return `- \`${target.slug}\`${reasons}`;
+  });
+}
+
+function renderSummary(report) {
+  const stale = staleTargets(report);
+  const lines = ["## Imported claim freshness"];
+
+  if (report.workflow_error) {
+    lines.push("");
+    lines.push(`Freshness check failed before producing a normal report: ${report.workflow_error}`);
+    return `${lines.join("\n")}\n`;
+  }
+
+  lines.push("");
+  lines.push(`- Checked at: \`${report.checked_at}\``);
+  lines.push(`- Active claims assessed: \`${report.assessed_targets.length}\``);
+  lines.push(`- Stale claims: \`${report.stale_target_count}\``);
+
+  if (stale.length === 0) {
+    lines.push("");
+    lines.push("All active imported claims are freshness-current.");
+    return `${lines.join("\n")}\n`;
+  }
+
+  lines.push("");
+  lines.push("Stale imported claims:");
+  lines.push(...renderTargetList(stale));
+
+  return `${lines.join("\n")}\n`;
+}
+
+function renderIssue(report) {
+  const stale = staleTargets(report);
+  const lines = [
+    "# Imported proof freshness drift",
+    "",
+    `Detected by the automated freshness workflow on \`${report.checked_at}\`.`
+  ];
+
+  if (report.workflow_error) {
+    lines.push("");
+    lines.push(`The freshness job failed before producing a normal report: ${report.workflow_error}`);
+    lines.push("");
+    lines.push("Action:");
+    lines.push("- inspect the failing workflow run");
+    lines.push("- repair the freshness job before trusting the imported claim set");
+    return `${lines.join("\n")}\n`;
+  }
+
+  lines.push("");
+  lines.push(`Stale active claims: \`${report.stale_target_count}\``);
+
+  if (stale.length > 0) {
+    lines.push("");
+    lines.push("Targets needing refresh:");
+    lines.push(...renderTargetList(stale));
+  }
+
+  lines.push("");
+  lines.push("Required action:");
+  lines.push("- rerun the affected imported targets against current `topogram/main`");
+  lines.push("- capture fresh verification receipts");
+  lines.push("- refresh `proof-status.json` and `rerun-manifest.json` from those reruns");
+  lines.push("- confirm `node ./ops/verify-imported-targets.mjs` and `node ./ops/claim-freshness.mjs --topogram-repo ../topogram` both pass");
+
+  return `${lines.join("\n")}\n`;
+}
+
+function main() {
+  const options = parseArgs(process.argv.slice(2));
+  const report = readJson(options.inputPath);
+  const markdown = options.mode === "issue" ? renderIssue(report) : renderSummary(report);
+  process.stdout.write(markdown);
+}
+
+main();

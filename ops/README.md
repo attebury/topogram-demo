@@ -51,6 +51,9 @@ The same check now runs automatically in GitHub Actions via [`.github/workflows/
 - verifies the committed imported targets on every PR and push to `main`
 - compares the active claim set against `attebury/topogram` `main`
 - runs on a weekday schedule and supports manual dispatch for on-demand freshness checks
+- uploads the JSON freshness report as a workflow artifact
+- writes a job summary that names stale targets directly
+- opens or updates a single `Imported proof freshness drift` tracking issue on non-PR runs when claims go stale, and closes it again when the active set is current
 
 ## Capturing Verification Receipts
 
