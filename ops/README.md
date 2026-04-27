@@ -1,10 +1,10 @@
 # Proof Ops
 
-This repo keeps imported brownfield proof targets outside the main product repo.
+This repo keeps **imported brownfield** proof targets and the **`examples/native/`** parity harness outside the main product repo.
 
 ## Active Inventory
 
-The canonical active target list is [active-targets.json](./active-targets.json).
+The canonical active **imported** target list is [active-targets.json](./active-targets.json).
 
 ## Verification
 
@@ -30,6 +30,20 @@ It also checks that:
 - `display_name` and target identity stay aligned across the inventory, `proof-status.json`, and `rerun-manifest.json`
 - the committed imported `topogram/` snapshot no longer carries stale machine-local provenance from the old `topogram/trials/...` paths
 - the README status lines still match `proof-status.json`
+
+### Native parity (`examples/native/`)
+
+```bash
+node ./ops/verify-native-targets.mjs
+```
+
+This checks each subdirectory of `examples/native/` for aligned `README.md` / `proof-status.json` metadata — **not** full Xcode/Gradle builds yet.
+
+Optional freshness vs proof-affecting Topogram commits (skipped for `status: archived` or `topogram_commit_tested: pending`):
+
+```bash
+node ./ops/native-claim-freshness.mjs --topogram-repo ../topogram
+```
 
 ## Freshness Drift
 
