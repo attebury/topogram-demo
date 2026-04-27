@@ -11,10 +11,13 @@ Use:
 
 - `node ./ops/verify-imported-targets.mjs`
 - `node ./ops/claim-freshness.mjs --topogram-repo ../topogram`
+- `node ./ops/rerun-imported-target.mjs <slug> --topogram-repo ../topogram`
 - `node ./ops/capture-verification-receipt.mjs <slug> --topogram-repo ../topogram --rerun-root /path/to/rerun-workspace`
 - `node ./ops/refresh-proof-status-metadata.mjs --topogram-repo ../topogram <slug>`
 
 before treating the active set as current. The metadata refresh step is now receipt-gated, so commit/date metadata cannot be bumped without a matching rerun receipt and a committed snapshot that matches it.
+
+`rerun-imported-target.mjs` is the canonical closure path. It performs the standard import/reconcile flow and then keeps promoting successive `bundle-review:*` selectors until the rerun reaches `next_bundle: null` or stops making progress.
 
 Those checks also run automatically in GitHub Actions through [`.github/workflows/imported-proof-freshness.yml`](../.github/workflows/imported-proof-freshness.yml), which compares the active claims against `attebury/topogram` `main` on PRs, pushes, a weekday schedule, and manual dispatch.
 

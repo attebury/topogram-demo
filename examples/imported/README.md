@@ -21,3 +21,5 @@ Each target includes:
 Use [../../ops/README.md](../../ops/README.md) for the verification command and [../../ops/active-targets.json](../../ops/active-targets.json) for the canonical active-target inventory.
 
 Proof metadata updates are now receipt-gated: do not hand-edit `topogram_commit_tested` or `last_verified_date`. Capture a local verification receipt from a real rerun workspace first, then refresh metadata only after the committed snapshot matches that receipt.
+
+Use `node ./ops/rerun-imported-target.mjs <slug> --topogram-repo ../topogram` from the repo root to run the actual closure path. That helper keeps promoting successive `bundle-review:*` selectors until the imported rerun reaches `next_bundle: null`.

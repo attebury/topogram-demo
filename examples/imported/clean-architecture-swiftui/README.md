@@ -17,20 +17,13 @@ export TOPOGRAM_REPO="${TOPOGRAM_REPO:-../topogram}"
 export TOPOGRAM_DEMO_REPO="${TOPOGRAM_DEMO_REPO:-../topogram-demo}"
 export TARGET_ROOT="${TARGET_ROOT:-$(mktemp -d /tmp/topogram-demo-swiftui-XXXXXX)}"
 
-rsync -a \
-  "$TOPOGRAM_DEMO_REPO/examples/imported/clean-architecture-swiftui/source/" \
-  "$TARGET_ROOT/"
-
-cd "$TOPOGRAM_REPO/engine"
-node ./src/cli.js import app "$TARGET_ROOT" --from db,api,ui,workflows --write
-node ./src/cli.js import docs "$TARGET_ROOT" --write
-node ./src/cli.js report gaps "$TARGET_ROOT" --write
-node ./src/cli.js reconcile "$TARGET_ROOT" --write
-node ./src/cli.js adoption status "$TARGET_ROOT" --write
-node ./src/cli.js reconcile adopt from-plan "$TARGET_ROOT" --write
-node ./src/cli.js reconcile "$TARGET_ROOT" --write
-node ./src/cli.js adoption status "$TARGET_ROOT" --write
+cd "$TOPOGRAM_DEMO_REPO"
+node ./ops/rerun-imported-target.mjs clean-architecture-swiftui \
+  --topogram-repo "$TOPOGRAM_REPO" \
+  --target-root "$TARGET_ROOT"
 ```
+
+That helper performs the real closure loop. It keeps applying the current `bundle-review:*` selector plus `from-plan` until `next_bundle` is `null` or the run stops making progress.
 
 After the rerun, capture a local verification receipt and only refresh the published metadata after the committed `source/` and `topogram/` snapshot matches that rerun receipt:
 

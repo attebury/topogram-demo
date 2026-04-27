@@ -36,7 +36,7 @@ Every active imported target publishes:
 - committed imported outputs under `topogram/`
 - a `proof-status.json`
 - a committed `rerun-manifest.json` tying the published status to the exact committed `source/` and `topogram/` trees
-- exact rerun commands
+- an executable rerun command
 - the adoption-status evidence used to justify its published status
 
 ## Verification
@@ -80,9 +80,12 @@ Manual dispatch supports two scopes:
 After rerunning a target, first capture a local verification receipt from the rerun workspace, then refresh metadata only after the committed `source/`, committed `topogram/`, and committed `rerun-manifest.json` all line up with that receipt:
 
 ```bash
+node ./ops/rerun-imported-target.mjs <slug> --topogram-repo ../topogram
 node ./ops/capture-verification-receipt.mjs <slug> --topogram-repo ../topogram --rerun-root /path/to/rerun-workspace
 node ./ops/refresh-proof-status-metadata.mjs --topogram-repo ../topogram <slug>
 ```
+
+`rerun-imported-target.mjs` encodes the real closure loop. It imports the committed `source/` snapshot into a temp workspace, runs the standard import/reconcile flow, then repeatedly applies the current `bundle-review:*` selector plus `from-plan` until `next_bundle` is `null` or the run stops making progress.
 
 ## Repo Layout
 

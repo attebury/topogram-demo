@@ -64,6 +64,23 @@ Manual dispatch supports:
 
 Single-target manual runs still upload a report and render a summary, but they do not open or close the global drift issue.
 
+## Rerunning Imported Targets
+
+Run a real imported-target rerun from the repo root with:
+
+```bash
+node ./ops/rerun-imported-target.mjs <slug> --topogram-repo ../topogram
+```
+
+That helper:
+
+- copies the committed `examples/imported/<slug>/source` snapshot into a temp workspace
+- runs the standard import + reconcile flow from the sibling `topogram` checkout
+- repeatedly applies the current `bundle-review:*` selector plus `from-plan`
+- stops only when `next_bundle` is `null` or the run stops making progress
+
+Use `--target-root /path/to/workspace` if you want a stable rerun directory, or `--max-review-iterations <n>` if a target legitimately needs a higher review ceiling.
+
 ## Capturing Verification Receipts
 
 After a real rerun into a temp workspace, capture a local verification receipt:
