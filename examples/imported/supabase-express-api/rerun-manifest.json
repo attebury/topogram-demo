@@ -3,7 +3,7 @@
   "target": "supabase-express-api",
   "display_name": "supabase-express-api",
   "published_status": "closed",
-  "topogram_commit_tested": "d7e3a029",
+  "topogram_commit_tested": "3e0ec40e",
   "last_verified_date": "2026-04-27",
   "evidence_origin": "rerun_receipt",
   "rerun_recipe_ref": "README.md#rerun",
@@ -14,5 +14,5 @@
     "blocked_item_count": 0,
     "applied_item_count": 56
   },
-  "receipt_recorded_at": "2026-04-27T15:33:27.135Z"
+  "receipt_recorded_at": "2026-04-27T15:51:33.439Z"
 }
