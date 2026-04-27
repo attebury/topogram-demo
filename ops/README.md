@@ -39,9 +39,11 @@ Run this from the repo root to compare the active claims against a Topogram chec
 node ./ops/claim-freshness.mjs --topogram-repo ../topogram
 ```
 
+By default, the script compares against the latest proof-affecting commit in `topogram`, not blindly against every merge to `main`. The current proof-affecting scope is `engine/**`.
+
 The freshness report flags targets as stale when:
 
-- `topogram_commit_tested` is behind the compared Topogram commit
+- `topogram_commit_tested` is behind the compared proof-affecting Topogram commit
 - `last_verified_date` is older than the freshness window
 
 Use this after pulling or merging Topogram changes that could affect imported-proof claims.

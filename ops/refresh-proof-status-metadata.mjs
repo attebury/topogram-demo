@@ -1,7 +1,7 @@
-import childProcess from "node:child_process";
 import fs from "node:fs";
 import path from "node:path";
 import { hashDirectory } from "./tree-hash.mjs";
+import { resolveGitShortSha, resolveTopogramProofCommit } from "./topogram-proof-ref.mjs";
 
 const repoRoot = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
 const inventoryPath = path.join(repoRoot, "ops", "active-targets.json");
@@ -54,22 +54,6 @@ function parseArgs(argv) {
   return options;
 }
 
-function resolveGitShortSha(repoPath, ref) {
-  const run = childProcess.spawnSync("git", ["-C", repoPath, "rev-parse", "--short=8", ref], {
-    encoding: "utf8",
-    env: {
-      ...process.env,
-      PATH: process.env.PATH || ""
-    }
-  });
-
-  if (run.status !== 0) {
-    throw new Error(`Unable to resolve git ref ${ref} in ${repoPath}:\n${run.stderr || run.stdout}`);
-  }
-
-  return run.stdout.trim();
-}
-
 function parseIsoDate(value) {
   const parsed = new Date(`${value}T00:00:00Z`);
   if (Number.isNaN(parsed.getTime())) {
@@ -92,6 +76,7 @@ function main() {
   const inventory = readJson(inventoryPath);
   const selectedSlugs = new Set(options.all ? inventory.map((entry) => entry.slug) : options.slugs);
   const topogramCommit = resolveGitShortSha(options.topogramRepo, options.topogramRef);
+  const topogramProofCommit = resolveTopogramProofCommit(options.topogramRepo, options.topogramRef);
   const refreshed = [];
 
   for (const entry of inventory) {
@@ -125,8 +110,14 @@ function main() {
       throw new Error(`${entry.slug} receipt slug mismatch: found ${receipt.slug}`);
     }
 
-    if (receipt.topogram_commit_verified !== topogramCommit) {
-      throw new Error(`${entry.slug} receipt commit ${receipt.topogram_commit_verified} does not match current Topogram ${topogramCommit}`);
+    const receiptProofCommit =
+      receipt.topogram_proof_commit_verified ||
+      resolveTopogramProofCommit(options.topogramRepo, receipt.topogram_commit_verified);
+
+    if (receiptProofCommit !== topogramProofCommit) {
+      throw new Error(
+        `${entry.slug} receipt proof commit ${receiptProofCommit} does not match current proof-affecting Topogram commit ${topogramProofCommit}`
+      );
     }
 
     if (receipt.rerun_status !== entry.expected_status) {

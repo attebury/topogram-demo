@@ -53,7 +53,7 @@ That command checks the active target inventory in [ops/active-targets.json](./o
 - `blocked_item_count === 0`
 - `applied_item_count > 0`
 
-Run the freshness verifier to compare active claims against the current Topogram checkout:
+Run the freshness verifier to compare active claims against the current proof-affecting Topogram commit:
 
 ```bash
 node ./ops/claim-freshness.mjs --topogram-repo ../topogram
@@ -61,7 +61,7 @@ node ./ops/claim-freshness.mjs --topogram-repo ../topogram
 
 That command reports freshness drift when:
 
-- `topogram_commit_tested` does not match the current Topogram commit you are comparing against
+- `topogram_commit_tested` does not match the current proof-affecting Topogram commit you are comparing against
 - `last_verified_date` is older than the freshness window
 
 GitHub Actions also runs this freshness check automatically in [`.github/workflows/imported-proof-freshness.yml`](./.github/workflows/imported-proof-freshness.yml) on pull requests, pushes to `main`, weekday schedule, and manual dispatch.

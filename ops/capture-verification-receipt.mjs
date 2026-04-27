@@ -1,7 +1,7 @@
-import childProcess from "node:child_process";
 import fs from "node:fs";
 import path from "node:path";
 import { hashDirectory } from "./tree-hash.mjs";
+import { resolveGitShortSha, resolveTopogramProofCommit } from "./topogram-proof-ref.mjs";
 
 const repoRoot = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
 const inventoryPath = path.join(repoRoot, "ops", "active-targets.json");
@@ -58,22 +58,6 @@ function parseArgs(argv) {
   return options;
 }
 
-function resolveGitShortSha(repoPath, ref) {
-  const run = childProcess.spawnSync("git", ["-C", repoPath, "rev-parse", "--short=8", ref], {
-    encoding: "utf8",
-    env: {
-      ...process.env,
-      PATH: process.env.PATH || ""
-    }
-  });
-
-  if (run.status !== 0) {
-    throw new Error(`Unable to resolve git ref ${ref} in ${repoPath}:\n${run.stderr || run.stdout}`);
-  }
-
-  return run.stdout.trim();
-}
-
 function deriveStatus(adoptionStatus) {
   const isClosed =
     adoptionStatus?.next_bundle === null &&
@@ -108,6 +92,7 @@ function main() {
   const adoptionStatus = readJson(adoptionStatusPath);
   const rerunStatus = deriveStatus(adoptionStatus);
   const topogramCommit = resolveGitShortSha(options.topogramRepo, options.topogramRef);
+  const topogramProofCommit = resolveTopogramProofCommit(options.topogramRepo, options.topogramRef);
   const receipt = {
     version: 1,
     slug: entry.slug,
@@ -115,6 +100,7 @@ function main() {
     target_dir: entry.target_dir,
     expected_status: entry.expected_status,
     topogram_commit_verified: topogramCommit,
+    topogram_proof_commit_verified: topogramProofCommit,
     recorded_at: new Date().toISOString(),
     rerun_status: rerunStatus,
     captured_from_rerun_root_name: path.basename(rerunRoot),
