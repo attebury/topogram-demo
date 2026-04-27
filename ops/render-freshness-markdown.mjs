@@ -38,11 +38,31 @@ function staleTargets(report) {
   return (report.assessed_targets || []).filter((target) => target.freshness_state === "stale");
 }
 
+function rerunCommand(target) {
+  return `node ./ops/rerun-imported-target.mjs ${target.slug} --topogram-repo ../topogram`;
+}
+
 function renderTargetList(targets) {
   return targets.map((target) => {
     const reasons = target.stale_reasons?.length ? `: ${target.stale_reasons.join("; ")}` : "";
     return `- \`${target.slug}\`${reasons}`;
   });
+}
+
+function renderTargetCommands(targets) {
+  const lines = [];
+  for (const target of targets) {
+    lines.push(`- \`${target.slug}\``);
+    lines.push("");
+    lines.push("  ```bash");
+    lines.push(`  ${rerunCommand(target)}`);
+    lines.push("  ```");
+    lines.push("");
+  }
+  if (lines.at(-1) === "") {
+    lines.pop();
+  }
+  return lines;
 }
 
 function renderSummary(report) {
@@ -73,6 +93,9 @@ function renderSummary(report) {
   lines.push("");
   lines.push("Stale imported claims:");
   lines.push(...renderTargetList(stale));
+  lines.push("");
+  lines.push("Suggested rerun commands:");
+  lines.push(...renderTargetCommands(stale));
 
   return `${lines.join("\n")}\n`;
 }
@@ -107,6 +130,9 @@ function renderIssue(report) {
     lines.push("");
     lines.push("Targets needing refresh:");
     lines.push(...renderTargetList(stale));
+    lines.push("");
+    lines.push("Run these reruns first:");
+    lines.push(...renderTargetCommands(stale));
   }
 
   lines.push("");
