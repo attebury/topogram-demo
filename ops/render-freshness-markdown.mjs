@@ -57,6 +57,10 @@ function renderSummary(report) {
 
   lines.push("");
   lines.push(`- Checked at: \`${report.checked_at}\``);
+  lines.push(`- Scope: \`${report.scope || "active_inventory"}\``);
+  if (Array.isArray(report.selected_slugs) && report.selected_slugs.length > 0) {
+    lines.push(`- Selected targets: ${report.selected_slugs.map((slug) => `\`${slug}\``).join(", ")}`);
+  }
   lines.push(`- Active claims assessed: \`${report.assessed_targets.length}\``);
   lines.push(`- Stale claims: \`${report.stale_target_count}\``);
 
@@ -92,6 +96,11 @@ function renderIssue(report) {
   }
 
   lines.push("");
+  lines.push(`Scope: \`${report.scope || "active_inventory"}\``);
+  if (Array.isArray(report.selected_slugs) && report.selected_slugs.length > 0) {
+    lines.push(`Selected targets: ${report.selected_slugs.map((slug) => `\`${slug}\``).join(", ")}`);
+    lines.push("");
+  }
   lines.push(`Stale active claims: \`${report.stale_target_count}\``);
 
   if (stale.length > 0) {
