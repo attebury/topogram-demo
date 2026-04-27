@@ -57,6 +57,13 @@ The same check now runs automatically in GitHub Actions via [`.github/workflows/
 - writes a job summary that names stale targets directly
 - opens or updates a single `Imported proof freshness drift` tracking issue on non-PR runs when claims go stale, and closes it again when the active set is current
 
+Manual dispatch supports:
+
+- `scope=all` for the full active imported claim set
+- `scope=single` plus `slug=<target>` for one imported target
+
+Single-target manual runs still upload a report and render a summary, but they do not open or close the global drift issue.
+
 ## Capturing Verification Receipts
 
 After a real rerun into a temp workspace, capture a local verification receipt:

@@ -10,6 +10,19 @@ on:
     branches:
       - main
   workflow_dispatch:
+    inputs:
+      scope:
+        description: Freshness check scope
+        required: true
+        default: all
+        type: choice
+        options:
+          - all
+          - single
+      slug:
+        description: Active imported target slug to check when scope=single
+        required: false
+        type: string
   schedule:
     - cron: "17 14 * * 1-5"
 
@@ -51,8 +64,25 @@ jobs:
       - name: Check imported claim freshness
         id: freshness
         run: |
+          args=(--topogram-repo ./topogram)
+          check_scope="active_inventory"
+
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.scope }}" = "single" ]; then
+            if [ -z "${{ inputs.slug }}" ]; then
+              node --input-type=module -e "import fs from 'node:fs'; fs.writeFileSync('freshness-report.json', JSON.stringify({ type: 'claim_freshness_report', checked_at: new Date().toISOString().slice(0, 10), scope: 'selected_targets', selected_slugs: [], stale_target_count: -1, assessed_targets: [], workflow_error: 'workflow_dispatch with scope=single requires a slug input' }, null, 2));"
+              cat freshness-report.json
+              echo "exit_code=1" >> "$GITHUB_OUTPUT"
+              echo "stale_count=-1" >> "$GITHUB_OUTPUT"
+              echo "check_scope=selected_targets" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+
+            args+=(--slug "${{ inputs.slug }}")
+            check_scope="selected_targets"
+          fi
+
           set +e
-          node ./ops/claim-freshness.mjs --topogram-repo ./topogram > freshness-report.json
+          node ./ops/claim-freshness.mjs "${args[@]}" > freshness-report.json
           exit_code=$?
           set -e
 
@@ -66,6 +96,7 @@ jobs:
 
           echo "exit_code=$exit_code" >> "$GITHUB_OUTPUT"
           echo "stale_count=$stale_count" >> "$GITHUB_OUTPUT"
+          echo "check_scope=$check_scope" >> "$GITHUB_OUTPUT"
 
       - name: Render freshness summary
         if: always()
@@ -89,7 +120,7 @@ jobs:
           if-no-files-found: ignore
 
       - name: Open or update freshness tracking issue
-        if: ${{ always() && github.event_name != 'pull_request' && steps.freshness.outputs.stale_count != '0' }}
+        if: ${{ always() && github.event_name != 'pull_request' && steps.freshness.outputs.check_scope == 'active_inventory' && steps.freshness.outputs.stale_count != '0' }}
         uses: actions/github-script@v8
         with:
           script: |
@@ -122,7 +153,7 @@ jobs:
             }
 
       - name: Close freshness tracking issue when current
-        if: ${{ always() && github.event_name != 'pull_request' && steps.freshness.outputs.stale_count == '0' }}
+        if: ${{ always() && github.event_name != 'pull_request' && steps.freshness.outputs.check_scope == 'active_inventory' && steps.freshness.outputs.stale_count == '0' }}
         uses: actions/github-script@v8
         with:
           script: |

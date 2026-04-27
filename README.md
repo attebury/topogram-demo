@@ -72,6 +72,11 @@ That workflow now also:
 - writes a job summary naming stale targets directly
 - opens or updates a single `Imported proof freshness drift` issue on non-PR runs when the active claim set goes stale
 
+Manual dispatch supports two scopes:
+
+- `scope=all`: check the full active imported claim set
+- `scope=single` with `slug=<target>`: check one imported target without opening or closing the global drift issue
+
 After rerunning a target, first capture a local verification receipt from the rerun workspace, then refresh metadata only after the committed `source/`, committed `topogram/`, and committed `rerun-manifest.json` all line up with that receipt:
 
 ```bash

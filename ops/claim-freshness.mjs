@@ -15,7 +15,8 @@ function parseArgs(argv) {
   const options = {
     topogramRepo: process.env.TOPOGRAM_REPO || defaultTopogramRepo,
     topogramRef: process.env.TOPOGRAM_REF || "HEAD",
-    maxAgeDays: Number(process.env.MAX_VERIFICATION_AGE_DAYS || defaultMaxVerificationAgeDays)
+    maxAgeDays: Number(process.env.MAX_VERIFICATION_AGE_DAYS || defaultMaxVerificationAgeDays),
+    slugs: []
   };
 
   for (let index = 0; index < argv.length; index += 1) {
@@ -28,6 +29,13 @@ function parseArgs(argv) {
       index += 1;
     } else if (token === "--max-age-days") {
       options.maxAgeDays = Number(argv[index + 1]);
+      index += 1;
+    } else if (token === "--slug") {
+      const slug = argv[index + 1];
+      if (!slug) {
+        throw new Error("Expected --slug <target-slug>");
+      }
+      options.slugs.push(slug);
       index += 1;
     } else {
       throw new Error(`Unknown argument: ${token}`);
@@ -60,9 +68,12 @@ export function assessClaimFreshness({
   resolvePublishedProofCommit,
   maxAgeDays,
   today,
+  selectedSlugs = null,
   repoRootDir = repoRoot
 }) {
-  const assessedTargets = inventory.map((entry) => {
+  const targetInventory = selectedSlugs ? inventory.filter((entry) => selectedSlugs.has(entry.slug)) : inventory;
+
+  const assessedTargets = targetInventory.map((entry) => {
     const targetRoot = path.join(repoRootDir, entry.target_dir);
     const proofStatus = readJson(path.join(targetRoot, "proof-status.json"));
     const lastVerifiedDate = parseIsoDate(proofStatus.last_verified_date);
@@ -97,6 +108,8 @@ export function assessClaimFreshness({
   return {
     type: "claim_freshness_report",
     checked_at: today.toISOString().slice(0, 10),
+    scope: selectedSlugs ? "selected_targets" : "active_inventory",
+    selected_slugs: selectedSlugs ? Array.from(selectedSlugs) : [],
     max_verification_age_days: maxAgeDays,
     stale_target_count: assessedTargets.filter((target) => target.freshness_state === "stale").length,
     assessed_targets: assessedTargets
@@ -113,13 +126,24 @@ function main() {
   }
 
   const inventory = readJson(inventoryPath);
+  const selectedSlugs = options.slugs.length > 0 ? new Set(options.slugs) : null;
+
+  if (selectedSlugs) {
+    for (const slug of selectedSlugs) {
+      if (!inventory.some((entry) => entry.slug === slug)) {
+        throw new Error(`Unknown target slug: ${slug}`);
+      }
+    }
+  }
+
   const topogramCommit = resolveTopogramProofCommit(options.topogramRepo, options.topogramRef);
   const report = assessClaimFreshness({
     inventory,
     topogramCommit,
     resolvePublishedProofCommit: (ref) => resolveTopogramProofCommit(options.topogramRepo, ref),
     maxAgeDays: options.maxAgeDays,
-    today: new Date()
+    today: new Date(),
+    selectedSlugs
   });
 
   console.log(JSON.stringify(report, null, 2));

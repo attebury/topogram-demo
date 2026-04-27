@@ -19,3 +19,8 @@ before treating the active set as current. The metadata refresh step is now rece
 Those checks also run automatically in GitHub Actions through [`.github/workflows/imported-proof-freshness.yml`](../.github/workflows/imported-proof-freshness.yml), which compares the active claims against `attebury/topogram` `main` on PRs, pushes, a weekday schedule, and manual dispatch.
 
 When freshness drift appears on a non-PR run, that workflow now opens or updates a single `Imported proof freshness drift` issue so the refresh queue is explicit instead of living only in CI logs.
+
+For manual ops work, use workflow dispatch with:
+
+- `scope=all` to check the whole active set
+- `scope=single` and `slug=<target>` to inspect one imported proof without mutating the global drift issue state
