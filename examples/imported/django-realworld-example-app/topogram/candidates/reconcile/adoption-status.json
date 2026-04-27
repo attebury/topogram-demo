@@ -7,8 +7,8 @@
   "approved_review_groups": [
     "workflow_review:article",
     "workflow_review:user",
-    "workflow_review:comment",
     "workflow_review:profile",
+    "workflow_review:comment",
     "workflow_review:tag",
     "workflow_review:account"
   ],
@@ -148,8 +148,8 @@
       "approved_items": 0,
       "auth_aging_summary": {
         "escalationLevel": "stale_high_risk",
-        "escalationReason": "This bundle has stayed high risk for 18 reconcile runs in a row.",
-        "repeatCount": 18
+        "escalationReason": "This bundle has stayed high risk for 26 reconcile runs in a row.",
+        "repeatCount": 26
       },
       "auth_claim_hints": [],
       "auth_closure_summary": {
@@ -289,8 +289,8 @@
       "operator_summary": {
         "authAging": {
           "escalationLevel": "stale_high_risk",
-          "escalationReason": "This bundle has stayed high risk for 18 reconcile runs in a row.",
-          "repeatCount": 18
+          "escalationReason": "This bundle has stayed high risk for 26 reconcile runs in a row.",
+          "repeatCount": 26
         },
         "authClaimHints": [],
         "authClosureSummary": {
@@ -434,8 +434,8 @@
       "approved_items": 0,
       "auth_aging_summary": {
         "escalationLevel": "stale_high_risk",
-        "escalationReason": "This bundle has stayed high risk for 18 reconcile runs in a row.",
-        "repeatCount": 18
+        "escalationReason": "This bundle has stayed high risk for 26 reconcile runs in a row.",
+        "repeatCount": 26
       },
       "auth_claim_hints": [],
       "auth_closure_summary": {
@@ -518,8 +518,8 @@
       "operator_summary": {
         "authAging": {
           "escalationLevel": "stale_high_risk",
-          "escalationReason": "This bundle has stayed high risk for 18 reconcile runs in a row.",
-          "repeatCount": 18
+          "escalationReason": "This bundle has stayed high risk for 26 reconcile runs in a row.",
+          "repeatCount": 26
         },
         "authClaimHints": [],
         "authClosureSummary": {
@@ -605,8 +605,8 @@
       "approved_items": 0,
       "auth_aging_summary": {
         "escalationLevel": "stale_high_risk",
-        "escalationReason": "This bundle has stayed high risk for 18 reconcile runs in a row.",
-        "repeatCount": 18
+        "escalationReason": "This bundle has stayed high risk for 26 reconcile runs in a row.",
+        "repeatCount": 26
       },
       "auth_claim_hints": [],
       "auth_closure_summary": {
@@ -689,8 +689,8 @@
       "operator_summary": {
         "authAging": {
           "escalationLevel": "stale_high_risk",
-          "escalationReason": "This bundle has stayed high risk for 18 reconcile runs in a row.",
-          "repeatCount": 18
+          "escalationReason": "This bundle has stayed high risk for 26 reconcile runs in a row.",
+          "repeatCount": 26
         },
         "authClaimHints": [],
         "authClosureSummary": {
@@ -776,8 +776,8 @@
       "approved_items": 0,
       "auth_aging_summary": {
         "escalationLevel": "stale_high_risk",
-        "escalationReason": "This bundle has stayed high risk for 18 reconcile runs in a row.",
-        "repeatCount": 18
+        "escalationReason": "This bundle has stayed high risk for 26 reconcile runs in a row.",
+        "repeatCount": 26
       },
       "auth_claim_hints": [],
       "auth_closure_summary": {
@@ -860,8 +860,8 @@
       "operator_summary": {
         "authAging": {
           "escalationLevel": "stale_high_risk",
-          "escalationReason": "This bundle has stayed high risk for 18 reconcile runs in a row.",
-          "repeatCount": 18
+          "escalationReason": "This bundle has stayed high risk for 26 reconcile runs in a row.",
+          "repeatCount": 26
         },
         "authClaimHints": [],
         "authClosureSummary": {
@@ -1241,5 +1241,5 @@
       "reason": "Workflow semantics for user need canonical review before promotion."
     }
   ],
-  "workspace": "/tmp/topogram-demo-django-realworld-main-Z9jPjy/topogram"
+  "workspace": "/tmp/topogram-demo-django-realworld-example-app-refresh/topogram"
 }

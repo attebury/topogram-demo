@@ -3877,8 +3877,8 @@
       "approved_items": 0,
       "auth_aging_summary": {
         "escalationLevel": "stale_high_risk",
-        "escalationReason": "This bundle has stayed high risk for 20 reconcile runs in a row.",
-        "repeatCount": 20
+        "escalationReason": "This bundle has stayed high risk for 21 reconcile runs in a row.",
+        "repeatCount": 21
       },
       "auth_claim_hints": [],
       "auth_closure_summary": {
@@ -3981,8 +3981,8 @@
       "operator_summary": {
         "authAging": {
           "escalationLevel": "stale_high_risk",
-          "escalationReason": "This bundle has stayed high risk for 20 reconcile runs in a row.",
-          "repeatCount": 20
+          "escalationReason": "This bundle has stayed high risk for 21 reconcile runs in a row.",
+          "repeatCount": 21
         },
         "authClaimHints": [],
         "authClosureSummary": {
@@ -4089,8 +4089,8 @@
       "approved_items": 0,
       "auth_aging_summary": {
         "escalationLevel": "stale_high_risk",
-        "escalationReason": "This bundle has stayed high risk for 20 reconcile runs in a row.",
-        "repeatCount": 20
+        "escalationReason": "This bundle has stayed high risk for 21 reconcile runs in a row.",
+        "repeatCount": 21
       },
       "auth_claim_hints": [
         {
@@ -4236,8 +4236,8 @@
       "operator_summary": {
         "authAging": {
           "escalationLevel": "stale_high_risk",
-          "escalationReason": "This bundle has stayed high risk for 20 reconcile runs in a row.",
-          "repeatCount": 20
+          "escalationReason": "This bundle has stayed high risk for 21 reconcile runs in a row.",
+          "repeatCount": 21
         },
         "authClaimHints": [
           {
@@ -4387,8 +4387,8 @@
       "approved_items": 0,
       "auth_aging_summary": {
         "escalationLevel": "stale_high_risk",
-        "escalationReason": "This bundle has stayed high risk for 20 reconcile runs in a row.",
-        "repeatCount": 20
+        "escalationReason": "This bundle has stayed high risk for 21 reconcile runs in a row.",
+        "repeatCount": 21
       },
       "auth_claim_hints": [
         {
@@ -4532,8 +4532,8 @@
       "operator_summary": {
         "authAging": {
           "escalationLevel": "stale_high_risk",
-          "escalationReason": "This bundle has stayed high risk for 20 reconcile runs in a row.",
-          "repeatCount": 20
+          "escalationReason": "This bundle has stayed high risk for 21 reconcile runs in a row.",
+          "repeatCount": 21
         },
         "authClaimHints": [
           {
@@ -4681,8 +4681,8 @@
       "approved_items": 0,
       "auth_aging_summary": {
         "escalationLevel": "stale_high_risk",
-        "escalationReason": "This bundle has stayed high risk for 20 reconcile runs in a row.",
-        "repeatCount": 20
+        "escalationReason": "This bundle has stayed high risk for 21 reconcile runs in a row.",
+        "repeatCount": 21
       },
       "auth_claim_hints": [],
       "auth_closure_summary": {
@@ -4747,8 +4747,8 @@
       "operator_summary": {
         "authAging": {
           "escalationLevel": "stale_high_risk",
-          "escalationReason": "This bundle has stayed high risk for 20 reconcile runs in a row.",
-          "repeatCount": 20
+          "escalationReason": "This bundle has stayed high risk for 21 reconcile runs in a row.",
+          "repeatCount": 21
         },
         "authClaimHints": [],
         "authClosureSummary": {
@@ -4815,8 +4815,8 @@
       "approved_items": 0,
       "auth_aging_summary": {
         "escalationLevel": "stale_high_risk",
-        "escalationReason": "This bundle has stayed high risk for 20 reconcile runs in a row.",
-        "repeatCount": 20
+        "escalationReason": "This bundle has stayed high risk for 21 reconcile runs in a row.",
+        "repeatCount": 21
       },
       "auth_claim_hints": [
         {
@@ -4920,8 +4920,8 @@
       "operator_summary": {
         "authAging": {
           "escalationLevel": "stale_high_risk",
-          "escalationReason": "This bundle has stayed high risk for 20 reconcile runs in a row.",
-          "repeatCount": 20
+          "escalationReason": "This bundle has stayed high risk for 21 reconcile runs in a row.",
+          "repeatCount": 21
         },
         "authClaimHints": [
           {
@@ -5405,8 +5405,8 @@
       "operator_summary": {
         "authAging": {
           "escalationLevel": "stale_high_risk",
-          "escalationReason": "This bundle has stayed high risk for 20 reconcile runs in a row.",
-          "repeatCount": 20
+          "escalationReason": "This bundle has stayed high risk for 21 reconcile runs in a row.",
+          "repeatCount": 21
         },
         "authClaimHints": [],
         "authClosureSummary": {
@@ -5648,8 +5648,8 @@
       "operator_summary": {
         "authAging": {
           "escalationLevel": "stale_high_risk",
-          "escalationReason": "This bundle has stayed high risk for 20 reconcile runs in a row.",
-          "repeatCount": 20
+          "escalationReason": "This bundle has stayed high risk for 21 reconcile runs in a row.",
+          "repeatCount": 21
         },
         "authClaimHints": [],
         "authClosureSummary": {
@@ -6063,8 +6063,8 @@
       "operator_summary": {
         "authAging": {
           "escalationLevel": "stale_high_risk",
-          "escalationReason": "This bundle has stayed high risk for 20 reconcile runs in a row.",
-          "repeatCount": 20
+          "escalationReason": "This bundle has stayed high risk for 21 reconcile runs in a row.",
+          "repeatCount": 21
         },
         "authClaimHints": [
           {
@@ -6410,8 +6410,8 @@
       "operator_summary": {
         "authAging": {
           "escalationLevel": "stale_high_risk",
-          "escalationReason": "This bundle has stayed high risk for 20 reconcile runs in a row.",
-          "repeatCount": 20
+          "escalationReason": "This bundle has stayed high risk for 21 reconcile runs in a row.",
+          "repeatCount": 21
         },
         "authClaimHints": [
           {
@@ -6781,8 +6781,8 @@
       "operator_summary": {
         "authAging": {
           "escalationLevel": "stale_high_risk",
-          "escalationReason": "This bundle has stayed high risk for 20 reconcile runs in a row.",
-          "repeatCount": 20
+          "escalationReason": "This bundle has stayed high risk for 21 reconcile runs in a row.",
+          "repeatCount": 21
         },
         "authClaimHints": [
           {
@@ -7200,6 +7200,6 @@
       "reason": "Workflow semantics for workspace-membership need canonical review before promotion."
     }
   ],
-  "workspace": "/tmp/topogram-demo-supabase-main-FpTkIi/topogram",
+  "workspace": "/tmp/topogram-demo-supabase-express-api-refresh/topogram",
   "written_canonical_files": []
 }

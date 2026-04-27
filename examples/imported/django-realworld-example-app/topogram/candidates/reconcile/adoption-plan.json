@@ -2,8 +2,8 @@
   "approved_review_groups": [
     "workflow_review:article",
     "workflow_review:user",
-    "workflow_review:comment",
     "workflow_review:profile",
+    "workflow_review:comment",
     "workflow_review:tag",
     "workflow_review:account"
   ],
@@ -2150,5 +2150,5 @@
       "reason": "Workflow semantics for user need canonical review before promotion."
     }
   ],
-  "workspace": "/tmp/topogram-demo-django-realworld-main-Z9jPjy/topogram"
+  "workspace": "/tmp/topogram-demo-django-realworld-example-app-refresh/topogram"
 }

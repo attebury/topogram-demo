@@ -1,4 +1,4 @@
-projection proj_ui_shared_imported_topogram_demo_swiftui_main_ctn9xl {
+projection proj_ui_shared_imported_topogram_demo_clean_architecture_swiftui_refresh {
   name "Imported Shared UI Draft"
   description "Drafted from imported UI candidates. Review and adapt before adoption."
 
@@ -10,7 +10,7 @@ projection proj_ui_shared_imported_topogram_demo_swiftui_main_ctn9xl {
   outputs [ui_contract]
 
   ui_app_shell {
-    brand "Imported topogram demo swiftui main ctn9xl"
+    brand "Imported topogram demo clean architecture swiftui refresh"
     shell topbar
     global_search true
   }

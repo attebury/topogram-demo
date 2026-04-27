@@ -2743,7 +2743,6 @@
   "promoted_canonical_items": [],
   "refreshed_canonical_files": [],
   "skipped": [
-    "docs/glossary/architecture.md",
     "docs/glossary/business.md",
     "docs/glossary/data.md",
     "docs/glossary/layer.md",
@@ -2794,6 +2793,6 @@
       "reason": "Workflow semantics for country-details need canonical review before promotion."
     }
   ],
-  "workspace": "/tmp/topogram-demo-swiftui-main-ctN9XL/topogram",
+  "workspace": "/tmp/topogram-demo-clean-architecture-swiftui-refresh/topogram",
   "written_canonical_files": []
 }

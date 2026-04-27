@@ -70,11 +70,11 @@
 
 ## Bundle Priorities
 
-- `account`: action=complete, why=This bundle has no blocked, approved, or pending work left., safe-now=0, permission-hints=3, auth-closure=high_risk, auth-aging=stale_high_risk, high-risk-runs=20, auth-priority=3
-- `workspace`: action=complete, why=This bundle has no blocked, approved, or pending work left., safe-now=0, permission-hints=4, auth-hints=1, auth-closure=high_risk, auth-aging=stale_high_risk, high-risk-runs=20, auth-priority=3
-- `workspace-membership`: action=complete, why=This bundle has no blocked, approved, or pending work left., safe-now=0, permission-hints=4, auth-hints=1, auth-closure=high_risk, auth-aging=stale_high_risk, high-risk-runs=20, auth-priority=3
-- `audit-log`: action=complete, why=This bundle has no blocked, approved, or pending work left., safe-now=0, permission-hints=1, auth-closure=high_risk, auth-aging=stale_high_risk, high-risk-runs=20, auth-priority=3
-- `profile`: action=complete, why=This bundle has no blocked, approved, or pending work left., safe-now=0, permission-hints=2, auth-hints=1, auth-closure=high_risk, auth-aging=stale_high_risk, high-risk-runs=20, auth-priority=3
+- `account`: action=complete, why=This bundle has no blocked, approved, or pending work left., safe-now=0, permission-hints=3, auth-closure=high_risk, auth-aging=stale_high_risk, high-risk-runs=21, auth-priority=3
+- `workspace`: action=complete, why=This bundle has no blocked, approved, or pending work left., safe-now=0, permission-hints=4, auth-hints=1, auth-closure=high_risk, auth-aging=stale_high_risk, high-risk-runs=21, auth-priority=3
+- `workspace-membership`: action=complete, why=This bundle has no blocked, approved, or pending work left., safe-now=0, permission-hints=4, auth-hints=1, auth-closure=high_risk, auth-aging=stale_high_risk, high-risk-runs=21, auth-priority=3
+- `audit-log`: action=complete, why=This bundle has no blocked, approved, or pending work left., safe-now=0, permission-hints=1, auth-closure=high_risk, auth-aging=stale_high_risk, high-risk-runs=21, auth-priority=3
+- `profile`: action=complete, why=This bundle has no blocked, approved, or pending work left., safe-now=0, permission-hints=2, auth-hints=1, auth-closure=high_risk, auth-aging=stale_high_risk, high-risk-runs=21, auth-priority=3
 - `flow-lifecycle-flow`: action=complete, why=This bundle has no blocked, approved, or pending work left., safe-now=0
 - `workspace-membership-role`: action=complete, why=This bundle has no blocked, approved, or pending work left., safe-now=0
 
@@ -103,7 +103,7 @@
   - ownership hints _none_
   - auth role guidance _none_
   - auth closure high risk (adopted=0, deferred=0, unresolved=3)
-  - auth escalation escalated (high-risk runs=20)
+  - auth escalation escalated (high-risk runs=21)
   - why This bundle exists because entity evidence, API capability evidence, workflow evidence, doc evidence converges on the same account concept.
   - permission permission `admin.create` (medium) <- `cap_create_account`
     - closure unresolved
@@ -131,7 +131,7 @@
   - ownership hints _none_
   - auth role guidance _none_
   - auth closure high risk (adopted=0, deferred=0, unresolved=1)
-  - auth escalation escalated (high-risk runs=20)
+  - auth escalation escalated (high-risk runs=21)
   - why This bundle exists because entity evidence, API capability evidence, workflow evidence, doc evidence converges on the same audit log concept.
   - permission permission `admin.read` (medium) <- `cap_get_audit_log_stats`, `cap_list_audit_logs`
     - closure unresolved
@@ -163,7 +163,7 @@
   - ownership hints _none_
   - auth role guidance _none_
   - auth closure high risk (adopted=0, deferred=0, unresolved=3)
-  - auth escalation escalated (high-risk runs=20)
+  - auth escalation escalated (high-risk runs=21)
   - why This bundle exists because entity evidence, API capability evidence, workflow evidence, doc evidence converges on the same profile concept.
   - permission permission `me.read` (medium) <- `cap_get_profile`
     - closure unresolved
@@ -191,7 +191,7 @@
   - ownership hints _none_
   - auth role guidance _none_
   - auth closure high risk (adopted=0, deferred=0, unresolved=5)
-  - auth escalation escalated (high-risk runs=20)
+  - auth escalation escalated (high-risk runs=21)
   - why This bundle exists because entity evidence, API capability evidence, workflow evidence, doc evidence converges on the same workspace concept.
   - permission permission `workspaces.create` (medium) <- `cap_create_workspace`
     - closure unresolved
@@ -229,7 +229,7 @@
   - ownership hints _none_
   - auth role guidance _none_
   - auth closure high risk (adopted=0, deferred=0, unresolved=5)
-  - auth escalation escalated (high-risk runs=20)
+  - auth escalation escalated (high-risk runs=21)
   - why This bundle exists because entity evidence, API capability evidence, workflow evidence, doc evidence converges on the same workspace membership concept.
   - permission permission `workspaces.create` (medium) <- `cap_create_workspace_membership`
     - closure unresolved

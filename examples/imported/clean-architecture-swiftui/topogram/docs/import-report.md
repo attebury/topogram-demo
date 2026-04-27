@@ -4,7 +4,6 @@ Scanned 1 source document(s).
 
 ## Candidate Docs
 
-- `glossary` Architecture
 - `glossary` Business
 - `glossary` Data
 - `glossary` Layer

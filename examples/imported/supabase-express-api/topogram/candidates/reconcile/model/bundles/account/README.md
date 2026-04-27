@@ -31,7 +31,7 @@ Docs: 1
 - Ownership hints: _none_
 - Auth role guidance: _none_
 - Auth closure: high risk (adopted=0, deferred=0, unresolved=3)
-- Auth escalation: escalated (high-risk runs=20)
+- Auth escalation: escalated (high-risk runs=21)
 
 ## Why This Bundle Exists
 

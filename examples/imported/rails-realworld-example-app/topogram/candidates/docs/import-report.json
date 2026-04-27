@@ -33,7 +33,7 @@
   "findings": [
     {
       "actor_signals": [],
-      "file": "/tmp/topogram-demo-rails-realworld-main-QoVrjd/README.md",
+      "file": "/tmp/topogram-demo-rails-realworld-example-app-refresh/README.md",
       "relative_path": "README.md",
       "role_signals": [],
       "term_candidates": [
@@ -55,5 +55,5 @@
     "README.md"
   ],
   "type": "scan_docs_report",
-  "workspace": "/tmp/topogram-demo-rails-realworld-main-QoVrjd/topogram"
+  "workspace": "/tmp/topogram-demo-rails-realworld-example-app-refresh/topogram"
 }

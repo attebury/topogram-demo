@@ -6,7 +6,6 @@
 
 ## Skipped
 
-- `docs/glossary/architecture.md`
 - `docs/glossary/business.md`
 - `docs/glossary/data.md`
 - `docs/glossary/layer.md`

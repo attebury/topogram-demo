@@ -1,10 +1,10 @@
-projection proj_ui_web_imported_topogram_demo_supabase_main_fptkii {
+projection proj_ui_web_imported_topogram_demo_supabase_express_api_refresh {
   name "Imported Web UI Draft"
   description "Drafted from imported UI candidates. Review and adapt before adoption."
 
   platform ui_web
   realizes [
-    proj_ui_shared_imported_topogram_demo_supabase_main_fptkii,
+    proj_ui_shared_imported_topogram_demo_supabase_express_api_refresh,
     // add capability ids
   ]
   outputs [ui_contract, web_app]
