@@ -2,9 +2,9 @@
   "target": "rails-realworld-example-app",
   "display_name": "rails-realworld-example-app",
   "status": "closed",
-  "topogram_commit_tested": "d7e3a029",
+  "topogram_commit_tested": "3e0ec40e",
   "last_verified_date": "2026-04-27",
   "known_blockers": [],
   "notes": "Seeded from the historical closed imported proof snapshot migrated from topogram/trials/rails-realworld-example-app.",
-  "last_verification_receipt_recorded_at": "2026-04-27T15:33:35.949Z"
+  "last_verification_receipt_recorded_at": "2026-04-27T15:51:42.230Z"
 }

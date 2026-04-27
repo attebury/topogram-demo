@@ -7,7 +7,7 @@ This target shows that Topogram can import, reconcile, and adopt a Rails RealWor
 ## Current Status
 
 - proof status: `closed`
-- Topogram commit tested: `d7e3a029`
+- Topogram commit tested: `3e0ec40e`
 - last verified date: `2026-04-27`
 
 ## Rerun
