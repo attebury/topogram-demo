@@ -1,0 +1,11 @@
+{
+  "target": "starter-slot",
+  "display_name": "Native parity starter slot",
+  "status": "archived",
+  "topogram_commit_tested": "pending",
+  "last_verified_date": "2026-04-27",
+  "known_blockers": [
+    "Awaiting engine native generator outputs pinned to this demo repo."
+  ],
+  "notes": "Harness-only placeholder; verify-native-targets.mjs checks README and proof-status alignment."
+}

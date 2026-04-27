@@ -1,6 +1,6 @@
 # Topogram Demo
 
-This repo contains the imported proof targets for [Topogram](https://github.com/attebury/topogram).
+This repo contains **imported brownfield** proof targets and the **`examples/native/`** full-stack parity harness for [Topogram](https://github.com/attebury/topogram).
 
 Use the main `topogram` repo for:
 
@@ -11,22 +11,24 @@ Use the main `topogram` repo for:
 
 Use this repo for:
 
-- imported brownfield proof targets
-- committed `topogram/` outputs for real external apps
+- imported brownfield proof targets (`examples/imported/`)
+- native / mobile **build parity** proofs (`examples/native/`) with pinned Xcode / Gradle toolchains when promoted
+- committed `topogram/` outputs for real external apps (imports)
 - proof status and rerun commands
-- proof-ops verification for the active imported claim set
+- proof-ops verification for the active imported claim set and native harness metadata
 
-The alpha operator playbook for keeping those imported claims current lives in [ops/README.md](./ops/README.md).
+The alpha operator playbook for keeping imported claims current lives in [ops/README.md](./ops/README.md).
 
 ## Example Taxonomy
 
-Topogram uses three example relationships:
+Topogram uses these example relationships:
 
-- `examples/generated/<app>`: generated reference apps
-- `examples/maintained/<app>`: maintained proof apps
-- `examples/imported/<app>`: real existing systems imported into Topogram
+- `examples/generated/<app>`: generated reference apps (in **topogram**)
+- `examples/maintained/<app>`: maintained proof apps (in **topogram**)
+- `examples/imported/<app>`: real existing systems imported into Topogram (this repo)
+- `examples/native/<target>/`: native workspace parity proofs — **this repo** only
 
-This repo owns the `examples/imported` side of that split.
+This repo owns **`examples/imported`** and **`examples/native`**.
 
 ## Active Imported Claims
 
@@ -89,6 +91,19 @@ node ./ops/refresh-proof-status-metadata.mjs --topogram-repo ../topogram <slug>
 
 `rerun-imported-target.mjs` encodes the real closure loop. It imports the committed `source/` snapshot into a temp workspace, runs the standard import/reconcile flow, then repeatedly applies the current `bundle-review:*` selector plus `from-plan` until `next_bundle` is `null` or the run stops making progress.
 
+### Native parity harness (`examples/native/`)
+
+Structural verifier and optional freshness (skipped for `archived` / `pending` commits):
+
+```bash
+node ./ops/verify-native-targets.mjs
+node ./ops/native-claim-freshness.mjs --topogram-repo ../topogram
+```
+
+Runs in CI via [`.github/workflows/native-parity.yml`](./.github/workflows/native-parity.yml) when `examples/native/**` or the ops scripts change, plus weekly schedule and manual dispatch. **No Xcode/Android SDK jobs yet** — only metadata checks until real native workspaces land.
+
+See [examples/native/README.md](./examples/native/README.md).
+
 ## Repo Layout
 
 ```text
@@ -100,10 +115,15 @@ examples/
     clean-architecture-swiftui/
     rails-realworld-example-app/
     django-realworld-example-app/
+  native/
+    README.md
+    starter-slot/
 ops/
   README.md
   active-targets.json
   verify-imported-targets.mjs
+  verify-native-targets.mjs
+  native-claim-freshness.mjs
 ```
 
 ## Status Model

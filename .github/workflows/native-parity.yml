@@ -1,0 +1,61 @@
+name: Native parity harness
+
+permissions:
+  contents: read
+
+on:
+  pull_request:
+    paths:
+      - "examples/native/**"
+      - "ops/verify-native-targets.mjs"
+      - "ops/native-claim-freshness.mjs"
+      - ".github/workflows/native-parity.yml"
+  push:
+    branches:
+      - main
+    paths:
+      - "examples/native/**"
+      - "ops/verify-native-targets.mjs"
+      - "ops/native-claim-freshness.mjs"
+      - ".github/workflows/native-parity.yml"
+  workflow_dispatch: {}
+  schedule:
+    - cron: "27 11 * * 0"
+
+jobs:
+  verify-native-structure:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout topogram-demo
+        uses: actions/checkout@v6
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: "20"
+
+      - name: Verify native target metadata
+        run: node ./ops/verify-native-targets.mjs
+
+  native-freshness:
+    runs-on: ubuntu-latest
+    needs: verify-native-structure
+    steps:
+      - name: Checkout topogram-demo
+        uses: actions/checkout@v6
+
+      - name: Checkout topogram main
+        uses: actions/checkout@v6
+        with:
+          repository: attebury/topogram
+          ref: main
+          path: topogram
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: "20"
+
+      - name: Native claim freshness
+        run: node ./ops/native-claim-freshness.mjs --topogram-repo ./topogram
